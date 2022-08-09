@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!4 &28123570 stripped
@@ -225,6 +229,10 @@ PrefabInstance:
     - target: {fileID: 315445012725575869, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_Name
       value: house_big
+      objectReference: {fileID: 0}
+    - target: {fileID: 315445012725575869, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1093107237810694663, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_RootOrder
@@ -270,6 +278,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2060392891781143341, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581283628537094934, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624821007512477324, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56f01b115c934b64989066fa476eca6, type: 3}
 --- !u!4 &29577087 stripped
@@ -287,6 +307,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -389,6 +413,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!4 &47964177 stripped
@@ -416,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -488,6 +520,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -591,6 +627,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 63
@@ -652,6 +692,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -798,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naked_tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8906086579256230093, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
 --- !u!1001 &191717429
@@ -854,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
       propertyPath: m_Name
       value: grass (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
@@ -912,6 +964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!4 &205981269 stripped
@@ -929,6 +985,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -986,6 +1046,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -1053,6 +1117,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1127,9 +1195,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 4861155815657118222, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283149799919685800, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_Name
       value: house_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050649239332228722, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_RootOrder
@@ -1175,6 +1255,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128244753601477530, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
 --- !u!4 &264175420 stripped
@@ -1202,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1259,6 +1347,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1361,6 +1453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!1001 &287859475
@@ -1373,6 +1469,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -1475,6 +1575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!1001 &299781005
@@ -1487,6 +1591,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1549,6 +1657,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -1651,6 +1763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naked_tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8906086579256230093, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
 --- !u!4 &312652195 stripped
@@ -1668,6 +1784,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -1770,6 +1890,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!1001 &331878789
@@ -1782,6 +1906,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1894,6 +2022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!4 &365623118 stripped
@@ -1926,6 +2058,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -1984,6 +2120,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: river_area (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
       value: 99
@@ -2041,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: house_big (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 315445012725575869, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1093107237810694663, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_RootOrder
       value: 47
@@ -2084,6 +2228,18 @@ PrefabInstance:
     - target: {fileID: 1093107237810694663, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060392891781143341, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581283628537094934, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624821007512477324, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56f01b115c934b64989066fa476eca6, type: 3}
@@ -2147,6 +2303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!1001 &445874930
@@ -2159,6 +2319,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -2261,6 +2425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!4 &453626458 stripped
@@ -2322,6 +2490,10 @@ PrefabInstance:
     - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
@@ -2385,6 +2557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!1001 &463535636
@@ -2394,9 +2570,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 2528351055965522481, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200442094675154457, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013408633018750571, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4817440432585934006, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_Name
       value: car_blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817440432585934006, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159568093644245307, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5301066753220271628, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_RootOrder
@@ -2441,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 5301066753220271628, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153256910966958404, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683c15f9e972f4655b2620101423b704, type: 3}
@@ -2499,6 +2699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3167933080424967449, guid: 6729c2d78ee9040829d69b1c626b3903, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6729c2d78ee9040829d69b1c626b3903, type: 3}
 --- !u!1001 &477738322
@@ -2556,6 +2760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!1001 &477901440
@@ -2568,6 +2776,14 @@ PrefabInstance:
     - target: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_Name
       value: supermarket
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701226003627664727, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1985860520478105061, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_RootOrder
@@ -2613,6 +2829,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2129053718180717078, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483090001250698857, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041161869313742616, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220598575507934666, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
 --- !u!1001 &480188468
@@ -2625,6 +2857,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -2682,6 +2918,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -2784,6 +3024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!1001 &495961084
@@ -2840,6 +3084,10 @@ PrefabInstance:
     - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
       propertyPath: m_Name
       value: grass (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
@@ -2910,6 +3158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oval_tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5720404016215849147, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
 --- !u!4 &509801542 stripped
@@ -2927,6 +3179,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -3023,6 +3279,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -3125,6 +3385,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!4 &549106711 stripped
@@ -3147,6 +3411,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -3205,6 +3473,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 117
@@ -3261,6 +3533,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -3339,6 +3615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: river_area (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
       value: 101
@@ -3396,6 +3676,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: supermarket (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701226003627664727, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1985860520478105061, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_RootOrder
       value: 51
@@ -3439,6 +3727,22 @@ PrefabInstance:
     - target: {fileID: 1985860520478105061, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129053718180717078, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483090001250698857, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041161869313742616, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220598575507934666, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
@@ -3512,6 +3816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!1001 &636112841
@@ -3524,6 +3832,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -3626,6 +3938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5051157971696112145, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
@@ -3636,9 +3952,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 4861155815657118222, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283149799919685800, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_Name
       value: house_small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050649239332228722, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_RootOrder
@@ -3684,6 +4012,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128244753601477530, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
 --- !u!1001 &645859130
@@ -3696,6 +4028,10 @@ PrefabInstance:
     - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_Name
       value: pine_tree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9128216963764189511, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_RootOrder
@@ -3753,6 +4089,10 @@ PrefabInstance:
     - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_Name
       value: pine_tree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9128216963764189511, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_RootOrder
@@ -3846,6 +4186,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 67
@@ -3899,9 +4243,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 4861155815657118222, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283149799919685800, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_Name
       value: house_small (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050649239332228722, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_RootOrder
@@ -3947,6 +4303,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128244753601477530, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
 --- !u!1001 &725555922
@@ -3959,6 +4319,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -4026,6 +4390,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -4098,6 +4466,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -4200,6 +4572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!1001 &787630910
@@ -4212,6 +4588,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -4269,6 +4649,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -4371,6 +4755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!4 &821243514 stripped
@@ -4388,6 +4776,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -4445,6 +4837,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -4552,6 +4948,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shrub
       objectReference: {fileID: 0}
+    - target: {fileID: 7775953848205979001, guid: 1f3eda802988747c298e2d0a5c729760, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3eda802988747c298e2d0a5c729760, type: 3}
 --- !u!4 &849366723 stripped
@@ -4593,7 +4993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _smoothInputSpeed: 0.2
   _moveSpeed: 3.5
-  _rotationSpeed: 720
+  _rotationSpeed: 360
 --- !u!114 &873689056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4635,6 +5035,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f9450ac9-9feb-42cc-b8ed-4a7eb1b6ec6b
     m_ActionName: Game/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d01f9f45-fd66-4ed2-bc04-a7d61dbdc1da
+    m_ActionName: Game/Look
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -4680,6 +5084,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -4737,6 +5145,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -4800,6 +5212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 68
@@ -4856,6 +5272,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -4914,6 +5334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 85
@@ -4971,6 +5395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 120
@@ -5027,6 +5455,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (44)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -5090,6 +5522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 152
@@ -5147,6 +5583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: land_garden (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
       value: 137
@@ -5203,6 +5643,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -5267,9 +5711,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 2528351055965522481, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200442094675154457, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013408633018750571, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4817440432585934006, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_Name
       value: car_blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4817440432585934006, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159568093644245307, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5301066753220271628, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_RootOrder
@@ -5314,6 +5778,10 @@ PrefabInstance:
     - target: {fileID: 5301066753220271628, guid: 683c15f9e972f4655b2620101423b704, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8153256910966958404, guid: 683c15f9e972f4655b2620101423b704, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 683c15f9e972f4655b2620101423b704, type: 3}
@@ -5384,6 +5852,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oval_tree
       objectReference: {fileID: 0}
+    - target: {fileID: 5720404016215849147, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
 --- !u!1 &982368474
@@ -5429,6 +5901,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -5483,9 +5959,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1885106418}
     m_Modifications:
+    - target: {fileID: 4861155815657118222, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283149799919685800, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_Name
       value: house_small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274006608661370056, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050649239332228722, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
       propertyPath: m_RootOrder
@@ -5531,6 +6019,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8128244753601477530, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9746979f59e694feab90f89d54d783b0, type: 3}
 --- !u!1001 &1035074392
@@ -5543,6 +6035,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -5600,6 +6096,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -5673,6 +6173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: river_area (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
       value: 96
@@ -5734,6 +6238,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -5827,6 +6335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 112
@@ -5883,6 +6395,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -5946,6 +6462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 140
@@ -6007,6 +6527,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -6121,6 +6645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oval_tree (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5720404016215849147, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
 --- !u!4 &1168531894 stripped
@@ -6138,6 +6666,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -6240,6 +6772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naked_tree
       objectReference: {fileID: 0}
+    - target: {fileID: 8906086579256230093, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
 --- !u!1001 &1177974713
@@ -6252,6 +6788,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -6309,6 +6849,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -6416,6 +6960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!4 &1191012283 stripped
@@ -6438,6 +6986,10 @@ PrefabInstance:
     - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_Name
       value: pine_tree
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9128216963764189511, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_RootOrder
@@ -6605,6 +7157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!4 &1233605646 stripped
@@ -6632,6 +7188,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -6746,6 +7306,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: oval_tree (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5720404016215849147, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd5ac78e5f8a442c94ffa793d1b7ff1, type: 3}
 --- !u!4 &1262950620 stripped
@@ -6763,6 +7327,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -6865,6 +7433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5051157971696112145, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
@@ -6928,6 +7500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!1001 &1289959043
@@ -6940,6 +7516,10 @@ PrefabInstance:
     - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_Name
       value: pine_tree (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495513324701328381, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9128216963764189511, guid: 6cb72a3a9142647be8a73b9b0658c5b7, type: 3}
       propertyPath: m_RootOrder
@@ -7042,6 +7622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!4 &1297893605 stripped
@@ -7131,14 +7715,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298900535}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -15.49, y: 16.7, z: -24.6}
+  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: -15.49, y: 20.02, z: -20.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1298900539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7152,7 +7736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _followTarget: {fileID: 873689054}
-  _offSet: {x: 0, y: 14, z: -14}
+  _offSet: {x: 0, y: 17.32, z: -10}
 --- !u!4 &1301997379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
@@ -7183,6 +7767,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -7251,6 +7839,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 128
@@ -7307,6 +7899,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -7370,6 +7966,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 118
@@ -7432,6 +8032,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 62
@@ -7488,6 +8092,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -7590,6 +8198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!4 &1434661610 stripped
@@ -7607,6 +8219,14 @@ PrefabInstance:
     - target: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_Name
       value: supermarket (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208338212056041311, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1701226003627664727, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1985860520478105061, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
       propertyPath: m_RootOrder
@@ -7652,6 +8272,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2129053718180717078, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483090001250698857, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041161869313742616, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220598575507934666, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ef7289946b204a5793aa0a6014e4dc6, type: 3}
 --- !u!1001 &1448533713
@@ -7664,6 +8300,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -7786,6 +8426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cloud_2
       objectReference: {fileID: 0}
+    - target: {fileID: 5436262289328172073, guid: dc0aafd836368425393bd648e405215b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc0aafd836368425393bd648e405215b, type: 3}
 --- !u!4 &1499709817 stripped
@@ -7803,6 +8447,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -7905,6 +8553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!4 &1509633720 stripped
@@ -7927,6 +8579,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -8029,6 +8685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!1001 &1534948465
@@ -8041,6 +8701,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -8168,6 +8832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!1001 &1596778167
@@ -8180,6 +8848,10 @@ PrefabInstance:
     - target: {fileID: 315445012725575869, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_Name
       value: house_big (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 315445012725575869, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1093107237810694663, guid: f56f01b115c934b64989066fa476eca6, type: 3}
       propertyPath: m_RootOrder
@@ -8225,6 +8897,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2060392891781143341, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581283628537094934, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624821007512477324, guid: f56f01b115c934b64989066fa476eca6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56f01b115c934b64989066fa476eca6, type: 3}
 --- !u!4 &1613645547 stripped
@@ -8242,6 +8926,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -8324,6 +9012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 157
@@ -8395,6 +9087,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -8502,6 +9198,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naked_tree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8906086579256230093, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ae8eae1c5884da989b3fa8d61401cc, type: 3}
 --- !u!4 &1758362947 stripped
@@ -8519,6 +9219,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -8576,6 +9280,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -8643,6 +9351,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -8755,6 +9467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cloud_1
       objectReference: {fileID: 0}
+    - target: {fileID: 8743162327641917944, guid: 322090820329348c4896550e0363348e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322090820329348c4896550e0363348e, type: 3}
 --- !u!1001 &1821818631
@@ -8767,6 +9483,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -8830,6 +9550,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass_with_soil_area (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
       value: 72
@@ -8886,6 +9610,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -8988,6 +9716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!1001 &1856408368
@@ -9000,6 +9732,10 @@ PrefabInstance:
     - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_Name
       value: river_area (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
@@ -9058,6 +9794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: red_plane_without_gear
       objectReference: {fileID: 0}
+    - target: {fileID: 6043708078288739009, guid: 8e363b6f60915472ab4a16e7df561988, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6382797857446903931, guid: 8e363b6f60915472ab4a16e7df561988, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -9114,6 +9854,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -9177,6 +9921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: river_area (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
       value: 106
@@ -9232,7 +9980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1885106418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9440,6 +10188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 143
@@ -9496,6 +10248,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -9603,6 +10359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!1001 &1918858853
@@ -9660,6 +10420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fir (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4301449873508308719, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15d01b3b61b947018c7f35118ac7770, type: 3}
 --- !u!1001 &1926535268
@@ -9672,6 +10436,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -9784,6 +10552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!4 &1958873000 stripped
@@ -9846,6 +10618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: shrub (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7775953848205979001, guid: 1f3eda802988747c298e2d0a5c729760, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3eda802988747c298e2d0a5c729760, type: 3}
 --- !u!1001 &1969390406
@@ -9903,6 +10679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grass
       objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
 --- !u!1001 &1977821576
@@ -9959,6 +10739,10 @@ PrefabInstance:
     - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
       propertyPath: m_Name
       value: grass (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
@@ -10027,6 +10811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: paved_road_markings_straight_area_1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6433585727693662299, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91f37005e8ce642dea4d711a3e6db19c, type: 3}
 --- !u!4 &2017911070 stripped
@@ -10049,6 +10837,10 @@ PrefabInstance:
     - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_Name
       value: grass_with_soil_area (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 501218960617046695, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 990650431815637021, guid: fc958925259a74dbd9512eda4f8ded4a, type: 3}
       propertyPath: m_RootOrder
@@ -10112,6 +10904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 134
@@ -10168,6 +10964,10 @@ PrefabInstance:
     - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_Name
       value: pumpkin (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
@@ -10226,6 +11026,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: river_area (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 411527249248860998, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1080258589830898172, guid: 74f9d4249234845cd8fbc4bdabbc9fa9, type: 3}
       propertyPath: m_RootOrder
       value: 102
@@ -10282,6 +11086,10 @@ PrefabInstance:
     - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_Name
       value: land_garden (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7316740187328548238, guid: c601859cfa8db43908cbd040fa192589, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7980827981607819060, guid: c601859cfa8db43908cbd040fa192589, type: 3}
       propertyPath: m_RootOrder
@@ -10434,6 +11242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pumpkin (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4841061600697754438, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5216636546961111548, guid: 580d24e56948b490598ab382c0b4d7a1, type: 3}
       propertyPath: m_RootOrder
       value: 122
@@ -10540,6 +11352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone_2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6908711010690672192, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbc1d3b7475814f20818245d9e54aca9, type: 3}
 --- !u!1001 &2079415024
@@ -10552,6 +11368,10 @@ PrefabInstance:
     - target: {fileID: 211487285170437110, guid: f29d7be640856435aac354d716f2764a, type: 3}
       propertyPath: m_Name
       value: bridge_small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 211487285170437110, guid: f29d7be640856435aac354d716f2764a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 694832233389236556, guid: f29d7be640856435aac354d716f2764a, type: 3}
       propertyPath: m_RootOrder
@@ -10619,6 +11439,10 @@ PrefabInstance:
     - target: {fileID: 211487285170437110, guid: f29d7be640856435aac354d716f2764a, type: 3}
       propertyPath: m_Name
       value: bridge_small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 211487285170437110, guid: f29d7be640856435aac354d716f2764a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 694832233389236556, guid: f29d7be640856435aac354d716f2764a, type: 3}
       propertyPath: m_RootOrder
@@ -10731,6 +11555,10 @@ PrefabInstance:
     - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
       propertyPath: m_Name
       value: grass (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3063428822502621040, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d4d4abe7e7de45ed8fa6ff01c8aba81, type: 3}
