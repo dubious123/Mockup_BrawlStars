@@ -4992,8 +4992,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _smoothInputSpeed: 0.2
-  _moveSpeed: 3.5
+  _runSpeed: 6
+  _walkSpeed: 3
   _rotationSpeed: 360
+  _animator: {fileID: 873689060}
 --- !u!114 &873689056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5039,6 +5041,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: d01f9f45-fd66-4ed2-bc04-a7d61dbdc1da
     m_ActionName: Game/Look
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b2447acf-f7b1-4c52-9fd0-6ec5aa127627
+    m_ActionName: Game/BasicAttack[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
@@ -5074,6 +5080,11 @@ CapsuleCollider:
   m_Height: 1.4168725
   m_Direction: 1
   m_Center: {x: 0, y: 0.73205996, z: 0}
+--- !u!95 &873689060 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2066896392029128874, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+  m_PrefabInstance: {fileID: 1215391613}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &890284085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7048,6 +7059,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2066896392029128874, guid: 45288819fde2143449a96207b14db0bb, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27fb87a8d4653e948938dac2434a63ee, type: 2}
     - target: {fileID: 2066896392038131574, guid: 45288819fde2143449a96207b14db0bb, type: 3}
       propertyPath: m_RootOrder
       value: 1
