@@ -11,6 +11,9 @@ public class CharacterController : MonoBehaviour
 	[SerializeField] private float _walkSpeed;
 	[SerializeField] private float _rotationSpeed;
 	[SerializeField] private Animator _animator;
+	[SerializeField] private Transform _playerCenter;
+	[SerializeField] private float _basicAttackRadius;
+	[SerializeField] private float _basicAttackAngle;
 	#endregion
 
 	private float _currentMoveSpeed;
@@ -28,6 +31,8 @@ public class CharacterController : MonoBehaviour
 	private AnimationClip _basicAttackClip;
 	private bool _isBasicAttackTriggered;
 	private bool _isAttacking;
+
+	private List<GameObject> _basicAttackTargetBuffer = new List<GameObject>();
 	private void Awake()
 	{
 		_currentMoveSpeed = _runSpeed;
@@ -48,7 +53,13 @@ public class CharacterController : MonoBehaviour
 			basicAttackEndEvent.time = _basicAttackClip.length;
 			basicAttackEndEvent.functionName = "OnBasicAttackEnd";
 		}
+		var basicAttackPerformEvent = new AnimationEvent();
+		{
+			basicAttackPerformEvent.time = _basicAttackClip.length / 2;
+			basicAttackPerformEvent.functionName = "PerformBasicAttack";
+		}
 		_basicAttackClip.AddEvent(basicAttackStartEvent);
+		_basicAttackClip.AddEvent(basicAttackPerformEvent);
 		_basicAttackClip.AddEvent(basicAttackEndEvent);
 
 
@@ -81,13 +92,32 @@ public class CharacterController : MonoBehaviour
 		_animator.SetBool(AnimatorMeta.BasicAttack_Bool, _isBasicAttackTriggered);
 		#endregion
 	}
+
 	private void OnBasicAttackStart()
 	{
 		_isAttacking = true;
+		//1. sphere ray cast
+		var hits = Physics.OverlapSphere(_playerCenter.position, _basicAttackRadius, LayerMeta.Character_Opponent);
+		foreach (var hit in hits)
+		{
+			Vector3 targetVector = hit.gameObject.transform.position - transform.position;
+			targetVector.y = 0;
+			if (Vector3.Angle(targetVector, transform.forward) < Mathf.Abs(_basicAttackAngle))
+				_basicAttackTargetBuffer.Add(hit.gameObject);
+		}
+	}
+	private void PerformBasicAttack()
+	{
+		foreach (var target in _basicAttackTargetBuffer)
+		{
+			target.SendMessage("OnHit");
+		}
+		//1. invoke on hit 
+		//2. clear buffer
 	}
 	private void OnBasicAttackEnd()
 	{
 		_isAttacking = false;
-
+		_basicAttackTargetBuffer.Clear();
 	}
 }
