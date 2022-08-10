@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseAbility : MonoBehaviour
+public abstract class BaseAbility : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+	protected BaseCharacter _character;
+	public abstract void Init(BaseCharacter character);
+	protected abstract void OnAbilityStart();
+	protected abstract void OnAbilityPerform();
+	protected abstract void OnAbilityEnd();
 }
