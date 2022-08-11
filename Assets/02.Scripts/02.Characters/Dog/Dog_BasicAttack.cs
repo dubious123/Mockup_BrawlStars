@@ -46,7 +46,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 		#region OnPerform
 		foreach (var target in _targets)
 		{
-			target.OnHit();
+			target.OnHit(10);
 		}
 		#endregion
 		yield return new WaitForSeconds(_clip.length / 2);

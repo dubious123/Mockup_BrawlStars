@@ -10,6 +10,9 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private float _runSpeed;
 	[SerializeField] private float _walkSpeed;
 	[SerializeField] private float _rotationSpeed;
+
+	[SerializeField] protected int _maxHp;
+
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
 	#region Abilities
@@ -17,13 +20,16 @@ public class BaseCharacter : MonoBehaviour
 	#endregion
 
 	#endregion
-
 	private float _currentMoveSpeed;
 	private bool _isAttacking;
 	private Vector3 _smoothVelocity;
 	private Vector3 _targetMoveDir;
 	private Vector3 _targetLookDir;
 	private Quaternion _targetRotation;
+
+	protected int _currentHp;
+	public int GetHp => _currentHp;
+
 
 	public bool IsAttacking
 	{
@@ -32,7 +38,7 @@ public class BaseCharacter : MonoBehaviour
 	}
 	public Vector3 PlayerCenter => _playerCenter.position;
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		_basicAttack?.Init(this);
 	}
@@ -69,8 +75,8 @@ public class BaseCharacter : MonoBehaviour
 	{
 		_basicAttack.Deactivate();
 	}
-	public void OnHit()
+	public virtual void OnHit(int demage)
 	{
-		Debug.Log("Hit");
+		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
 	}
 }
