@@ -8,7 +8,6 @@ public abstract class BaseHoldingAbility : BaseAbility
 	[SerializeField] protected Animator _animator;
 	#endregion
 	protected AnimationClip _clip;
-	protected string _clipName;
 	protected bool _isBasicAttackTriggered;
 	protected virtual void Update()
 	{

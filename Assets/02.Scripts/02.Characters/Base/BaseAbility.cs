@@ -5,8 +5,7 @@ using UnityEngine;
 public abstract class BaseAbility : MonoBehaviour
 {
 	protected BaseCharacter _character;
+	protected Coroutine _currentCoroutine;
 	public abstract void Init(BaseCharacter character);
-	protected abstract void OnAbilityStart();
-	protected abstract void OnAbilityPerform();
-	protected abstract void OnAbilityEnd();
+	protected abstract IEnumerator Perform();
 }

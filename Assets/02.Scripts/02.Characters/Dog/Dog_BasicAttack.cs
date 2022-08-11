@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class Dog_BasicAttack : BaseHoldingAbility
 {
 	#region Serialize Field
-	[SerializeField] private AnimationEvent_Tool _animEventTool;
 	[SerializeField] private float _attackRadius;
 	[SerializeField] private float _attackAngle;
 	#endregion
@@ -17,18 +16,20 @@ public class Dog_BasicAttack : BaseHoldingAbility
 		base.Init(character);
 
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.BasicAttack_ClipName);
-		_animEventTool.AssignEvent(_clip, 0, () => OnAbilityStart());
-		_animEventTool.AssignEvent(_clip, _clip.length / 2, () => OnAbilityPerform());
-		_animEventTool.AssignEvent(_clip, _clip.length, () => OnAbilityEnd());
 	}
 	protected override void Update()
 	{
 		base.Update();
-		Debug.Log(_targets.Count);
-	}
+		if (_isBasicAttackTriggered && _currentCoroutine == null)
+		{
+			_currentCoroutine = StartCoroutine(Perform());
+		}
 
-	protected override void OnAbilityStart()
+		//Debug.Log(_targets.Count);
+	}
+	protected override IEnumerator Perform()
 	{
+		#region OnStart
 		_character.IsAttacking = true;
 		var hits = Physics.OverlapSphere(_character.PlayerCenter, _attackRadius, LayerMeta.Character_Opponent);
 		foreach (var hit in hits)
@@ -40,26 +41,20 @@ public class Dog_BasicAttack : BaseHoldingAbility
 			if (Vector3.Angle(targetVector, transform.forward) < Mathf.Abs(_attackAngle))
 				_targets.Add(target);
 		}
-	}
-
-	protected override void OnAbilityPerform()
-	{
+		#endregion
+		yield return new WaitForSeconds(_clip.length / 2);
+		#region OnPerform
 		foreach (var target in _targets)
 		{
-
 			target.OnHit();
 		}
-	}
-
-	protected override void OnAbilityEnd()
-	{
+		#endregion
+		yield return new WaitForSeconds(_clip.length / 2);
+		#region OnEnd
 		_character.IsAttacking = false;
 		_targets.Clear();
+		_currentCoroutine = null;
+		#endregion
+		yield break;
 	}
-
-
-
-
-
-
 }
