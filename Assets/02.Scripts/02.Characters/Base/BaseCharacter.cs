@@ -52,7 +52,7 @@ public class BaseCharacter : MonoBehaviour
 		transform.Translate(_currentMoveSpeed * Time.deltaTime * _targetMoveDir, Space.World);
 		#endregion
 		#region Rotate
-		_targetRotation = Quaternion.LookRotation(Time.deltaTime * _targetLookDir, Vector3.up);
+		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.deltaTime * _targetLookDir, Vector3.up);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.deltaTime * _rotationSpeed);
 		#endregion
 		#region Animatior
@@ -78,5 +78,9 @@ public class BaseCharacter : MonoBehaviour
 	public virtual void OnHit(int demage)
 	{
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
+	}
+	protected virtual void OnDead()
+	{
+		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
 	}
 }

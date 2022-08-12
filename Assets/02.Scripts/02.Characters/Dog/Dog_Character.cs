@@ -20,5 +20,6 @@ public class Dog_Character : BaseCharacter
 		base.OnHit(demage);
 		_currentHp = Mathf.Max(0, _currentHp - demage);
 		Debug.Log(_currentHp);
+		if (_currentHp <= 0) OnDead();
 	}
 }
