@@ -35,7 +35,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 		foreach (var hit in hits)
 		{
 			var target = hit.GetComponent<BaseCharacter>();
-			if (target == null) continue;
+			if (target == null || target.IsInteractible == false) continue;
 			Vector3 targetVector = hit.gameObject.transform.position - transform.position;
 			targetVector.y = 0;
 			if (Vector3.Angle(targetVector, transform.forward) < Mathf.Abs(_attackAngle))

@@ -20,15 +20,17 @@ public class BaseCharacter : MonoBehaviour
 	#endregion
 
 	#endregion
-	private float _currentMoveSpeed;
-	private bool _isAttacking;
-	private Vector3 _smoothVelocity;
-	private Vector3 _targetMoveDir;
-	private Vector3 _targetLookDir;
-	private Quaternion _targetRotation;
+	protected float _currentMoveSpeed;
+	protected bool _isAttacking;
+	protected bool _interactable;
+	protected Vector3 _smoothVelocity;
+	protected Vector3 _targetMoveDir;
+	protected Vector3 _targetLookDir;
+	protected Quaternion _targetRotation;
 
 	protected int _currentHp;
 	public int GetHp => _currentHp;
+	public bool IsInteractible => _interactable;
 
 
 	public bool IsAttacking
@@ -41,6 +43,7 @@ public class BaseCharacter : MonoBehaviour
 	protected virtual void Awake()
 	{
 		_basicAttack?.Init(this);
+		_interactable = true;
 	}
 	private void Update()
 	{
@@ -82,5 +85,6 @@ public class BaseCharacter : MonoBehaviour
 	protected virtual void OnDead()
 	{
 		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
+		_interactable = false;
 	}
 }

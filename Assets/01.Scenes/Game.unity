@@ -6204,7 +6204,7 @@ MonoBehaviour:
   _runSpeed: 6
   _walkSpeed: 3
   _rotationSpeed: 360
-  _maxHp: 100
+  _maxHp: 10
   _animator: {fileID: 901189798}
   _playerCenter: {fileID: 1704285345}
   _basicAttack: {fileID: 1698788358}

@@ -17,9 +17,14 @@ public class Dog_Character : BaseCharacter
 
 	public override void OnHit(int demage)
 	{
-		base.OnHit(demage);
 		_currentHp = Mathf.Max(0, _currentHp - demage);
+		if (_currentHp <= 0)
+		{
+			OnDead();
+			return;
+		}
+		base.OnHit(demage);
 		Debug.Log(_currentHp);
-		if (_currentHp <= 0) OnDead();
+
 	}
 }
