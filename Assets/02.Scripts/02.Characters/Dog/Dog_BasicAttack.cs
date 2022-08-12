@@ -9,6 +9,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	[SerializeField] private float _attackRadius;
 	[SerializeField] private float _attackAngle;
 	[SerializeField] private ParticleSystem _effects;
+	[SerializeField] private AudioSource _audio;
 	#endregion
 
 	private List<BaseCharacter> _targets = new List<BaseCharacter>();
@@ -31,6 +32,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	protected override IEnumerator Perform()
 	{
 		#region OnStart
+		_audio.Play();
 		_effects.Emit(100);
 		_character.IsAttacking = true;
 		var hits = Physics.OverlapSphere(_character.PlayerCenter, _attackRadius, LayerMeta.Character_Opponent);
@@ -44,6 +46,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 				_targets.Add(target);
 		}
 		#endregion
+
 		yield return new WaitForSeconds(_clip.length / 2);
 		#region OnPerform
 		foreach (var target in _targets)
