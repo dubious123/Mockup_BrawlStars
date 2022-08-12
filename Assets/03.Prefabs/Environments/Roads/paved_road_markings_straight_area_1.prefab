@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5909673296382948065}
   - component: {fileID: 7326436406242016580}
   - component: {fileID: 4776151319051995534}
-  - component: {fileID: -5051157971696112145}
+  - component: {fileID: 3821231463724041544}
   m_Layer: 0
   m_Name: paved_road_markings_straight_area_1
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-5051157971696112145
-BoxCollider:
+--- !u!64 &3821231463724041544
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,6 +94,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 12.1463995, y: 2.8767705, z: 12.146402}
-  m_Center: {x: 0, y: 1.4383843, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3680723633880925348, guid: 196411f154adf44d88668eb81907ffb2, type: 3}
