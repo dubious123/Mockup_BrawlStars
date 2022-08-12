@@ -8,6 +8,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	#region Serialize Field
 	[SerializeField] private float _attackRadius;
 	[SerializeField] private float _attackAngle;
+	[SerializeField] private ParticleSystem _effects;
 	#endregion
 
 	private List<BaseCharacter> _targets = new List<BaseCharacter>();
@@ -30,6 +31,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	protected override IEnumerator Perform()
 	{
 		#region OnStart
+		_effects.Emit(100);
 		_character.IsAttacking = true;
 		var hits = Physics.OverlapSphere(_character.PlayerCenter, _attackRadius, LayerMeta.Character_Opponent);
 		foreach (var hit in hits)
