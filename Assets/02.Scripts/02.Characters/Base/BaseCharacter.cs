@@ -47,6 +47,7 @@ public class BaseCharacter : MonoBehaviour
 	}
 	private void Update()
 	{
+		if (_interactable == false) return;
 		#region Move
 		_currentMoveSpeed =
 			_targetMoveDir == Vector3.zero ? 0f :
@@ -84,6 +85,7 @@ public class BaseCharacter : MonoBehaviour
 	}
 	protected virtual void OnDead()
 	{
+		DeactivateBasicAttack();
 		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
 		_interactable = false;
 	}

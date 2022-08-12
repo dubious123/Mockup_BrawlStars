@@ -23,11 +23,16 @@ public class CharacterController : MonoBehaviour
 		_moveAction = _playerInput.actions[InputActionMeta.Move];
 		_lookAction = _playerInput.actions[InputActionMeta.Look];
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
-		_basicAttackAction.started += _ => _currentPlayer.ActivateBasicAttack();
-		_basicAttackAction.canceled += _ => _currentPlayer.DeactivateBasicAttack();
+		_basicAttackAction.started += _ => _currentPlayer?.ActivateBasicAttack();
+		_basicAttackAction.canceled += _ => _currentPlayer?.DeactivateBasicAttack();
 	}
 	private void Update()
 	{
+		if (_currentPlayer == null || _currentPlayer.IsInteractible == false)
+		{
+			_currentPlayer = null;
+			return;
+		}
 		var moveInput = _moveAction.ReadValue<Vector2>();
 		_currentPlayer.Move(new Vector3(moveInput.x, 0, moveInput.y));
 		#region Move
