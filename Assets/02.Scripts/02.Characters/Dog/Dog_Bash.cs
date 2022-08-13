@@ -10,6 +10,7 @@ public class Dog_Bash : BaseAbility
 	[SerializeField] float _smoothSpeed;
 	[SerializeField] float _bashSpeed;
 	#endregion
+	private Collider _collider;
 
 	private float _currentBashLengh;
 	private float _currentBashTime;
@@ -21,6 +22,8 @@ public class Dog_Bash : BaseAbility
 	public override void Init(BaseCharacter character)
 	{
 		_character = character;
+		_collider = GetComponent<Collider>();
+		_collider.enabled = false;
 	}
 
 	public void ChargeBash()
@@ -38,6 +41,12 @@ public class Dog_Bash : BaseAbility
 	{
 
 	}
+	private void OnTriggerEnter(Collider other)
+	{
+		var target = other.transform.GetComponent<BaseCharacter>();
+		if (target == null || target == _character) return;
+		target.OnHit(9);
+	}
 	protected override IEnumerator Perform()
 	{
 		while (_currentChargingTime <= _chargingTimeLimit && _released == false)
@@ -50,6 +59,7 @@ public class Dog_Bash : BaseAbility
 
 		_expectedBashTime = _currentBashLengh / _bashSpeed;
 		_currentBashTime = 0;
+		_collider.enabled = true;
 		while (_currentBashTime <= _expectedBashTime)
 		{
 			_character.IsControllable = false;
@@ -57,6 +67,7 @@ public class Dog_Bash : BaseAbility
 			_character.transform.Translate(_bashSpeed * Time.deltaTime * _character.LookDir, Space.World);
 			yield return new WaitForEndOfFrame();
 		}
+		_collider.enabled = false;
 		_character.IsControllable = true;
 		yield break;
 	}

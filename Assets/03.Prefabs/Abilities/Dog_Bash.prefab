@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245657404041857997}
   - component: {fileID: 7927447902744673146}
+  - component: {fileID: 4472451122912204040}
   m_Layer: 11
   m_Name: Dog_Bash
   m_TagString: Untagged
@@ -48,3 +49,16 @@ MonoBehaviour:
   _chargingTimeLimit: 5
   _smoothSpeed: 0.2
   _bashSpeed: 12
+--- !u!135 &4472451122912204040
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240369378742353258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.5, z: 0}
