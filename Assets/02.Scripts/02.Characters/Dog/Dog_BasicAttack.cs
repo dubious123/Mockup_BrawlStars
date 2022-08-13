@@ -16,7 +16,6 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	public override void Init(BaseCharacter character)
 	{
 		base.Init(character);
-
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.BasicAttack_ClipName);
 	}
 	protected override void Update()

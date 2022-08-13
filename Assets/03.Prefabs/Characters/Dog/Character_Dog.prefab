@@ -3140,7 +3140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8601895643130212074, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: m_Value
-      value: 15.564025
+      value: 5.188008
       objectReference: {fileID: 0}
     - target: {fileID: 8601895643130212075, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3220,6 +3220,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7927447902744673146, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 1646509169937314139}
     - target: {fileID: 8240369378742353258, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
       propertyPath: m_Name
       value: Dog_Bash

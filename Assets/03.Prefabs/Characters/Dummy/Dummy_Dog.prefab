@@ -3081,6 +3081,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7927447902744673146, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 6051481488338788803}
     - target: {fileID: 8240369378742353258, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
       propertyPath: m_Name
       value: Dog_Bash

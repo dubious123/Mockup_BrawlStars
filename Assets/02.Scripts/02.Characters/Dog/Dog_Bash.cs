@@ -9,7 +9,9 @@ public class Dog_Bash : BaseAbility
 	[SerializeField] float _chargingTimeLimit;
 	[SerializeField] float _smoothSpeed;
 	[SerializeField] float _bashSpeed;
+	[SerializeField] protected Animator _animator;
 	#endregion
+	protected AnimationClip _clip;
 	private Collider _collider;
 
 	private float _currentBashLengh;
@@ -24,10 +26,12 @@ public class Dog_Bash : BaseAbility
 		_character = character;
 		_collider = GetComponent<Collider>();
 		_collider.enabled = false;
+		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.Dog_Bash);
 	}
 
 	public void ChargeBash()
 	{
+		if (_currentCoroutine != null) return;
 		_released = false;
 		_currentBashLengh = 0;
 		_currentChargingTime = 0;
@@ -49,6 +53,8 @@ public class Dog_Bash : BaseAbility
 	}
 	protected override IEnumerator Perform()
 	{
+		_character.DisableBasicAttack();
+
 		while (_currentChargingTime <= _chargingTimeLimit && _released == false)
 		{
 			_currentChargingTime += Time.deltaTime;
@@ -60,6 +66,7 @@ public class Dog_Bash : BaseAbility
 		_expectedBashTime = _currentBashLengh / _bashSpeed;
 		_currentBashTime = 0;
 		_collider.enabled = true;
+		_animator.SetBool(AnimatorMeta.Dog_Bash, true);
 		while (_currentBashTime <= _expectedBashTime)
 		{
 			_character.IsControllable = false;
@@ -69,6 +76,9 @@ public class Dog_Bash : BaseAbility
 		}
 		_collider.enabled = false;
 		_character.IsControllable = true;
+		_character.EnableBasicAttack();
+		_animator.SetBool(AnimatorMeta.Dog_Bash, false);
+		_currentCoroutine = null;
 		yield break;
 	}
 }

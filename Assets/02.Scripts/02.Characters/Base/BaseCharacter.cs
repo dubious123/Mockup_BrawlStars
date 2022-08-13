@@ -23,6 +23,7 @@ public class BaseCharacter : MonoBehaviour
 	protected float _currentMoveSpeed;
 	protected bool _isAttacking;
 	protected bool _interactable;
+	protected bool _canBasicAttack;
 	protected Vector3 _smoothVelocity;
 	protected Vector3 _targetMoveDir;
 	protected Vector3 _targetLookDir;
@@ -52,6 +53,7 @@ public class BaseCharacter : MonoBehaviour
 		_basicAttack?.Init(this);
 		_interactable = true;
 		_controllable = true;
+		_canBasicAttack = true;
 	}
 	private void Update()
 	{
@@ -79,8 +81,24 @@ public class BaseCharacter : MonoBehaviour
 	{
 		_targetLookDir = lookDir;
 	}
-	public void ActivateBasicAttack() => _basicAttack.Activate();
-	public void DeactivateBasicAttack() => _basicAttack.Deactivate();
+	public void ActivateBasicAttack()
+	{
+		if (_canBasicAttack == false) return;
+		_basicAttack.Activate();
+	}
+	public void DeactivateBasicAttack()
+	{
+		_basicAttack.Deactivate();
+	}
+
+	public void DisableBasicAttack()
+	{
+		_canBasicAttack = false;
+	}
+	public void EnableBasicAttack()
+	{
+		_canBasicAttack = true;
+	}
 
 	public virtual void OnHit(int demage)
 	{
