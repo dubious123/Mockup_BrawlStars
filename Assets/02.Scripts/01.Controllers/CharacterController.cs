@@ -6,39 +6,39 @@ using UnityEngine.InputSystem;
 public class CharacterController : MonoBehaviour
 {
 	#region SerializeFields		
-	[SerializeField] private BaseCharacter _currentPlayer;
+	[SerializeField] protected BaseCharacter _currentPlayer;
 	#endregion
 
+	protected PlayerInput _playerInput;
+	protected InputAction _lookAction;
+	protected InputAction _moveAction;
+	protected InputAction _basicAttackAction;
+	protected InputAction _abilityQ;
+	protected InputAction _abilityCancel;
+	protected RaycastHit _lookHit;
+	protected Vector3 _lookdir;
 
-
-	private PlayerInput _playerInput;
-	private InputAction _lookAction;
-	private InputAction _moveAction;
-	private InputAction _basicAttackAction;
-	private RaycastHit _lookHit;
-	private Vector3 _lookdir;
-	private void Awake()
+	protected virtual void Awake()
 	{
 		_playerInput = GetComponent<PlayerInput>();
 		_moveAction = _playerInput.actions[InputActionMeta.Move];
 		_lookAction = _playerInput.actions[InputActionMeta.Look];
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
-		_basicAttackAction.started += _ => _currentPlayer?.ActivateBasicAttack();
-		_basicAttackAction.canceled += _ => _currentPlayer?.DeactivateBasicAttack();
+		_abilityQ = _playerInput.actions[InputActionMeta.Q];
+		_abilityCancel = _playerInput.actions[InputActionMeta.CancelAbility];
+
 	}
 	private void Update()
 	{
-		if (_currentPlayer == null || _currentPlayer.IsInteractible == false)
+		if (_currentPlayer == null || _currentPlayer.IsControllable == false)
 		{
-			_currentPlayer = null;
 			return;
 		}
+		#region Move
 		var moveInput = _moveAction.ReadValue<Vector2>();
 		_currentPlayer.Move(new Vector3(moveInput.x, 0, moveInput.y));
-		#region Move
-
 		#endregion
-		#region Rotate
+		#region Look
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Floor))
 		{
 			_lookdir = _lookHit.point - transform.position;

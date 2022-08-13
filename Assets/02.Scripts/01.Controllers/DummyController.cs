@@ -10,9 +10,8 @@ public class DummyController : MonoBehaviour
 	#endregion
 	private void Update()
 	{
-		if (_currentPlayer == null || _currentPlayer.IsInteractible == false)
+		if (_currentPlayer == null || _currentPlayer.IsControllable == false)
 		{
-			_currentPlayer = null;
 			return;
 		}
 		_currentPlayer.Move((_currentTarget.position - transform.position).normalized);

@@ -29,25 +29,33 @@ public class BaseCharacter : MonoBehaviour
 	protected Quaternion _targetRotation;
 
 	protected int _currentHp;
+
+	protected bool _controllable;
+
 	public int GetHp => _currentHp;
+	public bool IsControllable
+	{
+		get => _controllable;
+		set => _controllable = value;
+	}
 	public bool IsInteractible => _interactable;
-
-
 	public bool IsAttacking
 	{
 		get => _isAttacking;
 		set => _isAttacking = value;
 	}
+	public Vector3 LookDir => _targetLookDir;
 	public Vector3 PlayerCenter => _playerCenter.position;
 
 	protected virtual void Awake()
 	{
 		_basicAttack?.Init(this);
 		_interactable = true;
+		_controllable = true;
 	}
 	private void Update()
 	{
-		if (_interactable == false) return;
+		if (_controllable == false || _interactable == false) return;
 		#region Move
 		_currentMoveSpeed =
 			_targetMoveDir == Vector3.zero ? 0f :
@@ -71,14 +79,9 @@ public class BaseCharacter : MonoBehaviour
 	{
 		_targetLookDir = lookDir;
 	}
-	public void ActivateBasicAttack()
-	{
-		_basicAttack.Activate();
-	}
-	public void DeactivateBasicAttack()
-	{
-		_basicAttack.Deactivate();
-	}
+	public void ActivateBasicAttack() => _basicAttack.Activate();
+	public void DeactivateBasicAttack() => _basicAttack.Deactivate();
+
 	public virtual void OnHit(int demage)
 	{
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
@@ -87,6 +90,7 @@ public class BaseCharacter : MonoBehaviour
 	{
 		DeactivateBasicAttack();
 		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
+		_controllable = false;
 		_interactable = false;
 	}
 }

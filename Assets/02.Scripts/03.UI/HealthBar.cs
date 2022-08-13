@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+
+[ExecuteInEditMode]
 public class HealthBar : MonoBehaviour
 {
 	#region SerializeFields
