@@ -8,4 +8,8 @@ public static class Extensions
 	{
 		return Animator_Tool.GetAnimationClipOrNull(anim, name);
 	}
+	public static Vector2 WorldtoCanvasRectPos(this Camera cam, Vector2 canvasSizeDelta, Vector3 worldPos)
+	{
+		return Canvas_Tool.WorldtoCanvasRectPos(cam, canvasSizeDelta, worldPos);
+	}
 }

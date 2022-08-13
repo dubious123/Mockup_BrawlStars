@@ -11,14 +11,15 @@ public class HealthBar : MonoBehaviour
 	[SerializeField] BaseCharacter _character;
 	[SerializeField] float _holdingTime;
 	[SerializeField] TextMeshProUGUI _healthText;
-
+	[SerializeField] RectTransform _canvasRect;
+	[SerializeField] Vector2 _offset;
 	#endregion
-	private Transform _camPos;
+	private RectTransform _rect;
 	private float _targetFollowValue;
 	private Coroutine _currentCo;
 	void Start()
 	{
-		_camPos = Camera.main.transform;
+		_rect = GetComponent<RectTransform>();
 		_fillSlider.onValueChanged.AddListener(_ =>
 		{
 			if (_currentCo != null) StopCoroutine(_currentCo);
@@ -29,7 +30,7 @@ public class HealthBar : MonoBehaviour
 	{
 		_fillSlider.value = _character.GetHp;
 		_healthText.text = $"{_fillSlider.value}";
-		transform.LookAt(transform.position + _camPos.forward);
+		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _character.transform.position) + _offset;
 	}
 	private IEnumerator OnHpChange(float value)
 	{
