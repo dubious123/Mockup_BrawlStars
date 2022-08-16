@@ -12,14 +12,14 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	[SerializeField] private ParticleSystem _effects;
 	[SerializeField] private AudioSource _audio;
 	#endregion
-
+	private bool _isRunning;
 	private List<BaseCharacter> _targets = new List<BaseCharacter>();
 
 	public override void Init(BaseCharacter character)
 	{
 		base.Init(character);
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.BasicAttack_ClipName);
-
+		_isRunning = false;
 		_hitInfo = new HitInfo
 		{
 			Damage = 10,
@@ -30,9 +30,10 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	protected override void Update()
 	{
 		base.Update();
-		if (_isBasicAttackTriggered && _coHandle == default)
+		if (_isBasicAttackTriggered && _isRunning == false)
 		{
-			_coHandle = Timing.RunCoroutine(Co_Perform());
+			_isRunning = true;
+			Timing.RunCoroutine(Co_Perform());
 		}
 
 		//Debug.Log(_targets.Count);
@@ -40,7 +41,6 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	protected override IEnumerator<float> Co_Perform()
 	{
 		#region OnStart
-		Debug.Log("attack 0");
 		_audio.Play();
 		_effects.Emit(100);
 		_character.IsAttacking = true;
@@ -55,7 +55,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 				_targets.Add(target);
 		}
 		#endregion
-		Debug.Log("attack 1");
+
 		yield return Timing.WaitForSeconds(_clip.length / 2);
 		#region OnPerform
 		foreach (var target in _targets)
@@ -63,15 +63,13 @@ public class Dog_BasicAttack : BaseHoldingAbility
 			target.OnHit(_hitInfo);
 		}
 		#endregion
-		Debug.Log("attack 2");
 
 		yield return Timing.WaitForSeconds(_clip.length / 2);
 		#region OnEnd
 		_character.IsAttacking = false;
 		_targets.Clear();
+		_isRunning = false;
 		#endregion
-		_coHandle = default;
-
 		yield break;
 	}
 }

@@ -25,9 +25,11 @@ public class Dog_Bash : BaseAbility
 	private float _smoothVelocity;
 	private bool _released;
 	private bool _canceled;
+	private bool _isRunning;
 	public override void Init(BaseCharacter character)
 	{
 		_character = character;
+		_isRunning = false;
 		_collider = GetComponent<Collider>();
 		_collider.enabled = false;
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.Dog_Bash);
@@ -44,12 +46,13 @@ public class Dog_Bash : BaseAbility
 
 	public void ChargeBash()
 	{
-		if (_coHandle != default) return;
+		if (_isRunning) return;
 		_released = false;
 		_canceled = false;
 		_currentBashLengh = 0;
 		_currentChargingTime = 0;
-		_coHandle = Timing.RunCoroutine(Co_Perform());
+		_isRunning = true;
+		Timing.RunCoroutine(Co_Perform());
 	}
 	public void ReleaseBash()
 	{
@@ -68,6 +71,7 @@ public class Dog_Bash : BaseAbility
 	}
 	protected override IEnumerator<float> Co_Perform()
 	{
+		_isRunning = true;
 		_character.DisableBasicAttack();
 		_character.IsCharging = true;
 		_indicator.enabled = true;
@@ -83,7 +87,7 @@ public class Dog_Bash : BaseAbility
 		if (_canceled == true)
 		{
 			_character.IsCharging = false;
-			_coHandle = default;
+			_isRunning = false;
 			yield break;
 		}
 		_character.IsCharging = false;
@@ -102,7 +106,7 @@ public class Dog_Bash : BaseAbility
 		_character.IsControllable = true;
 		_character.EnableBasicAttack();
 		_animator.SetBool(AnimatorMeta.Dog_Bash, false);
-		_coHandle = default;
+		_isRunning = false;
 		yield break;
 	}
 }
