@@ -1,3 +1,4 @@
+using MEC;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,12 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	#endregion
 
 	private List<BaseCharacter> _targets = new List<BaseCharacter>();
+
 	public override void Init(BaseCharacter character)
 	{
 		base.Init(character);
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.BasicAttack_ClipName);
+
 		_hitInfo = new HitInfo
 		{
 			Damage = 10,
@@ -27,16 +30,17 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	protected override void Update()
 	{
 		base.Update();
-		if (_isBasicAttackTriggered && _currentCoroutine == null)
+		if (_isBasicAttackTriggered && _coHandle == default)
 		{
-			_currentCoroutine = StartCoroutine(Perform());
+			_coHandle = Timing.RunCoroutine(Co_Perform());
 		}
 
 		//Debug.Log(_targets.Count);
 	}
-	protected override IEnumerator Perform()
+	protected override IEnumerator<float> Co_Perform()
 	{
 		#region OnStart
+		Debug.Log("attack 0");
 		_audio.Play();
 		_effects.Emit(100);
 		_character.IsAttacking = true;
@@ -51,20 +55,23 @@ public class Dog_BasicAttack : BaseHoldingAbility
 				_targets.Add(target);
 		}
 		#endregion
-
-		yield return new WaitForSeconds(_clip.length / 2);
+		Debug.Log("attack 1");
+		yield return Timing.WaitForSeconds(_clip.length / 2);
 		#region OnPerform
 		foreach (var target in _targets)
 		{
 			target.OnHit(_hitInfo);
 		}
 		#endregion
-		yield return new WaitForSeconds(_clip.length / 2);
+		Debug.Log("attack 2");
+
+		yield return Timing.WaitForSeconds(_clip.length / 2);
 		#region OnEnd
 		_character.IsAttacking = false;
 		_targets.Clear();
-		_currentCoroutine = null;
 		#endregion
+		_coHandle = default;
+
 		yield break;
 	}
 }

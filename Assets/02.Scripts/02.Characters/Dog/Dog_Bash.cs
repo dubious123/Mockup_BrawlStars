@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MEC;
 
 public class Dog_Bash : BaseAbility
 {
@@ -42,12 +44,12 @@ public class Dog_Bash : BaseAbility
 
 	public void ChargeBash()
 	{
-		if (_currentCoroutine != null) return;
+		if (_coHandle != default) return;
 		_released = false;
 		_canceled = false;
 		_currentBashLengh = 0;
 		_currentChargingTime = 0;
-		_currentCoroutine = StartCoroutine(Perform());
+		_coHandle = Timing.RunCoroutine(Co_Perform());
 	}
 	public void ReleaseBash()
 	{
@@ -64,7 +66,7 @@ public class Dog_Bash : BaseAbility
 		if (target == null || target == _character) return;
 		target.OnHit(_hitInfo with { Pos = transform.position });
 	}
-	protected override IEnumerator Perform()
+	protected override IEnumerator<float> Co_Perform()
 	{
 		_character.DisableBasicAttack();
 		_character.IsCharging = true;
@@ -75,14 +77,13 @@ public class Dog_Bash : BaseAbility
 			_currentBashLengh = Mathf.SmoothDamp(_currentBashLengh, _maxBashlength, ref _smoothVelocity, _smoothSpeed);
 			_currentBashLengh = Mathf.Min(_currentBashLengh, _maxBashlength);
 			_indicator.rectTransform.sizeDelta = new Vector2(100, _currentBashLengh * 100);
-			yield return new WaitForEndOfFrame();
+			yield return Timing.WaitForOneFrame;
 		}
 		_indicator.enabled = false;
 		if (_canceled == true)
 		{
 			_character.IsCharging = false;
-			StopCoroutine(_currentCoroutine);
-			_currentCoroutine = null;
+			_coHandle = default;
 			yield break;
 		}
 		_character.IsCharging = false;
@@ -95,13 +96,13 @@ public class Dog_Bash : BaseAbility
 			_character.IsControllable = false;
 			_currentBashTime += Time.deltaTime;
 			_character.transform.Translate(_bashSpeed * Time.deltaTime * _character.LookDir, Space.World);
-			yield return new WaitForEndOfFrame();
+			yield return Timing.WaitForOneFrame;
 		}
 		_collider.enabled = false;
 		_character.IsControllable = true;
 		_character.EnableBasicAttack();
 		_animator.SetBool(AnimatorMeta.Dog_Bash, false);
-		_currentCoroutine = null;
+		_coHandle = default;
 		yield break;
 	}
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using MEC;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -92,7 +93,6 @@ public class BaseCharacter : MonoBehaviour
 	public void DeactivateBasicAttack()
 	{
 		_basicAttack.Deactivate();
-		_canBasicAttack = false;
 	}
 
 	public void DisableBasicAttack()
@@ -109,11 +109,11 @@ public class BaseCharacter : MonoBehaviour
 		_currentHp = Mathf.Max(0, _currentHp - info.Damage);
 		if (info.KnockbackDist > 0)
 		{
-			StartCoroutine((OnKnockBackCo(transform.position - info.Pos, info.KnockbackDuration, info.KnockbackSpeed)));
+			Timing.RunCoroutine((Co_OnKnockBack(transform.position - info.Pos, info.KnockbackDuration, info.KnockbackSpeed)), GetInstanceID().ToString());
 		}
 		if (info.IsStun)
 		{
-			StartCoroutine(OnStunCo(info.StunDuration));
+			Timing.RunCoroutine(Co_OnStun(info.StunDuration), GetInstanceID().ToString());
 		}
 		if (_currentHp <= 0)
 		{
@@ -122,7 +122,7 @@ public class BaseCharacter : MonoBehaviour
 		}
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
 	}
-	protected virtual IEnumerator OnStunCo(float duration)
+	protected virtual IEnumerator<float> Co_OnStun(float duration)
 	{
 		float currentStunTime = 0;
 		DeactivateBasicAttack();
@@ -132,14 +132,14 @@ public class BaseCharacter : MonoBehaviour
 			_controllable = false;
 			_canBasicAttack = false;
 			currentStunTime += Time.deltaTime;
-			yield return new WaitForEndOfFrame();
+			yield return Timing.WaitForOneFrame;
 		}
 		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
 		_controllable = true;
 		_canBasicAttack = true;
 		yield break;
 	}
-	protected virtual IEnumerator OnKnockBackCo(Vector3 dir, float duration, float knockbackSpeed)
+	protected virtual IEnumerator<float> Co_OnKnockBack(Vector3 dir, float duration, float knockbackSpeed)
 	{
 		dir.y = 0;
 		float expectedKnockbackTime = 0.3f;
@@ -151,7 +151,7 @@ public class BaseCharacter : MonoBehaviour
 			_canBasicAttack = false;
 			currentKnockbackTime += Time.deltaTime;
 			transform.Translate(10 * Time.deltaTime * dir.normalized, Space.World);
-			yield return new WaitForEndOfFrame();
+			yield return Timing.WaitForOneFrame;
 		}
 		_controllable = true;
 		_canBasicAttack = true;
@@ -160,7 +160,7 @@ public class BaseCharacter : MonoBehaviour
 	protected virtual void OnDead()
 	{
 		DeactivateBasicAttack();
-		StopAllCoroutines();
+		Timing.KillCoroutines(GetInstanceID().ToString());
 		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
 		_animator.SetBool(AnimatorMeta.BasicAttack_Bool, false);
 		_animator.SetBool(AnimatorMeta.Dog_Bash, false);

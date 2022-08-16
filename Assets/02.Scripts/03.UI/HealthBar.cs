@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using MEC;
 
 
 [ExecuteInEditMode]
@@ -19,14 +20,14 @@ public class HealthBar : MonoBehaviour
 	#endregion
 	private RectTransform _rect;
 	private float _targetFollowValue;
-	private Coroutine _currentCo;
+	CoroutineHandle _coHandle;
 	void Start()
 	{
 		_rect = GetComponent<RectTransform>();
 		_fillSlider.onValueChanged.AddListener(_ =>
 		{
-			if (_currentCo != null) StopCoroutine(_currentCo);
-			_currentCo = StartCoroutine(OnHpChange(_));
+			Timing.KillCoroutines(_coHandle);
+			_coHandle = Timing.RunCoroutine(Co_OnHpChange(_));
 		});
 	}
 	private void LateUpdate()
@@ -35,9 +36,9 @@ public class HealthBar : MonoBehaviour
 		_healthText.text = $"{_fillSlider.value}";
 		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _character.transform.position) + _offset;
 	}
-	private IEnumerator OnHpChange(float value)
+	private IEnumerator<float> Co_OnHpChange(float value)
 	{
-		yield return new WaitForSeconds(0.5f);
+		yield return Timing.WaitForSeconds(0.5f);
 		_targetFollowValue = value;
 		float elapsed = 0f;
 		float startValue = _followSlider.value;
@@ -45,9 +46,8 @@ public class HealthBar : MonoBehaviour
 		{
 			_followSlider.value = Mathf.Lerp(startValue, _targetFollowValue, elapsed / _holdingTime);
 			elapsed += Time.deltaTime;
-			yield return new WaitForEndOfFrame();
+			yield return Timing.WaitForOneFrame;
 		}
-		_currentCo = null;
 		yield break;
 	}
 }

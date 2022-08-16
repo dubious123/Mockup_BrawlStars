@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MEC;
 
 public abstract class BaseAbility : MonoBehaviour
 {
 	protected BaseCharacter _character;
-	protected Coroutine _currentCoroutine;
+	protected CoroutineHandle _coHandle;
 	protected HitInfo _hitInfo;
 	public abstract void Init(BaseCharacter character);
-	protected abstract IEnumerator Perform();
+	protected abstract IEnumerator<float> Co_Perform();
 }
