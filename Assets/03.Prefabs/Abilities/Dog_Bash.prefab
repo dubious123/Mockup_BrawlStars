@@ -226,6 +226,7 @@ MonoBehaviour:
   _bashSpeed: 24
   _animator: {fileID: 0}
   _indicator: {fileID: 0}
+  _coolTime: 5
 --- !u!135 &4472451122912204040
 SphereCollider:
   m_ObjectHideFlags: 0
