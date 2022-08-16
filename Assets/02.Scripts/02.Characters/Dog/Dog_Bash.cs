@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dog_Bash : BaseAbility
 {
@@ -8,7 +9,8 @@ public class Dog_Bash : BaseAbility
 	[SerializeField] float _chargingTimeLimit;
 	[SerializeField] float _smoothSpeed;
 	[SerializeField] float _bashSpeed;
-	[SerializeField] protected Animator _animator;
+	[SerializeField] Animator _animator;
+	[SerializeField] RawImage _indicator;
 	#endregion
 	protected AnimationClip _clip;
 	private Collider _collider;
@@ -57,13 +59,16 @@ public class Dog_Bash : BaseAbility
 	{
 		_character.DisableBasicAttack();
 		_character.IsCharging = true;
+		_indicator.enabled = true;
 		while (_currentChargingTime <= _chargingTimeLimit && _released == false)
 		{
 			_currentChargingTime += Time.deltaTime;
 			_currentBashLengh = Mathf.SmoothDamp(_currentBashLengh, _maxBashlength, ref _smoothVelocity, _smoothSpeed);
 			_currentBashLengh = Mathf.Min(_currentBashLengh, _maxBashlength);
+			_indicator.rectTransform.sizeDelta = new Vector2(100, _currentBashLengh * 100);
 			yield return new WaitForEndOfFrame();
 		}
+		_indicator.enabled = false;
 		if (_canceled == true)
 		{
 			_character.IsCharging = false;

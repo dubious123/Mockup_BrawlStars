@@ -3140,7 +3140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8601895643130212074, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: m_Value
-      value: 5.188008
+      value: 1.7293358
       objectReference: {fileID: 0}
     - target: {fileID: 8601895643130212075, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3224,12 +3224,27 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 1646509169937314139}
+    - target: {fileID: 7927447902744673146, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
+      propertyPath: _indicator
+      value: 
+      objectReference: {fileID: 3141980956579363233}
     - target: {fileID: 8240369378742353258, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
       propertyPath: m_Name
       value: Dog_Bash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
+--- !u!114 &3141980956579363233 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1416339407917283510, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
+  m_PrefabInstance: {fileID: 4052489967585165591}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4275488605933374170 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 245657404041857997, guid: 32d299a8d3f8ef040841c048dc10e939, type: 3}
