@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using MEC;
+using TMPro;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class BaseCharacter : MonoBehaviour
 	protected Vector3 _targetMoveDir;
 	protected Vector3 _targetLookDir;
 	protected Quaternion _targetRotation;
+	protected TextMeshProUGUI _stunUI;
 
 	protected int _currentHp;
 
@@ -58,6 +60,8 @@ public class BaseCharacter : MonoBehaviour
 		_interactable = true;
 		_controllable = true;
 		_canBasicAttack = true;
+		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
+		_stunUI.enabled = false;
 	}
 	private void Update()
 	{
@@ -126,6 +130,17 @@ public class BaseCharacter : MonoBehaviour
 	{
 		float currentStunTime = 0;
 		DeactivateBasicAttack();
+		float stunDuration = duration;
+		_stunUI.enabled = true;
+		Timing.CallPeriodically(stunDuration, 0.1f, () =>
+		{
+			stunDuration -= 0.1f;
+			_stunUI.text = stunDuration.ToString("0.0");
+		},
+		() =>
+		{
+			_stunUI.enabled = false;
+		});
 		while (currentStunTime < duration)
 		{
 			_animator.SetBool(AnimatorMeta.IsStun_Bool, true);
