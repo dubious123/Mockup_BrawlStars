@@ -24,6 +24,7 @@ public class BaseCharacter : MonoBehaviour
 	protected bool _isAttacking;
 	protected bool _interactable;
 	protected bool _canBasicAttack;
+	protected bool _isCharging;
 	protected Vector3 _smoothVelocity;
 	protected Vector3 _targetMoveDir;
 	protected Vector3 _targetLookDir;
@@ -45,6 +46,8 @@ public class BaseCharacter : MonoBehaviour
 		get => _isAttacking;
 		set => _isAttacking = value;
 	}
+	public bool IsCharging { set => _isCharging = value; }
+
 	public Vector3 LookDir => _targetLookDir;
 	public Vector3 PlayerCenter => _playerCenter.position;
 
@@ -61,7 +64,7 @@ public class BaseCharacter : MonoBehaviour
 		#region Move
 		_currentMoveSpeed =
 			_targetMoveDir == Vector3.zero ? 0f :
-			_isAttacking ? _walkSpeed :
+			(_isAttacking || _isCharging) ? _walkSpeed :
 			_runSpeed;
 		transform.Translate(_currentMoveSpeed * Time.deltaTime * _targetMoveDir, Space.World);
 		#endregion

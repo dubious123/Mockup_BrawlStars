@@ -54,7 +54,7 @@ public class Dog_Bash : BaseAbility
 	protected override IEnumerator Perform()
 	{
 		_character.DisableBasicAttack();
-
+		_character.IsCharging = true;
 		while (_currentChargingTime <= _chargingTimeLimit && _released == false)
 		{
 			_currentChargingTime += Time.deltaTime;
@@ -62,6 +62,7 @@ public class Dog_Bash : BaseAbility
 			_currentBashLengh = Mathf.Min(_currentBashLengh, _maxBashlength);
 			yield return new WaitForEndOfFrame();
 		}
+		_character.IsCharging = false;
 
 		_expectedBashTime = _currentBashLengh / _bashSpeed;
 		_currentBashTime = 0;
