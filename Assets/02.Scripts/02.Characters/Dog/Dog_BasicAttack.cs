@@ -17,6 +17,12 @@ public class Dog_BasicAttack : BaseHoldingAbility
 	{
 		base.Init(character);
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.BasicAttack_ClipName);
+		_hitInfo = new HitInfo
+		{
+			Damage = 10,
+			IsStun = false,
+			KnockbackDist = 0,
+		};
 	}
 	protected override void Update()
 	{
@@ -50,7 +56,7 @@ public class Dog_BasicAttack : BaseHoldingAbility
 		#region OnPerform
 		foreach (var target in _targets)
 		{
-			target.OnHit(10);
+			target.OnHit(_hitInfo);
 		}
 		#endregion
 		yield return new WaitForSeconds(_clip.length / 2);

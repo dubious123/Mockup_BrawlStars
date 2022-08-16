@@ -92,6 +92,7 @@ public class BaseCharacter : MonoBehaviour
 	public void DeactivateBasicAttack()
 	{
 		_basicAttack.Deactivate();
+		_canBasicAttack = false;
 	}
 
 	public void DisableBasicAttack()
@@ -103,13 +104,66 @@ public class BaseCharacter : MonoBehaviour
 		_canBasicAttack = true;
 	}
 
-	public virtual void OnHit(int demage)
+	public virtual void OnHit(HitInfo info)
 	{
+		_currentHp = Mathf.Max(0, _currentHp - info.Damage);
+		if (info.KnockbackDist > 0)
+		{
+			StartCoroutine((OnKnockBackCo(transform.position - info.Pos, info.KnockbackDuration, info.KnockbackSpeed)));
+		}
+		if (info.IsStun)
+		{
+			StartCoroutine(OnStunCo(info.StunDuration));
+		}
+		if (_currentHp <= 0)
+		{
+			OnDead();
+			return;
+		}
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
+	}
+	protected virtual IEnumerator OnStunCo(float duration)
+	{
+		float currentStunTime = 0;
+		DeactivateBasicAttack();
+		while (currentStunTime < duration)
+		{
+			_animator.SetBool(AnimatorMeta.IsStun_Bool, true);
+			_controllable = false;
+			_canBasicAttack = false;
+			currentStunTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame();
+		}
+		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
+		_controllable = true;
+		_canBasicAttack = true;
+		yield break;
+	}
+	protected virtual IEnumerator OnKnockBackCo(Vector3 dir, float duration, float knockbackSpeed)
+	{
+		dir.y = 0;
+		float expectedKnockbackTime = 0.3f;
+		float currentKnockbackTime = 0;
+		DeactivateBasicAttack();
+		while (currentKnockbackTime < expectedKnockbackTime)
+		{
+			_controllable = false;
+			_canBasicAttack = false;
+			currentKnockbackTime += Time.deltaTime;
+			transform.Translate(10 * Time.deltaTime * dir.normalized, Space.World);
+			yield return new WaitForEndOfFrame();
+		}
+		_controllable = true;
+		_canBasicAttack = true;
+		yield break;
 	}
 	protected virtual void OnDead()
 	{
 		DeactivateBasicAttack();
+		StopAllCoroutines();
+		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
+		_animator.SetBool(AnimatorMeta.BasicAttack_Bool, false);
+		_animator.SetBool(AnimatorMeta.Dog_Bash, false);
 		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
 		_controllable = false;
 		_interactable = false;

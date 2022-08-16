@@ -29,6 +29,15 @@ public class Dog_Bash : BaseAbility
 		_collider = GetComponent<Collider>();
 		_collider.enabled = false;
 		_clip = _animator.runtimeAnimatorController.GetAnimationClipOrNull(AnimatorMeta.Dog_Bash);
+		_hitInfo = new HitInfo
+		{
+			Damage = 9,
+			IsStun = true,
+			StunDuration = 1,
+			KnockbackDist = 1,
+			KnockbackDuration = 0.3f,
+			KnockbackSpeed = 10f,
+		};
 	}
 
 	public void ChargeBash()
@@ -53,7 +62,7 @@ public class Dog_Bash : BaseAbility
 	{
 		var target = other.transform.GetComponent<BaseCharacter>();
 		if (target == null || target == _character) return;
-		target.OnHit(9);
+		target.OnHit(_hitInfo with { Pos = transform.position });
 	}
 	protected override IEnumerator Perform()
 	{

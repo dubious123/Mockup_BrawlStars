@@ -16,17 +16,10 @@ public class Dog_Character : BaseCharacter
 		_currentHp = _maxHp;
 	}
 
-	public override void OnHit(int demage)
+	public override void OnHit(HitInfo info)
 	{
-		_currentHp = Mathf.Max(0, _currentHp - demage);
-		if (_currentHp <= 0)
-		{
-			OnDead();
-			return;
-		}
-		base.OnHit(demage);
+		base.OnHit(info);
 		Debug.Log(_currentHp);
-
 	}
 
 	public void ChargeBash() => _bash.ChargeBash();
