@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Dog_Bash : BaseAbility
@@ -21,6 +20,7 @@ public class Dog_Bash : BaseAbility
 
 	private float _smoothVelocity;
 	private bool _released;
+	private bool _canceled;
 	public override void Init(BaseCharacter character)
 	{
 		_character = character;
@@ -33,6 +33,7 @@ public class Dog_Bash : BaseAbility
 	{
 		if (_currentCoroutine != null) return;
 		_released = false;
+		_canceled = false;
 		_currentBashLengh = 0;
 		_currentChargingTime = 0;
 		_currentCoroutine = StartCoroutine(Perform());
@@ -43,7 +44,8 @@ public class Dog_Bash : BaseAbility
 	}
 	public void CancelBash()
 	{
-
+		_released = true;
+		_canceled = true;
 	}
 	private void OnTriggerEnter(Collider other)
 	{
@@ -62,8 +64,14 @@ public class Dog_Bash : BaseAbility
 			_currentBashLengh = Mathf.Min(_currentBashLengh, _maxBashlength);
 			yield return new WaitForEndOfFrame();
 		}
+		if (_canceled == true)
+		{
+			_character.IsCharging = false;
+			StopCoroutine(_currentCoroutine);
+			_currentCoroutine = null;
+			yield break;
+		}
 		_character.IsCharging = false;
-
 		_expectedBashTime = _currentBashLengh / _bashSpeed;
 		_currentBashTime = 0;
 		_collider.enabled = true;
