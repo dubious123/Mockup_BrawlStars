@@ -176,6 +176,7 @@ public class BaseCharacter : MonoBehaviour
 	{
 		DeactivateBasicAttack();
 		Timing.KillCoroutines(GetInstanceID().ToString());
+		_basicAttack.OnDead();
 		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
 		_animator.SetBool(AnimatorMeta.BasicAttack_Bool, false);
 		_animator.SetBool(AnimatorMeta.Dog_Bash, false);

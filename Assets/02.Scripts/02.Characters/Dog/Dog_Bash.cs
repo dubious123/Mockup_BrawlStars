@@ -62,7 +62,7 @@ public class Dog_Bash : BaseAbility
 		_currentChargingTime = 0;
 		_isRunning = true;
 		_currentCoolTime = _coolTime;
-		Timing.RunCoroutine(Co_Perform());
+		_coHandle = Timing.RunCoroutine(Co_Perform());
 	}
 	public void ReleaseBash()
 	{
@@ -72,6 +72,10 @@ public class Dog_Bash : BaseAbility
 	{
 		_released = true;
 		_canceled = true;
+	}
+	public override void OnDead()
+	{
+		Timing.KillCoroutines(_coHandle);
 	}
 	private void OnTriggerEnter(Collider other)
 	{
@@ -85,25 +89,20 @@ public class Dog_Bash : BaseAbility
 		_character.DisableBasicAttack();
 		_character.IsCharging = true;
 		_indicator.enabled = true;
-		Debug.Log("Charging start");
 		while (_currentChargingTime <= _chargingTimeLimit && _released == false)
 		{
-			Debug.Log("Charging");
 			_currentChargingTime += Time.deltaTime;
 			_currentBashLengh = Mathf.SmoothDamp(_currentBashLengh, _maxBashlength, ref _smoothVelocity, _smoothSpeed);
 			_currentBashLengh = Mathf.Min(_currentBashLengh, _maxBashlength);
 			_indicator.rectTransform.sizeDelta = new Vector2(100, _currentBashLengh * 100);
 			yield return Timing.WaitForOneFrame;
 		}
-		Debug.Log("Charging end");
 
 		_indicator.enabled = false;
 		if (_canceled == true)
 		{
 			_character.IsCharging = false;
 			_isRunning = false;
-			Debug.Log("Charging cnaceled");
-
 			yield break;
 		}
 		_character.IsCharging = false;

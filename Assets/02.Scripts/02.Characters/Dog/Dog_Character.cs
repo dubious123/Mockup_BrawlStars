@@ -21,6 +21,11 @@ public class Dog_Character : BaseCharacter
 		base.OnHit(info);
 		Debug.Log(_currentHp);
 	}
+	protected override void OnDead()
+	{
+		base.OnDead();
+		_bash.OnDead();
+	}
 
 	public void ChargeBash() => _bash.ChargeBash();
 	public void ReleaseBash() => _bash.ReleaseBash();

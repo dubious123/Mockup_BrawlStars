@@ -27,13 +27,17 @@ public class Dog_BasicAttack : BaseHoldingAbility
 			KnockbackDist = 0,
 		};
 	}
+	public override void OnDead()
+	{
+		Timing.KillCoroutines(_coHandle);
+	}
 	protected override void Update()
 	{
 		base.Update();
 		if (_isBasicAttackTriggered && _isRunning == false)
 		{
 			_isRunning = true;
-			Timing.RunCoroutine(Co_Perform());
+			_coHandle = Timing.RunCoroutine(Co_Perform());
 		}
 
 		//Debug.Log(_targets.Count);
