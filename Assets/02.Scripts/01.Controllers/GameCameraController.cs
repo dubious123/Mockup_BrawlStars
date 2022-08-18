@@ -12,6 +12,7 @@ public class GameCameraController : MonoBehaviour
 
 	private void Update()
 	{
+		if (_followTarget == null) return;
 		_targetPos = _followTarget.position + _offSet;
 		transform.position = _targetPos;
 	}

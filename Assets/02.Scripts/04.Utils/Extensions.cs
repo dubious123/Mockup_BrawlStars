@@ -12,4 +12,15 @@ public static class Extensions
 	{
 		return Canvas_Tool.WorldtoCanvasRectPos(cam, canvasSizeDelta, worldPos);
 	}
+	/// <summary>
+	/// set child and return child
+	/// </summary>
+	/// <param name="parent"></param>
+	/// <param name="child"></param>
+	/// <returns></returns>
+	public static GameObject SetChild(this GameObject parent, GameObject child)
+	{
+		child.transform.SetParent(parent.transform);
+		return child;
+	}
 }

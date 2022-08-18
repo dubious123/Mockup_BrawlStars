@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using MEC;
 
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class HealthBar : MonoBehaviour
 {
 	#region SerializeFields
