@@ -60,7 +60,9 @@ public static class EditorTools
 			Debug.Log(msg); // When there's no scene view opened, we just print a log
 	}
 	#endregion
+	#region Generate Map Bounds
 
+	#endregion
 }
 #endif
 

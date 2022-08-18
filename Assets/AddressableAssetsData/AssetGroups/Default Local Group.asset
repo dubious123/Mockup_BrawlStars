@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ed955f08be9618041868f6ca3a89d679
+  m_SerializeEntries:
+  - m_GUID: 1e244351b1ef5f7429b6f69de7df8d3b
+    m_Address: Assets/03.Prefabs/Characters/Dog/Character_Dog.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b420ccc441795c439f90e023a1d350b
+    m_Address: Assets/03.Prefabs/NewEnv/river.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 32ccbd0899f7bcb4abbcb02446b2a019, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a53543ef1e2c16e4c9cf9936d2614e9d, type: 2}
+    - {fileID: 11400000, guid: 501522ba634b31946ade794883c53e21, type: 2}
