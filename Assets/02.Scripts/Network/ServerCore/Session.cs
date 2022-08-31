@@ -6,7 +6,7 @@ namespace ServerCore
 {
 	public abstract class Session
 	{
-		public int _id;
+		public int Id;
 		protected Socket _socket;
 		protected SendBuffer _sendBuffer = new(4048);
 		protected RecvBuffer _recvBuffer = new(32768);
@@ -14,7 +14,7 @@ namespace ServerCore
 		protected SocketAsyncEventArgs _recvArgs = new();
 		public void Init(int id, Socket socket)
 		{
-			_id = id;
+			Id = id;
 			_socket = socket;
 			_sendArgs.Completed += (obj, e) => OnSendCompleted(e);
 			_recvArgs.Completed += (obj, e) => OnRecvCompleted(e);
@@ -30,6 +30,12 @@ namespace ServerCore
 			_sendArgs.SetBuffer(_sendBuffer.Flush());
 			if (_socket.SendAsync(_sendArgs) == false)
 				OnSendCompleted(_sendArgs);
+		}
+		public virtual void Close()
+		{
+			Shutdown();
+			Disconnect();
+			_socket.Close(100);
 		}
 		protected virtual void OnSendCompleted(SocketAsyncEventArgs args)
 		{
@@ -53,7 +59,14 @@ namespace ServerCore
 				throw new Exception();
 			_recvBuffer.OnWrite(args.BytesTransferred);
 		}
-
+		protected virtual void Disconnect()
+		{
+			_socket.Disconnect(false);
+		}
+		protected virtual void Shutdown()
+		{
+			_socket.Shutdown(SocketShutdown.Both);
+		}
 
 
 

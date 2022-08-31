@@ -1,4 +1,5 @@
 using ServerCore;
+using ServerCore.Managers;
 using ServerCore.Packets;
 using ServerCore.Packets.Client;
 using System.Net.Sockets;
@@ -25,6 +26,11 @@ public class ServerSession : Session
 	protected override void OnRecvCompleted(SocketAsyncEventArgs args)
 	{
 		base.OnRecvCompleted(args);
+		if (args.BytesTransferred == 0)
+		{
+			SessionMgr.Close(Id);
+			return;
+		}
 		while (_recvBuffer.CanRead())
 		{
 			PacketHandler.HandlePacket(_recvBuffer.ReadPacket());

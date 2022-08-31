@@ -11,9 +11,8 @@ public class Network : MonoBehaviour
 		connector.StartConnect(GetNewEndPoint(7777));
 		Debug.Log("Connecting...");
 	}
-
-	void Update()
+	private void OnApplicationQuit()
 	{
-
+		SessionMgr.CloseAll();
 	}
 }
