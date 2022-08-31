@@ -1,4 +1,5 @@
-﻿using ServerCore.Packets;
+﻿using ServerCore.Managers;
+using ServerCore.Packets;
 using System;
 using System.Net.Sockets;
 
@@ -57,6 +58,11 @@ namespace ServerCore
 		{
 			if (args.SocketError != SocketError.Success)
 				throw new Exception();
+			if (args.BytesTransferred == 0)
+			{
+				SessionMgr.Close(Id);
+				return;
+			}
 			_recvBuffer.OnWrite(args.BytesTransferred);
 		}
 		protected virtual void Disconnect()

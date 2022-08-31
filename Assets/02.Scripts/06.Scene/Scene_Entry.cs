@@ -16,6 +16,5 @@ public class Scene_Entry : BaseScene
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
-		Scene.MoveTo(SceneType.Lobby, CharacterType.Dog);
 	}
 }

@@ -3,7 +3,6 @@ using ServerCore.Managers;
 using ServerCore.Packets;
 using System.Net.Sockets;
 using UnityEngine;
-using static ServerCore.Utils.Enums;
 
 public class ServerSession : Session
 {
@@ -11,10 +10,7 @@ public class ServerSession : Session
 	{
 		base.OnConnected();
 		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed");
-		C_Chat packet = new C_Chat
-		{
-			Id = (ushort)PacketId.C_Chat
-		};
+		C_EnterLobby packet = new C_EnterLobby();
 		RegisterSend(packet);
 		Send();
 	}
@@ -32,7 +28,7 @@ public class ServerSession : Session
 		}
 		while (_recvBuffer.CanRead())
 		{
-			PacketHandler.HandlePacket(_recvBuffer.ReadPacket());
+			PacketHandler.HandlePacket(_recvBuffer.ReadPacket(), this);
 		}
 		RegisterRecv();
 	}
