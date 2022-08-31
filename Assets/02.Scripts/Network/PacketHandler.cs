@@ -1,4 +1,4 @@
-﻿using ServerCore;
+using ServerCore;
 using ServerCore.Packets;
 using System;
 using System.Collections.Concurrent;
@@ -11,7 +11,7 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket>>();
-		_handlerDict.TryAdd((ushort)PacketId.S_Chat, packet => Console.WriteLine("Handle S_Chat"));
+		_handlerDict.TryAdd(PacketId.S_Chat, packet => S_ChatHandle(packet));
 	}
 
 	public static void HandlePacket(BasePacket packet)
@@ -20,5 +20,10 @@ public static class PacketHandler
 		if (_handlerDict.TryGetValue((PacketId)packet.Id, out Action<BasePacket> action) == false)
 			throw new Exception();
 		action.Invoke(packet);
+	}
+
+	private static void S_ChatHandle(BasePacket packet)
+	{
+		packet = packet as S_Chat;
 	}
 }

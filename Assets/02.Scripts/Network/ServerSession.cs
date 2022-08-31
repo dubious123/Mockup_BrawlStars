@@ -1,7 +1,6 @@
 using ServerCore;
 using ServerCore.Managers;
 using ServerCore.Packets;
-using ServerCore.Packets.Client;
 using System.Net.Sockets;
 using UnityEngine;
 using static ServerCore.Utils.Enums;
