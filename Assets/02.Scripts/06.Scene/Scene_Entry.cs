@@ -1,9 +1,6 @@
 using MEC;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-using static Enums;
 
 public class Scene_Entry : BaseScene
 {
@@ -15,6 +12,7 @@ public class Scene_Entry : BaseScene
 	{
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
+		DontDestroyOnLoad(new GameObject("@PacketQueue", typeof(PacketQueue)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
 	}
 }

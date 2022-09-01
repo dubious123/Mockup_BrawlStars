@@ -13,8 +13,8 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, Session>>();
-		_handlerDict.TryAdd(PacketId.S_Chat, (packet, session) => S_ChatHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Chat, (packet,session) => PacketQueue.Push(() => S_ChatHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)

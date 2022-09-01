@@ -8,8 +8,9 @@ public class Network : MonoBehaviour
 	void Start()
 	{
 		Connector connector = new Connector(socket => SessionMgr.GenerateSession<ServerSession>(socket));
-		connector.StartConnect(GetNewEndPoint(7777));
-		Debug.Log("Connecting...");
+		var endPoint = GetNewEndPoint(7777);
+		connector.StartConnect(endPoint);
+		Debug.Log($"Connecting to {endPoint}");
 	}
 	private void OnApplicationQuit()
 	{
