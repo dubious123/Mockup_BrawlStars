@@ -1,3 +1,4 @@
+using ServerCore.Packets;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ public class Scene_Lobby : BaseScene
 	}
 	public void EnterGame()
 	{
-		Scene.MoveTo(SceneType.Game, User.CharType);
+		Network.RegisterSend(new C_EnterGame { CharacterType = (ushort)User.CharType });
 	}
 
 }

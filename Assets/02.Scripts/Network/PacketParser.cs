@@ -14,10 +14,11 @@ public static class PacketParser
 	{
 		_readDict = new ConcurrentDictionary<ushort, Func<string, BasePacket>>();
 		_readDict.TryAdd((ushort)PacketId.C_Chat, json => JsonUtility.FromJson<C_Chat>(json));
-		_readDict.TryAdd((ushort)PacketId.C_EnterGame, json => JsonUtility.FromJson<C_EnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterLobby, json => JsonUtility.FromJson<C_EnterLobby>(json));
+		_readDict.TryAdd((ushort)PacketId.C_EnterGame, json => JsonUtility.FromJson<C_EnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Chat, json => JsonUtility.FromJson<S_Chat>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
+		_readDict.TryAdd((ushort)PacketId.S_EnterGame, json => JsonUtility.FromJson<S_EnterGame>(json));
 	}
 	public static BasePacket ReadPacket(this RecvBuffer buffer)
 	{

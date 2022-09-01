@@ -1,19 +1,35 @@
 using ServerCore;
 using ServerCore.Managers;
+using ServerCore.Packets;
 using UnityEngine;
 using static ServerCore.Utils.Tools;
 
 public class Network : MonoBehaviour
 {
+	ServerSession _session;
+	Connector _connector;
+	static Network _instance;
 	void Start()
 	{
-		Connector connector = new Connector(socket => SessionMgr.GenerateSession<ServerSession>(socket));
+		_instance = GameObject.Find("@Network").GetComponent<Network>();
+		_instance._connector = new Connector(socket =>
+		{
+			_instance._session = SessionMgr.GenerateSession<ServerSession>(socket);
+			return _instance._session;
+		});
 		var endPoint = GetNewEndPoint(7777);
-		connector.StartConnect(endPoint);
+		_instance._connector.StartConnect(endPoint);
 		Debug.Log($"Connecting to {endPoint}");
 	}
+
 	private void OnApplicationQuit()
 	{
 		SessionMgr.CloseAll();
+	}
+
+	public static void RegisterSend(BasePacket packet)
+	{
+		_instance._session.RegisterSend(packet);
+		_instance._session.Send();
 	}
 }
