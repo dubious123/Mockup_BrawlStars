@@ -7,6 +7,7 @@ public static class Enums
 	public enum SceneType
 	{
 		Entry,
+		Login,
 		Lobby,
 		Game
 	}

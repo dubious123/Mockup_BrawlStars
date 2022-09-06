@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using MEC;
-using System.Threading.Tasks;
 
 public class Scene_Map1 : BaseScene
 {

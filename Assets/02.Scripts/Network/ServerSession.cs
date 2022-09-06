@@ -10,7 +10,7 @@ public class ServerSession : Session
 	{
 		base.OnConnected();
 		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed");
-		C_EnterLobby packet = new C_EnterLobby();
+		C_Init packet = new C_Init();
 		RegisterSend(packet);
 		Send();
 	}

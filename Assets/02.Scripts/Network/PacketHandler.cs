@@ -2,20 +2,35 @@ using ServerCore;
 using ServerCore.Packets;
 using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using UnityEngine;
 using static Enums;
 using static ServerCore.Utils.Enums;
+using UnityEngine;
 
 public static class PacketHandler
 {
 	static ConcurrentDictionary<PacketId, Action<BasePacket, Session>> _handlerDict;
+	#region Scenes
+	static Scene_Login _login;
+	static Scene_Login SceneLogin
+	{
+		get
+		{
+			if (_login == null)
+			{
+				_login = GameObject.Find("SceneLogin").GetComponent<Scene_Login>();
+			}
+			return _login;
+		}
+	}
+	#endregion
+
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, Session>>();
-		_handlerDict.TryAdd(PacketId.S_Chat, (packet,session) => PacketQueue.Push(() => S_ChatHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)
@@ -26,9 +41,21 @@ public static class PacketHandler
 		action.Invoke(packet, session);
 	}
 
-	private static void S_ChatHandle(BasePacket packet, Session session)
+	private static void S_InitHandle(BasePacket packet, Session session)
 	{
-		var req = packet as S_Chat;
+		var req = packet as S_Init;
+		Scene.MoveTo(SceneType.Login, null);
+	}
+
+	private static void S_LoginHandle(BasePacket packet, Session session)
+	{
+		var req = packet as S_Login;
+		if (req.result == false)
+		{
+			SceneLogin.OnLoginFailed();
+			return;
+		}
+		SceneLogin.OnLoginSuccess(req);
 	}
 
 	private static void S_EnterLobbyHandle(BasePacket packet, Session session)
@@ -43,4 +70,8 @@ public static class PacketHandler
 		if (req.Result == false) return;
 		Scene.MoveTo(SceneType.Game, User.CharType);
 	}
+
+
+
+
 }
