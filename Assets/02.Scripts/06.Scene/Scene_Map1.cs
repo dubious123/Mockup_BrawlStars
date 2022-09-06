@@ -11,10 +11,13 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] AssetReference _dog;
 	[SerializeField] Transform _spawnPoint;
 	#endregion
-	public override async Task A_Init(object param)
+	public override void Init(object param)
 	{
-		await _dog.LoadAssetAsync<GameObject>().Task;
-		GameObject character = Instantiate(_dog.Asset as GameObject, _spawnPoint.position, Quaternion.identity);
-		Camera.main.GetComponent<GameCameraController>().FollowTarget = character.transform;
+		var handle = _dog.LoadAssetAsync<GameObject>();
+		handle.Completed += _ =>
+		{
+			GameObject character = Instantiate(_dog.Asset as GameObject, _spawnPoint.position, Quaternion.identity);
+			Camera.main.GetComponent<GameCameraController>().FollowTarget = character.transform;
+		};
 	}
 }

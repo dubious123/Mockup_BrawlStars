@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Scene_Entry : BaseScene
 {
-	public override Task A_Init(object param)
+	public override void Init(object param)
 	{
-		return null;
 	}
 	private void Awake()
 	{

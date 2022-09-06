@@ -9,13 +9,10 @@ using static Enums;
 public class Scene_Lobby : BaseScene
 {
 	[SerializeField] TMP_Dropdown _dropDwon;
-	public override async Task A_Init(object param)
+	public override void Init(object param)
 	{
-		await Task.Run(() =>
-		{
-			DontDestroyOnLoad(new GameObject("@User", typeof(User)));
-			User.CharType = (CharacterType)param;
-		});
+		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
+		User.CharType = (CharacterType)param;
 	}
 	public void SelectCharacterType(int value)
 	{

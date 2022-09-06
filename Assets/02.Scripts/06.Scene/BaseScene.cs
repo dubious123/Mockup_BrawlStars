@@ -5,5 +5,5 @@ using UnityEngine;
 
 public abstract class BaseScene : MonoBehaviour
 {
-	public abstract Task A_Init(object param);
+	public abstract void Init(object param);
 }
