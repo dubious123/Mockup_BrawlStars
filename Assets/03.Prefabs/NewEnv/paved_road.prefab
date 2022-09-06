@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4516448891532746415}
   - component: {fileID: 924245387210907}
   - component: {fileID: 8552878181710984315}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paved_road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5909673296382948065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paved_road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
