@@ -9,6 +9,7 @@ public class Scene_Entry : BaseScene
 	}
 	private void Awake()
 	{
+		Screen.SetResolution(1920, 1080, false);
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
 		DontDestroyOnLoad(new GameObject("@PacketQueue", typeof(PacketQueue)));

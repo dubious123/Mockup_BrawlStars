@@ -60,7 +60,65 @@ public static class EditorTools
 			Debug.Log(msg); // When there's no scene view opened, we just print a log
 	}
 	#endregion
-	#region Generate Map Bounds
+	#region Build and Run Multiplayer
+	[MenuItem("Tools/Run Multiplayer/2 Players")]
+	static void PerformWin62Build2()
+	{
+		PerformWin64Build(2);
+	}
+
+	[MenuItem("Tools/Run Multiplayer/3 Players")]
+	static void PerformWin62Build3()
+	{
+		PerformWin64Build(3);
+
+	}
+
+	[MenuItem("Tools/Run Multiplayer/4 Players")]
+	static void PerformWin62Build4()
+	{
+		PerformWin64Build(4);
+
+	}
+
+	[MenuItem("Tools/Run Multiplayer/5 Players")]
+	static void PerformWin62Build5()
+	{
+		PerformWin64Build(5);
+
+	}
+
+	[MenuItem("Tools/Run Multiplayer/6 Players")]
+	static void PerformWin62Build6()
+	{
+		PerformWin64Build(6);
+
+	}
+
+	static void PerformWin64Build(int playerCount)
+	{
+		EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+		for (int i = 0; i < playerCount; i++)
+		{
+			BuildPipeline.BuildPlayer(GetScenePaths(),
+				"Builds/Win64" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe",
+				BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
+		}
+	}
+	static string GetProjectName()
+	{
+		string[] s = Application.dataPath.Split('/');
+		return s[s.Length - 2];
+	}
+	static string[] GetScenePaths()
+	{
+		var scenes = new string[EditorBuildSettings.scenes.Length];
+		for (int i = 0; i < scenes.Length; i++)
+		{
+			scenes[i] = EditorBuildSettings.scenes[i].path;
+		}
+		return scenes;
+	}
 
 	#endregion
 }
