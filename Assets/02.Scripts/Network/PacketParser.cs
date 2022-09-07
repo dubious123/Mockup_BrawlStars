@@ -17,10 +17,12 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.C_Login, json => JsonUtility.FromJson<C_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterLobby, json => JsonUtility.FromJson<C_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterGame, json => JsonUtility.FromJson<C_EnterGame>(json));
+		_readDict.TryAdd((ushort)PacketId.C_BroadcastPlayerState, json => JsonUtility.FromJson<C_BroadcastPlayerState>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Init, json => JsonUtility.FromJson<S_Init>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Login, json => JsonUtility.FromJson<S_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterGame, json => JsonUtility.FromJson<S_EnterGame>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastGameState, json => JsonUtility.FromJson<S_BroadcastGameState>(json));
 	}
 	public static BasePacket ReadPacket(this RecvBuffer buffer)
 	{

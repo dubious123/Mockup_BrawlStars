@@ -60,10 +60,10 @@ public class Map_Tool : MonoBehaviour
 			wallSet.Add(Vector2Int.CeilToInt(new Vector2(pos.x - 0.5f, pos.z - 0.5f)));
 		}
 		var lines = new List<string>();
-		for (int x = -_xMin; x <= _xMax; x++)
+		for (int y = -_yMin; y <= _yMax; y++)
 		{
 			string line = string.Empty;
-			for (int y = -_yMin; y <= _yMax; y++)
+			for (int x = -_xMin; x <= _xMax; x++)
 			{
 				var str = wallSet.Contains(new Vector2Int(x, y)) ? "1" : "0";
 				line += str;

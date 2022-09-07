@@ -31,6 +31,7 @@ public static class PacketHandler
 		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
 		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
 		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)
@@ -68,10 +69,16 @@ public static class PacketHandler
 	{
 		var req = packet as S_EnterGame;
 		if (req.Result == false) return;
+		User.GameRoomId = req.RoomId;
 		Scene.MoveTo(SceneType.Game, User.CharType);
 	}
 
 
 
 
+
+	private static void S_BroadcastGameStateHandle(BasePacket packet, Session session)
+	{
+		var req = packet as S_BroadcastGameState;
+	}
 }

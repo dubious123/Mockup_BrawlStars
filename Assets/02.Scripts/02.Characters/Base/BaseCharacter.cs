@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using MEC;
 using TMPro;
+using ServerCore.Packets;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -18,7 +19,11 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
 	#region Abilities
+	[Header("Abilities")]
 	[SerializeField] private BaseHoldingAbility _basicAttack;
+
+	[Header("Network")]
+	[SerializeField] protected float _broadcastFreq;
 	#endregion
 
 	#endregion
@@ -32,6 +37,7 @@ public class BaseCharacter : MonoBehaviour
 	protected Vector3 _targetLookDir;
 	protected Quaternion _targetRotation;
 	protected TextMeshProUGUI _stunUI;
+	protected C_BroadcastPlayerState _broadcastPacket;
 
 	protected int _currentHp;
 
@@ -62,6 +68,8 @@ public class BaseCharacter : MonoBehaviour
 		_canBasicAttack = true;
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
+		_broadcastPacket = new(User.UserId);
+		Timing.RunCoroutine(Co_BroadCastState());
 	}
 	private void Update()
 	{
@@ -183,5 +191,17 @@ public class BaseCharacter : MonoBehaviour
 		_animator.SetBool(AnimatorMeta.IsDead_Bool, true);
 		_controllable = false;
 		_interactable = false;
+	}
+	protected virtual IEnumerator<float> Co_BroadCastState()
+	{
+		while (true)
+		{
+			yield return Timing.WaitForSeconds(_broadcastFreq);
+			_broadcastPacket.LookDirX = _targetLookDir.x;
+			_broadcastPacket.LookDirY = _targetLookDir.z;
+			_broadcastPacket.PosX = transform.position.x;
+			_broadcastPacket.PosY = transform.position.z;
+			Network.RegisterSend(_broadcastPacket);
+		}
 	}
 }

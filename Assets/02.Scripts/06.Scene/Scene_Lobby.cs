@@ -19,7 +19,7 @@ public class Scene_Lobby : BaseScene
 	}
 	public void EnterGame()
 	{
-		Network.RegisterSend(new C_EnterGame { CharacterType = (ushort)User.CharType });
+		Network.RegisterSend(new C_EnterGame { CharacterType = (ushort)User.CharType, UserId = User.UserId });
 	}
 
 }

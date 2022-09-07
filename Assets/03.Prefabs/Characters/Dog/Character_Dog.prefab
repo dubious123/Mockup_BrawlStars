@@ -1264,7 +1264,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646509169929880295}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5.7138157, y: -0.7022598, z: -0.037216187}
+  m_LocalPosition: {x: 5.7138157, y: 0.63, z: -0.037216187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1389,6 +1389,7 @@ MonoBehaviour:
   _animator: {fileID: 1646509169937314139}
   _playerCenter: {fileID: 753935177778529229}
   _basicAttack: {fileID: 753935177645860516}
+  _broadcastFreq: 0.25
   _bash: {fileID: 6214587029905046125}
 --- !u!114 &4642652656026845321
 MonoBehaviour:
