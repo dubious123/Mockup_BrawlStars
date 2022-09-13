@@ -20,6 +20,7 @@ public class Map_Tool : MonoBehaviour
 	[Header("Create Map Data")]
 	[SerializeField] string _filePath;
 	[SerializeField] Tilemap _walls;
+	[SerializeField] Tilemap _extras;
 
 
 	public int XMin => _xMin;
@@ -54,10 +55,19 @@ public class Map_Tool : MonoBehaviour
 	void CreateMapData()
 	{
 		var wallSet = new HashSet<Vector2Int>();
+		var blueSpawnSet = new HashSet<Vector2Int>();
+		var redSpawnSet = new HashSet<Vector2Int>();
 		for (int i = 0; i < _walls.transform.childCount; i++)
 		{
 			var pos = _walls.transform.GetChild(i).position;
 			wallSet.Add(Vector2Int.CeilToInt(new Vector2(pos.x - 0.5f, pos.z - 0.5f)));
+		}
+		for (int i = 0; i < _extras.transform.childCount; i++)
+		{
+			var child = _extras.transform.GetChild(i);
+			var set = child.name.Contains("Red") ? redSpawnSet : blueSpawnSet;
+			var pos = child.position;
+			set.Add(Vector2Int.CeilToInt(new Vector2(pos.x - 0.5f, pos.z - 0.5f)));
 		}
 		var lines = new List<string>();
 		for (int y = -_yMin; y <= _yMax; y++)
@@ -65,7 +75,11 @@ public class Map_Tool : MonoBehaviour
 			string line = string.Empty;
 			for (int x = -_xMin; x <= _xMax; x++)
 			{
-				var str = wallSet.Contains(new Vector2Int(x, y)) ? "1" : "0";
+				var pos = new Vector2Int(x, y);
+				var str =
+					redSpawnSet.Contains(pos) ? "3" :
+					blueSpawnSet.Contains(pos) ? "2" :
+					wallSet.Contains(new Vector2Int(x, y)) ? "1" : "0";
 				line += str;
 			}
 			Debug.Log(new string(line));

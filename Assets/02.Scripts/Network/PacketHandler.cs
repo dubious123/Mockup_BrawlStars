@@ -70,6 +70,7 @@ public static class PacketHandler
 		var req = packet as S_EnterGame;
 		if (req.Result == false) return;
 		User.GameRoomId = req.RoomId;
+		User.TeamId = req.TeamId;
 		Scene.MoveTo(SceneType.Game, User.CharType);
 	}
 
