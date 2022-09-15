@@ -27,11 +27,11 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, Session>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet, session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)
@@ -71,7 +71,7 @@ public static class PacketHandler
 		if (req.Result == false) return;
 		User.GameRoomId = req.RoomId;
 		User.TeamId = req.TeamId;
-		Scene.MoveTo(SceneType.Game, User.CharType);
+		Scene.MoveTo(SceneType.Game, null);
 	}
 
 

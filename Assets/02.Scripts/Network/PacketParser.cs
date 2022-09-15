@@ -44,7 +44,6 @@ public static class PacketParser
 		{
 			BitConverter.TryWriteBytes(buffer.Write(2), packet.Id);
 			var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
-			Debug.Log(JsonUtility.ToJson(packet));
 			BitConverter.TryWriteBytes(buffer.Write(2), (ushort)json.Count);
 			json.CopyTo(buffer.Write(json.Count));
 			return true;

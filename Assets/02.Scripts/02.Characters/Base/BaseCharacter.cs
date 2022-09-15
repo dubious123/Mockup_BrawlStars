@@ -68,7 +68,7 @@ public class BaseCharacter : MonoBehaviour
 		_canBasicAttack = true;
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
-		_broadcastPacket = new(User.UserId, User.TeamId);
+		_broadcastPacket = new(User.UserId);
 		Timing.RunCoroutine(Co_BroadCastState());
 	}
 	private void Update()
