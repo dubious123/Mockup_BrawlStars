@@ -10,6 +10,7 @@ public class Scene_Lobby : BaseScene
 	[SerializeField] TMP_Dropdown _dropDwon;
 	public override void Init(object param)
 	{
+		Scenetype = SceneType.Lobby;
 		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
 		User.CharType = (CharacterType)param;
 	}

@@ -6,6 +6,7 @@ public class Scene_Entry : BaseScene
 {
 	public override void Init(object param)
 	{
+		Scenetype = Enums.SceneType.Entry;
 	}
 	private void Awake()
 	{

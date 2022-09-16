@@ -31,7 +31,10 @@ public static class PacketParser
 			var id = BitConverter.ToUInt16(buffer.Read(2));
 			var size = BitConverter.ToUInt16(buffer.Read(2));
 			_readDict.TryGetValue(id, out Func<string, BasePacket> func);
-			return func.Invoke(Encoding.UTF8.GetString(buffer.Read(size)));
+			//return func.Invoke(Encoding.UTF8.GetString(buffer.Read(size)));
+			var json = Encoding.UTF8.GetString(buffer.Read(size));
+			Debug.Log(json);
+			return func.Invoke(json);
 		}
 		catch (System.Exception)
 		{

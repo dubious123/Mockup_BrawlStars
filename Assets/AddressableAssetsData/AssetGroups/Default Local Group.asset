@@ -25,6 +25,10 @@ MonoBehaviour:
     m_Address: Assets/03.Prefabs/NewEnv/river.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7f9b14799400cc94d931ca0aed59a3b6
+    m_Address: Assets/03.Prefabs/Characters/Dog/Character_Dog_Local.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 32ccbd0899f7bcb4abbcb02446b2a019, type: 2}
   m_SchemaSet:

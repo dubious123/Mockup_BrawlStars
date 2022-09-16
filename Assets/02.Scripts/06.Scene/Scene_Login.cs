@@ -20,6 +20,7 @@ public class Scene_Login : BaseScene
 
 	public override void Init(object param)
 	{
+		Scenetype = SceneType.Login;
 		_packet = new C_Login();
 	}
 	public void Login()

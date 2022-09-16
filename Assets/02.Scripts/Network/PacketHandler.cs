@@ -71,6 +71,8 @@ public static class PacketHandler
 		if (req.Result == false) return;
 		User.GameRoomId = req.RoomId;
 		User.TeamId = req.TeamId;
+		var game = Scene.CurrentScene as Scene_Map1;
+
 		Scene.MoveTo(SceneType.Game, null);
 	}
 
@@ -81,5 +83,13 @@ public static class PacketHandler
 	private static void S_BroadcastGameStateHandle(BasePacket packet, Session session)
 	{
 		var req = packet as S_BroadcastGameState;
+		if (Scene.CurrentScene is not Scene_Map1) Debug.LogError("not in game scene yet");
+		var game = Scene.CurrentScene as Scene_Map1;
+		for (short i = 0; i < 6; i++)
+		{
+			game.UpdatePlayer(i, req.PlayerPosArr[i], req.PlayerLookDirArr[i]);
+		}
+
+
 	}
 }
