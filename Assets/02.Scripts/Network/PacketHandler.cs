@@ -83,8 +83,12 @@ public static class PacketHandler
 	private static void S_BroadcastGameStateHandle(BasePacket packet, Session session)
 	{
 		var req = packet as S_BroadcastGameState;
-		if (Scene.CurrentScene is not Scene_Map1) Debug.LogError("not in game scene yet");
 		var game = Scene.CurrentScene as Scene_Map1;
+		if (game == null || game.IsReady == false)
+		{
+			Debug.LogError("scene is not game or scene is not ready");
+			return;
+		}
 		for (short i = 0; i < 6; i++)
 		{
 			game.UpdatePlayer(i, req.PlayerPosArr[i], req.PlayerLookDirArr[i]);

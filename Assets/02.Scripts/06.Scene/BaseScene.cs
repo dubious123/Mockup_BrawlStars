@@ -7,5 +7,6 @@ using static Enums;
 public abstract class BaseScene : MonoBehaviour
 {
 	public SceneType Scenetype { get; set; }
+	public bool IsReady { get; protected set; } = false;
 	public abstract void Init(object param);
 }

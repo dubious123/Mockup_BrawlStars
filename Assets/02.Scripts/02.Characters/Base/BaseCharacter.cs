@@ -82,6 +82,7 @@ public class BaseCharacter : MonoBehaviour
 		transform.Translate(_currentMoveSpeed * Time.deltaTime * _targetMoveDir, Space.World);
 		#endregion
 		#region Rotate
+		Debug.Log(_targetLookDir);
 		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.deltaTime * _targetLookDir, Vector3.up);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.deltaTime * _rotationSpeed);
 		#endregion

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using static ServerCore.Utils.Enums;
 using UnityEngine;
 using System.Text;
+using Logging;
 
 public static class PacketParser
 {
@@ -33,8 +34,10 @@ public static class PacketParser
 			_readDict.TryGetValue(id, out Func<string, BasePacket> func);
 			//return func.Invoke(Encoding.UTF8.GetString(buffer.Read(size)));
 			var json = Encoding.UTF8.GetString(buffer.Read(size));
-			Debug.Log(json);
-			return func.Invoke(json);
+			LogMgr.Log(Enums.LogSourceType.PacketRecv, json);
+			var ret = func.Invoke(json);
+			LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(ret, true));
+			return ret;
 		}
 		catch (System.Exception)
 		{
@@ -48,6 +51,7 @@ public static class PacketParser
 			BitConverter.TryWriteBytes(buffer.Write(2), packet.Id);
 			var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
 			BitConverter.TryWriteBytes(buffer.Write(2), (ushort)json.Count);
+			LogMgr.Log(Enums.LogSourceType.PacketSend, JsonUtility.ToJson(packet, true));
 			json.CopyTo(buffer.Write(json.Count));
 			return true;
 		}

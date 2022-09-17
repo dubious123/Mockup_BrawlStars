@@ -6,7 +6,8 @@ using static Enums;
 public class Scene_Map1 : BaseScene
 {
 	#region SerializeField
-	[SerializeField] AssetReference _dog;
+	//[SerializeField] AssetReference _dog;
+	[SerializeField] GameObject _dog;
 	[SerializeField] InputActionAsset _inputAsset;
 	[SerializeField] Transform[] _spawnPoint;
 	[SerializeField] BaseCharacter[] _characters;
@@ -14,17 +15,22 @@ public class Scene_Map1 : BaseScene
 	public override void Init(object param)
 	{
 		Scenetype = SceneType.Game;
-		var handle = _dog.LoadAssetAsync<GameObject>();
 		_characters = new BaseCharacter[6];
-		handle.Completed += _ =>
-		{
-			Enter(User.TeamId, User.CharType);
-			Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
-		};
+		//var handle = _dog.LoadAssetAsync<GameObject>();
+		//handle.Completed += _ =>
+		//{
+		//	Enter(User.TeamId, User.CharType);
+		//	Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
+		//	IsReady = true;
+		//};
+		Enter(User.TeamId, User.CharType);
+		Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
+		IsReady = true;
 	}
 	public void Enter(short teamId, CharacterType type)
 	{
-		var character = Instantiate(_dog.Asset as GameObject, _spawnPoint[User.TeamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
+		//var character = Instantiate(_dog.Asset as GameObject, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
+		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		_characters[teamId] = character;
 		if (User.TeamId == teamId)
 		{

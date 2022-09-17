@@ -22,6 +22,7 @@ public class Scene_Login : BaseScene
 	{
 		Scenetype = SceneType.Login;
 		_packet = new C_Login();
+		IsReady = true;
 	}
 	public void Login()
 	{

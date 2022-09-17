@@ -1,0 +1,316 @@
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:06]
+{"Id":4096}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:06]
+after parse : 
+{
+    "Id": 4096
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:10]
+{"result":true,"userId":4,"Id":4097}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:10]
+after parse : 
+{
+    "Id": 4097,
+    "result": true,
+    "userId": 4
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+{"Result":true,"RoomId":4,"TeamId":0,"Id":4099}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+after parse : 
+{
+    "Id": 4099,
+    "Result": true,
+    "RoomId": 4,
+    "TeamId": 0
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+{"RoomId":1,"PlayerPosArr":[{"x":4,"y":9},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"PlayerLookDirArr":[{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"CharacterTypeArr":[0,0,0,0,0,0],"PlayerCount":1,"Id":4100}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+after parse : 
+{
+    "Id": 4100,
+    "RoomId": 1,
+    "PlayerPosArr": [
+        {
+            "x": 4.0,
+            "y": 9.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "PlayerLookDirArr": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "CharacterTypeArr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "PlayerCount": 1
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+{"RoomId":1,"PlayerPosArr":[{"x":4,"y":9},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"PlayerLookDirArr":[{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"CharacterTypeArr":[0,0,0,0,0,0],"PlayerCount":1,"Id":4100}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+after parse : 
+{
+    "Id": 4100,
+    "RoomId": 1,
+    "PlayerPosArr": [
+        {
+            "x": 4.0,
+            "y": 9.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "PlayerLookDirArr": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "CharacterTypeArr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "PlayerCount": 1
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+{"RoomId":1,"PlayerPosArr":[{"x":4,"y":9},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"PlayerLookDirArr":[{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"CharacterTypeArr":[0,0,0,0,0,0],"PlayerCount":1,"Id":4100}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:11]
+after parse : 
+{
+    "Id": 4100,
+    "RoomId": 1,
+    "PlayerPosArr": [
+        {
+            "x": 4.0,
+            "y": 9.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "PlayerLookDirArr": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "CharacterTypeArr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "PlayerCount": 1
+}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:12]
+{"RoomId":1,"PlayerPosArr":[{"x":4,"y":9},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"PlayerLookDirArr":[{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0},{"x":0,"y":0}],"CharacterTypeArr":[0,0,0,0,0,0],"PlayerCount":1,"Id":4100}
+Level : [Info]
+DateTime : [2022-09-17 오후 9:04:12]
+after parse : 
+{
+    "Id": 4100,
+    "RoomId": 1,
+    "PlayerPosArr": [
+        {
+            "x": 4.0,
+            "y": 9.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "PlayerLookDirArr": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "CharacterTypeArr": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "PlayerCount": 1
+}

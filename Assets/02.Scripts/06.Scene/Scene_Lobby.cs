@@ -13,6 +13,7 @@ public class Scene_Lobby : BaseScene
 		Scenetype = SceneType.Lobby;
 		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
 		User.CharType = (CharacterType)param;
+		IsReady = true;
 	}
 	public void SelectCharacterType(int value)
 	{
