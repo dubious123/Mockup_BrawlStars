@@ -12,8 +12,10 @@ namespace Logging
 		}
 		public override void Flush()
 		{
-			Debug.Log(_log);
-			_log = string.Empty;
+			while (_logQueue.TryDequeue(out var log))
+			{
+				Debug.Log(log);
+			}
 		}
 	}
 }

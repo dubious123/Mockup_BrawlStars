@@ -17,9 +17,11 @@ namespace Logging
 		}
 		public override void Flush()
 		{
-			_writer.Write(Encoding.UTF8.GetBytes(_log));
+			while (_logQueue.TryDequeue(out var log))
+			{
+				_writer.Write(Encoding.UTF8.GetBytes(log));
+			}
 			_writer.Flush();
-			_log = string.Empty;
 		}
 	}
 }

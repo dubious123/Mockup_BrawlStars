@@ -44,35 +44,33 @@ public static class PacketParser
 			return null;
 		}
 	}
-	static object _lock = new();
 	public static bool WritePacket(this SendBuffer buffer, BasePacket packet)
 	{
 		try
 		{
-			Debug.Log("writing to the buffer");
-			var arr1 = buffer.Write(2);
-			BitConverter.TryWriteBytes(arr1, packet.Id);
+			//var arr1 = buffer.Write(2);
+			//BitConverter.TryWriteBytes(arr1, packet.Id);
 
+			//var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
 
+			//var arr2 = buffer.Write(2);
+			//BitConverter.TryWriteBytes(arr2, (ushort)json.Count);
 
+			//LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}]" + JsonUtility.ToJson(packet));
+			//string str = string.Empty;
 
+			//str += BitConverter.ToString(arr1.Array, arr1.Offset, arr1.Count);
+			//str += BitConverter.ToString(arr2.Array, arr2.Offset, arr2.Count);
+			//str += BitConverter.ToString(json.Array, json.Offset, json.Count);
 
+			//LogMgr.Log(Enums.LogSourceType.Debug, str);
+			//json.CopyTo(buffer.Write(json.Count));
+			BitConverter.TryWriteBytes(buffer.Write(2), packet.Id);
 			var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
-
-			var arr2 = buffer.Write(2);
-			BitConverter.TryWriteBytes(arr2, (ushort)json.Count);
-
+			BitConverter.TryWriteBytes(buffer.Write(2), (ushort)json.Count);
 			LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}]" + JsonUtility.ToJson(packet));
-			string str = string.Empty;
-
-			str += BitConverter.ToString(arr1.Array, arr1.Offset, arr1.Count);
-			str += BitConverter.ToString(arr2.Array, arr2.Offset, arr2.Count);
-			str += BitConverter.ToString(json.Array, json.Offset, json.Count);
-
-			LogMgr.Log(Enums.LogSourceType.Debug, str);
 			json.CopyTo(buffer.Write(json.Count));
 			return true;
-
 		}
 		catch (System.Exception)
 		{
