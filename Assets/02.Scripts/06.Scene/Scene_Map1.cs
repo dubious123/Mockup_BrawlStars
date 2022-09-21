@@ -32,10 +32,17 @@ public class Scene_Map1 : BaseScene
 		//var character = Instantiate(_dog.Asset as GameObject, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		_characters[teamId] = character;
+		character.TeamId = teamId;
+		character.Init();
 		if (User.TeamId == teamId)
 		{
-			character.gameObject.AddComponent<PlayerInput>().actions = _inputAsset;
-			character.gameObject.AddComponent<DogController>();
+			var playerInput = character.gameObject.AddComponent<PlayerInput>();
+			{
+				playerInput.actions = _inputAsset;
+				playerInput.notificationBehavior = PlayerNotifications.InvokeCSharpEvents;
+				playerInput.actions.Enable();
+			}
+			character.gameObject.AddComponent<DogController>().Init(character);
 		}
 
 	}
@@ -46,8 +53,13 @@ public class Scene_Map1 : BaseScene
 			Enter(teamId, CharacterType.Dog);
 		}
 		if (User.TeamId == teamId) return;
-		_characters[teamId].Move(new Vector3(movePos.x, 0, movePos.y));
-		_characters[teamId].Look(new Vector3(lookDir.x, 0, lookDir.y));
+		//if (movePos == Vector2.zero) return;
+		//_characters[teamId].Move(new Vector3(movePos.x, 0, movePos.y));
+		//if (lookDir == Vector2.zero)
+		//{
+		//	lookDir = Vector2.right;
+		//}
+		//_characters[teamId].Look(new Vector3(lookDir.x, 0, lookDir.y));
 	}
 	public void Move(short teamId, Vector2 movePos)
 	{

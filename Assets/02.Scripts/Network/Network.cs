@@ -21,7 +21,10 @@ public class Network : MonoBehaviour
 		_instance._connector.StartConnect(endPoint);
 		Debug.Log($"Connecting to {endPoint}");
 	}
+	private void Update()
+	{
 
+	}
 	private void OnApplicationQuit()
 	{
 		SessionMgr.CloseAll();
@@ -29,7 +32,10 @@ public class Network : MonoBehaviour
 
 	public static void RegisterSend(BasePacket packet)
 	{
-		_instance._session.RegisterSend(packet);
-		_instance._session.Send();
+		PacketQueue.Push(() =>
+		{
+			_instance._session.RegisterSend(packet);
+		});
+
 	}
 }

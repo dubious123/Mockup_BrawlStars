@@ -27,6 +27,7 @@ public static class Enums
 		Error,
 		PacketSend,
 		PacketRecv,
+		Debug
 	}
 	public enum LogLevel
 	{

@@ -212,7 +212,7 @@
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "PC",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

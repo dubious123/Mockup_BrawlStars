@@ -24,13 +24,15 @@ namespace Logging
 			_dirPath = Application.dataPath + "/02.Scripts/Logs/";
 
 			Directory.CreateDirectory(_dirPath);
-			_loggers = new LogSource[8];
+			_loggers = new LogSource[9];
 			_loggers[(int)LogSourceType.Console] = new LogSource()
 				.AddConsoleListener(LogLevel.Info, LogOptionFlag.DateTime);
 			var packetLogWriter = new FileStream(_dirPath + "Packet.txt", FileMode.Create, FileAccess.Write);
 			var recvPacketLogWriter = new FileStream(_dirPath + "RecvPacket.txt", FileMode.Create, FileAccess.Write);
 			var sendPacketLogWriter = new FileStream(_dirPath + "SendPacket.txt", FileMode.Create, FileAccess.Write);
+			var debugLogWriter = new FileStream(_dirPath + "Debug.txt", FileMode.Create, FileAccess.Write);
 			var packetListener = new TextWriterLogListener(LogLevel.Info, LogOptionFlag.DateTime, packetLogWriter);
+
 			_loggers[(int)LogSourceType.PacketRecv] = new LogSource()
 				.AddListener(packetListener)
 				.AddTextWriterLogListener(LogLevel.Info, LogOptionFlag.DateTime, recvPacketLogWriter);
@@ -38,12 +40,16 @@ namespace Logging
 				.AddListener(packetListener)
 				.AddTextWriterLogListener(LogLevel.Info, LogOptionFlag.DateTime, sendPacketLogWriter);
 
+			_loggers[(int)LogSourceType.Debug] = new LogSource()
+				.AddTextWriterLogListener(LogLevel.Info, LogOptionFlag.DateTime, debugLogWriter);
+
 
 			_disposables = new()
 			{
 				packetLogWriter,
 				recvPacketLogWriter,
-				sendPacketLogWriter
+				sendPacketLogWriter,
+				debugLogWriter
 			};
 			_available = true;
 		}

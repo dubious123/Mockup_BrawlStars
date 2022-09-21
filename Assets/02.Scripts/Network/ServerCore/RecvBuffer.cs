@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Threading;
 using ServerCore.Managers;
 using ServerCore.Packets;
 
@@ -20,34 +22,51 @@ namespace ServerCore
 			_lock = new object();
 		}
 		public bool CanRead() => _writePos - _readPos > 4;
-		public bool CanRead(ushort size) => _writePos - _readPos - size > 0;
+		public bool CanRead(ushort size) => _writePos - _readPos - size >= 0;
 		public ArraySegment<byte> Read(ushort size)
 		{
-			var result = new ArraySegment<byte>(_buffer, _readPos, size);
-			_readPos += size;
-			return result;
+			lock (_lock)
+			{
+				var result = new ArraySegment<byte>(_buffer, _readPos, size);
+				Interlocked.Add(ref _readPos, size);
+				Debug.Assert(_readPos <= _writePos);
+				return result;
+			}
 		}
 		public ArraySegment<byte> Read(int count)
 		{
-			var segment = new ArraySegment<byte>(_buffer, _readPos, count);
-			_readPos += count;
-			return segment;
+			lock (_lock)
+			{
+				var segment = new ArraySegment<byte>(_buffer, _readPos, count);
+				Interlocked.Add(ref _readPos, count);
+				Debug.Assert(_readPos <= _writePos);
+				return segment;
+			}
 		}
 		public ArraySegment<byte> GetWriteBuffer() => new ArraySegment<byte>(_buffer, _writePos, _buffer.Length - _writePos);
-		public void OnWrite(int size) => _writePos += size;
+		public void OnWrite(int size)
+		{
+			Debug.Assert(_writePos + size < _buffer.Length);
+			Interlocked.Add(ref _writePos, size);
+		}
 		public void Clear()
 		{
 			lock (_lock)
 			{
 				var leftDataSize = _writePos - _readPos;
-				if (leftDataSize != 0 && _readPos != 0)
+				if (leftDataSize == 0)
 				{
-					Array.Copy(_buffer, _readPos, _buffer, 0, leftDataSize);
-					_writePos = leftDataSize;
-					_readPos = 0;
+					_writePos = _readPos = 0;
 					return;
 				}
-				_readPos = _writePos = 0;
+				if (_readPos == 0)
+				{
+					return;
+				}
+				Array.Copy(_buffer, _readPos, _buffer, 0, leftDataSize);
+				_writePos = leftDataSize;
+				_readPos = 0;
+				return;
 			}
 		}
 	}

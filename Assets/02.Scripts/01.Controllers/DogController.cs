@@ -6,9 +6,10 @@ using UnityEngine.InputSystem;
 public class DogController : CharacterController
 {
 	protected Dog_Character _dog;
-	protected override void Awake()
+
+	public override void Init(BaseCharacter playableCharacter)
 	{
-		base.Awake();
+		base.Init(playableCharacter);
 		_dog = _currentPlayer as Dog_Character;
 		_basicAttackAction.started += _ => _dog.ActivateBasicAttack();
 		_basicAttackAction.canceled += _ => _dog.DeactivateBasicAttack();

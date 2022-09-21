@@ -8,10 +8,9 @@ public class Dog_Character : BaseCharacter
 	[SerializeField] Dog_Bash _bash;
 	#endregion
 
-
-	protected override void Awake()
+	public override void Init()
 	{
-		base.Awake();
+		base.Init();
 		_bash.Init(this);
 		_currentHp = _maxHp;
 	}

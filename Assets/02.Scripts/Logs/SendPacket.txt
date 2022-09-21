@@ -1,1982 +1,1017 @@
 Level : [Info]
-DateTime : [2022-09-17 오후 9:04:05]
-{
-    "Id": 0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:09]
-{
-    "Id": 1,
-    "loginId": "jonghun1",
-    "loginPw": "0827"
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 3,
-    "UserId": 4,
-    "CharacterType": 0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.5,
-    "PosY": -10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 0.5,
-    "PosY": -10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 3.5,
-    "PosY": -10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.5,
-    "PosY": 10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 0.5,
-    "PosY": 10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 3.5,
-    "PosY": 10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.4896328449249269,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 3.5,
-    "PosY": -10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:11]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 0.5,
-    "PosY": 10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:12]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.4895355701446535,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:12]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": 0.5,
-    "PosY": 10.5,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:12]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:12]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:12]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:13]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:13]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:13]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:13]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:14]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:14]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:14]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:14]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:15]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:15]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:15]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:15]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:16]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:16]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:16]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:16]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:17]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:17]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:17]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:18]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:18]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:18]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:18]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:19]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:19]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:19]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:19]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:20]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:20]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:20]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:20]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:21]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:21]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:21]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:21]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:22]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:22]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:22]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:22]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:23]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:23]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:23]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:23]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:24]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:24]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:24]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:24]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:25]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:25]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:25]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:25]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:26]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:26]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:26]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:26]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:27]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:27]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:27]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:27]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:28]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:28]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:28]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:28]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:29]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:29]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:29]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:29]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:30]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:30]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:30]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:30]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:31]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:31]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:31]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:31]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:32]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:32]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:32]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:33]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:33]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:33]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:33]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:34]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:34]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:34]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:34]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:35]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:35]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:35]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:35]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:36]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:36]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:36]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:36]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:37]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:37]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:37]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:37]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:38]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:38]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:38]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:38]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:39]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:39]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:39]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:39]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:40]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:40]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:40]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:40]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:41]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:41]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:41]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:41]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:42]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:42]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:42]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:42]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:43]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:43]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:43]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:43]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:44]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:44]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:44]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:44]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:45]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:45]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:45]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:45]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:46]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:46]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:46]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:46]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:52]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:52]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
-Level : [Info]
-DateTime : [2022-09-17 오후 9:04:52]
-{
-    "Id": 4,
-    "UserId": 4,
-    "RoomId": 0,
-    "CharacterType": 0,
-    "TeamId": 0,
-    "PosX": -2.489506959915161,
-    "PosY": -10.499945640563965,
-    "LookDirX": 0.0,
-    "LookDirY": 0.0
-}
+DateTime : [2022-09-22 오전 1:48:13]
+size : [8]{"Id":0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:21]
+size : [46]{"Id":1,"loginId":"jonghun1","loginPw":"0827"}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:23]
+size : [37]{"Id":3,"UserId":4,"CharacterType":0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [146]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.5,"PosY":-10.5,"LookDirX":0.02739395946264267,"LookDirY":-0.9996247291564941}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4897048473358156,"PosY":-10.499945640563965,"LookDirX":-0.9978363513946533,"LookDirY":0.0657467171549797}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4922001361846926,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4895339012145998,"PosY":-10.499945640563965,"LookDirX":-0.6151269674301148,"LookDirY":0.7884280681610107}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489807605743408,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:24]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489445924758911,"PosY":-10.499945640563965,"LookDirX":-0.5390743017196655,"LookDirY":0.8422582149505615}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.091061115264893,"PosY":-10.500324249267579,"LookDirX":-0.24497482180595399,"LookDirY":0.9695294499397278}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.370303153991699,"PosY":-10.050907135009766,"LookDirX":-0.25586801767349245,"LookDirY":0.9667117595672607}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.370378017425537,"PosY":-8.508516311645508,"LookDirX":-0.22082534432411195,"LookDirY":0.9753133058547974}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:25]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.370378017425537,"PosY":-6.907643795013428,"LookDirX":-0.2214164435863495,"LookDirY":0.9751793146133423}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.370378017425537,"PosY":-5.4138875007629398,"LookDirX":-0.23416638374328614,"LookDirY":0.9721964597702026}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.370378017425537,"PosY":-3.8795177936553957,"LookDirX":-0.23537202179431916,"LookDirY":0.9719052910804749}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.310183525085449,"PosY":-2.8048739433288576,"LookDirX":-0.2538212239742279,"LookDirY":0.967251181602478}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:26]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [176]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":-1.1132842302322388,"LookDirX":-0.0006643746164627373,"LookDirY":0.9999997615814209}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":0.4147668778896332,"LookDirX":0.04430833458900452,"LookDirY":0.9990178942680359}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":1.9439815282821656,"LookDirX":0.04969377815723419,"LookDirY":0.9987645149230957}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":3.6107425689697267,"LookDirX":0.04963754490017891,"LookDirY":0.9987673163414002}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:27]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [170]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":5.160549640655518,"LookDirX":0.04666215926408768,"LookDirY":0.998910665512085}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":6.6943182945251469,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [171]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":8.402047157287598,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [171]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":9.905564308166504,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:28]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":11.536407470703125,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [171]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":12.51315689086914,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489755392074585,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-4.301346778869629,"PosY":12.509275436401368,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [127]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.489666223526001,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:29]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [159]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-3.8288028240203859,"PosY":12.5,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4895694255828859,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [158]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.246028423309326,"PosY":12.5,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [159]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-0.7068850994110107,"PosY":12.5,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [158]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.3228488862514496,"PosY":12.5,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:30]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [169]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.3226276934146881,"PosY":11.472900390625,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [141]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5002200603485107,"PosY":10.490848541259766,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.04431978985667229,"PosY":10.47973918914795,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.8254631757736206,"PosY":9.867348670959473,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-0.0527459979057312,"PosY":8.756324768066407,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.9416791796684265,"PosY":9.808487892150879,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-0.0527459979057312,"PosY":7.860535621643066,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.9416791796684265,"PosY":9.808487892150879,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:31]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-0.0527459979057312,"PosY":9.456609725952149,"LookDirX":0.04656674712896347,"LookDirY":0.9989151954650879}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.9416791796684265,"PosY":9.808487892150879,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [170]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.8424281477928162,"PosY":10.739776611328125,"LookDirX":0.8598405718803406,"LookDirY":0.510562539100647}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2604374885559083,"PosY":9.759369850158692,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":0.5065489411354065,"LookDirY":-0.8622112274169922}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:32]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.31137368083000185,"LookDirY":-0.9502875804901123}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.31401386857032778,"LookDirY":-0.9494184255599976}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.3208044469356537,"LookDirY":-0.9471454620361328}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [172]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.335249125957489,"LookDirY":-0.9421295523643494}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:33]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.33982354402542117,"LookDirY":-0.9404892325401306}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.7280635833740235,"PosY":10.750631332397461,"LookDirX":-0.33982354402542117,"LookDirY":-0.9404892325401306}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.5888296365737916,"PosY":10.750631332397461,"LookDirX":-0.3077455461025238,"LookDirY":-0.9514687061309815}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [138]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.26039719581604,"PosY":9.758087158203125,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5346351861953735,"PosY":10.75324535369873,"LookDirX":-0.41731348633766177,"LookDirY":-0.9087626338005066}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:34]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.0980350971221924,"PosY":10.75324535369873,"LookDirX":-0.9752289056777954,"LookDirY":-0.22119805216789246}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9817113280296326,"LookDirY":-0.1903756856918335}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9817113280296326,"LookDirY":-0.1903756856918335}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:35]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9821483492851257,"LookDirY":-0.1881081461906433}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9891959428787231,"LookDirY":-0.14659972488880158}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9910913705825806,"LookDirY":-0.13318383693695069}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [174]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9910913705825806,"LookDirY":-0.13318383693695069}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:36]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [173]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":10.75324535369873,"LookDirX":-0.9908567667007446,"LookDirY":-0.1349179446697235}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [170]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":9.22892951965332,"LookDirX":0.6457157731056213,"LookDirY":0.7635778784751892}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [171]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-1.4179404973983765,"PosY":7.460440635681152,"LookDirX":0.9026152491569519,"LookDirY":0.4304482042789459}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:37]
+size : [170]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.386061668395996,"PosY":6.205901145935059,"LookDirX":0.9103110432624817,"LookDirY":0.4139249324798584}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [170]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-3.5397586822509767,"PosY":5.045048236846924,"LookDirX":0.8192960619926453,"LookDirY":0.573370635509491}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [169]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.009215831756592,"PosY":5.037834167480469,"LookDirX":0.8192960619926453,"LookDirY":0.573370635509491}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [169]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.009346008300781,"PosY":5.037834167480469,"LookDirX":0.8192960619926453,"LookDirY":0.573370635509491}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:38]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [169]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-5.009346008300781,"PosY":5.037834167480469,"LookDirX":0.8192960619926453,"LookDirY":0.573370635509491}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":0.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [113]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":-10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [128]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":-2.4894800186157228,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [140]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":1.2603754997253419,"PosY":9.755473136901856,"LookDirX":0.0,"LookDirY":0.0}
+Level : [Info]
+DateTime : [2022-09-22 오전 1:48:39]
+size : [112]{"Id":4,"UserId":4,"RoomId":0,"CharacterType":0,"TeamId":0,"PosX":3.5,"PosY":10.5,"LookDirX":0.0,"LookDirY":0.0}

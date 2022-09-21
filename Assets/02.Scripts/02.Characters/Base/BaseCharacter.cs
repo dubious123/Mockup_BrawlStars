@@ -8,6 +8,7 @@ using ServerCore.Packets;
 
 public class BaseCharacter : MonoBehaviour
 {
+	public int TeamId { get; set; }
 	#region SerializeFields
 	[SerializeField] private float _smoothInputSpeed;
 	[SerializeField] private float _runSpeed;
@@ -60,7 +61,7 @@ public class BaseCharacter : MonoBehaviour
 	public Vector3 LookDir => _targetLookDir;
 	public Vector3 PlayerCenter => _playerCenter.position;
 
-	protected virtual void Awake()
+	public virtual void Init()
 	{
 		_basicAttack?.Init(this);
 		_interactable = true;
@@ -69,8 +70,13 @@ public class BaseCharacter : MonoBehaviour
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
 		_broadcastPacket = new(User.UserId);
+		//if (TeamId == User.TeamId)
+		//{
+		//	Timing.RunCoroutine(Co_BroadCastState());
+		//}
 		Timing.RunCoroutine(Co_BroadCastState());
 	}
+
 	private void Update()
 	{
 		if (_controllable == false || _interactable == false) return;
@@ -82,7 +88,6 @@ public class BaseCharacter : MonoBehaviour
 		transform.Translate(_currentMoveSpeed * Time.deltaTime * _targetMoveDir, Space.World);
 		#endregion
 		#region Rotate
-		Debug.Log(_targetLookDir);
 		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.deltaTime * _targetLookDir, Vector3.up);
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.deltaTime * _rotationSpeed);
 		#endregion
@@ -198,10 +203,19 @@ public class BaseCharacter : MonoBehaviour
 		while (true)
 		{
 			yield return Timing.WaitForSeconds(_broadcastFreq);
+			//_broadcastPacket.LookDirX = _targetLookDir.x == 0 ? float.Epsilon : _targetLookDir.x;
+			//_broadcastPacket.LookDirY = _targetLookDir.z == 0 ? float.Epsilon : _targetLookDir.z;
 			_broadcastPacket.LookDirX = _targetLookDir.x;
 			_broadcastPacket.LookDirY = _targetLookDir.z;
 			_broadcastPacket.PosX = transform.position.x;
 			_broadcastPacket.PosY = transform.position.z;
+			//var packet = new C_BroadcastPlayerState(User.UserId)
+			//{
+			//	LookDirX = _targetLookDir.x,
+			//	LookDirY = _targetLookDir.z,
+			//	PosX = transform.position.x,
+			//	PosY = transform.position.z,
+			//};
 			Network.RegisterSend(_broadcastPacket);
 		}
 	}
