@@ -1345,7 +1345,7 @@ MonoBehaviour:
   _animator: {fileID: 1646509169937314139}
   _playerCenter: {fileID: 753935177778529229}
   _basicAttack: {fileID: 753935177645860516}
-  _broadcastFreq: 0.25
+  _broadcastFreq: 0.15
   _bash: {fileID: 6214587029905046125}
 --- !u!1 &1646509169929880297
 GameObject:

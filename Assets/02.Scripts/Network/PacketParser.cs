@@ -68,7 +68,7 @@ public static class PacketParser
 			BitConverter.TryWriteBytes(buffer.Write(2), packet.Id);
 			var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
 			BitConverter.TryWriteBytes(buffer.Write(2), (ushort)json.Count);
-			LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}]" + JsonUtility.ToJson(packet));
+			LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}] \n{JsonUtility.ToJson(packet)}");
 			json.CopyTo(buffer.Write(json.Count));
 			return true;
 		}

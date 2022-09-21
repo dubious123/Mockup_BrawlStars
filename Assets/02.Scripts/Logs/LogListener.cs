@@ -15,14 +15,14 @@ namespace Logging
 		{
 			Level = level;
 			_logQueue = new ConcurrentQueue<string>();
-			_logQueue.Enqueue($"Level : [{_header[(int)level]}]");
+			_logQueue.Enqueue($"Level : [{_header[(int)level]}]\n");
 			if (option.HasFlag(LogOptionFlag.DateTime))
 			{
-				_onLog += () => _logQueue.Enqueue($"DateTime : [{DateTime.Now}]");
+				_onLog += () => _logQueue.Enqueue($"DateTime : [{DateTime.Now}]\n");
 			}
 			if (option.HasFlag(LogOptionFlag.Callstack))
 			{
-				_onLog += () => _logQueue.Enqueue($"Callstack : {StackTraceUtility.ExtractStackTrace()}");
+				_onLog += () => _logQueue.Enqueue($"Callstack : {StackTraceUtility.ExtractStackTrace()}\n");
 			}
 		}
 		public void Write(string message)

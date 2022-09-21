@@ -1,5 +1,6 @@
 
 using ServerCore;
+using System;
 using UnityEngine;
 
 public class AuthPacket : BasePacket
@@ -69,6 +70,7 @@ public class S_EnterLobby : BasePacket
 }
 public class S_EnterGame : BasePacket
 {
+	[Serializable]
 	public struct PlayerInfoDto
 	{
 		public ushort CharacterType;

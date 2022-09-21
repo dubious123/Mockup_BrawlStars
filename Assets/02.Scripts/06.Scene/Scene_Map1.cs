@@ -14,6 +14,7 @@ public class Scene_Map1 : BaseScene
 	#endregion
 	public override void Init(object param)
 	{
+		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
 		_characters = new BaseCharacter[6];
 		//var handle = _dog.LoadAssetAsync<GameObject>();
@@ -23,13 +24,18 @@ public class Scene_Map1 : BaseScene
 		//	Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
 		//	IsReady = true;
 		//};
-		Enter(User.TeamId, User.CharType);
+		for (int i = 0; i < req.PlayerInfoArr.Length; i++)
+		{
+			var playerInfo = req.PlayerInfoArr[i];
+			if (playerInfo.CharacterType == 0) continue;
+			Enter((short)i, (CharacterType)playerInfo.CharacterType);
+		}
 		Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
 		IsReady = true;
 	}
 	public void Enter(short teamId, CharacterType type)
 	{
-		//var character = Instantiate(_dog.Asset as GameObject, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
+		Debug.Assert(_characters[teamId] is null);
 		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		_characters[teamId] = character;
 		character.TeamId = teamId;
@@ -48,34 +54,15 @@ public class Scene_Map1 : BaseScene
 	}
 	public void UpdatePlayer(short teamId, Vector2 movePos, Vector2 lookDir)
 	{
-		if (_characters[teamId] == null)
+		var character = _characters[teamId];
+		if (character is null) return;
+		var pos = new Vector3(movePos.x, character.transform.position.y, movePos.y);
+		Debug.Log((character.transform.position - pos).magnitude);
+		if ((character.transform.position - pos).magnitude > 1.5)
 		{
-			Enter(teamId, CharacterType.Dog);
+			character.transform.position = pos;
 		}
-		if (User.TeamId == teamId) return;
-		//if (movePos == Vector2.zero) return;
-		//_characters[teamId].Move(new Vector3(movePos.x, 0, movePos.y));
-		//if (lookDir == Vector2.zero)
-		//{
-		//	lookDir = Vector2.right;
-		//}
-		//_characters[teamId].Look(new Vector3(lookDir.x, 0, lookDir.y));
-	}
-	public void Move(short teamId, Vector2 movePos)
-	{
-		if (User.TeamId == teamId)
-		{
-			return;
-		}
-		_characters[teamId].Move(new Vector3(movePos.x, 0, movePos.y));
-	}
-	public void Look(short teamId, Vector2 lookDir)
-	{
-		if (User.TeamId == teamId)
-		{
-			return;
-		}
-		_characters[teamId].Look(new Vector3(lookDir.x, 0, lookDir.y));
+		character.Look(new Vector3(lookDir.x, 0, lookDir.y));
 	}
 	public void Exit()
 	{

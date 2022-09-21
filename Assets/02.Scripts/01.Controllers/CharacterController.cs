@@ -37,7 +37,6 @@ public class CharacterController : MonoBehaviour
 		#region Move
 		var moveInput = _moveAction.ReadValue<Vector2>();
 		_currentPlayer.Move(new Vector3(moveInput.x, 0, moveInput.y));
-		Debug.Log(moveInput);
 		#endregion
 		#region Look
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Floor))

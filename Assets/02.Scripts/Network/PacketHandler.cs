@@ -26,12 +26,12 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, Session>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => PacketQueue.Push(() => S_BroadcastEnterGameHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => PacketQueue.Push(() => S_BroadcastEnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet, session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)
@@ -68,11 +68,9 @@ public static class PacketHandler
 	private static void S_EnterGameHandle(BasePacket packet, Session session)
 	{
 		var req = packet as S_EnterGame;
-		if (req.TeamId == -1) return;
+		if (req.TeamId == -1 || req.PlayerInfoArr[req.TeamId].CharacterType == 0) return;
 		User.TeamId = req.TeamId;
-		var game = Scene.CurrentScene as Scene_Map1;
-
-		Scene.MoveTo(SceneType.Game, null);
+		Scene.MoveTo(SceneType.Game, req);
 	}
 
 
@@ -83,7 +81,7 @@ public static class PacketHandler
 	{
 		var req = packet as S_BroadcastGameState;
 		var game = Scene.CurrentScene as Scene_Map1;
-		if (game == null || game.IsReady == false)
+		if (game is null || game.IsReady == false)
 		{
 			Debug.LogError("scene is not game or scene is not ready");
 			return;
@@ -99,5 +97,9 @@ public static class PacketHandler
 	private static void S_BroadcastEnterGameHandle(BasePacket packet, Session session)
 	{
 		var req = packet as S_BroadcastEnterGame;
+		var game = Scene.CurrentScene as Scene_Map1;
+		if (game is null || game.IsReady == false) return;
+		game.Enter(req.TeamId, (CharacterType)req.Charactertype);
+
 	}
 }
