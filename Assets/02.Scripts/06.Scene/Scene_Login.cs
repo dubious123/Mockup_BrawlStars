@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using ServerCore.Packets;
 using static Enums;
 using UnityEngine.UI;
 

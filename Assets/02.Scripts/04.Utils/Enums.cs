@@ -14,6 +14,7 @@ public static class Enums
 	}
 	public enum CharacterType
 	{
+		None,
 		Dog,
 	}
 

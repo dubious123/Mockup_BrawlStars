@@ -1,6 +1,5 @@
 using ServerCore;
 using ServerCore.Managers;
-using ServerCore.Packets;
 using System.Collections.Concurrent;
 using System.Net.Sockets;
 using System.Threading;

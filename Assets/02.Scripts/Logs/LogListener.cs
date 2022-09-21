@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using static Enums;
 using System.Collections.Concurrent;
@@ -16,20 +14,20 @@ namespace Logging
 		public LogListener(LogLevel level, LogOptionFlag option)
 		{
 			Level = level;
-			_onLog = default;
+			_logQueue = new ConcurrentQueue<string>();
 			_logQueue.Enqueue($"Level : [{_header[(int)level]}]");
 			if (option.HasFlag(LogOptionFlag.DateTime))
 			{
-				_logQueue.Enqueue($"DateTime : [{DateTime.Now}]");
+				_onLog += () => _logQueue.Enqueue($"DateTime : [{DateTime.Now}]");
 			}
 			if (option.HasFlag(LogOptionFlag.Callstack))
 			{
-				_logQueue.Enqueue($"Callstack : {StackTraceUtility.ExtractStackTrace()}");
+				_onLog += () => _logQueue.Enqueue($"Callstack : {StackTraceUtility.ExtractStackTrace()}");
 			}
 		}
 		public void Write(string message)
 		{
-			_onLog.Invoke();
+			_onLog?.Invoke();
 			_logQueue.Enqueue($"{message}");
 		}
 		public abstract void Flush();

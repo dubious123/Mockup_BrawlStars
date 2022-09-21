@@ -1,5 +1,4 @@
 using ServerCore;
-using ServerCore.Packets;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -23,6 +22,7 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.S_Login, json => JsonUtility.FromJson<S_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterGame, json => JsonUtility.FromJson<S_EnterGame>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastEnterGame, json => JsonUtility.FromJson<S_BroadcastEnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastGameState, json => JsonUtility.FromJson<S_BroadcastGameState>(json));
 	}
 	public static BasePacket ReadPacket(this RecvBuffer buffer)

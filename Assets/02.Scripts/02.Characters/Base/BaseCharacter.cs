@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using MEC;
 using TMPro;
-using ServerCore.Packets;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -209,13 +208,6 @@ public class BaseCharacter : MonoBehaviour
 			_broadcastPacket.LookDirY = _targetLookDir.z;
 			_broadcastPacket.PosX = transform.position.x;
 			_broadcastPacket.PosY = transform.position.z;
-			//var packet = new C_BroadcastPlayerState(User.UserId)
-			//{
-			//	LookDirX = _targetLookDir.x,
-			//	LookDirY = _targetLookDir.z,
-			//	PosX = transform.position.x,
-			//	PosY = transform.position.z,
-			//};
 			Network.RegisterSend(_broadcastPacket);
 		}
 	}

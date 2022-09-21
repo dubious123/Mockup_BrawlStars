@@ -1,5 +1,4 @@
 using ServerCore;
-using ServerCore.Packets;
 using System;
 using System.Collections.Concurrent;
 using static Enums;
@@ -27,11 +26,12 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, Session>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet, session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => PacketQueue.Push(() => S_InitHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => PacketQueue.Push(() => S_LoginHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => PacketQueue.Push(() => S_EnterLobbyHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => PacketQueue.Push(() => S_EnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => PacketQueue.Push(() => S_BroadcastEnterGameHandle(packet, session)));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => PacketQueue.Push(() => S_BroadcastGameStateHandle(packet, session)));
 	}
 
 	public static void HandlePacket(BasePacket packet, Session session)
@@ -68,8 +68,7 @@ public static class PacketHandler
 	private static void S_EnterGameHandle(BasePacket packet, Session session)
 	{
 		var req = packet as S_EnterGame;
-		if (req.Result == false) return;
-		User.GameRoomId = req.RoomId;
+		if (req.TeamId == -1) return;
 		User.TeamId = req.TeamId;
 		var game = Scene.CurrentScene as Scene_Map1;
 
@@ -95,5 +94,10 @@ public static class PacketHandler
 		}
 
 
+	}
+
+	private static void S_BroadcastEnterGameHandle(BasePacket packet, Session session)
+	{
+		var req = packet as S_BroadcastEnterGame;
 	}
 }
