@@ -1,27 +1,54 @@
+using Logging;
 using ServerCore;
 using ServerCore.Managers;
+using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 using UnityEngine;
+using static Enums;
 
 public class ServerSession : Session
 {
+	JobQueue _sendQueue;
+	JobQueue _parserQueue;
 	ConcurrentQueue<BasePacket> _sendingPacketQueue;
+	IEnumerator<float> _coPacketParserHandler;
 	int _sendRegistered;
+	public bool ParsingPacket;
+
 	public override void Init(int id, Socket socket)
 	{
 		base.Init(id, socket);
 		_sendRegistered = 0;
 		_sendingPacketQueue = new ConcurrentQueue<BasePacket>();
+		_sendQueue = JobMgr.GetQueue("PacketSend");
+		_parserQueue = JobMgr.GetQueue("PacketParser");
+		_coPacketParserHandler = _recvBuffer.ReadPacket(this);
 	}
 	public override void OnConnected()
 	{
 		base.OnConnected();
 		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed");
-		C_Init packet = new C_Init();
-		RegisterSend(packet);
+		RegisterSend(new C_Init());
 		Send();
+	}
+	protected override void Send()
+	{
+		try
+		{
+			base.Send();
+		}
+		catch (ObjectDisposedException e)
+		{
+			JobMgr.PushUnityJob(() =>
+			LogMgr.Log(LogSourceType.Session, LogLevel.Error, $"Session [{Id}] : {e.Message}"));
+		}
+		catch (Exception)
+		{
+			throw;
+		}
 	}
 	protected override void OnSendCompleted(SocketAsyncEventArgs args)
 	{
@@ -31,13 +58,13 @@ public class ServerSession : Session
 			_sendRegistered = 0;
 			return;
 		}
-		PacketQueue.Push(() =>
+		_sendQueue.Push(() =>
 		{
 			while (_sendingPacketQueue.TryDequeue(out BasePacket item))
 			{
 				_sendBuffer.WritePacket(item);
 			}
-			PacketQueue.Push(() => Send());
+			_sendQueue.Push(() => Send());
 		});
 	}
 	protected override void OnRecvCompleted(SocketAsyncEventArgs args)
@@ -48,11 +75,13 @@ public class ServerSession : Session
 			SessionMgr.Close(Id);
 			return;
 		}
-		while (_recvBuffer.CanRead())
+		_parserQueue.Push(() =>
 		{
-			PacketHandler.HandlePacket(_recvBuffer.ReadPacket(), this);
-		}
-		RegisterRecv();
+			_coPacketParserHandler.MoveNext();
+			//todo
+			//만약 한 악성 클라이언트가 엄청 빠르게 많이 보내면 queue가 해당 클라이언트의 패킷만 처리하면서 막힐 수 있다.
+			RegisterRecv();
+		});
 	}
 
 	public override bool RegisterSend(BasePacket packet)
@@ -65,7 +94,7 @@ public class ServerSession : Session
 			{
 				result &= _sendBuffer.WritePacket(item);
 			}
-			PacketQueue.Push(() => Send());
+			_sendQueue.Push(() => Send());
 		}
 		return result;
 	}

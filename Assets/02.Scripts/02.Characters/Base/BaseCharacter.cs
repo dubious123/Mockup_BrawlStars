@@ -14,8 +14,10 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private float _walkSpeed;
 	[SerializeField] private float _rotationSpeed;
 
+
 	[SerializeField] protected int _maxHp;
 
+	[SerializeField] private Rigidbody _rigidBody;
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
 	#region Abilities
@@ -28,6 +30,7 @@ public class BaseCharacter : MonoBehaviour
 
 	#endregion
 	protected float _currentMoveSpeed;
+	protected bool _isAwake;
 	protected bool _isAttacking;
 	protected bool _interactable;
 	protected bool _canBasicAttack;
@@ -37,7 +40,7 @@ public class BaseCharacter : MonoBehaviour
 	protected Vector3 _targetLookDir;
 	protected Quaternion _targetRotation;
 	protected TextMeshProUGUI _stunUI;
-	protected C_BroadcastPlayerState _broadcastPacket;
+
 
 	protected int _currentHp;
 
@@ -63,20 +66,21 @@ public class BaseCharacter : MonoBehaviour
 	public virtual void Init()
 	{
 		_basicAttack?.Init(this);
+		_isAwake = true;
 		_interactable = true;
 		_controllable = true;
 		_canBasicAttack = true;
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
-		_broadcastPacket = new(User.UserId);
-		//if (TeamId == User.TeamId)
-		//{
-		//	Timing.RunCoroutine(Co_BroadCastState());
-		//}
-		Timing.RunCoroutine(Co_BroadCastState());
+		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
+		Debug.Assert(_rigidBody is not null);
 	}
-
-	private void Update()
+	public void HandleInput(in InputInfo input)
+	{
+		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, input.MoveInput, ref _smoothVelocity, _smoothInputSpeed);
+		_targetLookDir = input.LookInput;
+	}
+	public void HandleOneFrame()
 	{
 		if (_controllable == false || _interactable == false) return;
 		#region Move
@@ -94,13 +98,18 @@ public class BaseCharacter : MonoBehaviour
 		_animator.SetFloat(AnimatorMeta.Speed_Float, _currentMoveSpeed);
 		#endregion
 	}
-	public void Move(Vector3 moveDir)
+	public void StopAll()
 	{
-		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, moveDir, ref _smoothVelocity, _smoothInputSpeed);
+		if (_isAwake == false) return;
+		_isAwake = false;
+		_rigidBody.Sleep();
+		_animator.speed = 0;
 	}
-	public void Look(Vector3 lookDir)
+	public void AwakeAll()
 	{
-		_targetLookDir = lookDir;
+		if (_isAwake) return;
+		_rigidBody.WakeUp();
+		_animator.speed = 1;
 	}
 	public void ActivateBasicAttack()
 	{
@@ -197,18 +206,5 @@ public class BaseCharacter : MonoBehaviour
 		_controllable = false;
 		_interactable = false;
 	}
-	protected virtual IEnumerator<float> Co_BroadCastState()
-	{
-		while (true)
-		{
-			yield return Timing.WaitForSeconds(_broadcastFreq);
-			//_broadcastPacket.LookDirX = _targetLookDir.x == 0 ? float.Epsilon : _targetLookDir.x;
-			//_broadcastPacket.LookDirY = _targetLookDir.z == 0 ? float.Epsilon : _targetLookDir.z;
-			_broadcastPacket.LookDirX = _targetLookDir.x;
-			_broadcastPacket.LookDirY = _targetLookDir.z;
-			_broadcastPacket.PosX = transform.position.x;
-			_broadcastPacket.PosY = transform.position.z;
-			Network.RegisterSend(_broadcastPacket);
-		}
-	}
+
 }

@@ -16,6 +16,8 @@ public class CharacterController : MonoBehaviour
 	protected InputAction _abilityCancel;
 	protected RaycastHit _lookHit;
 	protected Vector3 _lookdir;
+	protected Scene_Map1 _game;
+	protected bool _isReady = false;
 
 	public virtual void Init(BaseCharacter playableCharacter)
 	{
@@ -26,17 +28,20 @@ public class CharacterController : MonoBehaviour
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
 		_abilityQ = _playerInput.actions[InputActionMeta.Q];
 		_abilityCancel = _playerInput.actions[InputActionMeta.CancelAbility];
+		Debug.Assert(Scene.CurrentScene is Scene_Map1);
+		_game = Scene.CurrentScene as Scene_Map1;
+		_isReady = true;
 	}
 
-	private void Update()
+	private void FixedUpdate()
 	{
+		if (_isReady == false) return;
 		if (_currentPlayer == null || _currentPlayer.IsControllable == false)
 		{
 			return;
 		}
 		#region Move
 		var moveInput = _moveAction.ReadValue<Vector2>();
-		_currentPlayer.Move(new Vector3(moveInput.x, 0, moveInput.y));
 		#endregion
 		#region Look
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Floor))
@@ -45,7 +50,15 @@ public class CharacterController : MonoBehaviour
 			_lookdir.y = 0;
 			_lookdir = _lookdir.normalized;
 		}
-		_currentPlayer.Look(_lookdir);
 		#endregion
+		//_game.EnqueueInputInfo(User.TeamId, new InputInfo()
+		//{
+		//	LookInput = _lookdir,
+		//	MoveInput = new Vector3(moveInput.x, 0, moveInput.y),
+		//	StartTick = _game.CurrentTick,
+		//	TargetTick = _game.CurrentTick + 6, //input lag = 0.1sec
+		//});
+		//Todo object pooling to reduce gc
+		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, _lookdir));
 	}
 }

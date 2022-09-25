@@ -15,13 +15,12 @@ public class Scene_Entry : BaseScene
 	{
 		Screen.SetResolution(1920, 1080, false);
 		Application.targetFrameRate = 300;
-		//S_EnterGame packet = new S_EnterGame();
-		//packet.PlayerInfoArr = new PlayerInfoDto[6];
-		//var str = JsonUtility.ToJson(packet);
+		//Debug.Log(1 / 60);
+		Time.fixedDeltaTime = 1 / 60f;
+		DontDestroyOnLoad(new GameObject("@JobMgr", typeof(JobMgr)));
 		DontDestroyOnLoad(new GameObject("@Log", typeof(LogMgr)));
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
-		DontDestroyOnLoad(new GameObject("@PacketQueue", typeof(PacketQueue)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
 	}
 }

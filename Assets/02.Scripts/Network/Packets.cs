@@ -1,6 +1,6 @@
 
-using ServerCore;
 using System;
+using ServerCore;
 using UnityEngine;
 
 public class AuthPacket : BasePacket
@@ -44,16 +44,22 @@ public class C_EnterGame : AuthPacket
 	}
 	public ushort CharacterType;
 }
-public class C_BroadcastPlayerState : GamePacket
+public class C_BroadcastPlayerInput : GamePacket
 {
-	public C_BroadcastPlayerState(int userId)
+	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveInput, Vector2 lookInput)
 	{
 		Id = 0x0004;
 		UserId = userId;
+		StartTick = startTick;
+		MoveDirX = moveInput.x;
+		MoveDirY = moveInput.y;
+		LookDirX = lookInput.x;
+		LookDirY = lookInput.y;
 	}
 	public short TeamId;
-	public float PosX;
-	public float PosY;
+	public long StartTick;
+	public float MoveDirX;
+	public float MoveDirY;
 	public float LookDirX;
 	public float LookDirY;
 }
@@ -85,11 +91,16 @@ public class S_BroadcastEnterGame : BasePacket
 }
 public class S_BroadcastGameState : BasePacket
 {
-	public int RoomId;
-	public Vector2[] PlayerPosArr;
+	public long StartTick;
+	public long TargetTick;
+	public Vector2[] PlayerMoveDirArr;
 	public Vector2[] PlayerLookDirArr;
 
-	public ushort PlayerCount;
 
-
+}
+public class S_BroadcastMove : BasePacket
+{
+	public Vector2 MoveDir;
+	public Vector2 LookDir;
+	public short TeamId;
 }

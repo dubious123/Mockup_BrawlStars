@@ -31,10 +31,6 @@ public class Network : MonoBehaviour
 
 	public static void RegisterSend(BasePacket packet)
 	{
-		PacketQueue.Push(() =>
-		{
-			_instance._session.RegisterSend(packet);
-		});
-
+		_instance._session.RegisterSend(packet);
 	}
 }
