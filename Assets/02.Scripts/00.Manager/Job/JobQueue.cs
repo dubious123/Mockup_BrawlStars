@@ -66,6 +66,12 @@ public class JobQueue
 					}
 					nowTick = Environment.TickCount;
 				}
+
+				//for (int j = 0; j < _jobQueue.Count; j++)
+				//{
+				//	if (_jobQueue.TryDequeue(out var action))
+				//		action.Invoke();
+				//}
 			}
 			Thread.Sleep(Timeout.Infinite);
 		}

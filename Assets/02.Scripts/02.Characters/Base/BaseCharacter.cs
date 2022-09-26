@@ -78,6 +78,7 @@ public class BaseCharacter : MonoBehaviour
 	public void HandleInput(in InputInfo input)
 	{
 		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, input.MoveInput, ref _smoothVelocity, _smoothInputSpeed);
+		if (input.LookInput == Vector3.zero) return;
 		_targetLookDir = input.LookInput;
 	}
 	public void HandleOneFrame()

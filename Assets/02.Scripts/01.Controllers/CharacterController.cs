@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Logging;
+using static Enums;
 
 public class CharacterController : MonoBehaviour
 {
@@ -36,10 +38,8 @@ public class CharacterController : MonoBehaviour
 	private void FixedUpdate()
 	{
 		if (_isReady == false) return;
-		if (_currentPlayer == null || _currentPlayer.IsControllable == false)
-		{
-			return;
-		}
+		if (_currentPlayer == null || _currentPlayer.IsControllable == false) return;
+		if (_game.GameStarted == false) return;
 		#region Move
 		var moveInput = _moveAction.ReadValue<Vector2>();
 		#endregion
@@ -51,6 +51,10 @@ public class CharacterController : MonoBehaviour
 			_lookdir = _lookdir.normalized;
 		}
 		#endregion
+
+		//Todo object pooling to reduce gc
+		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_game.CurrentTick}]\ninput ¹ß»ý, move : {moveInput}, look : {_lookdir}");
+		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, new Vector2(_lookdir.x, _lookdir.z)));
 		//_game.EnqueueInputInfo(User.TeamId, new InputInfo()
 		//{
 		//	LookInput = _lookdir,
@@ -58,7 +62,5 @@ public class CharacterController : MonoBehaviour
 		//	StartTick = _game.CurrentTick,
 		//	TargetTick = _game.CurrentTick + 6, //input lag = 0.1sec
 		//});
-		//Todo object pooling to reduce gc
-		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, _lookdir));
 	}
 }

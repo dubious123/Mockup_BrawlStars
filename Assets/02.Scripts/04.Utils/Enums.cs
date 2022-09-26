@@ -42,5 +42,7 @@ public static class Enums
 		None = 0,
 		DateTime = 1,
 		Callstack = 2,
+		FixedTime = 4,
+
 	}
 }

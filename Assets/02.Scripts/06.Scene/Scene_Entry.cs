@@ -16,7 +16,7 @@ public class Scene_Entry : BaseScene
 		Screen.SetResolution(1920, 1080, false);
 		Application.targetFrameRate = 300;
 		//Debug.Log(1 / 60);
-		Time.fixedDeltaTime = 1 / 60f;
+		Time.fixedDeltaTime = 1 / 50f;
 		DontDestroyOnLoad(new GameObject("@JobMgr", typeof(JobMgr)));
 		DontDestroyOnLoad(new GameObject("@Log", typeof(LogMgr)));
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));

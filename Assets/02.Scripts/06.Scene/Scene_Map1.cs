@@ -1,3 +1,6 @@
+using Logging;
+using MEC;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -14,52 +17,19 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] Transform[] _spawnPoint;
 	[SerializeField] BaseCharacter[] _characters;
 	#endregion
-	PriorityQueue<InputInfo, long>[] _inputQueues;
+	ConcurrentQueue<InputInfo>[] _inputBuffers;
+	//PriorityQueue<InputInfo, long>[] _inputQueues;
 	public long CurrentTick => _currentTick;
+	public bool GameStarted => _gameStarted;
+	private object _lock = new();
 	long _currentTick = 0;
-	private void FixedUpdate()
-	{
-		Co_FixedUpdate().MoveNext();
-	}
-	private IEnumerator<float> Co_FixedUpdate()
-	{
-		BaseCharacter character;
-		PriorityQueue<InputInfo, long> inputQueue;
-		while (true)
-		{
-			_currentTick++;
-			for (int i = 0; i < 6; i++)
-			{
-				character = _characters[i];
-				inputQueue = _inputQueues[i];
-				if (character is null) continue;
-				while (inputQueue.Count <= 0)
-				{
-					yield return 0f;
-				}
-				while (inputQueue.Peek().TargetTick > _currentTick)
-				{
-					character.StopAll();
-					yield return 0f;
-				}
-				character.AwakeAll();
-				character.HandleInput(inputQueue.Dequeue());
-			}
-			for (int i = 0; i < 6; i++)
-			{
-				character = _characters[i];
-				if (character is null) continue;
-				character.HandleOneFrame();
-			}
-			yield return 0f;
-		}
-	}
+	bool _gameStarted = false;
 	public override void Init(object param)
 	{
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
 		_characters = new BaseCharacter[6];
-		_inputQueues = new PriorityQueue<InputInfo, long>[6];
+		_inputBuffers = new ConcurrentQueue<InputInfo>[6];
 		//var handle = _dog.LoadAssetAsync<GameObject>();
 		//handle.Completed += _ =>
 		//{
@@ -75,13 +45,56 @@ public class Scene_Map1 : BaseScene
 		}
 		Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
 		IsReady = true;
+		Network.RegisterSend(new C_GameReady(User.UserId));
 	}
+	private void FixedUpdate()
+	{
+		if (_gameStarted == false) return;
+		LogMgr.Log(LogSourceType.Debug, "Update Start");
+		Co_FixedUpdate().MoveNext();
+		LogMgr.Log(LogSourceType.Debug, "Update End");
+
+	}
+	private IEnumerator<float> Co_FixedUpdate()
+	{
+		BaseCharacter character;
+		//PriorityQueue<InputInfo, long> inputQueue;
+		ConcurrentQueue<InputInfo> inputBuffer;
+		while (true)
+		{
+			_currentTick++;
+			for (int i = 0; i < 6; i++)
+			{
+				character = _characters[i];
+				inputBuffer = _inputBuffers[i];
+				if (character is null) continue;
+
+				if (inputBuffer.TryPeek(out var input) == false || input.TargetTick > _currentTick)
+				{
+					character.HandleInput(default(InputInfo));
+					continue;
+				}
+				inputBuffer.TryDequeue(out input);
+				LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nDequeueing {JsonUtility.ToJson(input)}");
+				character.HandleInput(input);
+				character.AwakeAll();
+			}
+			for (int i = 0; i < 6; i++)
+			{
+				character = _characters[i];
+				if (character is null) continue;
+				character.HandleOneFrame();
+			}
+			yield return 0f;
+		}
+	}
+
 	public void Enter(short teamId, CharacterType type)
 	{
 		Debug.Assert(_characters[teamId] is null);
 		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		_characters[teamId] = character;
-		_inputQueues[teamId] = new();
+		_inputBuffers[teamId] = new();
 		character.TeamId = teamId;
 		character.Init();
 		if (User.TeamId == teamId)
@@ -95,6 +108,15 @@ public class Scene_Map1 : BaseScene
 			character.gameObject.AddComponent<DogController>().Init(character);
 		}
 
+	}
+	public void StartGame(float waitTime)
+	{
+		Timing.CallDelayed(waitTime, Internal_StartGame);
+	}
+	void Internal_StartGame()
+	{
+		LogMgr.Log(LogSourceType.Debug, "---------------StartGame----------------");
+		_gameStarted = true;
 	}
 	public void UpdatePlayer(short teamId, Vector2 moveDir, Vector2 lookDir)
 	{
@@ -110,9 +132,10 @@ public class Scene_Map1 : BaseScene
 	public void EnqueueInputInfo(short teamId, in InputInfo info)
 	{
 		//Debug.Assert(_characters[teamId] is not null);
-		var queue = _inputQueues[teamId];
-		if (queue is null) return;
-		_inputQueues[teamId].Enqueue(info, info.TargetTick);
+		var buffer = _inputBuffers[teamId];
+		if (buffer is null) return;
+		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nEnqueueing {JsonUtility.ToJson(info)}");
+		buffer.Enqueue(info);
 	}
 
 }

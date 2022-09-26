@@ -44,11 +44,19 @@ public class C_EnterGame : AuthPacket
 	}
 	public ushort CharacterType;
 }
+public class C_GameReady : AuthPacket
+{
+	public C_GameReady(int userId)
+	{
+		Id = 0x0004;
+		UserId = userId;
+	}
+}
 public class C_BroadcastPlayerInput : GamePacket
 {
 	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveInput, Vector2 lookInput)
 	{
-		Id = 0x0004;
+		Id = 0x0005;
 		UserId = userId;
 		StartTick = startTick;
 		MoveDirX = moveInput.x;
@@ -88,6 +96,10 @@ public class S_BroadcastEnterGame : BasePacket
 {
 	public ushort Charactertype;
 	public short TeamId;
+}
+public class S_BroadcastStartGame : BasePacket
+{
+	public float WaitTime;
 }
 public class S_BroadcastGameState : BasePacket
 {

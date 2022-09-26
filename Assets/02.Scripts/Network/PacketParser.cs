@@ -19,12 +19,14 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.C_Login, json => JsonUtility.FromJson<C_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterLobby, json => JsonUtility.FromJson<C_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterGame, json => JsonUtility.FromJson<C_EnterGame>(json));
+		_readDict.TryAdd((ushort)PacketId.C_GameReady, json => JsonUtility.FromJson<C_GameReady>(json));
 		_readDict.TryAdd((ushort)PacketId.C_BroadcastPlayerInput, json => JsonUtility.FromJson<C_BroadcastPlayerInput>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Init, json => JsonUtility.FromJson<S_Init>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Login, json => JsonUtility.FromJson<S_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterGame, json => JsonUtility.FromJson<S_EnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastEnterGame, json => JsonUtility.FromJson<S_BroadcastEnterGame>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartGame, json => JsonUtility.FromJson<S_BroadcastStartGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastGameState, json => JsonUtility.FromJson<S_BroadcastGameState>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastMove, json => JsonUtility.FromJson<S_BroadcastMove>(json));
 	}
@@ -67,7 +69,7 @@ public static class PacketParser
 			string json = Encoding.UTF8.GetString(buffer.Read(size));
 			LogMgr.Log(Enums.LogSourceType.PacketRecv, json);
 			var packet = func.Invoke(json);
-			LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(packet, true));
+			//LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(packet, true));
 			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(packet, session));
 #else
 			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(func.Invoke(buffer.Read(size)), session));

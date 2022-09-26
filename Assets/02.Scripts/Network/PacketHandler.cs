@@ -8,31 +8,18 @@ using static ServerCore.Utils.Enums;
 public static class PacketHandler
 {
 	static ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>> _handlerDict;
-	//#region Scenes
-	//static Scene_Login _login;
-	//static Scene_Login SceneLogin
-	//{
-	//	get
-	//	{
-	//		if (_login == null)
-	//		{
-	//			_login = GameObject.Find("SceneLogin").GetComponent<Scene_Login>();
-	//		}
-	//		return _login;
-	//	}
-	//}
-	//#endregion
 
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet, session) => S_BroadcastGameStateHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastMove, (packet, session) => S_BroadcastMoveHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => S_LoginHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => S_BroadcastEnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet,session) => S_BroadcastStartGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => S_BroadcastGameStateHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastMove, (packet,session) => S_BroadcastMoveHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -99,6 +86,7 @@ public static class PacketHandler
 				TargetTick = req.TargetTick
 			});
 		}
+
 	}
 
 	private static void S_BroadcastEnterGameHandle(BasePacket packet, ServerSession session)
@@ -108,11 +96,22 @@ public static class PacketHandler
 		JobMgr.PushUnityJob(() => game.Enter(req.TeamId, (CharacterType)req.Charactertype));
 
 	}
+	private static void S_BroadcastStartGameHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastStartGame;
 
+		JobMgr.PushUnityJob(() =>
+		{
+			if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
+			game.StartGame(req.WaitTime);
+		});
+	}
 	private static void S_BroadcastMoveHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_BroadcastMove;
 		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
 		JobMgr.PushUnityJob(() => game.UpdatePlayer(req.TeamId, req.MoveDir, req.LookDir));
 	}
+
+
 }

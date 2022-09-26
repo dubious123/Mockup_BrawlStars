@@ -30,7 +30,8 @@ public class ServerSession : Session
 	public override void OnConnected()
 	{
 		base.OnConnected();
-		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed");
+		JobMgr.PushUnityJob(() =>
+		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed"));
 		RegisterSend(new C_Init());
 		Send();
 	}
@@ -42,8 +43,7 @@ public class ServerSession : Session
 		}
 		catch (ObjectDisposedException e)
 		{
-			JobMgr.PushUnityJob(() =>
-			LogMgr.Log(LogSourceType.Session, LogLevel.Error, $"Session [{Id}] : {e.Message}"));
+			JobMgr.PushUnityJob(() => LogMgr.Log(LogSourceType.Session, LogLevel.Error, $"Session [{Id}] : {e.Message}"));
 		}
 		catch (Exception)
 		{

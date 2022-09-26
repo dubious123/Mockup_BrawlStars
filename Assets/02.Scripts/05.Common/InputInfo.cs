@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
+[Serializable]
 public struct InputInfo
 {
-	public long StartTick { get; init; } //N
-	public long TargetTick { get; init; } //N + alpha
-	public Vector3 MoveInput { get; init; }
-	public Vector3 LookInput { get; init; }
+	[SerializeField] public long StartTick;//{ get; init; } //N
+	[SerializeField] public long TargetTick;//{ get; init; } //N + alpha
+	[SerializeField] public Vector3 MoveInput;//{ get; init; }
+	[SerializeField] public Vector3 LookInput;//{ get; init; }
 }
