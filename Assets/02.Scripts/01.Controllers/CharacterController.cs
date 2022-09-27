@@ -20,6 +20,7 @@ public class CharacterController : MonoBehaviour
 	protected Vector3 _lookdir;
 	protected Scene_Map1 _game;
 	protected bool _isReady = false;
+	protected byte _mousePressed = 0;
 
 	public virtual void Init(BaseCharacter playableCharacter)
 	{
@@ -28,6 +29,10 @@ public class CharacterController : MonoBehaviour
 		_moveAction = _playerInput.actions[InputActionMeta.Move];
 		_lookAction = _playerInput.actions[InputActionMeta.Look];
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
+		{
+			_basicAttackAction.started += _ => _mousePressed = 1;
+			_basicAttackAction.canceled += _ => _mousePressed = 0;
+		}
 		_abilityQ = _playerInput.actions[InputActionMeta.Q];
 		_abilityCancel = _playerInput.actions[InputActionMeta.CancelAbility];
 		Debug.Assert(Scene.CurrentScene is Scene_Map1);
@@ -54,7 +59,7 @@ public class CharacterController : MonoBehaviour
 
 		//Todo object pooling to reduce gc
 		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_game.CurrentTick}]\ninput ¹ß»ý, move : {moveInput}, look : {_lookdir}");
-		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, new Vector2(_lookdir.x, _lookdir.z)));
+		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, new Vector2(_lookdir.x, _lookdir.z), _mousePressed));
 		//_game.EnqueueInputInfo(User.TeamId, new InputInfo()
 		//{
 		//	LookInput = _lookdir,

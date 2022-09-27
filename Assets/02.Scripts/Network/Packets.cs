@@ -54,7 +54,7 @@ public class C_GameReady : AuthPacket
 }
 public class C_BroadcastPlayerInput : GamePacket
 {
-	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveInput, Vector2 lookInput)
+	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveInput, Vector2 lookInput, byte mousePressed)
 	{
 		Id = 0x0005;
 		UserId = userId;
@@ -63,7 +63,9 @@ public class C_BroadcastPlayerInput : GamePacket
 		MoveDirY = moveInput.y;
 		LookDirX = lookInput.x;
 		LookDirY = lookInput.y;
+		MousePressed = mousePressed;
 	}
+	public byte MousePressed;
 	public short TeamId;
 	public long StartTick;
 	public float MoveDirX;
@@ -107,6 +109,7 @@ public class S_BroadcastGameState : BasePacket
 	public long TargetTick;
 	public Vector2[] PlayerMoveDirArr;
 	public Vector2[] PlayerLookDirArr;
+	public ushort[] MousePressed;
 
 
 }

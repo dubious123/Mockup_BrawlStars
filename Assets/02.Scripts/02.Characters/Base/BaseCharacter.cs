@@ -75,11 +75,19 @@ public class BaseCharacter : MonoBehaviour
 		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
 		Debug.Assert(_rigidBody is not null);
 	}
-	public void HandleInput(in Vector2 moveDir, in Vector2 lookDir)
+	public void HandleInput(in Vector2 moveDir, in Vector2 lookDir, in ushort mousePressed)
 	{
 		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, new Vector3(moveDir.x, 0, moveDir.y), ref _smoothVelocity, _smoothInputSpeed);
 		if (lookDir == Vector2.zero) return;
 		_targetLookDir = new Vector3(lookDir.x, 0, lookDir.y);
+		if (mousePressed == 0)
+		{
+			DeactivateBasicAttack();
+		}
+		else
+		{
+			ActivateBasicAttack();
+		}
 	}
 	public void HandleOneFrame()
 	{

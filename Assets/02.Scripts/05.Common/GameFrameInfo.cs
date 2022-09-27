@@ -12,4 +12,5 @@ public struct GameFrameInfo
 	[SerializeField] public long TargetTick;//{ get; init; } //N + alpha
 	[SerializeField] public Vector2[] MoveInput;//{ get; init; }
 	[SerializeField] public Vector2[] LookInput;//{ get; init; }
+	[SerializeField] public ushort[] MousePressed;
 }

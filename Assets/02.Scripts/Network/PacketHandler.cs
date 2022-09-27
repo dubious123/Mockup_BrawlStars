@@ -80,7 +80,9 @@ public static class PacketHandler
 			LookInput = req.PlayerLookDirArr,
 			MoveInput = req.PlayerMoveDirArr,
 			StartTick = req.StartTick,
-			TargetTick = req.TargetTick
+			TargetTick = req.TargetTick,
+			MousePressed = req.MousePressed
+
 		});
 
 	}

@@ -13,6 +13,7 @@ public class Scene_Map1 : BaseScene
 	#region SerializeField
 	//[SerializeField] AssetReference _dog;
 	[SerializeField] GameObject _dog;
+	[SerializeField] GameObject _gameMessage_waiting;
 	[SerializeField] InputActionAsset _inputAsset;
 	[SerializeField] Transform[] _spawnPoint;
 	[SerializeField] BaseCharacter[] _characters;
@@ -69,7 +70,7 @@ public class Scene_Map1 : BaseScene
 			{
 				character = _characters[i];
 				if (character is null) continue;
-				character.HandleInput(info.MoveInput[i], info.LookInput[i]);
+				character.HandleInput(info.MoveInput[i], info.LookInput[i], info.MousePressed[i]);
 				character.HandleOneFrame();
 			}
 			_currentTick++;
@@ -103,6 +104,7 @@ public class Scene_Map1 : BaseScene
 	void Internal_StartGame()
 	{
 		LogMgr.Log(LogSourceType.Debug, "---------------StartGame----------------");
+		_gameMessage_waiting.SetActive(false);
 		_gameStarted = true;
 	}
 	public void UpdatePlayer(short teamId, Vector2 moveDir, Vector2 lookDir)

@@ -65,15 +65,11 @@ public static class PacketParser
 			}
 			//Todo handle invalid id
 			_readDict.TryGetValue(id, out var func);
-#if DEBUG
 			string json = Encoding.UTF8.GetString(buffer.Read(size));
 			LogMgr.Log(Enums.LogSourceType.PacketRecv, json);
 			var packet = func.Invoke(json);
 			//LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(packet, true));
 			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(packet, session));
-#else
-			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(func.Invoke(buffer.Read(size)), session));
-#endif
 		}
 	}
 	public static bool WritePacket(this SendBuffer buffer, BasePacket packet)

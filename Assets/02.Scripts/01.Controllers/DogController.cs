@@ -11,8 +11,8 @@ public class DogController : CharacterController
 	{
 		base.Init(playableCharacter);
 		_dog = _currentPlayer as Dog_Character;
-		_basicAttackAction.started += _ => _dog.ActivateBasicAttack();
-		_basicAttackAction.canceled += _ => _dog.DeactivateBasicAttack();
+		//_basicAttackAction.started += _ => _dog.ActivateBasicAttack();
+		//_basicAttackAction.canceled += _ => _dog.DeactivateBasicAttack();
 		_abilityQ.started += _ => _dog.ChargeBash();
 		_abilityQ.canceled += _ => _dog.ReleaseBash();
 		_abilityCancel.performed += _ => _dog.CancelBash();
