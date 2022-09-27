@@ -17,7 +17,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] Transform[] _spawnPoint;
 	[SerializeField] BaseCharacter[] _characters;
 	#endregion
-	ConcurrentQueue<InputInfo>[] _inputBuffers;
+	ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
 	//PriorityQueue<InputInfo, long>[] _inputQueues;
 	public long CurrentTick => _currentTick;
 	public bool GameStarted => _gameStarted;
@@ -29,7 +29,7 @@ public class Scene_Map1 : BaseScene
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
 		_characters = new BaseCharacter[6];
-		_inputBuffers = new ConcurrentQueue<InputInfo>[6];
+		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		//var handle = _dog.LoadAssetAsync<GameObject>();
 		//handle.Completed += _ =>
 		//{
@@ -50,41 +50,29 @@ public class Scene_Map1 : BaseScene
 	private void FixedUpdate()
 	{
 		if (_gameStarted == false) return;
-		LogMgr.Log(LogSourceType.Debug, "Update Start");
 		Co_FixedUpdate().MoveNext();
-		LogMgr.Log(LogSourceType.Debug, "Update End");
 
 	}
 	private IEnumerator<float> Co_FixedUpdate()
 	{
 		BaseCharacter character;
-		//PriorityQueue<InputInfo, long> inputQueue;
-		ConcurrentQueue<InputInfo> inputBuffer;
+		GameFrameInfo info;
 		while (true)
 		{
-			_currentTick++;
-			for (int i = 0; i < 6; i++)
+			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
-				character = _characters[i];
-				inputBuffer = _inputBuffers[i];
-				if (character is null) continue;
-
-				if (inputBuffer.TryPeek(out var input) == false || input.TargetTick > _currentTick)
-				{
-					character.HandleInput(default(InputInfo));
-					continue;
-				}
-				inputBuffer.TryDequeue(out input);
-				LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nDequeueing {JsonUtility.ToJson(input)}");
-				character.HandleInput(input);
-				character.AwakeAll();
+				//todo
+				yield return 0f;
 			}
+			LogMgr.Log(LogSourceType.Debug, $"----------------move one frame, current tick : [{_currentTick}]-------------------");
 			for (int i = 0; i < 6; i++)
 			{
 				character = _characters[i];
 				if (character is null) continue;
+				character.HandleInput(info.MoveInput[i], info.LookInput[i]);
 				character.HandleOneFrame();
 			}
+			_currentTick++;
 			yield return 0f;
 		}
 	}
@@ -94,7 +82,6 @@ public class Scene_Map1 : BaseScene
 		Debug.Assert(_characters[teamId] is null);
 		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
 		_characters[teamId] = character;
-		_inputBuffers[teamId] = new();
 		character.TeamId = teamId;
 		character.Init();
 		if (User.TeamId == teamId)
@@ -129,13 +116,11 @@ public class Scene_Map1 : BaseScene
 	{
 
 	}
-	public void EnqueueInputInfo(short teamId, in InputInfo info)
+	public void EnqueueFrameInfo(in GameFrameInfo info)
 	{
 		//Debug.Assert(_characters[teamId] is not null);
-		var buffer = _inputBuffers[teamId];
-		if (buffer is null) return;
 		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nEnqueueing {JsonUtility.ToJson(info)}");
-		buffer.Enqueue(info);
+		_frameInfoQueue.Enqueue(info);
 	}
 
 }

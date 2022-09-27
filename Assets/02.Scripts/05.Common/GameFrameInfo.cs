@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 [Serializable]
-public struct InputInfo
+public struct GameFrameInfo
 {
 	[SerializeField] public long StartTick;//{ get; init; } //N
 	[SerializeField] public long TargetTick;//{ get; init; } //N + alpha
-	[SerializeField] public Vector3 MoveInput;//{ get; init; }
-	[SerializeField] public Vector3 LookInput;//{ get; init; }
+	[SerializeField] public Vector2[] MoveInput;//{ get; init; }
+	[SerializeField] public Vector2[] LookInput;//{ get; init; }
 }

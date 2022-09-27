@@ -12,14 +12,14 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => S_InitHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => S_LoginHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => S_EnterLobbyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => S_EnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => S_BroadcastEnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet,session) => S_BroadcastStartGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => S_BroadcastGameStateHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastMove, (packet,session) => S_BroadcastMoveHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet, session) => S_BroadcastGameStateHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastMove, (packet, session) => S_BroadcastMoveHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -75,17 +75,13 @@ public static class PacketHandler
 			UnityEngine.Debug.LogError("scene is not game or scene is not ready");
 			return;
 		}
-		for (short i = 0; i < 6; i++)
+		game.EnqueueFrameInfo(new GameFrameInfo()
 		{
-			//if (i == User.TeamId) continue;
-			game.EnqueueInputInfo(i, new InputInfo()
-			{
-				LookInput = new UnityEngine.Vector3(req.PlayerLookDirArr[i].x, 0, req.PlayerLookDirArr[i].y),
-				MoveInput = new UnityEngine.Vector3(req.PlayerMoveDirArr[i].x, 0, req.PlayerMoveDirArr[i].y),
-				StartTick = req.StartTick,
-				TargetTick = req.TargetTick
-			});
-		}
+			LookInput = req.PlayerLookDirArr,
+			MoveInput = req.PlayerMoveDirArr,
+			StartTick = req.StartTick,
+			TargetTick = req.TargetTick
+		});
 
 	}
 

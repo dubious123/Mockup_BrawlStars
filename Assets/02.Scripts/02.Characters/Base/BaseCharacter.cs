@@ -75,11 +75,11 @@ public class BaseCharacter : MonoBehaviour
 		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
 		Debug.Assert(_rigidBody is not null);
 	}
-	public void HandleInput(in InputInfo input)
+	public void HandleInput(in Vector2 moveDir, in Vector2 lookDir)
 	{
-		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, input.MoveInput, ref _smoothVelocity, _smoothInputSpeed);
-		if (input.LookInput == Vector3.zero) return;
-		_targetLookDir = input.LookInput;
+		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, new Vector3(moveDir.x, 0, moveDir.y), ref _smoothVelocity, _smoothInputSpeed);
+		if (lookDir == Vector2.zero) return;
+		_targetLookDir = new Vector3(lookDir.x, 0, lookDir.y);
 	}
 	public void HandleOneFrame()
 	{
@@ -89,11 +89,11 @@ public class BaseCharacter : MonoBehaviour
 			_targetMoveDir == Vector3.zero ? 0f :
 			(_isAttacking || _isCharging) ? _walkSpeed :
 			_runSpeed;
-		transform.Translate(_currentMoveSpeed * Time.deltaTime * _targetMoveDir, Space.World);
+		transform.Translate(_currentMoveSpeed * Time.fixedDeltaTime * _targetMoveDir, Space.World);
 		#endregion
 		#region Rotate
-		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.deltaTime * _targetLookDir, Vector3.up);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.deltaTime * _rotationSpeed);
+		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.fixedDeltaTime * _targetLookDir, Vector3.up);
+		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.fixedDeltaTime * _rotationSpeed);
 		#endregion
 		#region Animatior
 		_animator.SetFloat(AnimatorMeta.Speed_Float, _currentMoveSpeed);

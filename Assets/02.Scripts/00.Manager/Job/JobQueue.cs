@@ -57,14 +57,14 @@ public class JobQueue
 
 			while (_isJobQueueRunning)
 			{
-				if (_waitTick < Environment.TickCount - nowTick)
+				if (_waitTick < DateTime.Now.Ticks - nowTick)
 				{
 					for (int j = 0; j < _jobQueue.Count; j++)
 					{
 						if (_jobQueue.TryDequeue(out var action))
 							action.Invoke();
 					}
-					nowTick = Environment.TickCount;
+					nowTick = DateTime.Now.Ticks;
 				}
 
 				//for (int j = 0; j < _jobQueue.Count; j++)
