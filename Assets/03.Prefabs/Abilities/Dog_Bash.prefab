@@ -183,8 +183,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245657404041857997}
-  - component: {fileID: 7927447902744673146}
   - component: {fileID: 4472451122912204040}
+  - component: {fileID: 2332360515967022554}
   m_Layer: 11
   m_Name: Dog_Bash
   m_TagString: Untagged
@@ -208,25 +208,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7927447902744673146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8240369378742353258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3fa986f0bc5fdf41a94d527bb19af00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxBashlength: 10
-  _chargingTimeLimit: 5
-  _smoothSpeed: 0.2
-  _bashSpeed: 24
-  _animator: {fileID: 0}
-  _indicator: {fileID: 0}
-  _coolTime: 5
 --- !u!135 &4472451122912204040
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -240,3 +221,25 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &2332360515967022554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8240369378742353258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a49a75f883a2a46823a0c02ab11ba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 0
+  _effects: {fileID: 0}
+  _audio: {fileID: 0}
+  _animator: {fileID: 0}
+  _skillIndicator: {fileID: 1416339407917283510}
+  _maxBashlength: 10
+  _maxChargeTime: 90
+  _holdingTimeLimit: 300
+  _bashSpeed: 24
+  _coolTime: 300

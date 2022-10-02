@@ -1,16 +1,30 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using static S_BroadcastGameState;
 
-[Serializable]
-public struct GameFrameInfo
+public class GameFrameInfo
 {
-	[SerializeField] public long StartTick;//{ get; init; } //N
-	[SerializeField] public long TargetTick;//{ get; init; } //N + alpha
-	[SerializeField] public Vector2[] MoveInput;//{ get; init; }
-	[SerializeField] public Vector2[] LookInput;//{ get; init; }
-	[SerializeField] public ushort[] MousePressed;
+	public GameFrameInfo(S_BroadcastGameState req, Func<IEnumerable<GameActionInfo>, IEnumerable<GameActionContext>> contextFactory)
+	{
+		_req = req;
+		ActionContexts = contextFactory.Invoke(_req.Actions).ToList();
+	}
+	[SerializeField] S_BroadcastGameState _req;
+	public long StartTick => _req.StartTick;
+	public long TargetTick => _req.TargetTick;
+	public Vector2[] MoveInput => _req.PlayerMoveDirArr;
+	public Vector2[] LookInput => _req.PlayerLookDirArr;
+	public ushort[] ButtonPressed => _req.ButtonPressedArr;
+	public List<GameActionContext> ActionContexts;
+	public class GameActionContext
+	{
+		public uint ActionCode;
+		public BaseCharacter Subject;
+		public BaseCharacter[] Objects;
+	}
 }

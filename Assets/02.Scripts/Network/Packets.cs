@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 using ServerCore;
 using UnityEngine;
 
@@ -54,24 +55,20 @@ public class C_GameReady : AuthPacket
 }
 public class C_BroadcastPlayerInput : GamePacket
 {
-	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveInput, Vector2 lookInput, byte mousePressed)
+	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveDir, Vector2 lookDir, byte buttonPressed)
 	{
 		Id = 0x0005;
 		UserId = userId;
 		StartTick = startTick;
-		MoveDirX = moveInput.x;
-		MoveDirY = moveInput.y;
-		LookDirX = lookInput.x;
-		LookDirY = lookInput.y;
-		MousePressed = mousePressed;
+		MoveDir = moveDir;
+		LookDir = lookDir;
+		ButtonPressed = buttonPressed;
 	}
-	public byte MousePressed;
+	public byte ButtonPressed;
 	public short TeamId;
 	public long StartTick;
-	public float MoveDirX;
-	public float MoveDirY;
-	public float LookDirX;
-	public float LookDirY;
+	public Vector2 MoveDir;
+	public Vector2 LookDir;
 }
 public class S_Init : BasePacket
 {
@@ -109,7 +106,25 @@ public class S_BroadcastGameState : BasePacket
 	public long TargetTick;
 	public Vector2[] PlayerMoveDirArr;
 	public Vector2[] PlayerLookDirArr;
-	public ushort[] MousePressed;
+	public ushort[] ButtonPressedArr;
+	public List<GameActionInfo> Actions;
+
+	[Serializable]
+	public class GameActionInfo
+	{
+		public GameActionInfo(uint code, short subject, params short[] objects)
+		{
+			ActionCode = code;
+			Subject = subject;
+			Objects = objects;
+		}
+		//[][][][][][][][]
+		//charType / action code (0,1,2,3...)
+		public uint ActionCode;
+		public short Subject;
+		public short[] Objects;
+	}
+
 
 
 }

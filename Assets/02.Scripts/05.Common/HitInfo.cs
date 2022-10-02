@@ -8,5 +8,5 @@ public record HitInfo
 	public float KnockbackDist { get; init; }
 	public float KnockbackDuration { get; init; }
 	public float KnockbackSpeed { get; init; }
-	public Vector3 Pos;
+	public Vector3 Pos { get; init; }
 }

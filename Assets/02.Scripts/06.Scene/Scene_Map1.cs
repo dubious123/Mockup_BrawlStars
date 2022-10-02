@@ -2,11 +2,13 @@ using Logging;
 using MEC;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
 using Utils;
 using static Enums;
+using static GameFrameInfo;
 
 public class Scene_Map1 : BaseScene
 {
@@ -66,11 +68,18 @@ public class Scene_Map1 : BaseScene
 				yield return 0f;
 			}
 			LogMgr.Log(LogSourceType.Debug, $"----------------move one frame, current tick : [{_currentTick}]-------------------");
+			foreach (var ctx in info.ActionContexts)
+			{
+				foreach (var obj in ctx.Objects)
+				{
+					obj.OnGetHit(ctx.Subject.GetHitInfo(ctx.ActionCode));
+				}
+			}
 			for (int i = 0; i < 6; i++)
 			{
 				character = _characters[i];
 				if (character is null) continue;
-				character.HandleInput(info.MoveInput[i], info.LookInput[i], info.MousePressed[i]);
+				character.HandleInput(ref info.MoveInput[i], ref info.LookInput[i], info.ButtonPressed[i]);
 				character.HandleOneFrame();
 			}
 			_currentTick++;
@@ -107,22 +116,29 @@ public class Scene_Map1 : BaseScene
 		_gameMessage_waiting.SetActive(false);
 		_gameStarted = true;
 	}
-	public void UpdatePlayer(short teamId, Vector2 moveDir, Vector2 lookDir)
-	{
-		var character = _characters[teamId];
-		if (character is null || teamId == User.TeamId) return;
-		//character.Move(new Vector3(moveDir.x, 0, moveDir.y));
-		//character.Look(new Vector3(lookDir.x, 0, lookDir.y));
-	}
+
 	public void Exit()
 	{
 
 	}
-	public void EnqueueFrameInfo(in GameFrameInfo info)
+	public void HandleGameState(S_BroadcastGameState req)
 	{
 		//Debug.Assert(_characters[teamId] is not null);
-		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nEnqueueing {JsonUtility.ToJson(info)}");
+		var info = new GameFrameInfo(req, actions =>
+			actions.Select(action => new GameActionContext()
+			{
+				ActionCode = action.ActionCode,
+				Subject = _characters[action.Subject],
+				Objects = action.Objects.Select(id => _characters[id]).ToArray(),
+			}));
+		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_currentTick}]\nEnqueueing {JsonUtility.ToJson(req)}");
 		_frameInfoQueue.Enqueue(info);
 	}
-
+	//public void UpdatePlayer(short teamId, Vector2 moveDir, Vector2 lookDir)
+	//{
+	//	var character = _characters[teamId];
+	//	if (character is null || teamId == User.TeamId) return;
+	//	//character.Move(new Vector3(moveDir.x, 0, moveDir.y));
+	//	//character.Look(new Vector3(lookDir.x, 0, lookDir.y));
+	//}
 }

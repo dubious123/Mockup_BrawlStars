@@ -75,15 +75,7 @@ public static class PacketHandler
 			UnityEngine.Debug.LogError("scene is not game or scene is not ready");
 			return;
 		}
-		game.EnqueueFrameInfo(new GameFrameInfo()
-		{
-			LookInput = req.PlayerLookDirArr,
-			MoveInput = req.PlayerMoveDirArr,
-			StartTick = req.StartTick,
-			TargetTick = req.TargetTick,
-			MousePressed = req.MousePressed
-
-		});
+		game.HandleGameState(req);
 
 	}
 
@@ -108,7 +100,7 @@ public static class PacketHandler
 	{
 		var req = packet as S_BroadcastMove;
 		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
-		JobMgr.PushUnityJob(() => game.UpdatePlayer(req.TeamId, req.MoveDir, req.LookDir));
+		//JobMgr.PushUnityJob(() => game.UpdatePlayer(req.TeamId, req.MoveDir, req.LookDir));
 	}
 
 

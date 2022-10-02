@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using MEC;
 using TMPro;
+using static S_BroadcastGameState;
+using System;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -20,12 +22,10 @@ public class BaseCharacter : MonoBehaviour
 	[SerializeField] private Rigidbody _rigidBody;
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
-	#region Abilities
-	[Header("Abilities")]
-	[SerializeField] private BaseHoldingAbility _basicAttack;
+	#region Skills
+	[Header("Skills")]
+	[SerializeField] private BaseSkill _basicAttack;
 
-	[Header("Network")]
-	[SerializeField] protected float _broadcastFreq;
 	#endregion
 
 	#endregion
@@ -33,13 +33,18 @@ public class BaseCharacter : MonoBehaviour
 	protected bool _isAwake;
 	protected bool _isAttacking;
 	protected bool _interactable;
-	protected bool _canBasicAttack;
+	//protected bool _canBasicAttack;
 	protected bool _isCharging;
 	protected Vector3 _smoothVelocity;
 	protected Vector3 _targetMoveDir;
 	protected Vector3 _targetLookDir;
 	protected Quaternion _targetRotation;
 	protected TextMeshProUGUI _stunUI;
+
+	public void EnableMoveControll(bool value) => _moveControllEnabled = value;
+	protected bool _moveControllEnabled = true;
+	public void EnableLookControll(bool value) => _lookControllEnabled = value;
+	protected bool _lookControllEnabled = true;
 
 
 	protected int _currentHp;
@@ -65,47 +70,73 @@ public class BaseCharacter : MonoBehaviour
 
 	public virtual void Init()
 	{
-		_basicAttack?.Init(this);
+		_basicAttack.Init(this);
 		_isAwake = true;
 		_interactable = true;
 		_controllable = true;
-		_canBasicAttack = true;
+		//_canBasicAttack = true;
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
 		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
 		Debug.Assert(_rigidBody is not null);
 	}
-	public void HandleInput(in Vector2 moveDir, in Vector2 lookDir, in ushort mousePressed)
+	public virtual void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
 	{
 		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, new Vector3(moveDir.x, 0, moveDir.y), ref _smoothVelocity, _smoothInputSpeed);
 		if (lookDir == Vector2.zero) return;
 		_targetLookDir = new Vector3(lookDir.x, 0, lookDir.y);
-		if (mousePressed == 0)
+
+		_basicAttack.HandleInput((buttonPressed & 1) == 1);
+	}
+
+	public virtual HitInfo GetHitInfo(uint actionCode)
+	{
+		switch (actionCode)
 		{
-			DeactivateBasicAttack();
-		}
-		else
-		{
-			ActivateBasicAttack();
+			case 0:
+				return new HitInfo
+				{
+					Damage = 10,
+					IsStun = false,
+					KnockbackDist = 0,
+				};
+			default:
+				return null;
 		}
 	}
-	public void HandleOneFrame()
+
+	public virtual void HandleOneFrame()
 	{
-		if (_controllable == false || _interactable == false) return;
 		#region Move
-		_currentMoveSpeed =
-			_targetMoveDir == Vector3.zero ? 0f :
-			(_isAttacking || _isCharging) ? _walkSpeed :
-			_runSpeed;
-		transform.Translate(_currentMoveSpeed * Time.fixedDeltaTime * _targetMoveDir, Space.World);
+		if (_moveControllEnabled)
+		{
+
+			_currentMoveSpeed =
+				_targetMoveDir == Vector3.zero ? 0f :
+				(_isAttacking || _isCharging) ? _walkSpeed :
+				_runSpeed;
+			transform.Translate(_currentMoveSpeed * Time.fixedDeltaTime * _targetMoveDir, Space.World);
+		}
+
 		#endregion
 		#region Rotate
-		if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.fixedDeltaTime * _targetLookDir, Vector3.up);
-		transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.fixedDeltaTime * _rotationSpeed);
+		if (_lookControllEnabled)
+		{
+			if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.fixedDeltaTime * _targetLookDir, Vector3.up);
+			transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.fixedDeltaTime * _rotationSpeed);
+		}
+
 		#endregion
 		#region Animatior
 		_animator.SetFloat(AnimatorMeta.Speed_Float, _currentMoveSpeed);
 		#endregion
+
+
+		#region Skills
+		_basicAttack.HandleOneFrame();
+		#endregion
+
+		LogMgr.Log(Enums.LogSourceType.Debug, $"{transform.position}");
 	}
 	public void StopAll()
 	{
@@ -120,26 +151,13 @@ public class BaseCharacter : MonoBehaviour
 		_rigidBody.WakeUp();
 		_animator.speed = 1;
 	}
-	public void ActivateBasicAttack()
+
+	public virtual void SetOtherSkillsActive(uint skillId, bool active)
 	{
-		if (_canBasicAttack == false) return;
-		_basicAttack.Activate();
-	}
-	public void DeactivateBasicAttack()
-	{
-		_basicAttack.Deactivate();
+		if (_basicAttack.Id == skillId == false) _basicAttack.SetActive(active);
 	}
 
-	public void DisableBasicAttack()
-	{
-		_canBasicAttack = false;
-	}
-	public void EnableBasicAttack()
-	{
-		_canBasicAttack = true;
-	}
-
-	public virtual void OnHit(HitInfo info)
+	public virtual void OnGetHit(HitInfo info)
 	{
 		_currentHp = Mathf.Max(0, _currentHp - info.Damage);
 		if (info.KnockbackDist > 0)
@@ -160,7 +178,6 @@ public class BaseCharacter : MonoBehaviour
 	protected virtual IEnumerator<float> Co_OnStun(float duration)
 	{
 		float currentStunTime = 0;
-		DeactivateBasicAttack();
 		float stunDuration = duration;
 		_stunUI.enabled = true;
 		Timing.CallPeriodically(stunDuration, 0.1f, () =>
@@ -176,13 +193,13 @@ public class BaseCharacter : MonoBehaviour
 		{
 			_animator.SetBool(AnimatorMeta.IsStun_Bool, true);
 			_controllable = false;
-			_canBasicAttack = false;
+			//_canBasicAttack = false;
 			currentStunTime += Time.deltaTime;
 			yield return Timing.WaitForOneFrame;
 		}
 		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
 		_controllable = true;
-		_canBasicAttack = true;
+		//_canBasicAttack = true;
 		yield break;
 	}
 	protected virtual IEnumerator<float> Co_OnKnockBack(Vector3 dir, float duration, float knockbackSpeed)
@@ -190,24 +207,21 @@ public class BaseCharacter : MonoBehaviour
 		dir.y = 0;
 		float expectedKnockbackTime = 0.3f;
 		float currentKnockbackTime = 0;
-		DeactivateBasicAttack();
 		while (currentKnockbackTime < expectedKnockbackTime)
 		{
 			_controllable = false;
-			_canBasicAttack = false;
+			//_canBasicAttack = false;
 			currentKnockbackTime += Time.deltaTime;
 			transform.Translate(10 * Time.deltaTime * dir.normalized, Space.World);
 			yield return Timing.WaitForOneFrame;
 		}
 		_controllable = true;
-		_canBasicAttack = true;
+		//_canBasicAttack = true;
 		yield break;
 	}
 	protected virtual void OnDead()
 	{
-		DeactivateBasicAttack();
 		Timing.KillCoroutines(GetInstanceID().ToString());
-		_basicAttack.OnDead();
 		_animator.SetBool(AnimatorMeta.IsStun_Bool, false);
 		_animator.SetBool(AnimatorMeta.BasicAttack_Bool, false);
 		_animator.SetBool(AnimatorMeta.Dog_Bash, false);

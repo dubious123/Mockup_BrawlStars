@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 533113745439633900}
-  - component: {fileID: 533113745439633891}
+  - component: {fileID: 8437165280193387339}
   - component: {fileID: 7917146448220640359}
   m_Layer: 7
   m_Name: basic_attack
@@ -33,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &533113745439633891
+--- !u!114 &8437165280193387339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,14 +42,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 533113745439633901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e501e1bfd6c8004d959535be2fc9219, type: 3}
+  m_Script: {fileID: 11500000, guid: e5ac332e046083642ab2257f3632b37d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _attackRadius: 1.7
-  _attackAngle: 45
   _effects: {fileID: 0}
   _audio: {fileID: 7917146448220640359}
+  _animator: {fileID: 0}
 --- !u!82 &7917146448220640359
 AudioSource:
   m_ObjectHideFlags: 0
