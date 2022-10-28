@@ -1,13 +1,16 @@
 
 using System;
 using System.Collections.Generic;
+
 using ServerCore;
+
 using UnityEngine;
 
 public class AuthPacket : BasePacket
 {
 	public int UserId;
 }
+
 public class GamePacket : AuthPacket
 {
 	public int RoomId;
@@ -27,6 +30,7 @@ public class C_Login : BasePacket
 	{
 		Id = 0x0001;
 	}
+
 	public string loginId;
 	public string loginPw;
 }
@@ -43,6 +47,7 @@ public class C_EnterGame : AuthPacket
 	{
 		Id = 0x0003;
 	}
+
 	public ushort CharacterType;
 }
 public class C_GameReady : AuthPacket
@@ -64,6 +69,7 @@ public class C_BroadcastPlayerInput : GamePacket
 		LookDir = lookDir;
 		ButtonPressed = buttonPressed;
 	}
+
 	public byte ButtonPressed;
 	public short TeamId;
 	public long StartTick;
@@ -83,36 +89,43 @@ public class S_EnterLobby : BasePacket
 }
 public class S_EnterGame : BasePacket
 {
+
 	[Serializable]
 	public struct PlayerInfoDto
 	{
+
 		public ushort CharacterType;
 	}
+
 	public short TeamId;
-	public PlayerInfoDto[] PlayerInfoArr;
+	public PlayerInfoDto PlayerInfo;
 }
 public class S_BroadcastEnterGame : BasePacket
 {
+
 	public ushort Charactertype;
 	public short TeamId;
 }
 public class S_BroadcastStartGame : BasePacket
 {
+
+	public ushort[] CharacterTypeArr;
 	public float WaitTime;
 }
 public class S_BroadcastGameState : BasePacket
 {
+
 	public long StartTick;
 	public long TargetTick;
 	public Vector2[] PlayerMoveDirArr;
 	public Vector2[] PlayerLookDirArr;
 	public ushort[] ButtonPressedArr;
-	public List<GameActionInfo> Actions;
+	public List<GameActionResult> Actions;
 
 	[Serializable]
-	public class GameActionInfo
+	public class GameActionResult
 	{
-		public GameActionInfo(uint code, short subject, params short[] objects)
+		public GameActionResult(uint code, short subject, params short[] objects)
 		{
 			ActionCode = code;
 			Subject = subject;
@@ -124,12 +137,10 @@ public class S_BroadcastGameState : BasePacket
 		public short Subject;
 		public short[] Objects;
 	}
-
-
-
 }
 public class S_BroadcastMove : BasePacket
 {
+
 	public Vector2 MoveDir;
 	public Vector2 LookDir;
 	public short TeamId;

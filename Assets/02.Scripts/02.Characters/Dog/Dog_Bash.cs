@@ -1,7 +1,10 @@
-using MEC;
 using System.Collections;
 using System.Collections.Generic;
+
+using MEC;
+
 using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,11 +15,11 @@ public class Dog_Bash : BaseSkill
 	[SerializeField] protected AudioSource _audio;
 	[SerializeField] protected Animator _animator;
 	[SerializeField] protected RawImage _skillIndicator;
-	[SerializeField] float _maxBashlength;
-	[SerializeField] int _maxChargeTime;
-	[SerializeField] int _holdingTimeLimit;
-	[SerializeField] float _bashSpeed;
-	[SerializeField] int _coolTime;
+	[SerializeField] private float _maxBashlength;
+	[SerializeField] private int _maxChargeTime;
+	[SerializeField] private int _holdingTimeLimit;
+	[SerializeField] private float _bashSpeed;
+	[SerializeField] private int _coolTime;
 	#endregion
 	protected TextMeshProUGUI _coolTimeIndicator;
 	protected IEnumerator<int> _coHandler;
@@ -55,8 +58,8 @@ public class Dog_Bash : BaseSkill
 	{
 		while (true)
 		{
-			float bashLength = 0;
-			float bashTime = 0;
+			float bashLength;
+			float bashTime;
 			int holdFrame = 0;
 			CoroutineHandle handler;
 			#region Charge
@@ -81,13 +84,13 @@ public class Dog_Bash : BaseSkill
 				Timing.KillCoroutines(handler);
 				_skillIndicator.enabled = false;
 				_animator.SetBool(AnimatorMeta.Dog_Bash, true);
-
 				bashLength = _maxBashlength * Mathf.Min(holdFrame / (float)_maxChargeTime, 1);
 				bashTime = bashLength / _bashSpeed;
 
+				Debug.Log($"bashTime : {bashTime}, bashLength : {bashLength}");
 				for (float current = 0f; current <= bashTime; current += Time.fixedDeltaTime)
 				{
-					_character.transform.position += _character.LookDir * _bashSpeed * Time.fixedDeltaTime;
+					_character.transform.position += (Vector3)(_character.LookDir * (sfloat)_bashSpeed * (sfloat)Time.fixedDeltaTime);
 					yield return 0;
 				}
 				_character.EnableLookControll(true);

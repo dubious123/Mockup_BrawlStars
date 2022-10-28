@@ -1,11 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+
+using MEC;
+
+using TMPro;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
-using MEC;
-using TMPro;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UIElements;
+
+using Utils;
+
+using static Enums;
 using static S_BroadcastGameState;
-using System;
+using static UnityEngine.GraphicsBuffer;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -31,14 +42,13 @@ public class BaseCharacter : MonoBehaviour
 	#endregion
 	protected float _currentMoveSpeed;
 	protected bool _isAwake;
-	protected bool _isAttacking;
 	protected bool _interactable;
-	//protected bool _canBasicAttack;
-	protected bool _isCharging;
-	protected Vector3 _smoothVelocity;
-	protected Vector3 _targetMoveDir;
-	protected Vector3 _targetLookDir;
-	protected Quaternion _targetRotation;
+	protected sVector3 _position;
+	protected sVector3 _smoothVelocity;
+	protected sVector3 _targetMoveDir;
+	protected sVector3 _targetLookDir;
+	protected sQuaternion _targetRotation;
+	protected sQuaternion _rotation;
 	protected TextMeshProUGUI _stunUI;
 
 	public void EnableMoveControll(bool value) => _moveControllEnabled = value;
@@ -46,11 +56,8 @@ public class BaseCharacter : MonoBehaviour
 	public void EnableLookControll(bool value) => _lookControllEnabled = value;
 	protected bool _lookControllEnabled = true;
 
-
 	protected int _currentHp;
-
 	protected bool _controllable;
-
 	public int GetHp => _currentHp;
 	public bool IsControllable
 	{
@@ -58,15 +65,11 @@ public class BaseCharacter : MonoBehaviour
 		set => _controllable = value;
 	}
 	public bool IsInteractible => _interactable;
-	public bool IsAttacking
-	{
-		get => _isAttacking;
-		set => _isAttacking = value;
-	}
-	public bool IsCharging { set => _isCharging = value; }
+	public sVector3 LookDir => _targetLookDir;
+	public sVector3 PlayerCenter => (sVector3)_playerCenter.position;
 
-	public Vector3 LookDir => _targetLookDir;
-	public Vector3 PlayerCenter => _playerCenter.position;
+	public sVector3 Position => _position;
+	public sQuaternion Rotation => _rotation;
 
 	public virtual void Init()
 	{
@@ -79,13 +82,14 @@ public class BaseCharacter : MonoBehaviour
 		_stunUI.enabled = false;
 		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
 		Debug.Assert(_rigidBody is not null);
+		_position = (sVector3)transform.position;
+		_rotation = (sQuaternion)transform.rotation;
 	}
+
 	public virtual void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
 	{
-		_targetMoveDir = Vector3.SmoothDamp(_targetMoveDir, new Vector3(moveDir.x, 0, moveDir.y), ref _smoothVelocity, _smoothInputSpeed);
-		if (lookDir == Vector2.zero) return;
-		_targetLookDir = new Vector3(lookDir.x, 0, lookDir.y);
-
+		_targetMoveDir = sVector3.SmoothDamp(_targetMoveDir, new sVector3(moveDir.x, 0, moveDir.y), ref _smoothVelocity, (sfloat)_smoothInputSpeed, sfloat.PositiveInfinity, ((sfloat)1 / (sfloat)60f));
+		_targetLookDir = new sVector3(lookDir.x, 0, lookDir.y);
 		_basicAttack.HandleInput((buttonPressed & 1) == 1);
 	}
 
@@ -110,20 +114,23 @@ public class BaseCharacter : MonoBehaviour
 		#region Move
 		if (_moveControllEnabled)
 		{
-
-			_currentMoveSpeed =
-				_targetMoveDir == Vector3.zero ? 0f :
-				(_isAttacking || _isCharging) ? _walkSpeed :
-				_runSpeed;
-			transform.Translate(_currentMoveSpeed * Time.fixedDeltaTime * _targetMoveDir, Space.World);
+			_currentMoveSpeed = _targetMoveDir == sVector3.zero ? 0f : _runSpeed;
+			var delta = (sfloat)_currentMoveSpeed * ((sfloat)1 / (sfloat)60f) * _targetMoveDir;
+			_position += delta;
+			transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
 		}
 
 		#endregion
 		#region Rotate
 		if (_lookControllEnabled)
 		{
-			if (_targetLookDir != Vector3.zero) _targetRotation = Quaternion.LookRotation(Time.fixedDeltaTime * _targetLookDir, Vector3.up);
-			transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, Time.fixedDeltaTime * _rotationSpeed);
+			if (_targetLookDir != sVector3.zero)
+			{
+				_targetRotation = sQuaternion.LookRotation((sfloat)Time.fixedDeltaTime * _targetLookDir, sVector3.up);
+			}
+
+			_rotation = sQuaternion.RotateTowards(_rotation, _targetRotation, (sfloat)Time.fixedDeltaTime * (sfloat)_rotationSpeed);
+			transform.rotation = (Quaternion)_rotation;
 		}
 
 		#endregion
@@ -135,8 +142,6 @@ public class BaseCharacter : MonoBehaviour
 		#region Skills
 		_basicAttack.HandleOneFrame();
 		#endregion
-
-		LogMgr.Log(Enums.LogSourceType.Debug, $"{transform.position}");
 	}
 	public void StopAll()
 	{
@@ -157,9 +162,14 @@ public class BaseCharacter : MonoBehaviour
 		if (_basicAttack.Id == skillId == false) _basicAttack.SetActive(active);
 	}
 
-	public virtual void OnGetHit(HitInfo info)
+	public virtual void OnGetHit(in HitInfo info)
 	{
 		_currentHp = Mathf.Max(0, _currentHp - info.Damage);
+		if (_currentHp <= 0)
+		{
+			OnDead();
+			return;
+		}
 		if (info.KnockbackDist > 0)
 		{
 			Timing.RunCoroutine((Co_OnKnockBack(transform.position - info.Pos, info.KnockbackDuration, info.KnockbackSpeed)), GetInstanceID().ToString());
@@ -168,11 +178,7 @@ public class BaseCharacter : MonoBehaviour
 		{
 			Timing.RunCoroutine(Co_OnStun(info.StunDuration), GetInstanceID().ToString());
 		}
-		if (_currentHp <= 0)
-		{
-			OnDead();
-			return;
-		}
+
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
 	}
 	protected virtual IEnumerator<float> Co_OnStun(float duration)

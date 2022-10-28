@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using Logging;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Logging;
+
 using static Enums;
 
 public class CharacterController : MonoBehaviour
@@ -66,7 +69,7 @@ public class CharacterController : MonoBehaviour
 		#endregion
 
 		//Todo object pooling to reduce gc
-		LogMgr.Log(LogSourceType.Debug, $"[Tick : {_game.CurrentTick}]\ninput 발생, move : {moveInput}, look : {_lookdir}");
+		//LogMgr.Log(LogSourceType.Debug, $"[Tick : {_game.CurrentTick}]\ninput 발생, move : {moveInput}, look : {_lookdir}");
 		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, new Vector2(_lookdir.x, _lookdir.z), _buttonPressed));
 		//_game.EnqueueInputInfo(User.TeamId, new InputInfo()
 		//{

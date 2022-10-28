@@ -19,12 +19,12 @@ public class Dog_Character : BaseCharacter
 		base.HandleOneFrame();
 		_bash.HandleOneFrame();
 	}
-	public override void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort mousePressed)
+	public override void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
 	{
-		base.HandleInput(ref moveDir, ref lookDir, mousePressed);
+		base.HandleInput(ref moveDir, ref lookDir, buttonPressed);
 
-		_bash.HandleInput(((mousePressed >> 1) & 1) == 1);
-		if (((mousePressed >> 2) & 1) == 1)
+		_bash.HandleInput(((buttonPressed >> 1) & 1) == 1);
+		if (((buttonPressed >> 2) & 1) == 1)
 		{
 
 		}
@@ -34,7 +34,7 @@ public class Dog_Character : BaseCharacter
 		base.SetOtherSkillsActive(skillId, active);
 		if (_bash.Id == skillId == false) _bash.SetActive(active);
 	}
-	public override void OnGetHit(HitInfo info)
+	public override void OnGetHit(in HitInfo info)
 	{
 		base.OnGetHit(info);
 		Debug.Log(_currentHp);

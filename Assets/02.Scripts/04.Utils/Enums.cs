@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public static class Enums
@@ -28,7 +29,8 @@ public static class Enums
 		Error,
 		PacketSend,
 		PacketRecv,
-		Debug
+		Debug,
+		Game,
 	}
 	public enum LogLevel
 	{
