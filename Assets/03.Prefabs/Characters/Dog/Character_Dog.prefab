@@ -1347,6 +1347,8 @@ MonoBehaviour:
   _playerCenter: {fileID: 753935177778529229}
   _basicAttack: {fileID: 8648689410132511756}
   _bash: {fileID: 1757357885691786445}
+  _colliderRadus: 0.5
+  _colliderOffset: {x: 0, y: 0}
 --- !u!1 &1646509169929880297
 GameObject:
   m_ObjectHideFlags: 0

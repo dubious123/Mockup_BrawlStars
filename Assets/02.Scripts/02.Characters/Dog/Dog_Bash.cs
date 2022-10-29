@@ -58,8 +58,8 @@ public class Dog_Bash : BaseSkill
 	{
 		while (true)
 		{
-			float bashLength;
-			float bashTime;
+			sfloat bashLength;
+			sfloat bashTime;
 			int holdFrame = 0;
 			CoroutineHandle handler;
 			#region Charge
@@ -84,13 +84,13 @@ public class Dog_Bash : BaseSkill
 				Timing.KillCoroutines(handler);
 				_skillIndicator.enabled = false;
 				_animator.SetBool(AnimatorMeta.Dog_Bash, true);
-				bashLength = _maxBashlength * Mathf.Min(holdFrame / (float)_maxChargeTime, 1);
-				bashTime = bashLength / _bashSpeed;
+				bashLength = (sfloat)_maxBashlength * sMathf.Min((sfloat)holdFrame / (sfloat)_maxChargeTime, (sfloat)1f);
+				bashTime = bashLength / (sfloat)_bashSpeed;
 
 				Debug.Log($"bashTime : {bashTime}, bashLength : {bashLength}");
-				for (float current = 0f; current <= bashTime; current += Time.fixedDeltaTime)
+				for (sfloat current = (sfloat)0f; current <= bashTime; current += (sfloat)Time.fixedDeltaTime)
 				{
-					_character.transform.position += (Vector3)(_character.LookDir * (sfloat)_bashSpeed * (sfloat)Time.fixedDeltaTime);
+					_character.Position += (_character.LookDir * (sfloat)_bashSpeed * (sfloat)Time.fixedDeltaTime);
 					yield return 0;
 				}
 				_character.EnableLookControll(true);

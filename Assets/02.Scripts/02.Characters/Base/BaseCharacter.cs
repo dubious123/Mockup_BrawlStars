@@ -16,9 +16,10 @@ using Utils;
 
 using static Enums;
 using static S_BroadcastGameState;
+using static ServerCore.Utils.Enums;
 using static UnityEngine.GraphicsBuffer;
 
-public class BaseCharacter : MonoBehaviour
+public class BaseCharacter : MonoBehaviour, INetObject
 {
 	public int TeamId { get; set; }
 	#region SerializeFields
@@ -68,8 +69,26 @@ public class BaseCharacter : MonoBehaviour
 	public sVector3 LookDir => _targetLookDir;
 	public sVector3 PlayerCenter => (sVector3)_playerCenter.position;
 
-	public sVector3 Position => _position;
-	public sQuaternion Rotation => _rotation;
+	public sVector3 Position
+	{
+		get => _position;
+		set
+		{
+			if (CanGo(value))
+			{
+				_position = value;
+				transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
+			}
+		}
+	}
+	public sQuaternion Rotation { get => _rotation; set => _rotation = value; }
+
+	public NetObjectTag Tag { get; set; } = NetObjectTag.Character;
+
+	public NetCollider2D NCollider { get; protected set; }
+
+	public NetPhysics2D NPhysics { get; set; }
+
 
 	public virtual void Init()
 	{
@@ -84,6 +103,7 @@ public class BaseCharacter : MonoBehaviour
 		Debug.Assert(_rigidBody is not null);
 		_position = (sVector3)transform.position;
 		_rotation = (sQuaternion)transform.rotation;
+		NPhysics = (Scene.CurrentScene as Scene_Map1).NPhysics2D;
 	}
 
 	public virtual void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
@@ -111,48 +131,39 @@ public class BaseCharacter : MonoBehaviour
 
 	public virtual void HandleOneFrame()
 	{
-		#region Move
-		if (_moveControllEnabled)
-		{
-			_currentMoveSpeed = _targetMoveDir == sVector3.zero ? 0f : _runSpeed;
-			var delta = (sfloat)_currentMoveSpeed * ((sfloat)1 / (sfloat)60f) * _targetMoveDir;
-			_position += delta;
-			transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
-		}
+		HandleMove();
 
-		#endregion
-		#region Rotate
-		if (_lookControllEnabled)
-		{
-			if (_targetLookDir != sVector3.zero)
-			{
-				_targetRotation = sQuaternion.LookRotation((sfloat)Time.fixedDeltaTime * _targetLookDir, sVector3.up);
-			}
+		HandleRotate();
 
-			_rotation = sQuaternion.RotateTowards(_rotation, _targetRotation, (sfloat)Time.fixedDeltaTime * (sfloat)_rotationSpeed);
-			transform.rotation = (Quaternion)_rotation;
-		}
+		HandleAnimators();
 
-		#endregion
-		#region Animatior
-		_animator.SetFloat(AnimatorMeta.Speed_Float, _currentMoveSpeed);
-		#endregion
-
-
-		#region Skills
-		_basicAttack.HandleOneFrame();
-		#endregion
+		HandleSkills();
 	}
+
+	public virtual bool CanGo(sVector3 dest)
+	{
+		return NPhysics.DetectCollision(NCollider, NetObjectTag.Wall) == false;
+	}
+
 	public void StopAll()
 	{
-		if (_isAwake == false) return;
+		if (_isAwake == false)
+		{
+			return;
+		}
+
 		_isAwake = false;
 		_rigidBody.Sleep();
 		_animator.speed = 0;
 	}
+
 	public void AwakeAll()
 	{
-		if (_isAwake) return;
+		if (_isAwake)
+		{
+			return;
+		}
+
 		_rigidBody.WakeUp();
 		_animator.speed = 1;
 	}
@@ -181,6 +192,40 @@ public class BaseCharacter : MonoBehaviour
 
 		_animator.SetTrigger(AnimatorMeta.GetHIt_Trigger);
 	}
+
+	protected virtual void HandleMove()
+	{
+		if (_moveControllEnabled)
+		{
+			_currentMoveSpeed = _targetMoveDir == sVector3.zero ? 0f : _runSpeed;
+			Position += (sfloat)_currentMoveSpeed * ((sfloat)1 / (sfloat)60f) * _targetMoveDir;
+		}
+	}
+
+	protected virtual void HandleRotate()
+	{
+		if (_lookControllEnabled)
+		{
+			if (_targetLookDir != sVector3.zero)
+			{
+				_targetRotation = sQuaternion.LookRotation((sfloat)Time.fixedDeltaTime * _targetLookDir, sVector3.up);
+			}
+
+			_rotation = sQuaternion.RotateTowards(_rotation, _targetRotation, (sfloat)Time.fixedDeltaTime * (sfloat)_rotationSpeed);
+			transform.rotation = (Quaternion)_rotation;
+		}
+	}
+
+	protected virtual void HandleAnimators()
+	{
+		_animator.SetFloat(AnimatorMeta.Speed_Float, _currentMoveSpeed);
+	}
+
+	protected virtual void HandleSkills()
+	{
+		_basicAttack.HandleOneFrame();
+	}
+
 	protected virtual IEnumerator<float> Co_OnStun(float duration)
 	{
 		float currentStunTime = 0;

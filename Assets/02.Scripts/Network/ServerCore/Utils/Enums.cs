@@ -1,3 +1,5 @@
+using System;
+
 namespace ServerCore.Utils
 {
 	public static class Enums

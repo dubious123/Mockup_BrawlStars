@@ -1,24 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Dog_Character : BaseCharacter
 {
 	#region SerializeFields
-	[SerializeField] Dog_Bash _bash;
+	[SerializeField] private Dog_Bash _bash;
+	[SerializeField] private float _colliderRadus;
+	[SerializeField] private Vector2 _colliderOffset;
 	#endregion
 
 	public override void Init()
 	{
 		base.Init();
 		_bash.Init(this);
+		NCollider = NPhysics.GetNewCircleCollider2D(this, (sVector2)_colliderOffset, (sfloat)_colliderRadus);
 		_currentHp = _maxHp;
 	}
-	public override void HandleOneFrame()
-	{
-		base.HandleOneFrame();
-		_bash.HandleOneFrame();
-	}
+
 	public override void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
 	{
 		base.HandleInput(ref moveDir, ref lookDir, buttonPressed);
@@ -29,16 +26,25 @@ public class Dog_Character : BaseCharacter
 
 		}
 	}
+
 	public override void SetOtherSkillsActive(uint skillId, bool active)
 	{
 		base.SetOtherSkillsActive(skillId, active);
 		if (_bash.Id == skillId == false) _bash.SetActive(active);
 	}
+
 	public override void OnGetHit(in HitInfo info)
 	{
 		base.OnGetHit(info);
 		Debug.Log(_currentHp);
 	}
+
+	protected override void HandleSkills()
+	{
+		base.HandleSkills();
+		_bash.HandleOneFrame();
+	}
+
 	protected override void OnDead()
 	{
 		base.OnDead();

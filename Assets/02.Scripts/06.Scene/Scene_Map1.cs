@@ -14,6 +14,7 @@ using static GameFrameInfo;
 
 public class Scene_Map1 : BaseScene
 {
+	public NetPhysics2D NPhysics2D { get; private set; }
 	public long CurrentTick => _currentTick;
 	public bool GameStarted => _gameStarted;
 	#region SerializeField
@@ -33,14 +34,16 @@ public class Scene_Map1 : BaseScene
 	{
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
+		NPhysics2D = new NetPhysics2D();
+
+		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0.5f, 0, -12.5f) }, new sVector2(0f, 0f), new sVector2(18f, 1f));
+		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0.5f, 0, 12.5f) }, new sVector2(0f, 0f), new sVector2(18f, 1f));
+		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(-9.5f, 0, 0) }, new sVector2(0f, 0f), new sVector2(1f, 25f));
+		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(9.5f, 0, 0) }, new sVector2(0f, 0f), new sVector2(1f, 25f));
+		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0, 0, 0) }, new sVector2(0f, 0f), new sVector2(4f, 4f));
+
 		_characters = new BaseCharacter[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
-		//for (int i = 0; i < req.PlayerInfoArr.Length; i++)
-		//{
-		//	var playerInfo = req.PlayerInfoArr[i];
-		//	if (playerInfo.CharacterType == 0) continue;
-		//	Enter((short)i, (CharacterType)playerInfo.CharacterType);
-		//}
 		Enter(req.TeamId, User.CharType);
 		Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
 		IsReady = true;
@@ -66,6 +69,7 @@ public class Scene_Map1 : BaseScene
 				//todo
 				yield return 0f;
 			}
+
 			info.ToString(sb);
 			sb.AppendLine("Handling Frame Info");
 			foreach (var ctx in info.ActionContexts)

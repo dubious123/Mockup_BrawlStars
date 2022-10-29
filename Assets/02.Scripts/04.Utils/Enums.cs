@@ -1,10 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 
-using UnityEngine;
-
-public static class Enums
+public static partial class Enums
 {
 	public enum SceneType
 	{
