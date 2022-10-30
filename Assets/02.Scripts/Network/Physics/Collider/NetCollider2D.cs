@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 
-using static Enums;
+using UnityEngine;
 
-public abstract class NetCollider2D
+
+public abstract class NetCollider2D : MonoBehaviour
 {
-	protected INetObject NetObject { get; init; }
-	protected sVector2 Offset { get; init; }
+	[field: SerializeField] protected Vector3 Offset { get; set; }
+	public INetObject NetObject { get; protected set; }
 
-	public NetCollider2D(INetObject obj, sVector2 offset)
+	public virtual void Init(INetObject obj)
 	{
 		NetObject = obj;
-		Offset = offset;
 	}
 
 	public static bool CheckBoxBoxCollision(NetBoxCollider2D left, NetBoxCollider2D right)
@@ -46,6 +46,8 @@ public abstract class NetCollider2D
 	}
 
 	public abstract bool CheckCollision(NetCollider2D other);
+
+	public abstract void DrawGizmo();
 }
 
 

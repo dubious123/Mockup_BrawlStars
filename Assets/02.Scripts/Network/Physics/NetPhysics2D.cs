@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using UnityEngine;
+
 using static Enums;
 
-public class NetPhysics2D
+public class NetPhysics2D : MonoBehaviour
 {
 	private List<NetCollider2D>[] _colliders;
 
-	public NetPhysics2D()
+	public void Init()
 	{
 		var length = Enum.GetValues(typeof(NetObjectTag)).Length;
 		_colliders = new List<NetCollider2D>[length];
@@ -15,20 +17,17 @@ public class NetPhysics2D
 		{
 			_colliders[i] = new();
 		}
+
+		var colliders = transform.GetComponentsInChildren<NetCollider2D>();
+		foreach (var collider in colliders)
+		{
+			_colliders[(int)collider.NetObject.Tag].Add(collider);
+		}
 	}
 
-	public NetBoxCollider2D GetNewBoxCollider2D(INetObject obj, sVector2 offset, sVector2 size)
+	public void RegisterNetCollider(NetCollider2D collider)
 	{
-		var res = new NetBoxCollider2D(obj, offset, size);
-		_colliders[(int)obj.Tag].Add(res);
-		return res;
-	}
-
-	public NetCircleCollider2D GetNewCircleCollider2D(INetObject obj, sVector2 offset, sfloat radius)
-	{
-		var res = new NetCircleCollider2D(obj, offset, radius);
-		_colliders[(int)obj.Tag].Add(res);
-		return res;
+		_colliders[(int)collider.NetObject.Tag].Add(collider);
 	}
 
 	public bool DetectCollision(NetCollider2D collider, NetObjectTag tag)

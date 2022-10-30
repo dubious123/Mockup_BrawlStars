@@ -4,15 +4,12 @@ public class Dog_Character : BaseCharacter
 {
 	#region SerializeFields
 	[SerializeField] private Dog_Bash _bash;
-	[SerializeField] private float _colliderRadus;
-	[SerializeField] private Vector2 _colliderOffset;
 	#endregion
 
 	public override void Init()
 	{
 		base.Init();
 		_bash.Init(this);
-		NCollider = NPhysics.GetNewCircleCollider2D(this, (sVector2)_colliderOffset, (sfloat)_colliderRadus);
 		_currentHp = _maxHp;
 	}
 

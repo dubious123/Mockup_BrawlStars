@@ -34,9 +34,12 @@ public class BaseCharacter : MonoBehaviour, INetObject
 	[SerializeField] private Rigidbody _rigidBody;
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
+	[field: SerializeField] protected NetCollider2D NCollider { get; private set; }
+	[field: SerializeField] public NetObjectTag Tag { get; set; }
 	#region Skills
 	[Header("Skills")]
 	[SerializeField] private BaseSkill _basicAttack;
+
 
 	#endregion
 
@@ -59,6 +62,7 @@ public class BaseCharacter : MonoBehaviour, INetObject
 
 	protected int _currentHp;
 	protected bool _controllable;
+
 	public int GetHp => _currentHp;
 	public bool IsControllable
 	{
@@ -69,26 +73,26 @@ public class BaseCharacter : MonoBehaviour, INetObject
 	public sVector3 LookDir => _targetLookDir;
 	public sVector3 PlayerCenter => (sVector3)_playerCenter.position;
 
-	public sVector3 Position
+	public virtual sVector3 Position
 	{
 		get => _position;
 		set
 		{
-			if (CanGo(value))
+			var beforePos = _position;
+			_position = value;
+			if (NPhysics.DetectCollision(NCollider, NetObjectTag.Wall))
 			{
-				_position = value;
-				transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
+				_position = beforePos;
+				return;
 			}
+
+			transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
 		}
 	}
 	public sQuaternion Rotation { get => _rotation; set => _rotation = value; }
 
-	public NetObjectTag Tag { get; set; } = NetObjectTag.Character;
 
-	public NetCollider2D NCollider { get; protected set; }
-
-	public NetPhysics2D NPhysics { get; set; }
-
+	protected NetPhysics2D NPhysics { get; private set; }
 
 	public virtual void Init()
 	{
@@ -104,6 +108,8 @@ public class BaseCharacter : MonoBehaviour, INetObject
 		_position = (sVector3)transform.position;
 		_rotation = (sQuaternion)transform.rotation;
 		NPhysics = (Scene.CurrentScene as Scene_Map1).NPhysics2D;
+		NCollider.Init(this);
+		NPhysics.RegisterNetCollider(NCollider);
 	}
 
 	public virtual void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
@@ -138,11 +144,6 @@ public class BaseCharacter : MonoBehaviour, INetObject
 		HandleAnimators();
 
 		HandleSkills();
-	}
-
-	public virtual bool CanGo(sVector3 dest)
-	{
-		return NPhysics.DetectCollision(NCollider, NetObjectTag.Wall) == false;
 	}
 
 	public void StopAll()

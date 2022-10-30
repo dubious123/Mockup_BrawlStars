@@ -1,24 +1,25 @@
-﻿using System;
-using System.Drawing;
-
-using UnityEngine.UIElements;
+﻿#if UNITY_EDITOR
+using UnityEngine;
+#endif
 
 public class NetBoxCollider2D : NetCollider2D
 {
+	[SerializeField] private Vector2 _size;
+
+	private sfloat _deltaX;
+	private sfloat _deltaY;
+
+
 	public sfloat MaxX => NetObject.Position.x + _deltaX;
 	public sfloat MinX => NetObject.Position.x - _deltaX;
 	public sfloat MaxY => NetObject.Position.z + _deltaY;
 	public sfloat MinY => NetObject.Position.z - _deltaY;
 
-	private readonly sfloat _deltaX;
-	private readonly sfloat _deltaY;
-
-	public NetBoxCollider2D(INetObject obj, sVector2 offset, sVector2 size) : base(obj, offset)
+	public override void Init(INetObject obj)
 	{
-		var deltaX = size.x * (sfloat)0.5f;
-		var deltaY = size.y * (sfloat)0.5f;
-		_deltaX = offset.x + deltaX;
-		_deltaY = offset.y + deltaY;
+		base.Init(obj);
+		_deltaX = Offset.x + _size.x * (sfloat)0.5f;
+		_deltaY = Offset.y + _size.y * (sfloat)0.5f;
 	}
 
 	public override bool CheckCollision(NetCollider2D other)
@@ -29,6 +30,11 @@ public class NetBoxCollider2D : NetCollider2D
 			NetCircleCollider2D circle => CheckBoxCircleCollision(this, circle),
 			_ => false
 		};
+	}
+
+	public override void DrawGizmo()
+	{
+		Gizmos.DrawWireCube((Vector3)NetObject.Position + Offset, new Vector3(_size.x, 1, _size.y));
 	}
 }
 

@@ -34,14 +34,8 @@ public class Scene_Map1 : BaseScene
 	{
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
-		NPhysics2D = new NetPhysics2D();
-
-		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0.5f, 0, -12.5f) }, new sVector2(0f, 0f), new sVector2(18f, 1f));
-		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0.5f, 0, 12.5f) }, new sVector2(0f, 0f), new sVector2(18f, 1f));
-		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(-9.5f, 0, 0) }, new sVector2(0f, 0f), new sVector2(1f, 25f));
-		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(9.5f, 0, 0) }, new sVector2(0f, 0f), new sVector2(1f, 25f));
-		NPhysics2D.GetNewBoxCollider2D(new Wall() { Position = new sVector3(0, 0, 0) }, new sVector2(0f, 0f), new sVector2(4f, 4f));
-
+		NPhysics2D = GameObject.Find("@NetObjects").GetComponent<NetPhysics2D>();
+		NPhysics2D.Init();
 		_characters = new BaseCharacter[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		Enter(req.TeamId, User.CharType);

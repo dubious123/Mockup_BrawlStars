@@ -9,6 +9,7 @@ public static partial class Enums
 		Lobby,
 		Game
 	}
+
 	public enum CharacterType
 	{
 		None,
@@ -28,12 +29,14 @@ public static partial class Enums
 		Debug,
 		Game,
 	}
+
 	public enum LogLevel
 	{
 		Info,
 		Warning,
 		Error,
 	}
+
 	[Flags]
 	public enum LogOptionFlag
 	{
@@ -41,6 +44,5 @@ public static partial class Enums
 		DateTime = 1,
 		Callstack = 2,
 		FixedTime = 4,
-
 	}
 }

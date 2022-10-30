@@ -1,13 +1,21 @@
-﻿
+﻿#if UNITY_EDITOR
+using UnityEditor;
+
+using UnityEngine;
+#endif
+
 public class NetCircleCollider2D : NetCollider2D
 {
-	public sfloat Radius { get; init; }
-	public sfloat RadiusSquared { get; init; }
-	public sVector3 Center => NetObject.Position;
-	public NetCircleCollider2D(INetObject obj, sVector2 offset, sfloat radius) : base(obj, offset)
+	[SerializeField] private float _radius;
+	public sfloat Radius { get; private set; }
+	public sfloat RadiusSquared { get; private set; }
+	public sVector3 Center => NetObject.Position + (sVector3)Offset;
+
+	public override void Init(INetObject obj)
 	{
-		Radius = radius;
-		RadiusSquared = radius * radius;
+		base.Init(obj);
+		Radius = (sfloat)_radius;
+		RadiusSquared = Radius * Radius;
 	}
 
 	public override bool CheckCollision(NetCollider2D other)
@@ -18,6 +26,11 @@ public class NetCircleCollider2D : NetCollider2D
 			NetCircleCollider2D circle => CheckCircleCircleCollision(this, circle),
 			_ => false
 		};
+	}
+
+	public override void DrawGizmo()
+	{
+		Handles.DrawWireDisc((Vector3)NetObject.Position + Offset, Vector3.up, _radius);
 	}
 }
 

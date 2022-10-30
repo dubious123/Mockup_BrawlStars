@@ -1247,6 +1247,7 @@ GameObject:
   - component: {fileID: 753935178992562542}
   - component: {fileID: 753935178992562543}
   - component: {fileID: 753935178992562539}
+  - component: {fileID: -6333730060462538406}
   m_Layer: 7
   m_Name: Character_Dog
   m_TagString: Untagged
@@ -1345,10 +1346,24 @@ MonoBehaviour:
   _rigidBody: {fileID: 753935178992562542}
   _animator: {fileID: 1646509169937314139}
   _playerCenter: {fileID: 753935177778529229}
+  <NCollider>k__BackingField: {fileID: -6333730060462538406}
+  <Tag>k__BackingField: 0
   _basicAttack: {fileID: 8648689410132511756}
   _bash: {fileID: 1757357885691786445}
-  _colliderRadus: 0.5
-  _colliderOffset: {x: 0, y: 0}
+--- !u!114 &-6333730060462538406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646509169929880295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c26aeb5e8582014baac42b753326918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Offset>k__BackingField: {x: 0, y: 0, z: 0}
+  _radius: 0.5
 --- !u!1 &1646509169929880297
 GameObject:
   m_ObjectHideFlags: 0

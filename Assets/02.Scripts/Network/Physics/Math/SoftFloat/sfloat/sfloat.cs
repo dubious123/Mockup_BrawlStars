@@ -328,13 +328,31 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
         }
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator +(sfloat f1, float f2) => f1 + (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator +(float f1, sfloat f2) => (sfloat)f1 + f2;
+
     public static sfloat operator +(sfloat f1, sfloat f2)
     {
         return f1.RawExponent - f2.RawExponent >= 0 ? InternalAdd(f1, f2) : InternalAdd(f2, f1);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator -(sfloat f1, float f2) => f1 + (sfloat)(-f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator -(float f1, sfloat f2) => (sfloat)f1 + (-f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sfloat operator -(sfloat f1, sfloat f2) => f1 + (-f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator *(sfloat f1, float f2) => f1 * (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator *(float f1, sfloat f2) => (sfloat)f1 * f2;
 
     public static sfloat operator *(sfloat f1, sfloat f2)
     {
@@ -551,6 +569,12 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
         return new sfloat(raw);
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator /(sfloat f1, float f2) => f1 / (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator /(float f1, sfloat f2) => (sfloat)f1 / f2;
+
     public static sfloat operator /(sfloat f1, sfloat f2)
     {
         if (f1.IsNaN() || f2.IsNaN())
@@ -743,6 +767,12 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator %(sfloat f1, float f2) => sMathf.fmodf(f1, (sfloat)f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static sfloat operator %(float f1, sfloat f2) => sMathf.fmodf((sfloat)f1, f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static sfloat operator %(sfloat f1, sfloat f2) => sMathf.fmodf(f1, f2);
 
     private static readonly sbyte[] msb = new sbyte[256]
@@ -809,6 +839,12 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
         }
     }
 
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator ==(sfloat f1, float f2) => f1 == (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator ==(float f1, sfloat f2) => (sfloat)f1 == f2;
+
     public static bool operator ==(sfloat f1, sfloat f2)
     {
         if (f1.RawExponent != 255)
@@ -832,16 +868,46 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator !=(sfloat f1, float f2) => !(f1 == (sfloat)f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator !=(float f1, sfloat f2) => !((sfloat)f1 == f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator !=(sfloat f1, sfloat f2) => !(f1 == f2);
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <(sfloat f1, float f2) => f1 < (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <(float f1, sfloat f2) => (sfloat)f1 < f2;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator <(sfloat f1, sfloat f2) => !f1.IsNaN() && !f2.IsNaN() && f1.CompareTo(f2) < 0;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >(sfloat f1, float f2) => f1 > (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >(float f1, sfloat f2) => (sfloat)f1 > f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator >(sfloat f1, sfloat f2) => !f1.IsNaN() && !f2.IsNaN() && f1.CompareTo(f2) > 0;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <=(sfloat f1, float f2) => f1 <= (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator <=(float f1, sfloat f2) => (sfloat)f1 <= f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator <=(sfloat f1, sfloat f2) => !f1.IsNaN() && !f2.IsNaN() && f1.CompareTo(f2) <= 0;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >=(sfloat f1, float f2) => f1 >= (sfloat)f2;
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static bool operator >=(float f1, sfloat f2) => (sfloat)f1 >= f2;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static bool operator >=(sfloat f1, sfloat f2) => !f1.IsNaN() && !f2.IsNaN() && f1.CompareTo(f2) >= 0;
