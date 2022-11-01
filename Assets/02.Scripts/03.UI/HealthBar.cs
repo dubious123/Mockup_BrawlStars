@@ -1,27 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using MEC;
+
 using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
-using MEC;
 
 
 //[ExecuteInEditMode]
 public class HealthBar : MonoBehaviour
 {
 	#region SerializeFields
-	[SerializeField] Slider _fillSlider;
-	[SerializeField] Slider _followSlider;
-	[SerializeField] BaseCharacter _character;
-	[SerializeField] float _holdingTime;
-	[SerializeField] TextMeshProUGUI _healthText;
-	[SerializeField] RectTransform _canvasRect;
-	[SerializeField] Vector2 _offset;
+	[SerializeField] private Slider _fillSlider;
+	[SerializeField] private Slider _followSlider;
+	[SerializeField] private CPlayer _player;
+	[SerializeField] private float _holdingTime;
+	[SerializeField] private TextMeshProUGUI _healthText;
+	[SerializeField] private RectTransform _canvasRect;
+	[SerializeField] private Vector2 _offset;
 	#endregion
 	private RectTransform _rect;
 	private float _targetFollowValue;
-	CoroutineHandle _coHandle;
-	void Start()
+	private CoroutineHandle _coHandle;
+
+	private void Start()
 	{
 		_rect = GetComponent<RectTransform>();
 		_fillSlider.onValueChanged.AddListener(_ =>
@@ -32,9 +36,9 @@ public class HealthBar : MonoBehaviour
 	}
 	private void LateUpdate()
 	{
-		_fillSlider.value = _character.GetHp;
+		_fillSlider.value = _player.Hp;
 		_healthText.text = $"{_fillSlider.value}";
-		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _character.transform.position) + _offset;
+		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _player.transform.position) + _offset;
 	}
 	private IEnumerator<float> Co_OnHpChange(float value)
 	{

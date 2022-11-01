@@ -1,10 +1,12 @@
+using Server.Game;
+
 public class DogController : CharacterController
 {
-	protected Dog_Character _dog;
+	protected NetCharacterDog _dog;
 
-	public override void Init(BaseCharacter playableCharacter)
+	public override void Init(NetCharacter playableCharacter)
 	{
 		base.Init(playableCharacter);
-		_dog = _currentPlayer as Dog_Character;
+		_dog = _currentPlayer as NetCharacterDog;
 	}
 }

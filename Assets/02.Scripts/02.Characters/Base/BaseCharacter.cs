@@ -19,7 +19,7 @@ using static S_BroadcastGameState;
 using static ServerCore.Utils.Enums;
 using static UnityEngine.GraphicsBuffer;
 
-public class BaseCharacter : MonoBehaviour, INetObject
+public class BaseCharacter : MonoBehaviour
 {
 	public int TeamId { get; set; }
 	#region SerializeFields
@@ -31,10 +31,9 @@ public class BaseCharacter : MonoBehaviour, INetObject
 
 	[SerializeField] protected int _maxHp;
 
-	[SerializeField] private Rigidbody _rigidBody;
 	[SerializeField] private Animator _animator;
 	[SerializeField] private Transform _playerCenter;
-	[field: SerializeField] protected NetCollider2D NCollider { get; private set; }
+	//[field: SerializeField] protected NetCollider2D NCollider { get; private set; }
 	[field: SerializeField] public NetObjectTag Tag { get; set; }
 	#region Skills
 	[Header("Skills")]
@@ -80,19 +79,18 @@ public class BaseCharacter : MonoBehaviour, INetObject
 		{
 			var beforePos = _position;
 			_position = value;
-			if (NPhysics.DetectCollision(NCollider, NetObjectTag.Wall))
-			{
-				_position = beforePos;
-				return;
-			}
+			//if (NPhysics.DetectCollision(NCollider, NetObjectTag.NetBoxCollider2DGizmoRenderer))
+			//{
+			//	_position = beforePos;
+			//	return;
+			//}
 
 			transform.position = new Vector3((float)_position.x, transform.position.y, (float)_position.z);
 		}
 	}
 	public sQuaternion Rotation { get => _rotation; set => _rotation = value; }
 
-
-	protected NetPhysics2D NPhysics { get; private set; }
+	//protected NetPhysics2D NPhysics { get; private set; }
 
 	public virtual void Init()
 	{
@@ -103,13 +101,11 @@ public class BaseCharacter : MonoBehaviour, INetObject
 		//_canBasicAttack = true;
 		_stunUI = GameObject.FindGameObjectWithTag("StunCoolTime").GetComponent<TextMeshProUGUI>();
 		_stunUI.enabled = false;
-		_rigidBody = _rigidBody == null ? GetComponent<Rigidbody>() : _rigidBody;
-		Debug.Assert(_rigidBody is not null);
 		_position = (sVector3)transform.position;
 		_rotation = (sQuaternion)transform.rotation;
-		NPhysics = (Scene.CurrentScene as Scene_Map1).NPhysics2D;
-		NCollider.Init(this);
-		NPhysics.RegisterNetCollider(NCollider);
+		//NPhysics = (Scene.CurrentScene as Scene_Map1).NPhysics2D;
+		//NCollider.Init(this);
+		//NPhysics.RegisterNetCollider(NCollider);
 	}
 
 	public virtual void HandleInput(ref Vector2 moveDir, ref Vector2 lookDir, ushort buttonPressed)
@@ -154,7 +150,6 @@ public class BaseCharacter : MonoBehaviour, INetObject
 		}
 
 		_isAwake = false;
-		_rigidBody.Sleep();
 		_animator.speed = 0;
 	}
 
@@ -165,7 +160,6 @@ public class BaseCharacter : MonoBehaviour, INetObject
 			return;
 		}
 
-		_rigidBody.WakeUp();
 		_animator.speed = 1;
 	}
 

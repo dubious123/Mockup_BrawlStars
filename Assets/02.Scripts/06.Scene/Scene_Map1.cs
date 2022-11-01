@@ -1,10 +1,16 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 using MEC;
+
+using Newtonsoft.Json;
+
+using Server.Game;
+using Server.Game.Data;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,7 +20,6 @@ using static GameFrameInfo;
 
 public class Scene_Map1 : BaseScene
 {
-	public NetPhysics2D NPhysics2D { get; private set; }
 	public long CurrentTick => _currentTick;
 	public bool GameStarted => _gameStarted;
 	#region SerializeField
@@ -23,25 +28,52 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private GameObject _gameMessage_waiting;
 	[SerializeField] private InputActionAsset _inputAsset;
 	[SerializeField] private Transform[] _spawnPoint;
-	[SerializeField] private BaseCharacter[] _characters;
+	[SerializeField] private CPlayer[] _playerRenderers;
 	#endregion
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
 	private IEnumerator<float> _coHandler;
 	private object _lock = new();
 	private long _currentTick = 0;
 	private bool _gameStarted = false;
+
+	public NetWorld World;
+
 	public override void Init(object param)
 	{
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
-		NPhysics2D = GameObject.Find("@NetObjects").GetComponent<NetPhysics2D>();
-		NPhysics2D.Init();
-		_characters = new BaseCharacter[6];
+		_playerRenderers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
-		Enter(req.TeamId, User.CharType);
-		Camera.main.GetComponent<GameCameraController>().FollowTarget = _characters[User.TeamId].transform;
+		World = new NetWorld(GetWorldData);
+		Enter(req.TeamId, (CharacterType)req.PlayerInfo.CharacterType);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
+	}
+
+	public WorldData GetWorldData()
+	{
+		var go = GameObject.Find("@NetObjects");
+		var renderers = go.GetComponentsInChildren<CBoxCollider2DGizmoRenderer>();
+		var worldData = new WorldData()
+		{
+			NetObjectDatas = new NetObjectData[renderers.Length]
+		};
+
+		for (uint i = 0; i < renderers.Length; i++)
+		{
+			worldData.NetObjectDatas[i] = new NetObjectData()
+			{
+				NetObjectId = i << 1,
+				Position = (sVector3)renderers[i].transform.position,
+				Rotation = sQuaternion.identity,
+				Collider = new NetBoxCollider2DData()
+				{
+					Size = (sVector2)renderers[i].Size,
+					Offset = (sVector2)renderers[i].Offset,
+				}
+			};
+		}
+		return worldData;
 	}
 
 	private void FixedUpdate()
@@ -51,44 +83,23 @@ public class Scene_Map1 : BaseScene
 
 	private IEnumerator<float> Co_FixedUpdate()
 	{
-		BaseCharacter character;
 		GameFrameInfo info;
-		StringBuilder sb = new();
 		while (true)
 		{
-			sb.AppendLine($"[{DateTime.Now}.{DateTime.Now.Millisecond:000}]");
-			sb.AppendLine($"-------------Start Frame [{_currentTick}]--------------");
 			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
 				//todo
 				yield return 0f;
 			}
 
-			info.ToString(sb);
-			sb.AppendLine("Handling Frame Info");
-			foreach (var ctx in info.ActionContexts)
-			{
-				foreach (var obj in ctx.Objects)
-				{
-					obj.OnGetHit(ctx.Subject.GetHitInfo(ctx.ActionCode));
-				}
-			}
+			World.InputInfo = info;
+			World.Update();
 
 			for (int i = 0; i < 6; i++)
 			{
-				character = _characters[i];
-				if (character is null) continue;
-				character.HandleInput(ref info.MoveInput[i], ref info.LookInput[i], info.ButtonPressed[i]);
-				character.HandleOneFrame();
-				sb.AppendLine($"Player[{i}] handle one frame result");
-				sb.AppendLine($"({character.Position.x},{character.Position.x},{character.Position.z},)");
-				sb.AppendLine($"({character.Rotation.x},{character.Rotation.y},{character.Rotation.z},)");
+				_playerRenderers[i]?.HandleOneFrame();
 			}
 
-			sb.AppendLine($"[{DateTime.Now}.{DateTime.Now.Millisecond:000}]");
-			sb.AppendLine("--------Frame End--------");
-			LogMgr.Log(LogSourceType.Game, sb.ToString());
-			sb.Clear();
 			_currentTick++;
 			yield return 0f;
 		}
@@ -96,20 +107,22 @@ public class Scene_Map1 : BaseScene
 
 	public void Enter(short teamId, CharacterType type)
 	{
-		Debug.Assert(_characters[teamId] is null);
-		var character = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<BaseCharacter>();
-		_characters[teamId] = character;
-		character.TeamId = teamId;
-		character.Init();
+		Debug.Assert(_playerRenderers[teamId] is null);
+		var player = Instantiate(_dog, _spawnPoint[teamId].position, Quaternion.identity).GetComponent<CPlayer>();
+		player.Init(new NetCharacterDog((sVector3)player.transform.position, sQuaternion.identity, NetObjectTag.Character, World));
+		World.AddNewNetObject((uint)teamId, player.NPlayer);
+		_playerRenderers[teamId] = player;
 		if (User.TeamId == teamId)
 		{
-			var playerInput = character.gameObject.AddComponent<PlayerInput>();
+			var playerInput = player.gameObject.AddComponent<PlayerInput>();
 			{
 				playerInput.actions = _inputAsset;
 				playerInput.notificationBehavior = PlayerNotifications.InvokeCSharpEvents;
 				playerInput.actions.Enable();
 			}
-			character.gameObject.AddComponent<DogController>().Init(character);
+
+			player.gameObject.AddComponent<DogController>().Init(player.NPlayer);
+			Camera.main.GetComponent<GameCameraController>().FollowTarget = player.transform;
 		}
 	}
 
@@ -138,8 +151,8 @@ public class Scene_Map1 : BaseScene
 			actions.Select(action => new GameActionContext()
 			{
 				ActionCode = action.ActionCode,
-				Subject = _characters[action.Subject],
-				Objects = action.Objects.Select(id => _characters[id]).ToArray(),
+				//Subject = _characters[action.Subject],
+				//Objects = action.Objects.Select(id => _characters[id]).ToArray(),
 			}));
 
 		_frameInfoQueue.Enqueue(info);

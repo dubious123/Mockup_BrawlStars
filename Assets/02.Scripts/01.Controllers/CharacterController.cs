@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using Logging;
 
+using Server.Game;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,9 +12,7 @@ using static Enums;
 
 public class CharacterController : MonoBehaviour
 {
-	#region SerializeFields		
-	[SerializeField] protected BaseCharacter _currentPlayer;
-	#endregion
+	protected NetCharacter _currentPlayer;
 	protected PlayerInput _playerInput;
 	protected InputAction _lookAction;
 	protected InputAction _moveAction;
@@ -25,7 +25,7 @@ public class CharacterController : MonoBehaviour
 	protected bool _isReady = false;
 	protected byte _buttonPressed = 0;
 
-	public virtual void Init(BaseCharacter playableCharacter)
+	public virtual void Init(NetCharacter playableCharacter)
 	{
 		_currentPlayer = playableCharacter;
 		_playerInput = GetComponent<PlayerInput>();
@@ -54,7 +54,7 @@ public class CharacterController : MonoBehaviour
 	private void FixedUpdate()
 	{
 		if (_isReady == false) return;
-		if (_currentPlayer == null || _currentPlayer.IsControllable == false) return;
+		//if (_currentPlayer == null || _currentPlayer.IsControllable == false) return;
 		if (_game.GameStarted == false) return;
 		#region Move
 		var moveInput = _moveAction.ReadValue<Vector2>();

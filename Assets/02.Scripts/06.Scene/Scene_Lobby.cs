@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using TMPro;
+
 using UnityEngine;
+
 using static Enums;
 
 public class Scene_Lobby : BaseScene
 {
-	[SerializeField] TMP_Dropdown _dropDwon;
+	[SerializeField] private TMP_Dropdown _dropDwon;
 	public override void Init(object param)
 	{
 		Scenetype = SceneType.Lobby;

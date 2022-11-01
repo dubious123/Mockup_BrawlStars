@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using MEC;
 
+using Server.Game.Skills;
+
 using TMPro;
 
 using UnityEngine;
@@ -35,10 +37,12 @@ public class Dog_Bash : BaseSkill
 		_performing = false;
 		Id = 2;
 	}
+
 	public override void HandleOneFrame()
 	{
 		if (_performing) _coHandler.MoveNext();
 	}
+
 	public override void HandleInput(bool buttonPressed)
 	{
 		if (_enabled == false) return;
@@ -50,10 +54,12 @@ public class Dog_Bash : BaseSkill
 			return;
 		}
 	}
+
 	public override void Cancel()
 	{
 
 	}
+
 	protected IEnumerator<int> Co_Perform()
 	{
 		while (true)
