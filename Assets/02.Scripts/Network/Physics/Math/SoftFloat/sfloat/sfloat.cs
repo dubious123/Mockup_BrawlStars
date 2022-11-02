@@ -36,7 +36,7 @@ public struct sfloat : IEquatable<sfloat>, IComparable<sfloat>, IComparable, IFo
     /// <summary>
     /// Raw byte representation of an sfloat number
     /// </summary>
-    public readonly uint rawValue;
+    private readonly uint rawValue;
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private sfloat(uint raw)

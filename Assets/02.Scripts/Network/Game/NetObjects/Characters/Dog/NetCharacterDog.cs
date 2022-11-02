@@ -11,8 +11,8 @@ namespace Server.Game
 		public INetBaseSkill BasicAttack { get; set; }
 		public INetBaseSkill Bash { get; set; }
 
-		public NetCharacterDog(sVector3 position, sQuaternion rotation, Enums.NetObjectTag tag, NetWorld world)
-			: base(position, rotation, tag, world)
+		public NetCharacterDog(sVector3 position, sQuaternion rotation, NetWorld world)
+			: base(position, rotation, Enums.NetObjectTag.Character, world)
 		{
 			BasicAttack = new NetDogBasicAttack(this);
 			Bash = new NetDogBash(this);

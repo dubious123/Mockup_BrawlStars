@@ -70,7 +70,7 @@ public class CharacterController : MonoBehaviour
 
 		//Todo object pooling to reduce gc
 		//LogMgr.Log(LogSourceType.Debug, $"[Tick : {_game.CurrentTick}]\ninput ¹ß»ý, move : {moveInput}, look : {_lookdir}");
-		Network.RegisterSend(new C_BroadcastPlayerInput(User.UserId, _game.CurrentTick, moveInput, new Vector2(_lookdir.x, _lookdir.z), _buttonPressed));
+		Network.RegisterSend(new C_PlayerInput(User.UserId, _game.CurrentTick, (sVector2)moveInput, new sVector2(_lookdir.x, _lookdir.z), _buttonPressed));
 		//_game.EnqueueInputInfo(User.TeamId, new InputInfo()
 		//{
 		//	LookInput = _lookdir,

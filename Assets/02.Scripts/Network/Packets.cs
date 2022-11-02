@@ -58,23 +58,27 @@ public class C_GameReady : AuthPacket
 		UserId = userId;
 	}
 }
-public class C_BroadcastPlayerInput : GamePacket
+public class C_PlayerInput : GamePacket
 {
-	public C_BroadcastPlayerInput(int userId, long startTick, Vector2 moveDir, Vector2 lookDir, byte buttonPressed)
+	public C_PlayerInput(int userId, long startTick, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
 	{
 		Id = 0x0005;
 		UserId = userId;
 		StartTick = startTick;
-		MoveDir = moveDir;
-		LookDir = lookDir;
+		MoveDirX = moveDir.x.RawValue;
+		MoveDirY = moveDir.y.RawValue;
+		LookDirX = lookDir.x.RawValue;
+		LookDirY = lookDir.y.RawValue;
 		ButtonPressed = buttonPressed;
 	}
 
 	public byte ButtonPressed;
 	public short TeamId;
 	public long StartTick;
-	public Vector2 MoveDir;
-	public Vector2 LookDir;
+	public uint MoveDirX;
+	public uint MoveDirY;
+	public uint LookDirX;
+	public uint LookDirY;
 }
 public class S_Init : BasePacket
 {
@@ -112,36 +116,14 @@ public class S_BroadcastStartGame : BasePacket
 	public ushort[] CharacterTypeArr;
 	public float WaitTime;
 }
-public class S_BroadcastGameState : BasePacket
+public class S_GameFrameInfo : BasePacket
 {
 
 	public long StartTick;
 	public long TargetTick;
-	public Vector2[] PlayerMoveDirArr;
-	public Vector2[] PlayerLookDirArr;
+	public uint[] PlayerMoveDirXArr;
+	public uint[] PlayerMoveDirYArr;
+	public uint[] PlayerLookDirXArr;
+	public uint[] PlayerLookDirYArr;
 	public ushort[] ButtonPressedArr;
-	public List<GameActionResult> Actions;
-
-	[Serializable]
-	public class GameActionResult
-	{
-		public GameActionResult(uint code, short subject, params short[] objects)
-		{
-			ActionCode = code;
-			Subject = subject;
-			Objects = objects;
-		}
-		//[][][][][][][][]
-		//charType / action code (0,1,2,3...)
-		public uint ActionCode;
-		public short Subject;
-		public short[] Objects;
-	}
-}
-public class S_BroadcastMove : BasePacket
-{
-
-	public Vector2 MoveDir;
-	public Vector2 LookDir;
-	public short TeamId;
 }

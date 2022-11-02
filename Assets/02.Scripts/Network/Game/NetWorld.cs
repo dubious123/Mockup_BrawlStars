@@ -20,20 +20,14 @@ namespace Server.Game
 		public GameFrameInfo InputInfo { get; set; }
 		public NetCharacter[] NetCharacters { get; set; }
 
-		static NetWorld()
-		{
-
-		}
-
-		public NetWorld(Func<WorldData> dataFunc)
+		public NetWorld(WorldData data)
 		{
 			_update = UpdateGameLogic;
 			_update += UpdatePlayers;
-			var data = dataFunc();
 			uint i = 0x10;
 			foreach (var netObjData in data.NetObjectDatas)
 			{
-				var wall = new Wall(this, NetObjectTag.Wall, netObjData.Collider.Offset, (netObjData.Collider as NetBoxCollider2DData).Size)
+				var wall = new Wall(this, NetObjectTag.Wall, netObjData.BoxCollider.Offset, (netObjData.BoxCollider as NetBoxCollider2DData).Size)
 				{
 					Position = netObjData.Position,
 					Rotation = netObjData.Rotation,
@@ -61,12 +55,7 @@ namespace Server.Game
 					return;
 				}
 
-				player.UpdateInput(new InputData()
-				{
-					MoveInput = new sVector3(InputInfo.MoveInput[i].x, 0, InputInfo.MoveInput[i].y),
-					LookInput = new sVector3(InputInfo.LookInput[i].x, 0, InputInfo.LookInput[i].y),
-					ButtonInput = InputInfo.ButtonPressed[i]
-				});
+				player.UpdateInput(in InputInfo.Inputs[i]);
 				player.Update();
 			}
 		}

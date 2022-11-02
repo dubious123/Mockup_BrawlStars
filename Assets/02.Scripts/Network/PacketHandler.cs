@@ -9,19 +9,18 @@ using static ServerCore.Utils.Enums;
 
 public static class PacketHandler
 {
-	static ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>> _handlerDict;
+	private static ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>> _handlerDict;
 
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => S_InitHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => S_LoginHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => S_EnterLobbyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => S_EnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => S_BroadcastEnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet,session) => S_BroadcastStartGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastGameState, (packet,session) => S_BroadcastGameStateHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastMove, (packet,session) => S_BroadcastMoveHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet, session) => S_GameFrameInfoHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -64,9 +63,9 @@ public static class PacketHandler
 		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Game, req));
 	}
 
-	private static void S_BroadcastGameStateHandle(BasePacket packet, ServerSession session)
+	private static void S_GameFrameInfoHandle(BasePacket packet, ServerSession session)
 	{
-		var req = packet as S_BroadcastGameState;
+		var req = packet as S_GameFrameInfo;
 		var game = Scene.CurrentScene as Scene_Map1;
 		if (game is null || game.IsReady == false)
 		{
@@ -74,7 +73,6 @@ public static class PacketHandler
 			return;
 		}
 		game.HandleGameState(req);
-
 	}
 
 	private static void S_BroadcastEnterGameHandle(BasePacket packet, ServerSession session)
@@ -100,12 +98,5 @@ public static class PacketHandler
 
 			game.StartGame(req.WaitTime);
 		});
-	}
-
-	private static void S_BroadcastMoveHandle(BasePacket packet, ServerSession session)
-	{
-		var req = packet as S_BroadcastMove;
-		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
-		//JobMgr.PushUnityJob(() => game.UpdatePlayer(req.TeamId, req.MoveDir, req.LookDir));
 	}
 }
