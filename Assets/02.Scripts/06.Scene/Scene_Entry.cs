@@ -1,15 +1,6 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-
-using Logging;
-
 using MEC;
 
 using UnityEngine;
-
-using static GameFrameInfo;
-using static S_EnterGame;
 
 public class Scene_Entry : BaseScene
 {
@@ -25,8 +16,8 @@ public class Scene_Entry : BaseScene
 		Screen.SetResolution(1920, 1080, false);
 		Application.targetFrameRate = 300;
 		Time.fixedDeltaTime = (float)((sfloat)1 / (sfloat)60f);
+		DontDestroyOnLoad(new GameObject("@Loggers", typeof(Loggers)));
 		DontDestroyOnLoad(new GameObject("@JobMgr", typeof(JobMgr)));
-		DontDestroyOnLoad(new GameObject("@Log", typeof(LogMgr)));
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));

@@ -1,21 +1,23 @@
-using Logging;
-using ServerCore;
-using ServerCore.Managers;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
+
+using ServerCore;
+using ServerCore.Managers;
+
 using UnityEngine;
+
 using static Enums;
 
 public class ServerSession : Session
 {
-	JobQueue _sendQueue;
-	JobQueue _parserQueue;
-	ConcurrentQueue<BasePacket> _sendingPacketQueue;
-	IEnumerator<float> _coPacketParserHandler;
-	int _sendRegistered;
+	private JobQueue _sendQueue;
+	private JobQueue _parserQueue;
+	private ConcurrentQueue<BasePacket> _sendingPacketQueue;
+	private IEnumerator<float> _coPacketParserHandler;
+	private int _sendRegistered;
 	public bool ParsingPacket;
 
 	public override void Init(int id, Socket socket)
@@ -43,7 +45,10 @@ public class ServerSession : Session
 		}
 		catch (ObjectDisposedException e)
 		{
-			JobMgr.PushUnityJob(() => LogMgr.Log(LogSourceType.Session, LogLevel.Error, $"Session [{Id}] : {e.Message}"));
+			Loggers.Error.Information("Session [{0}] : {1}", Id, e.Message);
+#if UNITY_EDITOR
+			JobMgr.PushUnityJob(() => Debug.Log($"Session [{Id}] : {e.Message}"));
+#endif
 		}
 		catch (Exception)
 		{

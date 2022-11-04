@@ -1,16 +1,18 @@
-using ServerCore;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using static ServerCore.Utils.Enums;
-using UnityEngine;
 using System.Text;
-using Logging;
+
+using ServerCore;
+
+using UnityEngine;
+
+using static ServerCore.Utils.Enums;
 
 public static class PacketParser
 {
-	static readonly ConcurrentDictionary<ushort, Func<string, BasePacket>> _readDict;
-	static JobQueue _packetHandlerQueue;
+	private static readonly ConcurrentDictionary<ushort, Func<string, BasePacket>> _readDict;
+	private static JobQueue _packetHandlerQueue;
 	static PacketParser()
 	{
 		_packetHandlerQueue = JobMgr.GetQueue("PacketHandler");
@@ -29,25 +31,7 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartGame, json => JsonUtility.FromJson<S_BroadcastStartGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_GameFrameInfo, json => JsonUtility.FromJson<S_GameFrameInfo>(json));
 	}
-	public static BasePacket ReadPacket(this RecvBuffer buffer)
-	{
-		try
-		{
-			var id = BitConverter.ToUInt16(buffer.Read(2));
-			var size = BitConverter.ToUInt16(buffer.Read(2));
-			_readDict.TryGetValue(id, out Func<string, BasePacket> func);
-			//return func.Invoke(Encoding.UTF8.GetString(buffer.Read(size)));
-			var json = Encoding.UTF8.GetString(buffer.Read(size));
-			LogMgr.Log(Enums.LogSourceType.PacketRecv, json);
-			var ret = func.Invoke(json);
-			LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(ret, true));
-			return ret;
-		}
-		catch (System.Exception)
-		{
-			return null;
-		}
-	}
+
 	public static IEnumerator<float> ReadPacket(this RecvBuffer buffer, ServerSession session)
 	{
 		while (true)
@@ -56,46 +40,30 @@ public static class PacketParser
 			{
 				yield return 0f;
 			}
+
 			ushort id = BitConverter.ToUInt16(buffer.Read(2));
 			ushort size = BitConverter.ToUInt16(buffer.Read(2));
 			while (buffer.CanRead(size) == false)
 			{
 				yield return 0f;
 			}
-			//Todo handle invalid id
+
 			_readDict.TryGetValue(id, out var func);
 			string json = Encoding.UTF8.GetString(buffer.Read(size));
-			LogMgr.Log(Enums.LogSourceType.PacketRecv, json);
+			Loggers.Recv.Information(json);
 			var packet = func.Invoke(json);
-			//LogMgr.Log(Enums.LogSourceType.PacketRecv, "after parse : \n" + JsonUtility.ToJson(packet, true));
 			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(packet, session));
 		}
 	}
+
 	public static bool WritePacket(this SendBuffer buffer, BasePacket packet)
 	{
 		try
 		{
-			//var arr1 = buffer.Write(2);
-			//BitConverter.TryWriteBytes(arr1, packet.Id);
-
-			//var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
-
-			//var arr2 = buffer.Write(2);
-			//BitConverter.TryWriteBytes(arr2, (ushort)json.Count);
-
-			//LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}]" + JsonUtility.ToJson(packet));
-			//string str = string.Empty;
-
-			//str += BitConverter.ToString(arr1.Array, arr1.Offset, arr1.Count);
-			//str += BitConverter.ToString(arr2.Array, arr2.Offset, arr2.Count);
-			//str += BitConverter.ToString(json.Array, json.Offset, json.Count);
-
-			//LogMgr.Log(Enums.LogSourceType.Debug, str);
-			//json.CopyTo(buffer.Write(json.Count));
 			BitConverter.TryWriteBytes(buffer.Write(2), packet.Id);
 			var json = new ArraySegment<byte>(Encoding.UTF8.GetBytes(JsonUtility.ToJson(packet)));
 			BitConverter.TryWriteBytes(buffer.Write(2), (ushort)json.Count);
-			LogMgr.Log(Enums.LogSourceType.PacketSend, $"size : [{(ushort)json.Count}] \n{JsonUtility.ToJson(packet)}");
+			Loggers.Send.Information("size : [{0}] \n{1}", (ushort)json.Count, JsonUtility.ToJson(packet, true));
 			json.CopyTo(buffer.Write(json.Count));
 			return true;
 		}

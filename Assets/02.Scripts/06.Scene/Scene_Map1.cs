@@ -111,7 +111,7 @@ public class Scene_Map1 : BaseScene
 	{
 		_gameMessage_waiting.SetActive(false);
 		_gameStarted = true;
-		LogMgr.Log(LogSourceType.Game, "---------------StartGame----------------");
+		Loggers.Game.Information("---------------StartGame----------------");
 		_coHandler = Co_FixedUpdate();
 	}
 
