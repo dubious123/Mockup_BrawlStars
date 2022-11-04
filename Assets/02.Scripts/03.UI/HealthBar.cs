@@ -8,8 +8,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-//[ExecuteInEditMode]
 public class HealthBar : MonoBehaviour
 {
 	#region SerializeFields
@@ -34,12 +32,14 @@ public class HealthBar : MonoBehaviour
 			_coHandle = Timing.RunCoroutine(Co_OnHpChange(_));
 		});
 	}
+
 	private void LateUpdate()
 	{
 		_fillSlider.value = _player.Hp;
 		_healthText.text = $"{_fillSlider.value}";
 		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _player.transform.position) + _offset;
 	}
+
 	private IEnumerator<float> Co_OnHpChange(float value)
 	{
 		yield return Timing.WaitForSeconds(0.5f);

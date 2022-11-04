@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
+﻿using System.Collections.Generic;
 
 using static Enums;
 
 namespace Server.Game
 {
-	public abstract class NetCharacter : INetCollidable2D, INetUpdatable
+	public abstract class NetCharacter : INetCollidable2D, INetUpdatable, ISendHit, ITakeHit
 	{
 		public NetWorld World { get; init; }
 		public sVector3 Position { get; set; }
+		public sVector3 Forward => Rotation * sVector3.forward;
 		public sQuaternion Rotation { get; set; }
 		public NetObjectTag Tag { get; set; }
 		public INetCollider2D Collider { get; init; }
@@ -29,6 +23,8 @@ namespace Server.Game
 		public sfloat MoveSmoothTime { get; set; }
 		public sVector3 TargetLookDir { get; set; }
 
+		public int MaxHp { get; protected set; }
+		public int Hp { get; protected set; }
 
 		private sVector3 _smoothVelocity;
 
@@ -84,6 +80,40 @@ namespace Server.Game
 		public virtual void GetCollisions(NetObjectTag tag, List<INetCollider2D> collisions)
 		{
 			World.Physics2D.GetCollisions(Collider, tag, collisions);
+		}
+
+		public virtual void SendHit(ITakeHit target, in HitInfo info)
+		{
+			if (info.Damage > 0)
+			{
+				target.TakeMeleeDamage(info.Damage);
+			}
+		}
+
+		public virtual bool CanBeHit()
+		{
+			return IsDead() == false;
+		}
+
+		public virtual void TakeMeleeDamage(int damage)
+		{
+			Hp -= damage;
+
+			if (IsDead())
+			{
+				OnDead();
+			}
+		}
+
+		public virtual bool IsDead()
+		{
+			return Hp <= 0;
+		}
+
+		public virtual void OnDead()
+		{
+			CanControlMove = false;
+			CanControlLook = false;
 		}
 	}
 }

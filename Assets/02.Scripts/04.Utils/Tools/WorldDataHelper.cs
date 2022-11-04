@@ -7,12 +7,12 @@ using UnityEngine;
 
 public class WorldDataHelper : MonoBehaviour
 {
-#if UNITY_EDITOR
 	[Header("Create World")]
-	[SerializeField] private string _filePath;
 	[SerializeField] private Transform[] _spawnPoints;
 	[SerializeField] private CBoxCollider2DGizmoRenderer[] _walls;
 
+#if UNITY_EDITOR
+	[SerializeField] private string _filePath;
 	[ContextMenu("Create World Data")]
 	public void GenerateWorldData()
 	{

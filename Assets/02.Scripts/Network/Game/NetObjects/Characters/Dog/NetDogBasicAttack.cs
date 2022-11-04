@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+
+using static Enums;
 
 namespace Server.Game
 {
@@ -11,11 +8,15 @@ namespace Server.Game
 	{
 		public NetCharacter Character => _dog;
 		public int Id { get; init; }
+		public sfloat Length { get; set; }
+		public sfloat Angle { get; set; }
+		public sfloat SqrLength { get; set; }
 		public bool Performing { get; set; }
 		public bool Active { get; set; }
 
 		private NetCharacterDog _dog;
 		private IEnumerator<int> _coHandler;
+		private HitInfo _hitInfo;
 
 		public NetDogBasicAttack(NetCharacterDog dog)
 		{
@@ -24,6 +25,13 @@ namespace Server.Game
 			Performing = false;
 			Active = true;
 			_coHandler = Co_Perform();
+			Length = (sfloat)1.5f;
+			SqrLength = Length * Length;
+			Angle = (sfloat)45f;
+			_hitInfo = new HitInfo
+			{
+				Damage = 20,
+			};
 		}
 
 		public virtual void Update()
@@ -56,6 +64,28 @@ namespace Server.Game
 				{
 					yield return 0;
 				}
+
+				Character.World.FindAllAndBroadcast(target =>
+				{
+					if (target.Tag is not NetObjectTag.Character || target == Character || target is not ITakeHit || (target as ITakeHit).CanBeHit() is false)
+					{
+						return false;
+					}
+
+					var dir = target.Position - Character.Position;
+					if (dir.sqrMagnitude > SqrLength)
+					{
+						return false;
+					}
+
+					var angle = sVector3.Angle(Character.Forward, dir);
+					if (angle > Angle)
+					{
+						return false;
+					}
+
+					return true;
+				}, target => Character.SendHit(target as ITakeHit, _hitInfo));
 
 				for (int i = 0; i < 30; i++)
 				{

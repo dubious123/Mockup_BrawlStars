@@ -60,8 +60,10 @@ public class Scene_Map1 : BaseScene
 	private IEnumerator<float> Co_FixedUpdate()
 	{
 		GameFrameInfo info;
+		Loggers.Game.Information("---------------StartGame----------------");
 		while (true)
 		{
+			Loggers.Game.Information("---------------Frame [{0}]----------------", _currentTick);
 			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
 				//todo
@@ -111,7 +113,6 @@ public class Scene_Map1 : BaseScene
 	{
 		_gameMessage_waiting.SetActive(false);
 		_gameStarted = true;
-		Loggers.Game.Information("---------------StartGame----------------");
 		_coHandler = Co_FixedUpdate();
 	}
 
