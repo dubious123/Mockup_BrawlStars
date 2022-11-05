@@ -8,9 +8,9 @@ public class CPlayerDog : CPlayer
 	[field: SerializeField] public CDogBasicAttack BasicAttack { get; set; }
 	[field: SerializeField] public CDogBash Bash { get; set; }
 
-	public override void Init(NetCharacter character)
+	public override void Init(NetCharacter character, short teamId)
 	{
-		base.Init(character);
+		base.Init(character, teamId);
 		BasicAttack.Init(this);
 		Bash.Init(this);
 	}

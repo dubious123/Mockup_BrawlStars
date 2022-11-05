@@ -87,7 +87,7 @@ public class Scene_Map1 : BaseScene
 	{
 		Debug.Assert(_playerRenderers[teamId] is null);
 		var player = Instantiate(_dog, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
-		player.Init(new NetCharacterDog(_spawnPoints[teamId], sQuaternion.identity, World));
+		player.Init(new NetCharacterDog(_spawnPoints[teamId], sQuaternion.identity, World), teamId);
 		World.AddNewNetObject((uint)teamId, player.NPlayer);
 		_playerRenderers[teamId] = player;
 		if (User.TeamId == teamId)

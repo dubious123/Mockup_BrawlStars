@@ -53,12 +53,17 @@ public class CDogBash : MonoBehaviour, ICBaseSkill
 			Player.Animator.SetBool(AnimatorMeta.Dog_Bash, true);
 			for (int i = 0; i < NetBash.BashFrame; i++)
 			{
+				if (NetBash.IsHit)
+				{
+					break;
+				}
+
 				yield return 0;
 			}
 
 			Player.Animator.SetBool(AnimatorMeta.Dog_Bash, false);
 			_coolTimeIndicator.enabled = true;
-			for (int i = NetBash.CoolTimeFrame; 0 < i; i--)
+			for (int i = NetBash.CoolTimeFrame - 1; 0 < i; i--)
 			{
 				_coolTimeIndicator.text = (i * Time.fixedDeltaTime).ToString("0.0");
 				yield return 0;

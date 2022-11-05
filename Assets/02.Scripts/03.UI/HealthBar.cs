@@ -31,6 +31,11 @@ public class HealthBar : MonoBehaviour
 			Timing.KillCoroutines(_coHandle);
 			_coHandle = Timing.RunCoroutine(Co_OnHpChange(_));
 		});
+
+		if (_player.TeamId == User.TeamId)
+		{
+			transform.parent.GetComponent<Canvas>().sortingOrder = 1;
+		}
 	}
 
 	private void LateUpdate()

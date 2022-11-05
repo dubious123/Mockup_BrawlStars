@@ -39,7 +39,7 @@ public class CDogBasicAttack : MonoBehaviour, ICBaseSkill
 			_audio.Play();
 			_effects.Emit(100);
 			Player.Animator.SetTrigger(AnimatorMeta.BasicAttack_Trigger);
-			for (int i = 0; i < 60; i++)
+			for (int i = 0; i < 59; i++)
 			{
 				yield return 0;
 			}
