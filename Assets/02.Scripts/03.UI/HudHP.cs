@@ -8,7 +8,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class HudHP : MonoBehaviour
 {
 	#region SerializeFields
 	[SerializeField] private Slider _fillSlider;

@@ -42,6 +42,15 @@ namespace Server.Game
 			}
 		}
 
+		public void Cancel()
+		{
+			if (Performing)
+			{
+				_coHandler.Reset();
+				Performing = false;
+			}
+		}
+
 		public virtual void HandleInput(in InputData input)
 		{
 			if (Active == false || Performing || (input.ButtonInput & 1) == 0)

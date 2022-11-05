@@ -14,5 +14,6 @@ namespace Server.Game
 		public bool Active { get; set; }
 		public void HandleInput(in InputData input);
 		public IEnumerator<int> Co_Perform();
+		public void Cancel();
 	}
 }

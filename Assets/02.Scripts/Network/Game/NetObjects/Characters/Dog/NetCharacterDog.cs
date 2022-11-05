@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static Enums;
 
 namespace Server.Game
 {
@@ -12,7 +8,7 @@ namespace Server.Game
 		public INetBaseSkill Bash { get; set; }
 
 		public NetCharacterDog(sVector3 position, sQuaternion rotation, NetWorld world)
-			: base(position, rotation, Enums.NetObjectTag.Character, world)
+			: base(position, rotation, NetObjectTag.Character, world)
 		{
 			BasicAttack = new NetDogBasicAttack(this);
 			Bash = new NetDogBash(this);
@@ -54,6 +50,22 @@ namespace Server.Game
 			BasicAttack.Active = false;
 			Bash.Performing = false;
 			Bash.Active = false;
+		}
+
+		protected override void OnCCStart()
+		{
+			base.OnCCStart();
+			BasicAttack.Cancel();
+			BasicAttack.Active = false;
+			Bash.Cancel();
+			Bash.Active = false;
+		}
+
+		protected override void OnCCEnd()
+		{
+			base.OnCCEnd();
+			BasicAttack.Active = true;
+			Bash.Active = true;
 		}
 	}
 }

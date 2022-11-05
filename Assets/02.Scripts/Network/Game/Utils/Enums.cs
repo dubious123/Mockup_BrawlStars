@@ -1,4 +1,6 @@
-﻿public static partial class Enums
+﻿using System;
+
+public static partial class Enums
 {
 	public enum NetObjectTag
 	{
@@ -10,6 +12,14 @@
 	{
 		Wall,
 		Player_Dog,
+	}
+
+	[Flags]
+	public enum CCFlags
+	{
+		None = 0,
+		Knockback = 1,
+		Stun = 2,
 	}
 }
 

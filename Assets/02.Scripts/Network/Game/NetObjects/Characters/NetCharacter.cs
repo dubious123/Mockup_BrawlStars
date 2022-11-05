@@ -16,8 +16,12 @@ namespace Server.Game
 		public sfloat LookSpeed { get; set; }
 		//public bool BasicAttackBtnPressed { get; set; }
 		//public bool SkillBtnPressed { get; set; }
+		public CCFlags CCFlag { get; protected set; }
 		public bool CanControlMove { get; set; }
 		public bool CanControlLook { get; set; }
+		public int KnockbackDuration { get; protected set; }
+		public int StunDuration { get; protected set; }
+		public sVector2 KnockbackDelta { get; protected set; }
 
 		public sVector3 TargetMoveDir { get; set; }
 		public sfloat MoveSmoothTime { get; set; }
@@ -25,6 +29,9 @@ namespace Server.Game
 
 		public int MaxHp { get; protected set; }
 		public int Hp { get; protected set; }
+
+		protected IEnumerator<int> KnockbackCoHandler { get; set; }
+		protected IEnumerator<int> StunCoHandler { get; set; }
 
 		private sVector3 _smoothVelocity;
 
@@ -40,10 +47,14 @@ namespace Server.Game
 			MoveSmoothTime = (sfloat)0.01f;
 			CanControlMove = true;
 			CanControlLook = true;
+			KnockbackCoHandler = CoKnockback();
+			StunCoHandler = CoStun();
 		}
 
 		public virtual void Update()
 		{
+			HandleCC();
+
 			if (CanControlMove && TargetMoveDir != sVector3.zero)
 			{
 				Move(MoveSpeed * Define.FixedDeltaTime * TargetMoveDir);
@@ -88,6 +99,17 @@ namespace Server.Game
 			{
 				target.TakeMeleeDamage(info.Damage);
 			}
+
+			if (info.KnockbackDuration > 0)
+			{
+				var delta = Forward.normalized * (info.KnockbackDistance / (sfloat)info.KnockbackDuration);
+				target.TakeKnockback(info.KnockbackDuration, delta);
+			}
+
+			if (info.StunDuration > 0)
+			{
+				target.TakeStun(info.StunDuration);
+			}
 		}
 
 		public virtual bool CanBeHit()
@@ -105,6 +127,29 @@ namespace Server.Game
 			}
 		}
 
+		public virtual void HandleCC()
+		{
+			KnockbackCoHandler.MoveNext();
+			StunCoHandler.MoveNext();
+			if (CCFlag == CCFlags.None)
+			{
+				OnCCEnd();
+			}
+		}
+
+		public virtual void TakeKnockback(int duration, sVector3 delta)
+		{
+			KnockbackDuration = duration;
+			KnockbackDelta = delta;
+			KnockbackCoHandler = CoKnockback();
+		}
+
+		public virtual void TakeStun(int duration)
+		{
+			StunDuration = duration;
+			StunCoHandler = CoStun();
+		}
+
 		public virtual bool IsDead()
 		{
 			return Hp <= 0;
@@ -114,6 +159,45 @@ namespace Server.Game
 		{
 			CanControlMove = false;
 			CanControlLook = false;
+		}
+
+		protected virtual IEnumerator<int> CoKnockback()
+		{
+			OnCCStart();
+			CCFlag |= CCFlags.Knockback;
+			for (; KnockbackDuration > 0; KnockbackDuration--)
+			{
+				Move(KnockbackDelta);
+				yield return 0;
+			}
+
+			CCFlag ^= CCFlags.Knockback;
+			yield break;
+		}
+
+		protected virtual IEnumerator<int> CoStun()
+		{
+			OnCCStart();
+			CCFlag |= CCFlags.Stun;
+			for (; StunDuration > 0; StunDuration--)
+			{
+				yield return 0;
+			}
+
+			CCFlag ^= CCFlags.Stun;
+			yield break;
+		}
+
+		protected virtual void OnCCStart()
+		{
+			CanControlMove = false;
+			CanControlLook = false;
+		}
+
+		protected virtual void OnCCEnd()
+		{
+			CanControlMove = true;
+			CanControlLook = true;
 		}
 	}
 }
