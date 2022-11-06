@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="41.495201mm"
+   height="18mm"
+   viewBox="0 0 41.495201 18"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="BrawlStars.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.75633418"
+     inkscape:cx="88.585181"
+     inkscape:cy="195.01962"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-119.53067,-1.0009262)">
+    <g
+       id="g34426"
+       transform="matrix(0.37383178,0,-0.027628,0.31578947,121.1325,4.158821)"
+       inkscape:export-filename="g34426.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g13583"
+         transform="matrix(0.97438376,0,0.08524753,1.1073753,-52.253114,-26.175828)">
+        <rect
+           style="fill:#000000;stroke-width:0.265103"
+           id="rect340"
+           width="109.72406"
+           height="47.598351"
+           x="52.684246"
+           y="14.664887"
+           rx="0"
+           ry="0"
+           transform="matrix(1,0,-0.08848981,0.99607708,0,0)" />
+        <rect
+           style="fill:#000000;stroke-width:0.265103"
+           id="rect340-6"
+           width="109.72406"
+           height="47.598351"
+           x="52.717415"
+           y="18.742321"
+           rx="0"
+           ry="2.040235"
+           transform="matrix(1,0,-0.08848981,0.99607708,0,0)" />
+      </g>
+      <g
+         id="g34328">
+        <rect
+           style="fill:#f7ec42;fill-opacity:1;stroke-width:0.297707"
+           id="rect26255"
+           width="104.99967"
+           height="38.512764"
+           x="-6.2375267e-07"
+           y="0"
+           ry="1.5569366"
+           rx="1.1709712" />
+        <rect
+           style="fill:#a6532b;fill-opacity:1;stroke-width:0.297708"
+           id="rect26255-9"
+           width="105"
+           height="38.512764"
+           x="-1.5089046e-08"
+           y="6.487236"
+           ry="1.5569366"
+           rx="1.1709749" />
+        <g
+           id="g26205"
+           transform="matrix(-0.99915025,0,0.00254925,1.1428571,104.73233,-77.499997)">
+          <rect
+             style="fill:#ecc308;fill-opacity:1;stroke-width:0.198115"
+             id="rect26145"
+             width="105"
+             height="35"
+             x="0"
+             y="70" />
+          <rect
+             style="fill:#ecc308;fill-opacity:1;stroke-width:0.264583"
+             id="rect26199"
+             width="0.17491166"
+             height="0.69964665"
+             x="52.998234"
+             y="85.356895"
+             ry="0.087455831" />
+          <g
+             id="g26138"
+             transform="translate(0,10)">
+            <path
+               style="fill:#f7ec42;fill-opacity:1;stroke-width:0.0791072"
+               d="M 0,63 3,60 H 0.02018 Z"
+               id="path20986"
+               sodipodi:nodetypes="cccc" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
