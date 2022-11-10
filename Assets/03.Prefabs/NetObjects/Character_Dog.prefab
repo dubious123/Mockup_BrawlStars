@@ -1266,8 +1266,8 @@ GameObject:
   - component: {fileID: 1646509169930378887}
   - component: {fileID: 1646509169937314139}
   - component: {fileID: 7790647429089897129}
-  - component: {fileID: 7478932102351980560}
   - component: {fileID: 1635614313022175885}
+  - component: {fileID: 2931575979215702616}
   m_Layer: 7
   m_Name: Character_Dog
   m_TagString: Untagged
@@ -1328,22 +1328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 1646509169937314139}
   <StunIndicator>k__BackingField: {fileID: 2282623622190046312}
-  <BasicAttack>k__BackingField: {fileID: 7478932102351980560}
+  <BasicAttack>k__BackingField: {fileID: 0}
   <Bash>k__BackingField: {fileID: 1635614313022175885}
---- !u!114 &7478932102351980560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646509169929880295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7caa0edd335b0d84f8d01d9e717ecefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effects: {fileID: 874337401992673051}
-  _audio: {fileID: 8983129183014282087}
 --- !u!114 &1635614313022175885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,6 +1343,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skillIndicator: {fileID: 8894002790915833734}
+--- !u!114 &2931575979215702616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646509169929880295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7caa0edd335b0d84f8d01d9e717ecefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effects: {fileID: 874337401992673051}
+  _audio: {fileID: 8983129183014282087}
 --- !u!1 &1646509169929880297
 GameObject:
   m_ObjectHideFlags: 0

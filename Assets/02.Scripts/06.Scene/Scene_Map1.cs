@@ -23,7 +23,7 @@ public class Scene_Map1 : BaseScene
 	public bool GameStarted => _gameStarted;
 	#region SerializeField
 	//[SerializeField] AssetReference _dog;
-	[SerializeField] private GameObject _dog;
+	[SerializeField] private GameObject _knight;
 	[SerializeField] private GameObject _gameMessage_waiting;
 	[SerializeField] private InputActionAsset _inputAsset;
 	[SerializeField] private WorldDataHelper _dataHelper;
@@ -86,8 +86,8 @@ public class Scene_Map1 : BaseScene
 	public void Enter(short teamId, CharacterType type)
 	{
 		Debug.Assert(_playerRenderers[teamId] is null);
-		var player = Instantiate(_dog, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
-		player.Init(new NetCharacterDog(_spawnPoints[teamId], sQuaternion.identity, World), teamId);
+		var player = Instantiate(_knight, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
+		player.Init(new NetCharacterKnight(_spawnPoints[teamId], sQuaternion.identity, World), teamId);
 		World.AddNewNetObject((uint)teamId, player.NPlayer);
 		_playerRenderers[teamId] = player;
 		if (User.TeamId == teamId)

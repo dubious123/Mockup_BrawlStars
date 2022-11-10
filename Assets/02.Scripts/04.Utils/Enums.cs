@@ -13,7 +13,7 @@ public static partial class Enums
 	public enum CharacterType
 	{
 		None,
-		Dog,
+		Knight,
 	}
 
 	public enum LogSourceType

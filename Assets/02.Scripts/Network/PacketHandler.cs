@@ -52,7 +52,7 @@ public static class PacketHandler
 	private static void S_EnterLobbyHandle(BasePacket packet, ServerSession session)
 	{
 		Debug.Assert(packet is S_EnterLobby);
-		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Lobby, CharacterType.Dog));
+		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Lobby, CharacterType.Knight));
 	}
 
 	private static void S_EnterGameHandle(BasePacket packet, ServerSession session)

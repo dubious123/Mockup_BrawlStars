@@ -1,21 +1,23 @@
-using UnityEngine;
 using TMPro;
-using static Enums;
+
+using UnityEngine;
 using UnityEngine.UI;
+
+using static Enums;
 
 public class Scene_Login : BaseScene
 {
 	#region Serialize Fields
-	[SerializeField] TMP_InputField _input_Id;
-	[SerializeField] TMP_InputField _input_Pw;
-	[SerializeField] TMP_Text _warning;
-	[SerializeField] UITool_Fade _fadeTool;
-	[SerializeField] Button _btn_Login;
-	[SerializeField] string _warningText_IdEmpty;
-	[SerializeField] string _warningText_PwEmpty;
-	[SerializeField] string _warningText_LoginFailed;
+	[SerializeField] private TMP_InputField _input_Id;
+	[SerializeField] private TMP_InputField _input_Pw;
+	[SerializeField] private TMP_Text _warning;
+	[SerializeField] private UITool_Fade _fadeTool;
+	[SerializeField] private Button _btn_Login;
+	[SerializeField] private string _warningText_IdEmpty;
+	[SerializeField] private string _warningText_PwEmpty;
+	[SerializeField] private string _warningText_LoginFailed;
 	#endregion
-	C_Login _packet;
+	private C_Login _packet;
 
 	public override void Init(object param)
 	{
@@ -51,6 +53,6 @@ public class Scene_Login : BaseScene
 	public void OnLoginSuccess(S_Login res)
 	{
 		User.Init(res);
-		Scene.MoveTo(Enums.SceneType.Lobby, CharacterType.Dog);
+		Scene.MoveTo(Enums.SceneType.Lobby, CharacterType.Knight);
 	}
 }

@@ -14,11 +14,11 @@ namespace Server.Game
 		public bool Performing { get; set; }
 		public bool Active { get; set; }
 
-		private NetCharacterDog _dog;
+		private NetCharacterKnight _dog;
 		private IEnumerator<int> _coHandler;
 		private HitInfo _hitInfo;
 
-		public NetDogBasicAttack(NetCharacterDog dog)
+		public NetDogBasicAttack(NetCharacterKnight dog)
 		{
 			_dog = dog;
 			Id = 0;
