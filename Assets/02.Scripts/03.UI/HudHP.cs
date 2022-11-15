@@ -17,7 +17,7 @@ public class HudHP : MonoBehaviour
 	[SerializeField] private float _holdingTime;
 	[SerializeField] private TextMeshProUGUI _healthText;
 	[SerializeField] private RectTransform _canvasRect;
-	[SerializeField] private Vector3 _offset;
+	[SerializeField] private Vector2 _offset;
 	[SerializeField] private Transform _targetTransform;
 	#endregion
 	private RectTransform _rect;
@@ -43,7 +43,7 @@ public class HudHP : MonoBehaviour
 	{
 		_fillSlider.value = _player.Hp;
 		_healthText.text = $"{_fillSlider.value}";
-		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _targetTransform.position) + new Vector2(0, 100);
+		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _targetTransform.position) + _offset;
 	}
 
 	private IEnumerator<float> Co_OnHpChange(float value)

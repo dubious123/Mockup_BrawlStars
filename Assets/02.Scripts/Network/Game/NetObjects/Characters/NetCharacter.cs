@@ -129,6 +129,11 @@ namespace Server.Game
 
 		public virtual void HandleCC()
 		{
+			if (CCFlag == CCFlags.None)
+			{
+				return;
+			}
+
 			KnockbackCoHandler.MoveNext();
 			StunCoHandler.MoveNext();
 			if (CCFlag == CCFlags.None)
@@ -164,7 +169,6 @@ namespace Server.Game
 		protected virtual IEnumerator<int> CoKnockback()
 		{
 			OnCCStart();
-			CCFlag |= CCFlags.Knockback;
 			for (; KnockbackDuration > 0; KnockbackDuration--)
 			{
 				Move(KnockbackDelta);
@@ -178,7 +182,6 @@ namespace Server.Game
 		protected virtual IEnumerator<int> CoStun()
 		{
 			OnCCStart();
-			CCFlag |= CCFlags.Stun;
 			for (; StunDuration > 0; StunDuration--)
 			{
 				yield return 0;

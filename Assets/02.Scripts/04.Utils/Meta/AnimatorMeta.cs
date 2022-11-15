@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public static class AnimatorMeta
 {
 	#region Parameters
-	public readonly static string Speed_Float = "Speed";
-	public readonly static string BasicAttack_Bool = "IsBasicAttack";
-	public readonly static string BasicAttack_Trigger = "TriggerBasicAttack";
-	public readonly static string GetHIt_Trigger = "GetHit";
-	public readonly static string IsDead_Bool = "IsDead";
-	public readonly static string IsStun_Bool = "IsStun";
+	public static readonly string Speed_Float = "Speed";
+	public static readonly string BasicAttack_Bool = "IsBasicAttack";
+	public static readonly string BasicAttack_Trigger = "TriggerBasicAttack";
+	public static readonly string GetHIt_Trigger = "GetHit";
+	public static readonly string IsDead_Bool = "IsDead";
+	public static readonly string IsStun_Bool = "IsStun";
+	public static readonly string IsBasicAttack = "IsBasicAttack";
 
 
 
 	#endregion
 
 	#region Clip Names
-	public readonly static string BasicAttack_ClipName = "Attack02";
-	public readonly static string Dog_Bash = "IsBash";
-	public readonly static string Stun = "Dizzy";
+	public static readonly string BasicAttack_ClipName = "Attack02";
+	public static readonly string Dog_Bash = "IsBash";
+	public static readonly string Stun = "Dizzy";
 	#endregion
 
 }

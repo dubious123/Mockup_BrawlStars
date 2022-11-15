@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class CPlayerKnight : CPlayer
 {
-	[field: SerializeField] public CKnightBasicAttack BasicAttack { get; set; }
+	[field: SerializeField] public CKnightWhirlwind Whirlwind { get; set; }
 	[field: SerializeField] public CKnightBash Bash { get; set; }
 
 	public override void Init(NetCharacter character, short teamId)
 	{
 		base.Init(character, teamId);
-		BasicAttack.Init(this);
+		Whirlwind.Init(this);
 		Bash.Init(this);
 	}
 
@@ -19,7 +19,7 @@ public class CPlayerKnight : CPlayer
 	{
 		base.HandleOneFrame();
 		Animator.SetFloat(AnimatorMeta.Speed_Float, (float)NPlayer.MoveSpeed * (float)NPlayer.TargetMoveDir.magnitude);
-		BasicAttack.HandleOneFrame();
+		Whirlwind.HandleOneFrame();
 		Bash.HandleOneFrame();
 	}
 }

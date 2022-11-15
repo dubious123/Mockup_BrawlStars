@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #00c4fb;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <g id="_레이어_1" data-name="레이어 1">
+    <circle class="cls-1" cx="55" cy="55" r="50"/>
+  </g>
+</svg>

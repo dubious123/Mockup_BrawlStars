@@ -12,7 +12,6 @@ public class CKnightBasicAttack : MonoBehaviour, ICBaseSkill
 	public CPlayerKnight Player { get; set; }
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
-
 	[SerializeField] protected ParticleSystem _effects;
 	[SerializeField] protected AudioSource _audio;
 	private IEnumerator<int> _handler;
@@ -20,7 +19,7 @@ public class CKnightBasicAttack : MonoBehaviour, ICBaseSkill
 	public void Init(CPlayerKnight player)
 	{
 		Player = player;
-		NetBasicAttack = (player.NPlayer as NetCharacterKnight).BasicAttack as NetDogBasicAttack;
+		NetBasicAttack = (player.NPlayer as NetCharacterKnight).Whirlwind as NetDogBasicAttack;
 		_handler = Co_Perform();
 	}
 
@@ -28,8 +27,10 @@ public class CKnightBasicAttack : MonoBehaviour, ICBaseSkill
 	{
 		if (NetBasicAttack.Performing)
 		{
-			_handler.MoveNext();
+			Player.Animator.SetBool("WhilWind", true);
 		}
+
+		Player.Animator.SetBool("WhilWind", false);
 	}
 
 	public IEnumerator<int> Co_Perform()
@@ -43,6 +44,7 @@ public class CKnightBasicAttack : MonoBehaviour, ICBaseSkill
 			{
 				yield return 0;
 			}
+
 			yield return 0;
 		}
 	}

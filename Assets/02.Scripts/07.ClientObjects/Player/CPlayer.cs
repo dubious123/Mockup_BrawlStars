@@ -12,6 +12,8 @@ public class CPlayer : MonoBehaviour
 	[field: SerializeField] public Image StunIndicator { get; set; }
 	public int MaxHp => NPlayer.MaxHp;
 	public int Hp => NPlayer.Hp;
+	public sVector3 Lookdir => NPlayer.TargetLookDir;
+	public sVector3 MoveDir => NPlayer.TargetMoveDir;
 
 	public virtual void Init(NetCharacter character, short teamId)
 	{

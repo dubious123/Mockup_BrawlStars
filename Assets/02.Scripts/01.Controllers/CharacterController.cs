@@ -59,7 +59,7 @@ public class CharacterController : MonoBehaviour
 		var moveInput = _moveAction.ReadValue<Vector2>();
 		#endregion
 		#region Look
-		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Floor))
+		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Env))
 		{
 			_lookdir = _lookHit.point - transform.position;
 			_lookdir.y = 0;
