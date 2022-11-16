@@ -13,7 +13,7 @@ public class Scene_Entry : BaseScene
 
 	private void Awake()
 	{
-		Screen.SetResolution(1920, 1080, false);
+		Screen.SetResolution(3840, 2160, true);
 		Application.targetFrameRate = 300;
 		Time.fixedDeltaTime = (float)((sfloat)1 / (sfloat)60f);
 		DontDestroyOnLoad(new GameObject("@Loggers", typeof(Loggers)));

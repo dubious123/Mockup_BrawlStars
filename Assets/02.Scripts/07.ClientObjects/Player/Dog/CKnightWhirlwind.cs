@@ -13,7 +13,7 @@ public class CKnightWhirlwind : MonoBehaviour, ICBaseSkill
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
 	[SerializeField] protected ParticleSystem _effects;
-	[SerializeField] protected AudioSource _audio;
+	[SerializeField] private AudioClip _audioClip;
 	private IEnumerator<int> _handler;
 
 	public void Init(CPlayerKnight player)
@@ -27,8 +27,8 @@ public class CKnightWhirlwind : MonoBehaviour, ICBaseSkill
 		Player.Animator.SetBool(AnimatorMeta.IsBasicAttack, NetWhirlwind.Performing);
 		if (NetWhirlwind.CurrentSpinFrame == NetWhirlwind.SpinIntervalFrame)
 		{
+			AudioSource.PlayClipAtPoint(_audioClip, transform.position);
 			Debug.Log("Spin");
-			_audio.Play();
 			_effects.Emit(100);
 			return;
 		}

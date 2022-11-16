@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 6224927104885144503}
   <StunIndicator>k__BackingField: {fileID: 7039065437449104458}
-  <BasicAttack>k__BackingField: {fileID: 9214539877578304304}
+  <Whirlwind>k__BackingField: {fileID: 0}
   <Bash>k__BackingField: {fileID: -2056247571257498706}
 --- !u!114 &9214539877578304304
 MonoBehaviour:

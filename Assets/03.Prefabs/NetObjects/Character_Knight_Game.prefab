@@ -173,7 +173,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0cf23efd93f1c404fa53c3b6ff80f0a5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: -0.59
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4561938020456714853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
@@ -1873,7 +1873,6 @@ GameObject:
   - component: {fileID: 5902489880269034798}
   - component: {fileID: 6224927104885144503}
   - component: {fileID: 7453175223683561202}
-  - component: {fileID: 9214539877578304304}
   - component: {fileID: -2056247571257498706}
   - component: {fileID: 7389262367941794523}
   m_Layer: 22
@@ -1940,20 +1939,10 @@ MonoBehaviour:
   <StunIndicator>k__BackingField: {fileID: 7039065437449104458}
   <Whirlwind>k__BackingField: {fileID: 7389262367941794523}
   <Bash>k__BackingField: {fileID: -2056247571257498706}
---- !u!114 &9214539877578304304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6530795506631069588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7caa0edd335b0d84f8d01d9e717ecefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effects: {fileID: 5215959880254896676}
-  _audio: {fileID: 1744932874209234292}
+  SelectCircleSelf: {fileID: 3286163911610860551, guid: f42db11356809014882b28968e34bddc, type: 3}
+  SelectCircleTeamRed: {fileID: 3286163911610860551, guid: 2ff459451fa4a274c9c9f67b7b47103a, type: 3}
+  SelectCircleTeamBlue: {fileID: 3286163911610860551, guid: a2c573811e377944b977055c8d8b260a, type: 3}
+  SelectCircle: {fileID: 5624871558581713352}
 --- !u!114 &-2056247571257498706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1980,7 +1969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _effects: {fileID: 5215959880254896676}
-  _audio: {fileID: 1744932874209234292}
+  _audioClip: {fileID: 8300000, guid: 0cf23efd93f1c404fa53c3b6ff80f0a5, type: 3}
 --- !u!1 &6551468599110530909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2707,10 @@ PrefabInstance:
     - target: {fileID: 7657957821338878907, guid: b4ccca77d5a8f1544a0ed625ee9c1bc4, type: 3}
       propertyPath: m_Layer
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657957822914494708, guid: b4ccca77d5a8f1544a0ed625ee9c1bc4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7657957822914494709, guid: b4ccca77d5a8f1544a0ed625ee9c1bc4, type: 3}
       propertyPath: m_Pivot.x

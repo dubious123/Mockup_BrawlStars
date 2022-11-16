@@ -1,23 +1,25 @@
 #if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public static class EditorTools
 {
 	#region Always Start From Scene 0
-	const string playFromFirstMenuStr = "Edit/Always Start From Scene 0 &p";
+	private const string playFromFirstMenuStr = "Edit/Always Start From Scene 0 &p";
 
-	static bool playFromFirstScene
+	private static bool playFromFirstScene
 	{
 		get { return EditorPrefs.HasKey(playFromFirstMenuStr) && EditorPrefs.GetBool(playFromFirstMenuStr); }
 		set { EditorPrefs.SetBool(playFromFirstMenuStr, value); }
 	}
 
 	[MenuItem(playFromFirstMenuStr, false, 150)]
-	static void PlayFromFirstSceneCheckMenu()
+	private static void PlayFromFirstSceneCheckMenu()
 	{
 		playFromFirstScene = !playFromFirstScene;
 		Menu.SetChecked(playFromFirstMenuStr, playFromFirstScene);
@@ -27,7 +29,7 @@ public static class EditorTools
 
 	// The menu won't be gray out, we use this validate method for update check state
 	[MenuItem(playFromFirstMenuStr, true)]
-	static bool PlayFromFirstSceneCheckMenuValidate()
+	private static bool PlayFromFirstSceneCheckMenuValidate()
 	{
 		Menu.SetChecked(playFromFirstMenuStr, playFromFirstScene);
 		return true;
@@ -35,7 +37,7 @@ public static class EditorTools
 
 	// This method is called before any Awake. It's the perfect callback for this feature
 	[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-	static void LoadFirstSceneAtGameBegins()
+	private static void LoadFirstSceneAtGameBegins()
 	{
 		if (!playFromFirstScene)
 			return;
@@ -52,7 +54,7 @@ public static class EditorTools
 		SceneManager.LoadScene((int)Enums.SceneType.Entry);
 	}
 
-	static void ShowNotifyOrLog(string msg)
+	private static void ShowNotifyOrLog(string msg)
 	{
 		if (Resources.FindObjectsOfTypeAll<SceneView>().Length > 0)
 			EditorWindow.GetWindow<SceneView>().ShowNotification(new GUIContent(msg));
@@ -60,47 +62,44 @@ public static class EditorTools
 			Debug.Log(msg); // When there's no scene view opened, we just print a log
 	}
 	#endregion
+
 	#region Build and Run Multiplayer
 	[MenuItem("Tools/Run Multiplayer/1 Players")]
-	static void PerformWin62Build1()
+	private static void PerformWin62Build1()
 	{
 		PerformWin64Build(1);
 	}
 	[MenuItem("Tools/Run Multiplayer/2 Players")]
-	static void PerformWin62Build2()
+	private static void PerformWin62Build2()
 	{
 		PerformWin64Build(2);
 	}
 
 	[MenuItem("Tools/Run Multiplayer/3 Players")]
-	static void PerformWin62Build3()
+	private static void PerformWin62Build3()
 	{
 		PerformWin64Build(3);
-
 	}
 
 	[MenuItem("Tools/Run Multiplayer/4 Players")]
-	static void PerformWin62Build4()
+	private static void PerformWin62Build4()
 	{
 		PerformWin64Build(4);
-
 	}
 
 	[MenuItem("Tools/Run Multiplayer/5 Players")]
-	static void PerformWin62Build5()
+	private static void PerformWin62Build5()
 	{
 		PerformWin64Build(5);
-
 	}
 
 	[MenuItem("Tools/Run Multiplayer/6 Players")]
-	static void PerformWin62Build6()
+	private static void PerformWin62Build6()
 	{
 		PerformWin64Build(6);
-
 	}
 
-	static void PerformWin64Build(int playerCount)
+	private static void PerformWin64Build(int playerCount)
 	{
 		EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
 		for (int i = 0; i < playerCount; i++)
@@ -110,12 +109,14 @@ public static class EditorTools
 				BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
 		}
 	}
-	static string GetProjectName()
+
+	private static string GetProjectName()
 	{
 		string[] s = Application.dataPath.Split('/');
 		return s[s.Length - 2];
 	}
-	static string[] GetScenePaths()
+
+	private static string[] GetScenePaths()
 	{
 		var scenes = new string[EditorBuildSettings.scenes.Length];
 		for (int i = 0; i < scenes.Length; i++)

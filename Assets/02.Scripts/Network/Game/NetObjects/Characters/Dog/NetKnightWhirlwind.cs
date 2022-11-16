@@ -36,7 +36,7 @@ namespace Server.Game
 			SqrRange = Range * Range;
 			MoveSpeed = (sfloat)3f;
 			CoolTimeFrame = 30;
-			SpinIntervalFrame = 10;
+			SpinIntervalFrame = 30;
 			ReadyFrame = 3;
 			_hitInfo = new HitInfo
 			{

@@ -13,6 +13,9 @@ public static class AnimatorMeta
 	public static readonly string IsDead_Bool = "IsDead";
 	public static readonly string IsStun_Bool = "IsStun";
 	public static readonly string IsBasicAttack = "IsBasicAttack";
+	public static readonly string IsBash = "IsBash";
+	public static readonly string IsHolding = "IsHolding";
+
 
 
 
@@ -20,7 +23,6 @@ public static class AnimatorMeta
 
 	#region Clip Names
 	public static readonly string BasicAttack_ClipName = "Attack02";
-	public static readonly string Dog_Bash = "IsBash";
 	public static readonly string Stun = "Dizzy";
 	#endregion
 

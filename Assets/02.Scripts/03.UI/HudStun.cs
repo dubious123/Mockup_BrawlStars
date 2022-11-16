@@ -18,13 +18,15 @@ public class HudStun : MonoBehaviour
 	private void Start()
 	{
 		_rect = GetComponent<RectTransform>();
+		_centerIcon.enabled = false;
+		_durationCircle.enabled = false;
 		if (_player.TeamId == User.TeamId)
 		{
 			transform.parent.GetComponent<Canvas>().sortingOrder = 1;
 		}
 	}
 
-	private void LateUpdate()
+	private void Update()
 	{
 		var currentDuration = _player.NPlayer.StunDuration;
 		if (currentDuration > 0)

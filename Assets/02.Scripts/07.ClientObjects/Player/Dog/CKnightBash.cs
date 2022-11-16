@@ -17,7 +17,6 @@ public class CKnightBash : MonoBehaviour, ICBaseSkill
 
 	[SerializeField] private RawImage _skillIndicator;
 	private TextMeshProUGUI _coolTimeIndicator;
-	private IEnumerator<int> _coHandler;
 
 	public void Init(CPlayerKnight player)
 	{
@@ -33,13 +32,16 @@ public class CKnightBash : MonoBehaviour, ICBaseSkill
 		{
 			_skillIndicator.enabled = true;
 			_skillIndicator.rectTransform.sizeDelta = new Vector2(100, (float)NetBash.MaxBashDistance * ((float)NetBash.CurrentHoldFrame / NetBash.MaxHoldingFrame) * 100);
+			Player.Animator.SetBool(AnimatorMeta.IsHolding, NetBash.Holding);
 		}
 		else
 		{
 			_skillIndicator.enabled = false;
+			Player.Animator.SetBool(AnimatorMeta.IsHolding, NetBash.Holding);
 		}
 
-		Player.Animator.SetBool(AnimatorMeta.Dog_Bash, NetBash.Bashing);
+		Player.Animator.SetBool(AnimatorMeta.IsBash, NetBash.Bashing);
+
 
 		if (NetBash.CurrentCooltime > 0)
 		{
