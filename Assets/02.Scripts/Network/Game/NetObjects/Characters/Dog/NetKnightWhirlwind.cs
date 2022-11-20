@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 
 using static Enums;
 
@@ -36,7 +37,7 @@ namespace Server.Game
 			SqrRange = Range * Range;
 			MoveSpeed = (sfloat)3f;
 			CoolTimeFrame = 30;
-			SpinIntervalFrame = 30;
+			SpinIntervalFrame = 15;
 			ReadyFrame = 3;
 			_hitInfo = new HitInfo
 			{
@@ -95,17 +96,13 @@ namespace Server.Game
 
 				Character.World.FindAllAndBroadcast(target =>
 				{
-					if (target.Tag is not NetObjectTag.Character || target == Character || target is not ITakeHit || (target as ITakeHit).CanBeHit() is false)
+					if (Character.World.GameRule.CanSendHit(Character, target) is true)
 					{
-						return false;
+						return (target.Position - Character.Position).sqrMagnitude <= SqrRange;
 					}
 
-					if ((target.Position - Character.Position).sqrMagnitude > SqrRange)
-					{
-						return false;
-					}
-
-					return true;
+					return false;
+					//}, target => { UnityEngine.Debug.Log("Hit"); Character.SendHit(target as ITakeHit, _hitInfo); });
 				}, target => Character.SendHit(target as ITakeHit, _hitInfo));
 
 				yield return 0;

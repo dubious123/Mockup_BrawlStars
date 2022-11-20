@@ -15,10 +15,27 @@ public class CPlayer : MonoBehaviour
 	public sVector3 Lookdir => NPlayer.TargetLookDir;
 	public sVector3 MoveDir => NPlayer.TargetMoveDir;
 
+	[SerializeField] private Sprite _selectCircleSelf;
+	[SerializeField] private Sprite _selectCircleRed;
+	[SerializeField] private Sprite _selectCircleBlue;
+	[SerializeField] private SpriteRenderer SelectCircle;
+
 	public virtual void Init(NetCharacter character, short teamId)
 	{
 		NPlayer = character;
 		TeamId = teamId;
+		if (teamId == User.TeamId)
+		{
+			SelectCircle.sprite = _selectCircleSelf;
+		}
+		else if (character.Team == User.Team)
+		{
+			SelectCircle.sprite = _selectCircleBlue;
+		}
+		else
+		{
+			SelectCircle.sprite = _selectCircleRed;
+		}
 	}
 
 	public virtual void HandleOneFrame()

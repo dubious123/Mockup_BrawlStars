@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 
 using Server.Game;
 using Server.Game.Data;
+using Server.Game.GameRule;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -46,7 +47,7 @@ public class Scene_Map1 : BaseScene
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		var data = _dataHelper.GetWorldData();
 		_spawnPoints = data.SpawnPoints;
-		World = new(data);
+		World = new(data, new GameRule00());
 		Enter(req.TeamId, (CharacterType)req.PlayerInfo.CharacterType);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
@@ -86,21 +87,22 @@ public class Scene_Map1 : BaseScene
 	public void Enter(short teamId, CharacterType type)
 	{
 		Debug.Assert(_playerRenderers[teamId] is null);
-		var player = Instantiate(_knight, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
-		player.Init(new NetCharacterKnight(_spawnPoints[teamId], sQuaternion.identity, World), teamId);
-		World.AddNewNetObject((uint)teamId, player.NPlayer);
-		_playerRenderers[teamId] = player;
+		var cPlayer = Instantiate(_knight, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
+		var netCharacter = World.AddNewCharacter(teamId, type);
+		cPlayer.Init(netCharacter, teamId);
+		_playerRenderers[teamId] = cPlayer;
 		if (User.TeamId == teamId)
 		{
-			var playerInput = player.gameObject.AddComponent<PlayerInput>();
+			User.Team = netCharacter.Team;
+			var playerInput = cPlayer.gameObject.AddComponent<PlayerInput>();
 			{
 				playerInput.actions = _inputAsset;
 				playerInput.notificationBehavior = PlayerNotifications.InvokeCSharpEvents;
 				playerInput.actions.Enable();
 			}
 
-			player.gameObject.AddComponent<DogController>().Init(player.NPlayer);
-			Camera.main.GetComponent<GameCameraController>().FollowTarget = player.transform;
+			cPlayer.gameObject.AddComponent<DogController>().Init(cPlayer.NPlayer);
+			Camera.main.GetComponent<GameCameraController>().FollowTarget = cPlayer.transform;
 		}
 	}
 

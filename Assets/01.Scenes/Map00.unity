@@ -12404,10 +12404,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoints:
   - {fileID: 2057062840}
-  - {fileID: 1411410348}
-  - {fileID: 1798099857}
   - {fileID: 740063397}
+  - {fileID: 1411410348}
   - {fileID: 936585265}
+  - {fileID: 1798099857}
   - {fileID: 286639307}
   _walls:
   - {fileID: 526161895}

@@ -112,7 +112,7 @@ namespace Server.Game
 					Character.Move(dir * BashSpeed * Define.FixedDeltaTime);
 					IsHit = Character.World.FindAllAndBroadcast(netObj =>
 					{
-						if (netObj is INetCollidable2D && netObj is ITakeHit && netObj != Character)
+						if (Character.World.GameRule.CanSendHit(Character, netObj))
 						{
 							return (netObj as INetCollidable2D).Collider.CheckCollision(Character.Collider);
 						}

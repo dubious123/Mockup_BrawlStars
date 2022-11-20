@@ -58,6 +58,7 @@ namespace ServerCore
 		}
 		protected virtual void OnRecvCompleted(SocketAsyncEventArgs args)
 		{
+			//Todo Socket Error Operation Aborted
 			if (args.SocketError != SocketError.Success)
 				throw new Exception();
 			_recvBuffer.OnWrite(args.BytesTransferred);
