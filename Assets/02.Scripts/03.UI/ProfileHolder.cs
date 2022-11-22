@@ -25,10 +25,9 @@ public class ProfileHolder : MonoBehaviour
 	private IEnumerator<int> _coHandle;
 	private bool _performing;
 
-	public void Start()
+	private void Start()
 	{
-		_isDead = false;
-		_performing = false;
+		Reset();
 	}
 
 	private void EditorUpdate()
@@ -39,15 +38,12 @@ public class ProfileHolder : MonoBehaviour
 		}
 	}
 
-
-
 	public void OnDead()
 	{
 		_isDead = true;
 		_profileImage.color = _deadColor;
 		_coHandle = CoPlayDeadAnim();
 		_performing = true;
-		UnityEditor.EditorApplication.update -= EditorUpdate;
 		UnityEditor.EditorApplication.update -= EditorUpdate;
 		UnityEditor.EditorApplication.update += EditorUpdate;
 	}
