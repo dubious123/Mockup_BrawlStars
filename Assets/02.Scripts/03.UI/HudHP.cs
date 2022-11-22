@@ -43,6 +43,7 @@ public class HudHP : MonoBehaviour
 	private int _beforeHp;
 	private int _currentHp;
 	private bool _isSelf;
+	private Vector3 _targetScale;
 	private RectTransform _rect;
 	private CoroutineHandle _coHandle;
 
@@ -50,6 +51,7 @@ public class HudHP : MonoBehaviour
 	{
 		_rect = GetComponent<RectTransform>();
 		_beforeHp = _currentHp = _player.Hp;
+		_targetScale = _rect.localScale;
 		SetText();
 
 		if (_player.TeamId == User.TeamId)
@@ -123,22 +125,21 @@ public class HudHP : MonoBehaviour
 		PlayParticle();
 		float elapsed = 0f;
 		float targetValue = _currentHp / (float)_player.MaxHp;
-		var targetScale = _rect.localScale;
-		var currentScale = targetScale * _expandRate;
+		var currentScale = _targetScale * _expandRate;
 		_rect.localScale = currentScale;
 		Vector2 anchorMax = _fillRect.anchorMax;
 		while (elapsed < _holdTime)
 		{
 			var ratio = elapsed / _holdTime;
 			anchorMax.x = Mathf.Lerp(anchorMax.x, targetValue, ratio);
-			_rect.localScale = Vector3.Lerp(currentScale, targetScale, ratio);
+			_rect.localScale = Vector3.Lerp(currentScale, _targetScale, ratio);
 			_fillRect.anchorMax = anchorMax;
 			elapsed += Timing.DeltaTime;
 			yield return Timing.WaitForOneFrame;
 		}
 
 		anchorMax.x = targetValue;
-		_rect.localScale = targetScale;
+		_rect.localScale = _targetScale;
 		elapsed = 0f;
 		anchorMax = _followRect.anchorMax;
 		while (elapsed < _followTime)

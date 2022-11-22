@@ -25,7 +25,6 @@ public class Scene_Map1 : BaseScene
 	#region SerializeField
 	//[SerializeField] AssetReference _dog;
 	[SerializeField] private GameObject _knight;
-	[SerializeField] private GameObject _gameMessage_waiting;
 	[SerializeField] private InputActionAsset _inputAsset;
 	[SerializeField] private WorldDataHelper _dataHelper;
 	#endregion
@@ -113,7 +112,6 @@ public class Scene_Map1 : BaseScene
 
 	private void Internal_StartGame()
 	{
-		_gameMessage_waiting.SetActive(false);
 		_gameStarted = true;
 		_coHandler = Co_FixedUpdate();
 	}
