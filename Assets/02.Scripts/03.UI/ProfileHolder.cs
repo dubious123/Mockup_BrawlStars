@@ -15,49 +15,32 @@ using UnityEngine.UI;
 [ExecuteInEditMode]
 public class ProfileHolder : MonoBehaviour
 {
-	[SerializeField] private bool _isDead;
 	[SerializeField] private Color _deadColor;
 	[SerializeField] private Image _profileImage;
 	[SerializeField] private RectTransform _deadBar;
 	[SerializeField] private Image _effect;
 	[SerializeField] private float _effectTargetScale;
 
-	private IEnumerator<int> _coHandle;
-	private bool _performing;
 
 	private void Start()
 	{
 		Reset();
 	}
 
-	private void EditorUpdate()
-	{
-		if (_performing)
-		{
-			_coHandle.MoveNext();
-		}
-	}
-
 	public void OnDead()
 	{
-		_isDead = true;
 		_profileImage.color = _deadColor;
-		_coHandle = CoPlayDeadAnim();
-		_performing = true;
-		UnityEditor.EditorApplication.update -= EditorUpdate;
-		UnityEditor.EditorApplication.update += EditorUpdate;
+		Timing.RunCoroutine(CoPlayDeadAnim());
 	}
 
 	public void Reset()
 	{
-		_isDead = true;
 		_profileImage.color = Color.white;
-		_performing = false;
 		_deadBar.gameObject.SetActive(false);
 		_effect.gameObject.SetActive(false);
 	}
 
-	private IEnumerator<int> CoPlayDeadAnim()
+	private IEnumerator<float> CoPlayDeadAnim()
 	{
 		var coBoom = PlayBoomEffect();
 		var coBar = PlayDeadBar();

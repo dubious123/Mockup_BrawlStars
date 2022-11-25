@@ -35,6 +35,7 @@ public class CenterScores : MonoBehaviour
         {
             _coHandle.MoveNext();
         }
+        Debug.Log(Time.deltaTime);
     }
 
     public void OnRoundStart()
@@ -89,14 +90,16 @@ public class CenterScores : MonoBehaviour
     {
         var targetScale = Vector3.one;
         var startScale = new Vector3(_scoreBigScale, _scoreBigScale, _scoreBigScale);
-        for (float delta = 0; delta < 1; delta += Time.deltaTime * 2)
+        for (float delta = 0; delta < 1; delta += Time.deltaTime * 4)
         {
-            _currentScoreUI.rectTransform.localScale = Vector3.Lerp(startScale, targetScale, delta * delta);
+            _currentScoreUI.rectTransform.localScale = Vector3.Lerp(startScale, targetScale, (delta) * (2 - delta));
             yield return 0;
         }
 
         _currentScoreUI.rectTransform.localScale = targetScale;
         _performing = false;
+
+        UnityEditor.EditorApplication.update -= EditorUpdate;
         yield break;
     }
 }
