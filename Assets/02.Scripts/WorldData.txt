@@ -709,30 +709,30 @@
         "RawValue": 0
       },
       "z": {
-        "RawValue": 3240624128
+        "RawValue": 3245867008
       },
       "normalized": {
         "x": {
-          "RawValue": 3194826222
+          "RawValue": 3189968340
         },
         "y": {
           "RawValue": 0
         },
         "z": {
-          "RawValue": 3212380628
+          "RawValue": 3212622804
         },
         "magnitude": {
-          "RawValue": 1065353215
+          "RawValue": 1065353214
         },
         "sqrMagnitude": {
-          "RawValue": 1065353215
+          "RawValue": 1065353212
         }
       },
       "magnitude": {
-        "RawValue": 1093448254
+        "RawValue": 1098593409
       },
       "sqrMagnitude": {
-        "RawValue": 1122566144
+        "RawValue": 1131839488
       }
     },
     {
@@ -743,51 +743,102 @@
         "RawValue": 0
       },
       "z": {
-        "RawValue": 1093140480
+        "RawValue": 1097334784
       },
       "normalized": {
         "x": {
-          "RawValue": 3194826222
+          "RawValue": 3190684692
         },
         "y": {
           "RawValue": 0
         },
         "z": {
-          "RawValue": 1064896980
+          "RawValue": 1065109276
         },
         "magnitude": {
-          "RawValue": 1065353215
+          "RawValue": 1065353214
         },
         "sqrMagnitude": {
-          "RawValue": 1065353215
+          "RawValue": 1065353212
         }
       },
       "magnitude": {
-        "RawValue": 1093448254
+        "RawValue": 1097559115
       },
       "sqrMagnitude": {
-        "RawValue": 1122566144
+        "RawValue": 1129873408
       }
     },
     {
       "x": {
-        "RawValue": 1056964608
+        "RawValue": 3204448256
       },
       "y": {
         "RawValue": 0
       },
       "z": {
-        "RawValue": 3240624128
+        "RawValue": 3245867008
       },
       "normalized": {
         "x": {
-          "RawValue": 1027789740
+          "RawValue": 3171159922
         },
         "y": {
           "RawValue": 0
         },
         "z": {
-          "RawValue": 3212817874
+          "RawValue": 3212828140
+        },
+        "normalized": {
+          "x": {
+            "RawValue": 3171159922
+          },
+          "y": {
+            "RawValue": 0
+          },
+          "z": {
+            "RawValue": 3212828142
+          },
+          "magnitude": {
+            "RawValue": 1065353215
+          },
+          "sqrMagnitude": {
+            "RawValue": 1065353215
+          }
+        },
+        "magnitude": {
+          "RawValue": 1065353213
+        },
+        "sqrMagnitude": {
+          "RawValue": 1065353211
+        }
+      },
+      "magnitude": {
+        "RawValue": 1098391814
+      },
+      "sqrMagnitude": {
+        "RawValue": 1131446272
+      }
+    },
+    {
+      "x": {
+        "RawValue": 3204448256
+      },
+      "y": {
+        "RawValue": 0
+      },
+      "z": {
+        "RawValue": 1097334784
+      },
+      "normalized": {
+        "x": {
+          "RawValue": 3171756112
+        },
+        "y": {
+          "RawValue": 0
+        },
+        "z": {
+          "RawValue": 1065343250
         },
         "magnitude": {
           "RawValue": 1065353215
@@ -797,31 +848,31 @@
         }
       },
       "magnitude": {
-        "RawValue": 1093152956
+        "RawValue": 1097343821
       },
       "sqrMagnitude": {
-        "RawValue": 1121779712
+        "RawValue": 1129480192
       }
     },
     {
       "x": {
-        "RawValue": 1056964608
+        "RawValue": 1069547520
       },
       "y": {
         "RawValue": 0
       },
       "z": {
-        "RawValue": 1093140480
+        "RawValue": 3245867008
       },
       "normalized": {
         "x": {
-          "RawValue": 1027789740
+          "RawValue": 1036338590
         },
         "y": {
           "RawValue": 0
         },
         "z": {
-          "RawValue": 1065334226
+          "RawValue": 3212758850
         },
         "magnitude": {
           "RawValue": 1065353215
@@ -831,78 +882,44 @@
         }
       },
       "magnitude": {
-        "RawValue": 1093152956
+        "RawValue": 1098459289
       },
       "sqrMagnitude": {
-        "RawValue": 1121779712
+        "RawValue": 1131577344
       }
     },
     {
       "x": {
-        "RawValue": 1080033280
+        "RawValue": 1069547520
       },
       "y": {
         "RawValue": 0
       },
       "z": {
-        "RawValue": 3240624128
+        "RawValue": 1097334784
       },
       "normalized": {
         "x": {
-          "RawValue": 1050798234
+          "RawValue": 1037221064
         },
         "y": {
           "RawValue": 0
         },
         "z": {
-          "RawValue": 3211975912
+          "RawValue": 1065264158
         },
         "magnitude": {
-          "RawValue": 1065353215
+          "RawValue": 1065353214
         },
         "sqrMagnitude": {
-          "RawValue": 1065353214
+          "RawValue": 1065353213
         }
       },
       "magnitude": {
-        "RawValue": 1093736042
+        "RawValue": 1097415923
       },
       "sqrMagnitude": {
-        "RawValue": 1123352576
-      }
-    },
-    {
-      "x": {
-        "RawValue": 1080033280
-      },
-      "y": {
-        "RawValue": 0
-      },
-      "z": {
-        "RawValue": 1093140480
-      },
-      "normalized": {
-        "x": {
-          "RawValue": 1050798234
-        },
-        "y": {
-          "RawValue": 0
-        },
-        "z": {
-          "RawValue": 1064492264
-        },
-        "magnitude": {
-          "RawValue": 1065353215
-        },
-        "sqrMagnitude": {
-          "RawValue": 1065353214
-        }
-      },
-      "magnitude": {
-        "RawValue": 1093736042
-      },
-      "sqrMagnitude": {
-        "RawValue": 1123352576
+        "RawValue": 1129611264
       }
     }
   ]
