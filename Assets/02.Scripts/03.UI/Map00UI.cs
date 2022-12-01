@@ -11,6 +11,10 @@ public class Map00UI : MonoBehaviour
 	[SerializeField] private GameObject _uiTop;
 	[SerializeField] private UIWelcomeAnim _welcomeAnim;
 
+	#region for debug
+	[SerializeField] private GameCamWelcomeMove _camAnim;
+	#endregion
+
 	private void Start()
 	{
 		Reset();
@@ -25,5 +29,6 @@ public class Map00UI : MonoBehaviour
 	public void OnGameStart()
 	{
 		_welcomeAnim.PlayAnim(() => _uiTop.SetActive(true));
+		_camAnim.enabled = true;
 	}
 }

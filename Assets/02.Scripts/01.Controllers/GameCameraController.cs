@@ -12,7 +12,12 @@ public class GameCameraController : MonoBehaviour
 	public Transform FollowTarget { set { _followTarget = value; } }
 	private void Update()
 	{
-		if (_followTarget == null) return;
+		if (_followTarget is null) return;
 		transform.position = new Vector3(0, _followTarget.position.y + _offSet.y, _followTarget.position.z + _offSet.z);
+	}
+
+	public void Init(Transform target)
+	{
+		_followTarget = target;
 	}
 }

@@ -27,6 +27,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private GameObject _knight;
 	[SerializeField] private InputActionAsset _inputAsset;
 	[SerializeField] private WorldDataHelper _dataHelper;
+	[SerializeField] private GameCameraController _cam;
 	#endregion
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _playerRenderers;
@@ -42,12 +43,14 @@ public class Scene_Map1 : BaseScene
 	{
 		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
+
 		_playerRenderers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		var data = _dataHelper.GetWorldData();
 		_spawnPoints = data.SpawnPoints;
 		World = new(data, new GameRule00());
 		Enter(req.TeamId, (CharacterType)req.PlayerInfo.CharacterType);
+
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
 	}
@@ -101,7 +104,7 @@ public class Scene_Map1 : BaseScene
 			}
 
 			cPlayer.gameObject.AddComponent<DogController>().Init(cPlayer.NPlayer);
-			Camera.main.GetComponent<GameCameraController>().FollowTarget = cPlayer.transform;
+			_cam.Init(cPlayer.transform);
 		}
 	}
 
