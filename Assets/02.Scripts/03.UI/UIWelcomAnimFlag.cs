@@ -27,7 +27,7 @@ public class UIWelcomAnimFlag : MonoBehaviour, IUIAnim
 	public void Reset()
 	{
 		_rect = GetComponent<RectTransform>();
-		SetAnchor(_startPos);
+		_rect.SetAnchorX(_startPos);
 	}
 
 	public void PlayAnim(Action callback = null)
@@ -39,33 +39,23 @@ public class UIWelcomAnimFlag : MonoBehaviour, IUIAnim
 	{
 		for (float delta = 0f; delta < _firstMoveDuration; delta += Time.deltaTime)
 		{
-			SetAnchor(Mathf.Lerp(_startPos, _firstTargetPos, delta / _firstMoveDuration));
+			_rect.SetAnchorX(Mathf.Lerp(_startPos, _firstTargetPos, delta / _firstMoveDuration));
 			yield return 0f;
 		}
 
 		for (float delta = 0f; delta < _secondMoveDiration; delta += Time.deltaTime)
 		{
-			SetAnchor(Mathf.Lerp(_firstTargetPos, _secondTargetPos, delta / _secondMoveDiration));
+			_rect.SetAnchorX(Mathf.Lerp(_firstTargetPos, _secondTargetPos, delta / _secondMoveDiration));
 			yield return 0f;
 		}
 
 		for (float delta = 0f; delta < _thirdMoveDuration; delta += Time.deltaTime)
 		{
-			SetAnchor(Mathf.Lerp(_secondTargetPos, _thirdTargetPos, delta / _thirdMoveDuration));
+			_rect.SetAnchorX(Mathf.Lerp(_secondTargetPos, _thirdTargetPos, delta / _thirdMoveDuration));
 			yield return 0f;
 		}
 
 		callback?.Invoke();
 		yield break;
 	}
-
-	private void SetAnchor(float pos)
-	{
-		_rect.anchorMin = new Vector2(pos, _rect.anchorMin.y);
-		_rect.anchorMax = new Vector2(pos, _rect.anchorMax.y);
-	}
-
-
-
-
 }

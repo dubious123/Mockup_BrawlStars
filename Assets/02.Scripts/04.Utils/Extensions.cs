@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using static UnityEditor.PlayerSettings;
+
 public static class Extensions
 {
 	public static AnimationClip GetAnimationClipOrNull(this RuntimeAnimatorController anim, string name)
@@ -35,5 +37,41 @@ public static class Extensions
 		color.a = newAlpha;
 		g.color = color;
 		return g;
+	}
+
+	public static void SetAnchorX(this RectTransform rect, float x)
+	{
+		rect.anchorMin = new Vector2(x, rect.anchorMin.y);
+		rect.anchorMax = new Vector2(x, rect.anchorMax.y);
+	}
+
+	public static void SetAnchorY(this RectTransform rect, float y)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x, y);
+		rect.anchorMax = new Vector2(rect.anchorMax.x, y);
+	}
+
+	public static void SetAnchorX(this RectTransform rect, Vector2 anchorX)
+	{
+		rect.anchorMin = new Vector2(anchorX.x, rect.anchorMin.y);
+		rect.anchorMax = new Vector2(anchorX.y, rect.anchorMax.y);
+	}
+
+	public static void SetAnchorY(this RectTransform rect, Vector2 anchorY)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x, anchorY.x);
+		rect.anchorMax = new Vector2(rect.anchorMax.x, anchorY.y);
+	}
+
+	public static void SetAnchorDeltaX(this RectTransform rect, float deltaX)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x + deltaX, rect.anchorMin.y);
+		rect.anchorMax = new Vector2(rect.anchorMax.x + deltaX, rect.anchorMax.y);
+	}
+
+	public static void SetAnchorDeltaY(this RectTransform rect, float deltaY)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY);
+		rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY);
 	}
 }

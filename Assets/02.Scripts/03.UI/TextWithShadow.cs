@@ -20,4 +20,14 @@ public class TextWithShadow : MonoBehaviour
 			_shadow.text = value;
 		}
 	}
+
+	public float Alpha
+	{
+		get => _body.alpha;
+		set
+		{
+			_body.alpha = value;
+			_shadow.alpha = value;
+		}
+	}
 }
