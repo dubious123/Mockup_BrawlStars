@@ -63,15 +63,15 @@ public static class Extensions
 		rect.anchorMax = new Vector2(rect.anchorMax.x, anchorY.y);
 	}
 
-	public static void SetAnchorDeltaX(this RectTransform rect, float deltaX)
-	{
-		rect.anchorMin = new Vector2(rect.anchorMin.x + deltaX, rect.anchorMin.y);
-		rect.anchorMax = new Vector2(rect.anchorMax.x + deltaX, rect.anchorMax.y);
-	}
+    public static void SetAnchorDeltaX(this RectTransform rect, Vector2 deltaX)
+    {
+        rect.anchorMin = new Vector2(rect.anchorMin.x + deltaX.x, rect.anchorMin.y);
+        rect.anchorMax = new Vector2(rect.anchorMax.x + deltaX.y, rect.anchorMax.y);
+    }
 
-	public static void SetAnchorDeltaY(this RectTransform rect, float deltaY)
-	{
-		rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY);
-		rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY);
-	}
+    public static void SetAnchorDeltaY(this RectTransform rect, Vector2 deltaY)
+    {
+        rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY.x);
+        rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY.y);
+    }
 }

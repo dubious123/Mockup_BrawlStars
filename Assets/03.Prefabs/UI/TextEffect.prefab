@@ -50,13 +50,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textPrefab: {fileID: 5503301704221171808, guid: 63edd18f787b5004988c66ba529561b0, type: 3}
+  _randomPosRadius: 0.2
   _startAlpha: 0
   _startSize: 0.5
-  _fadeInSize: 2
-  _fadeOutSize: 0.5
-  _fadeInTime: 0.5
-  _fadeInTravelDelta: {x: 0, y: 1}
-  _holdTime: 1
-  _fadeOutTime: 0.5
-  _fadeOutTravelDelta1: {x: 0, y: -2}
+  _fadeInSize: 1.5
+  _fadeOutSize: 1.5
+  _fadeInTime: 0.2
+  _holdTime: 0.5
+  _fadeOutTime: 0.3
+  _textColorRed: {r: 0.7176471, g: 0.15294118, b: 0.29803923, a: 1}
+  _textColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  _fadeInTravelDelta: {x: 0, y: 0.5}
+  _fadeOutTravelDelta1: {x: 0, y: -0.25}
   <Damage>k__BackingField: 100
+  <IsSelf>k__BackingField: 0
