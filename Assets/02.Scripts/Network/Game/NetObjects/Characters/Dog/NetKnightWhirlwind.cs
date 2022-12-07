@@ -7,10 +7,8 @@ using static Enums;
 
 namespace Server.Game
 {
-	public class NetKnightWhirlwind : INetBaseSkill
+	public class NetKnightWhirlwind : NetBaseSkill
 	{
-		public NetCharacter Character => _dog;
-		public int Id { get; init; }
 		public int CoolTimeFrame { get; set; }
 		public int CurrentCoolTimeFrame { get; set; }
 		public int ReadyFrame { get; set; }
@@ -19,8 +17,6 @@ namespace Server.Game
 		public sfloat Range { get; set; }
 		public sfloat SqrRange { get; init; }
 		public sfloat MoveSpeed { get; set; }
-		public bool Performing { get; set; }
-		public bool Active { get; set; }
 
 		private readonly NetCharacterKnight _dog;
 		private readonly HitInfo _hitInfo;
@@ -30,6 +26,7 @@ namespace Server.Game
 		public NetKnightWhirlwind(NetCharacterKnight dog)
 		{
 			_dog = dog;
+			Character = dog;
 			Id = 0;
 			Performing = false;
 			Active = true;
@@ -45,7 +42,7 @@ namespace Server.Game
 			};
 		}
 
-		public virtual void Update()
+		public override void Update()
 		{
 			if (Performing)
 			{
@@ -58,12 +55,12 @@ namespace Server.Game
 			}
 		}
 
-		public void Cancel()
+		public override void Cancel()
 		{
 			throw new NotImplementedException();
 		}
 
-		public virtual void HandleInput(in InputData input)
+		public override void HandleInput(in InputData input)
 		{
 			_btnPressed = (input.ButtonInput & 1) == 1;
 			if ((Active is false) || Performing || (_btnPressed is false) || CurrentCoolTimeFrame > 0)
@@ -77,7 +74,7 @@ namespace Server.Game
 			Performing = true;
 		}
 
-		public virtual IEnumerator<int> Co_Perform()
+		protected override IEnumerator<int> Co_Perform()
 		{
 			_dog.SetActiveOtherSkills(this, false);
 			_dog.MoveSpeed = MoveSpeed;

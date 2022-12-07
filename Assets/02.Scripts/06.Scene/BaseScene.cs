@@ -1,7 +1,11 @@
+#define DEBUG
+//#define RELEASE
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
 using UnityEngine;
+
 using static Enums;
 
 public abstract class BaseScene : MonoBehaviour

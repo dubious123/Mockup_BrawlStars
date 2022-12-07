@@ -3,7 +3,13 @@ guid: 66df38ba76fc89b479d1c0a0be8db140
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - <Animator>k__BackingField: {instanceID: 0}
+  - <StunIndicator>k__BackingField: {instanceID: 0}
+  - _selectCircleSelf: {fileID: 3286163911610860551, guid: f42db11356809014882b28968e34bddc, type: 3}
+  - _selectCircleRed: {fileID: 3286163911610860551, guid: 2ff459451fa4a274c9c9f67b7b47103a, type: 3}
+  - _selectCircleBlue: {fileID: 3286163911610860551, guid: a2c573811e377944b977055c8d8b260a, type: 3}
+  - SelectCircle: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

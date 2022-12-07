@@ -25,8 +25,10 @@ public class Scene_Map1 : BaseScene
 	#region SerializeField
 	//[SerializeField] AssetReference _dog;
 	[SerializeField] private GameObject _knight;
+	[SerializeField] private GameObject _shelly;
 	[SerializeField] private InputActionAsset _inputAsset;
 	[SerializeField] private WorldDataHelper _dataHelper;
+	[SerializeField] private Map00UI _mapUI;
 	[SerializeField] private GameCameraController _cam;
 	#endregion
 	private sVector3[] _spawnPoints;
@@ -50,7 +52,6 @@ public class Scene_Map1 : BaseScene
 		_spawnPoints = data.SpawnPoints;
 		World = new(data, new GameRule00());
 		Enter(req.TeamId, (CharacterType)req.PlayerInfo.CharacterType);
-
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
 	}
@@ -89,7 +90,7 @@ public class Scene_Map1 : BaseScene
 	public void Enter(short teamId, CharacterType type)
 	{
 		Debug.Assert(_playerRenderers[teamId] is null);
-		var cPlayer = Instantiate(_knight, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
+		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
 		var netCharacter = World.AddNewCharacter(teamId, type);
 		cPlayer.Init(netCharacter, teamId);
 		_playerRenderers[teamId] = cPlayer;
@@ -103,13 +104,14 @@ public class Scene_Map1 : BaseScene
 				playerInput.actions.Enable();
 			}
 
-			cPlayer.gameObject.AddComponent<DogController>().Init(cPlayer.NPlayer);
+			cPlayer.gameObject.AddComponent<CharacterController>().Init();
 			_cam.Init(cPlayer.transform);
 		}
 	}
 
 	public void StartGame(float waitTime)
 	{
+		_mapUI.OnGameStart();
 		Timing.CallDelayed(waitTime, Internal_StartGame);
 	}
 

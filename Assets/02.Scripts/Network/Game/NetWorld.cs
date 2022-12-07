@@ -66,7 +66,8 @@ namespace Server.Game
 		public NetCharacter AddNewCharacter(int inGameId, CharacterType type)
 		{
 			var id = (uint)inGameId;
-			var character = new NetCharacterKnight(id, GameRule.GetTeamType(id), _worldData.SpawnPoints[inGameId], sQuaternion.identity, this);
+			//var character = new NetCharacterKnight(id, GameRule.GetTeamType(id), _worldData.SpawnPoints[inGameId], sQuaternion.identity, this);
+			var character = new NCharacterShelly(id, GameRule.GetTeamType(id), _worldData.SpawnPoints[inGameId], sQuaternion.identity, this);
 			NetCharacters[inGameId] = character;
 			_netObjDict.Add(id, character);
 			return character;

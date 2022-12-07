@@ -1,17 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-
-
-using Server.Game;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-using static Enums;
 
 public class CharacterController : MonoBehaviour
 {
-	protected NetCharacter _currentPlayer;
 	protected PlayerInput _playerInput;
 	protected InputAction _lookAction;
 	protected InputAction _moveAction;
@@ -24,9 +17,8 @@ public class CharacterController : MonoBehaviour
 	protected bool _isReady = false;
 	protected byte _buttonPressed = 0;
 
-	public virtual void Init(NetCharacter playableCharacter)
+	public virtual void Init()
 	{
-		_currentPlayer = playableCharacter;
 		_playerInput = GetComponent<PlayerInput>();
 		_moveAction = _playerInput.actions[InputActionMeta.Move];
 		_lookAction = _playerInput.actions[InputActionMeta.Look];

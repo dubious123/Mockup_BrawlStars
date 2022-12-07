@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-using static UnityEditor.PlayerSettings;
-
 public static class Extensions
 {
 	public static AnimationClip GetAnimationClipOrNull(this RuntimeAnimatorController anim, string name)
@@ -63,15 +61,15 @@ public static class Extensions
 		rect.anchorMax = new Vector2(rect.anchorMax.x, anchorY.y);
 	}
 
-    public static void SetAnchorDeltaX(this RectTransform rect, Vector2 deltaX)
-    {
-        rect.anchorMin = new Vector2(rect.anchorMin.x + deltaX.x, rect.anchorMin.y);
-        rect.anchorMax = new Vector2(rect.anchorMax.x + deltaX.y, rect.anchorMax.y);
-    }
+	public static void SetAnchorDeltaX(this RectTransform rect, Vector2 deltaX)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x + deltaX.x, rect.anchorMin.y);
+		rect.anchorMax = new Vector2(rect.anchorMax.x + deltaX.y, rect.anchorMax.y);
+	}
 
-    public static void SetAnchorDeltaY(this RectTransform rect, Vector2 deltaY)
-    {
-        rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY.x);
-        rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY.y);
-    }
+	public static void SetAnchorDeltaY(this RectTransform rect, Vector2 deltaY)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY.x);
+		rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY.y);
+	}
 }

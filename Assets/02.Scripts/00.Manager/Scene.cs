@@ -1,16 +1,20 @@
 using UnityEngine;
-using static Enums;
 using UnityEngine.SceneManagement;
+
+using static Enums;
 
 public class Scene : MonoBehaviour
 {
 	public static BaseScene CurrentScene => _instance._currentScene;
-	static Scene _instance;
-	BaseScene _currentScene;
-	void Awake()
+
+	private static Scene _instance;
+	private BaseScene _currentScene;
+
+	private void Awake()
 	{
 		_instance = this;
 	}
+
 	public static void MoveTo(SceneType type, object sceneParam)
 	{
 		var handle = SceneManager.LoadSceneAsync((int)type);

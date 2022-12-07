@@ -4,8 +4,8 @@ namespace Server.Game
 {
 	public class NetCharacterKnight : NetCharacter
 	{
-		public INetBaseSkill Whirlwind { get; set; }
-		public INetBaseSkill Bash { get; set; }
+		public NetBaseSkill Whirlwind { get; set; }
+		public NetBaseSkill Bash { get; set; }
 
 		public NetCharacterKnight(uint objectId, TeamType team, sVector3 position, sQuaternion rotation, NetWorld world)
 			: base(objectId, team, position, rotation, NetObjectTag.Character, world)
@@ -30,7 +30,7 @@ namespace Server.Game
 			Bash.HandleInput(in input);
 		}
 
-		public void SetActiveOtherSkills(INetBaseSkill from, bool Active)
+		public void SetActiveOtherSkills(NetBaseSkill from, bool Active)
 		{
 			if (from != Whirlwind)
 			{

@@ -1717,7 +1717,6 @@ GameObject:
   - component: {fileID: 5902489880269034798}
   - component: {fileID: 6224927104885144503}
   - component: {fileID: 7453175223683561202}
-  - component: {fileID: 9214539877578304304}
   - component: {fileID: -2056247571257498706}
   m_Layer: 0
   m_Name: Character_Knight_Raw
@@ -1780,22 +1779,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 6224927104885144503}
   <StunIndicator>k__BackingField: {fileID: 7039065437449104458}
+  _selectCircleSelf: {fileID: 0}
+  _selectCircleRed: {fileID: 0}
+  _selectCircleBlue: {fileID: 0}
+  SelectCircle: {fileID: 0}
   <Whirlwind>k__BackingField: {fileID: 0}
   <Bash>k__BackingField: {fileID: -2056247571257498706}
---- !u!114 &9214539877578304304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6530795506631069588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7caa0edd335b0d84f8d01d9e717ecefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effects: {fileID: 5215959880254896676}
-  _audio: {fileID: 1744932874209234292}
 --- !u!114 &-2056247571257498706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,11 +2668,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a08e02255cf14bb4c8bd7f03434a001d, type: 3}
---- !u!198 &5215959880254896676 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 456201877774735613, guid: a08e02255cf14bb4c8bd7f03434a001d, type: 3}
-  m_PrefabInstance: {fileID: 5635708274107556569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5215959880254896678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 456201877774735615, guid: a08e02255cf14bb4c8bd7f03434a001d, type: 3}
@@ -2696,6 +2680,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4016449224769310819}
     m_Modifications:
+    - target: {fileID: 1556430201956247818, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556430203021937470, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2575170331268821993, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7158163805760515894, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 8601895642742607241, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: _player
       value: 

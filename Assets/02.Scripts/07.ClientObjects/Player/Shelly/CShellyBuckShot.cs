@@ -1,0 +1,54 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+
+using Unity.VisualScripting;
+
+using UnityEditor;
+
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
+{
+
+	[SerializeField] private GameObject _indicator;
+	[SerializeField] private GameObject _bulletPrefab;
+
+	public bool Performing { get; set; }
+	public bool Active { get; set; }
+	public CPlayerShelly Player { get; set; }
+
+	private List<CProjectile> _cBullets;
+	private NShellyBuckShot _netBuckShot;
+
+	public void Init(CPlayerShelly shelly)
+	{
+		Player = shelly;
+		_netBuckShot = (shelly.NPlayer as NCharacterShelly).BuckShot as NShellyBuckShot;
+		_cBullets = new List<CProjectile>(_netBuckShot.AmmoCount * _netBuckShot.BulletAmountPerAttack);
+		foreach (var netBulletArr in _netBuckShot.BulletArrQueue)
+		{
+			foreach (var bullet in netBulletArr)
+			{
+				var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
+				cBullet.Init(bullet);
+				_cBullets.Add(cBullet);
+			}
+		}
+	}
+
+	public void HandleOneFrame()
+	{
+		_indicator.SetActive(_netBuckShot.Holding);
+
+		if (_netBuckShot.IsAttack is true)
+		{
+			Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
+			_cBullets.ForEach(bullet => bullet.enabled = bullet.IsAlive);
+			return;
+		}
+
+		Player.Animator.SetBool(AnimatorMeta.IsAttack, false);
+	}
+}

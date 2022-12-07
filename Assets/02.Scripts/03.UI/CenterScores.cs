@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
+using MEC;
+
 using Unity.VectorGraphics;
 
 using UnityEngine;
@@ -20,22 +22,11 @@ public class CenterScores : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private int _currentScore;
 
-    private bool _performing;
-    private IEnumerator<int> _coHandle;
     private SVGImage _currentScoreUI;
 
     private void Start()
     {
         Reset();
-    }
-
-    private void EditorUpdate()
-    {
-        if (_performing)
-        {
-            _coHandle.MoveNext();
-        }
-        Debug.Log(Time.deltaTime);
     }
 
     public void OnRoundStart()
@@ -62,7 +53,6 @@ public class CenterScores : MonoBehaviour
 
     public void Reset()
     {
-        _performing = false;
         _currentScore = 0;
         foreach (var score in _scores)
         {
@@ -75,10 +65,7 @@ public class CenterScores : MonoBehaviour
     private void InternalHandleWin()
     {
         _currentScoreUI = _scores[_currentScore++];
-        _coHandle = CoShrink();
-        UnityEditor.EditorApplication.update -= EditorUpdate;
-        UnityEditor.EditorApplication.update += EditorUpdate;
-        _performing = true;
+        Timing.RunCoroutine(CoShrink());
     }
 
     private void MoveNext()
@@ -86,7 +73,7 @@ public class CenterScores : MonoBehaviour
         ++_currentScore;
     }
 
-    private IEnumerator<int> CoShrink()
+    private IEnumerator<float> CoShrink()
     {
         var targetScale = Vector3.one;
         var startScale = new Vector3(_scoreBigScale, _scoreBigScale, _scoreBigScale);
@@ -97,9 +84,6 @@ public class CenterScores : MonoBehaviour
         }
 
         _currentScoreUI.rectTransform.localScale = targetScale;
-        _performing = false;
-
-        UnityEditor.EditorApplication.update -= EditorUpdate;
         yield break;
     }
 }

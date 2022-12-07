@@ -1,19 +1,17 @@
 ﻿using System.Collections.Generic;
 
+using UnityEngine.TextCore.Text;
+
 using static Enums;
 
 namespace Server.Game
 {
-	public class NetKnightBash : INetBaseSkill
+	public class NetKnightBash : NetBaseSkill
 	{
-		public NetCharacter Character => _dog;
-		public int Id { get; init; }
 		public int MaxHoldingFrame { get; set; }
 		public int CurrentHoldFrame { get; protected set; }
 		public int CoolTimeFrame { get; protected set; }
 		public int CurrentCooltime { get; protected set; }
-		public bool Performing { get; set; }
-		public bool Active { get; set; }
 		public bool Holding { get; protected set; }
 		public bool Bashing { get; protected set; }
 		public sfloat MaxBashDistance { get; set; }
@@ -29,6 +27,7 @@ namespace Server.Game
 
 		public NetKnightBash(NetCharacterKnight dog)
 		{
+			Character = dog;
 			_dog = dog;
 			Id = 0;
 			MaxHoldingFrame = 60;
@@ -48,7 +47,7 @@ namespace Server.Game
 			};
 		}
 
-		public void Update()
+		public override void Update()
 		{
 			if (Performing)
 			{
@@ -61,7 +60,7 @@ namespace Server.Game
 			}
 		}
 
-		public void HandleInput(in InputData input)
+		public override void HandleInput(in InputData input)
 		{
 			_holdBtnPressed = (input.ButtonInput & 2) != 0;
 			_cancelBtnPressed = (input.ButtonInput & 4) != 0;
@@ -74,7 +73,7 @@ namespace Server.Game
 			Performing = true;
 		}
 
-		public void Cancel()
+		public override void Cancel()
 		{
 			if (Performing)
 			{
@@ -85,7 +84,7 @@ namespace Server.Game
 			}
 		}
 
-		public IEnumerator<int> Co_Perform()
+		protected override IEnumerator<int> Co_Perform()
 		{
 			while (true)
 			{

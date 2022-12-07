@@ -22,8 +22,8 @@ public class CKnightBash : MonoBehaviour, ICBaseSkill
 	{
 		Player = player;
 		NetBash = (player.NPlayer as NetCharacterKnight).Bash as NetKnightBash;
-		_coolTimeIndicator = GameObject.Find("Cool Time").GetComponent<TextMeshProUGUI>();
-		_coolTimeIndicator.enabled = false;
+		//_coolTimeIndicator = GameObject.Find("Cool Time").GetComponent<TextMeshProUGUI>();
+		//_coolTimeIndicator.enabled = false;
 	}
 
 	public void HandleOneFrame()
@@ -43,14 +43,14 @@ public class CKnightBash : MonoBehaviour, ICBaseSkill
 		Player.Animator.SetBool(AnimatorMeta.IsBash, NetBash.Bashing);
 
 
-		if (NetBash.CurrentCooltime > 0)
-		{
-			_coolTimeIndicator.enabled = true;
-			_coolTimeIndicator.text = (NetBash.CurrentCooltime * Time.fixedDeltaTime).ToString("0.0");
-		}
-		else
-		{
-			_coolTimeIndicator.enabled = false;
-		}
+		//if (NetBash.CurrentCooltime > 0)
+		//{
+		//	_coolTimeIndicator.enabled = true;
+		//	_coolTimeIndicator.text = (NetBash.CurrentCooltime * Time.fixedDeltaTime).ToString("0.0");
+		//}
+		//else
+		//{
+		//	_coolTimeIndicator.enabled = false;
+		//}
 	}
 }

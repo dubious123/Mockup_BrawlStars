@@ -13,6 +13,7 @@ public static class AnimatorMeta
 	public static readonly string IsDead_Bool = "IsDead";
 	public static readonly string IsStun_Bool = "IsStun";
 	public static readonly string IsBasicAttack = "IsBasicAttack";
+	public static readonly string IsAttack = "IsAttack";
 	public static readonly string IsBash = "IsBash";
 	public static readonly string IsHolding = "IsHolding";
 
