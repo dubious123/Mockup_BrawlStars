@@ -1,17 +1,18 @@
 using System;
 using System.Collections.Concurrent;
+
 using UnityEngine;
 
 public class JobMgr : MonoBehaviour
 {
-	static JobMgr _instance;
-	ConcurrentQueue<Action> _unityJobQueue;
-	ConcurrentDictionary<string, JobQueue> _jobDict = new();
+	private static JobMgr _instance;
+	private ConcurrentQueue<Action> _unityJobQueue;
+	private ConcurrentDictionary<string, JobQueue> _jobDict = new();
 
-	void Start()
+	public static void Init()
 	{
-		_unityJobQueue = new ConcurrentQueue<Action>();
 		_instance = GameObject.Find("@JobMgr").GetComponent<JobMgr>();
+		_instance._unityJobQueue = new ConcurrentQueue<Action>();
 
 		CreatejobQueue("PacketSend", 1, true, 1);
 		CreatejobQueue("PacketRecv", 1, true, 1);
@@ -19,7 +20,7 @@ public class JobMgr : MonoBehaviour
 		CreatejobQueue("PacketParser", 1, true, 1);
 	}
 
-	void Update()
+	private void Update()
 	{
 		while (_unityJobQueue.Count > 0)
 		{

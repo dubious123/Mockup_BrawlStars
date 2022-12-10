@@ -1,0 +1,8879 @@
+2022-12-10 21:11:39.861 +09:00 [INF] size : [45] 
+{
+    "Id": 1,
+    "loginId": "jonghun",
+    "loginPw": "0827"
+}
+2022-12-10 21:11:45.106 +09:00 [INF] size : [38] 
+{
+    "Id": 3,
+    "UserId": 11,
+    "CharacterType": 1
+}
+2022-12-10 21:11:46.119 +09:00 [INF] size : [20] 
+{
+    "Id": 4,
+    "UserId": 11
+}
+2022-12-10 21:11:46.229 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 0,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054449731,
+    "LookDirY": 1063762225
+}
+2022-12-10 21:11:46.236 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 0,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054519054,
+    "LookDirY": 1063745900
+}
+2022-12-10 21:11:46.256 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 0,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054665446,
+    "LookDirY": 1063711107
+}
+2022-12-10 21:11:46.283 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 1,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054786249,
+    "LookDirY": 1063682069
+}
+2022-12-10 21:11:46.290 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 2,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054827502,
+    "LookDirY": 1063672085
+}
+2022-12-10 21:11:46.304 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 3,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054976652,
+    "LookDirY": 1063635696
+}
+2022-12-10 21:11:46.322 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 4,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055097453,
+    "LookDirY": 1063605887
+}
+2022-12-10 21:11:46.340 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 5,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055220991,
+    "LookDirY": 1063575090
+}
+2022-12-10 21:11:46.353 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 6,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055310997,
+    "LookDirY": 1063552452
+}
+2022-12-10 21:11:46.373 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 7,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055442341,
+    "LookDirY": 1063519113
+}
+2022-12-10 21:11:46.388 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 8,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055544955,
+    "LookDirY": 1063492813
+}
+2022-12-10 21:11:46.404 +09:00 [INF] size : [162] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 9,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055652669,
+    "LookDirY": 1063464965
+}
+2022-12-10 21:11:46.426 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 10,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055813676,
+    "LookDirY": 1063422878
+}
+2022-12-10 21:11:46.441 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 11,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055919146,
+    "LookDirY": 1063395007
+}
+2022-12-10 21:11:46.456 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 12,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056030720,
+    "LookDirY": 1063365261
+}
+2022-12-10 21:11:46.471 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 13,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056085450,
+    "LookDirY": 1063350570
+}
+2022-12-10 21:11:46.487 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 14,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056256535,
+    "LookDirY": 1063304226
+}
+2022-12-10 21:11:46.504 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 15,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056389813,
+    "LookDirY": 1063267677
+}
+2022-12-10 21:11:46.521 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 16,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056521202,
+    "LookDirY": 1063231260
+}
+2022-12-10 21:11:46.536 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 17,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056646318,
+    "LookDirY": 1063196222
+}
+2022-12-10 21:11:46.558 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 18,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056821652,
+    "LookDirY": 1063146529
+}
+2022-12-10 21:11:46.573 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 19,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056941568,
+    "LookDirY": 1063112140
+}
+2022-12-10 21:11:46.588 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 20,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057016390,
+    "LookDirY": 1063075475
+}
+2022-12-10 21:11:46.605 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 21,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057076597,
+    "LookDirY": 1063040260
+}
+2022-12-10 21:11:46.621 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 22,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057156173,
+    "LookDirY": 1062993198
+}
+2022-12-10 21:11:46.641 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 23,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057244127,
+    "LookDirY": 1062940489
+}
+2022-12-10 21:11:46.654 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 24,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057303675,
+    "LookDirY": 1062904386
+}
+2022-12-10 21:11:46.676 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 25,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057392184,
+    "LookDirY": 1062850099
+}
+2022-12-10 21:11:46.688 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 26,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057453999,
+    "LookDirY": 1062811734
+}
+2022-12-10 21:11:46.702 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 27,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057514729,
+    "LookDirY": 1062773679
+}
+2022-12-10 21:11:46.726 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 28,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057561930,
+    "LookDirY": 1062743852
+}
+2022-12-10 21:11:46.743 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 29,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057504007,
+    "LookDirY": 1062780424
+}
+2022-12-10 21:11:46.752 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 30,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057428228,
+    "LookDirY": 1062827773
+}
+2022-12-10 21:11:46.776 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 31,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057042520,
+    "LookDirY": 1063060233
+}
+2022-12-10 21:11:46.792 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 32,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056462287,
+    "LookDirY": 1063247638
+}
+2022-12-10 21:11:46.811 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 33,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055763039,
+    "LookDirY": 1063436174
+}
+2022-12-10 21:11:46.823 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 34,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055219509,
+    "LookDirY": 1063575461
+}
+2022-12-10 21:11:46.839 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 35,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054145504,
+    "LookDirY": 1063832729
+}
+2022-12-10 21:11:46.856 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 36,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053280751,
+    "LookDirY": 1064023199
+}
+2022-12-10 21:11:46.873 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 37,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052717112,
+    "LookDirY": 1064139627
+}
+2022-12-10 21:11:46.890 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 38,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052416411,
+    "LookDirY": 1064199307
+}
+2022-12-10 21:11:46.905 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 39,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052299720,
+    "LookDirY": 1064222017
+}
+2022-12-10 21:11:46.923 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 40,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052309142,
+    "LookDirY": 1064220193
+}
+2022-12-10 21:11:46.938 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 41,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052388621,
+    "LookDirY": 1064204739
+}
+2022-12-10 21:11:46.961 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 42,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052521926,
+    "LookDirY": 1064178558
+}
+2022-12-10 21:11:46.971 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 43,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052579041,
+    "LookDirY": 1064167239
+}
+2022-12-10 21:11:46.993 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 44,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052742043,
+    "LookDirY": 1064134604
+}
+2022-12-10 21:11:47.008 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 45,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052853830,
+    "LookDirY": 1064111935
+}
+2022-12-10 21:11:47.028 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 46,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1052965357,
+    "LookDirY": 1064089087
+}
+2022-12-10 21:11:47.037 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 47,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053034923,
+    "LookDirY": 1064074717
+}
+2022-12-10 21:11:47.058 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 48,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053201482,
+    "LookDirY": 1064039938
+}
+2022-12-10 21:11:47.074 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 49,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053311090,
+    "LookDirY": 1064016761
+}
+2022-12-10 21:11:47.089 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 50,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053424450,
+    "LookDirY": 1063992551
+}
+2022-12-10 21:11:47.103 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 51,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053531023,
+    "LookDirY": 1063969566
+}
+2022-12-10 21:11:47.124 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 52,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053689786,
+    "LookDirY": 1063934917
+}
+2022-12-10 21:11:47.141 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 53,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053821899,
+    "LookDirY": 1063905711
+}
+2022-12-10 21:11:47.156 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 54,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1053931972,
+    "LookDirY": 1063881116
+}
+2022-12-10 21:11:47.170 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 55,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054049999,
+    "LookDirY": 1063854482
+}
+2022-12-10 21:11:47.191 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 56,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054223334,
+    "LookDirY": 1063814866
+}
+2022-12-10 21:11:47.206 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 57,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054337782,
+    "LookDirY": 1063788382
+}
+2022-12-10 21:11:47.222 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 58,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054462588,
+    "LookDirY": 1063759203
+}
+2022-12-10 21:11:47.236 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 59,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054604282,
+    "LookDirY": 1063725696
+}
+2022-12-10 21:11:47.260 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 60,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054796033,
+    "LookDirY": 1063679705
+}
+2022-12-10 21:11:47.276 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 61,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1054865564,
+    "LookDirY": 1063662841
+}
+2022-12-10 21:11:47.287 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 62,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055012131,
+    "LookDirY": 1063626972
+}
+2022-12-10 21:11:47.305 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 63,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055200101,
+    "LookDirY": 1063580320
+}
+2022-12-10 21:11:47.323 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 64,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055365011,
+    "LookDirY": 1063538786
+}
+2022-12-10 21:11:47.339 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 65,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055530152,
+    "LookDirY": 1063496620
+}
+2022-12-10 21:11:47.355 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 66,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055684071,
+    "LookDirY": 1063456801
+}
+2022-12-10 21:11:47.370 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 67,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055832121,
+    "LookDirY": 1063418022
+}
+2022-12-10 21:11:47.385 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 68,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055993343,
+    "LookDirY": 1063375254
+}
+2022-12-10 21:11:47.409 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 69,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056220170,
+    "LookDirY": 1063314130
+}
+2022-12-10 21:11:47.428 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 70,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056385354,
+    "LookDirY": 1063268906
+}
+2022-12-10 21:11:47.439 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 71,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056497792,
+    "LookDirY": 1063237776
+}
+2022-12-10 21:11:47.454 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 72,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056711617,
+    "LookDirY": 1063177797
+}
+2022-12-10 21:11:47.470 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 73,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1056878652,
+    "LookDirY": 1063130224
+}
+2022-12-10 21:11:47.492 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 74,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057050368,
+    "LookDirY": 1063055643
+}
+2022-12-10 21:11:47.508 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 75,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057137366,
+    "LookDirY": 1063004374
+}
+2022-12-10 21:11:47.525 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 76,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057233916,
+    "LookDirY": 1062946645
+}
+2022-12-10 21:11:47.540 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 77,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057327236,
+    "LookDirY": 1062890008
+}
+2022-12-10 21:11:47.557 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 78,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057425417,
+    "LookDirY": 1062829519
+}
+2022-12-10 21:11:47.574 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 79,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057529197,
+    "LookDirY": 1062764560
+}
+2022-12-10 21:11:47.594 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 80,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057651154,
+    "LookDirY": 1062686867
+}
+2022-12-10 21:11:47.609 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 81,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057758774,
+    "LookDirY": 1062617070
+}
+2022-12-10 21:11:47.625 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 82,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057859305,
+    "LookDirY": 1062550807
+}
+2022-12-10 21:11:47.642 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 83,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1057977286,
+    "LookDirY": 1062471712
+}
+2022-12-10 21:11:47.657 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 84,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058078534,
+    "LookDirY": 1062402671
+}
+2022-12-10 21:11:47.672 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 85,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058184081,
+    "LookDirY": 1062329536
+}
+2022-12-10 21:11:47.688 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 86,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058287178,
+    "LookDirY": 1062256935
+}
+2022-12-10 21:11:47.703 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 87,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058398882,
+    "LookDirY": 1062176954
+}
+2022-12-10 21:11:47.719 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 88,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058515411,
+    "LookDirY": 1062092031
+}
+2022-12-10 21:11:47.737 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 89,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058632781,
+    "LookDirY": 1062004929
+}
+2022-12-10 21:11:47.754 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 90,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058769485,
+    "LookDirY": 1061901459
+}
+2022-12-10 21:11:47.776 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 91,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058949318,
+    "LookDirY": 1061761948
+}
+2022-12-10 21:11:47.791 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 92,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059064119,
+    "LookDirY": 1061670821
+}
+2022-12-10 21:11:47.806 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 93,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059184968,
+    "LookDirY": 1061573106
+}
+2022-12-10 21:11:47.821 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 94,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059307486,
+    "LookDirY": 1061472131
+}
+2022-12-10 21:11:47.838 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 95,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059365766,
+    "LookDirY": 1061423409
+}
+2022-12-10 21:11:47.853 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 96,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059575456,
+    "LookDirY": 1061244343
+}
+2022-12-10 21:11:47.870 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 97,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059702916,
+    "LookDirY": 1061132542
+}
+2022-12-10 21:11:47.887 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 98,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059855021,
+    "LookDirY": 1060996091
+}
+2022-12-10 21:11:47.903 +09:00 [INF] size : [163] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 99,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059990084,
+    "LookDirY": 1060872083
+}
+2022-12-10 21:11:47.920 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 100,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060143904,
+    "LookDirY": 1060727485
+}
+2022-12-10 21:11:47.937 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 101,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060288656,
+    "LookDirY": 1060588021
+}
+2022-12-10 21:11:47.953 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 102,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060451107,
+    "LookDirY": 1060427447
+}
+2022-12-10 21:11:47.970 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 103,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060600102,
+    "LookDirY": 1060276255
+}
+2022-12-10 21:11:47.993 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 104,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060815905,
+    "LookDirY": 1060050306
+}
+2022-12-10 21:11:48.009 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 105,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060967590,
+    "LookDirY": 1059886327
+}
+2022-12-10 21:11:48.024 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 106,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061118696,
+    "LookDirY": 1059718520
+}
+2022-12-10 21:11:48.044 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 107,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061282661,
+    "LookDirY": 1059531169
+}
+2022-12-10 21:11:48.053 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 108,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061375301,
+    "LookDirY": 1059422790
+}
+2022-12-10 21:11:48.076 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 109,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061612195,
+    "LookDirY": 1059136901
+}
+2022-12-10 21:11:48.092 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 110,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061769766,
+    "LookDirY": 1058939374
+}
+2022-12-10 21:11:48.108 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 111,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061925440,
+    "LookDirY": 1058738057
+}
+2022-12-10 21:11:48.125 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 112,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062090454,
+    "LookDirY": 1058517555
+}
+2022-12-10 21:11:48.142 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 113,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062276015,
+    "LookDirY": 1058260242
+}
+2022-12-10 21:11:48.158 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 114,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062432890,
+    "LookDirY": 1058034414
+}
+2022-12-10 21:11:48.176 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 115,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062597510,
+    "LookDirY": 1057788612
+}
+2022-12-10 21:11:48.192 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 116,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062769583,
+    "LookDirY": 1057521231
+}
+2022-12-10 21:11:48.207 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 117,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062919216,
+    "LookDirY": 1057279283
+}
+2022-12-10 21:11:48.224 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 118,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063077072,
+    "LookDirY": 1057013648
+}
+2022-12-10 21:11:48.240 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 119,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063235079,
+    "LookDirY": 1056507488
+}
+2022-12-10 21:11:48.255 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 120,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063384948,
+    "LookDirY": 1055956983
+}
+2022-12-10 21:11:48.270 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 121,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063525231,
+    "LookDirY": 1055418340
+}
+2022-12-10 21:11:48.286 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 122,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063662198,
+    "LookDirY": 1054868214
+}
+2022-12-10 21:11:48.309 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 123,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063873731,
+    "LookDirY": 1053964824
+}
+2022-12-10 21:11:48.324 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 124,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063999528,
+    "LookDirY": 1053391895
+}
+2022-12-10 21:11:48.342 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 125,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064142656,
+    "LookDirY": 1052702053
+}
+2022-12-10 21:11:48.358 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 126,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064271623,
+    "LookDirY": 1052040219
+}
+2022-12-10 21:11:48.374 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 127,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064406042,
+    "LookDirY": 1051302203
+}
+2022-12-10 21:11:48.388 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 128,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064516619,
+    "LookDirY": 1050650972
+}
+2022-12-10 21:11:48.403 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 129,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064624317,
+    "LookDirY": 1049970339
+}
+2022-12-10 21:11:48.426 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 130,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064772789,
+    "LookDirY": 1048937015
+}
+2022-12-10 21:11:48.444 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 131,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064870060,
+    "LookDirY": 1047788066
+}
+2022-12-10 21:11:48.459 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 132,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064960719,
+    "LookDirY": 1046229834
+}
+2022-12-10 21:11:48.473 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 133,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065033632,
+    "LookDirY": 1044834941
+}
+2022-12-10 21:11:48.488 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 134,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065102595,
+    "LookDirY": 1043354997
+}
+2022-12-10 21:11:48.510 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 135,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065188036,
+    "LookDirY": 1041192582
+}
+2022-12-10 21:11:48.525 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 136,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065237270,
+    "LookDirY": 1039162391
+}
+2022-12-10 21:11:48.542 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 137,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065281418,
+    "LookDirY": 1035813976
+}
+2022-12-10 21:11:48.557 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 138,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065314219,
+    "LookDirY": 1032556010
+}
+2022-12-10 21:11:48.574 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 139,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065336338,
+    "LookDirY": 1027059169
+}
+2022-12-10 21:11:48.590 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 140,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065341412,
+    "LookDirY": 1025089652
+}
+2022-12-10 21:11:48.608 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 141,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065337402,
+    "LookDirY": 1026673810
+}
+2022-12-10 21:11:48.625 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 142,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065339189,
+    "LookDirY": 1025996401
+}
+2022-12-10 21:11:48.641 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 143,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065334792,
+    "LookDirY": 1027598437
+}
+2022-12-10 21:11:48.657 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 144,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065324122,
+    "LookDirY": 1030823268
+}
+2022-12-10 21:11:48.674 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 145,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065319015,
+    "LookDirY": 1031975942
+}
+2022-12-10 21:11:48.689 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 146,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065315875,
+    "LookDirY": 1032360125
+}
+2022-12-10 21:11:48.706 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 147,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065320861,
+    "LookDirY": 1031684820
+}
+2022-12-10 21:11:48.723 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 148,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065305465,
+    "LookDirY": 1033529352
+}
+2022-12-10 21:11:48.743 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 149,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065287093,
+    "LookDirY": 1035314677
+}
+2022-12-10 21:11:48.752 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 150,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065278440,
+    "LookDirY": 1036068068
+}
+2022-12-10 21:11:48.776 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 151,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065250862,
+    "LookDirY": 1038213307
+}
+2022-12-10 21:11:48.791 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 152,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065241372,
+    "LookDirY": 1038882185
+}
+2022-12-10 21:11:48.807 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 153,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065224495,
+    "LookDirY": 1040004363
+}
+2022-12-10 21:11:48.827 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 154,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065222730,
+    "LookDirY": 1040117329
+}
+2022-12-10 21:11:48.843 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 155,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065222881,
+    "LookDirY": 1040107657
+}
+2022-12-10 21:11:48.858 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 156,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065223002,
+    "LookDirY": 1040099840
+}
+2022-12-10 21:11:48.874 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 157,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065213073,
+    "LookDirY": 1040454677
+}
+2022-12-10 21:11:48.890 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 158,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065189357,
+    "LookDirY": 1041155159
+}
+2022-12-10 21:11:48.906 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 159,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065160177,
+    "LookDirY": 1041949688
+}
+2022-12-10 21:11:48.920 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 160,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065114697,
+    "LookDirY": 1043074569
+}
+2022-12-10 21:11:48.938 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 161,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065082783,
+    "LookDirY": 1043799514
+}
+2022-12-10 21:11:48.958 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 162,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065081063,
+    "LookDirY": 1043837281
+}
+2022-12-10 21:11:48.973 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 163,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065081318,
+    "LookDirY": 1043831726
+}
+2022-12-10 21:11:48.987 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 164,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065077252,
+    "LookDirY": 1043920581
+}
+2022-12-10 21:11:49.007 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 165,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065077630,
+    "LookDirY": 1043912367
+}
+2022-12-10 21:11:49.021 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 166,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065077888,
+    "LookDirY": 1043906758
+}
+2022-12-10 21:11:49.038 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 167,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065078182,
+    "LookDirY": 1043900348
+}
+2022-12-10 21:11:49.053 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 168,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065080680,
+    "LookDirY": 1043845728
+}
+2022-12-10 21:11:49.073 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 169,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065081057,
+    "LookDirY": 1043837440
+}
+2022-12-10 21:11:49.089 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 170,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065081343,
+    "LookDirY": 1043831169
+}
+2022-12-10 21:11:49.105 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 171,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065081619,
+    "LookDirY": 1043825124
+}
+2022-12-10 21:11:49.126 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 172,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065097489,
+    "LookDirY": 1043471228
+}
+2022-12-10 21:11:49.139 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 173,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065097745,
+    "LookDirY": 1043465441
+}
+2022-12-10 21:11:49.155 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 174,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065097990,
+    "LookDirY": 1043459887
+}
+2022-12-10 21:11:49.171 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 175,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065115006,
+    "LookDirY": 1043067324
+}
+2022-12-10 21:11:49.191 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 176,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065115344,
+    "LookDirY": 1043059397
+}
+2022-12-10 21:11:49.206 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 177,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065115458,
+    "LookDirY": 1043056698
+}
+2022-12-10 21:11:49.227 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 178,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065115927,
+    "LookDirY": 1043045699
+}
+2022-12-10 21:11:49.242 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 179,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065116182,
+    "LookDirY": 1043039689
+}
+2022-12-10 21:11:49.257 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 180,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065116422,
+    "LookDirY": 1043034049
+}
+2022-12-10 21:11:49.271 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 181,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065141121,
+    "LookDirY": 1042435859
+}
+2022-12-10 21:11:49.292 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 182,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065141420,
+    "LookDirY": 1042428447
+}
+2022-12-10 21:11:49.306 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 183,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065141645,
+    "LookDirY": 1042422798
+}
+2022-12-10 21:11:49.320 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 184,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065141840,
+    "LookDirY": 1042417944
+}
+2022-12-10 21:11:49.337 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 185,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065142078,
+    "LookDirY": 1042412013
+}
+2022-12-10 21:11:49.358 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 186,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065142405,
+    "LookDirY": 1042403823
+}
+2022-12-10 21:11:49.372 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 187,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065142612,
+    "LookDirY": 1042398659
+}
+2022-12-10 21:11:49.392 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 188,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065142916,
+    "LookDirY": 1042391071
+}
+2022-12-10 21:11:49.407 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 189,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065143134,
+    "LookDirY": 1042385595
+}
+2022-12-10 21:11:49.422 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 190,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065143353,
+    "LookDirY": 1042380106
+}
+2022-12-10 21:11:49.437 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 191,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065143588,
+    "LookDirY": 1042374232
+}
+2022-12-10 21:11:49.459 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 192,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065143900,
+    "LookDirY": 1042366394
+}
+2022-12-10 21:11:49.474 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 193,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065144128,
+    "LookDirY": 1042360687
+}
+2022-12-10 21:11:49.488 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 194,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065144342,
+    "LookDirY": 1042355302
+}
+2022-12-10 21:11:49.508 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 195,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065144641,
+    "LookDirY": 1042347804
+}
+2022-12-10 21:11:49.521 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 196,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065144851,
+    "LookDirY": 1042342536
+}
+2022-12-10 21:11:49.537 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 197,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065145055,
+    "LookDirY": 1042337372
+}
+2022-12-10 21:11:49.559 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 198,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065145415,
+    "LookDirY": 1042328343
+}
+2022-12-10 21:11:49.573 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 199,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065145611,
+    "LookDirY": 1042323395
+}
+2022-12-10 21:11:49.586 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 200,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065145825,
+    "LookDirY": 1042317991
+}
+2022-12-10 21:11:49.608 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 201,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065146144,
+    "LookDirY": 1042309975
+}
+2022-12-10 21:11:49.622 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 202,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065146357,
+    "LookDirY": 1042304592
+}
+2022-12-10 21:11:49.637 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 203,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065146576,
+    "LookDirY": 1042299051
+}
+2022-12-10 21:11:49.659 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 204,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065146907,
+    "LookDirY": 1042290697
+}
+2022-12-10 21:11:49.672 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 205,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065147123,
+    "LookDirY": 1042285251
+}
+2022-12-10 21:11:49.686 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 206,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065147326,
+    "LookDirY": 1042280108
+}
+2022-12-10 21:11:49.705 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 207,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065147615,
+    "LookDirY": 1042272770
+}
+2022-12-10 21:11:49.719 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 208,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065147823,
+    "LookDirY": 1042267510
+}
+2022-12-10 21:11:49.741 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 209,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065148103,
+    "LookDirY": 1042260433
+}
+2022-12-10 21:11:49.755 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 210,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065148362,
+    "LookDirY": 1042253851
+}
+2022-12-10 21:11:49.776 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 211,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065148672,
+    "LookDirY": 1042246000
+}
+2022-12-10 21:11:49.790 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 212,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065148890,
+    "LookDirY": 1042240451
+}
+2022-12-10 21:11:49.805 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 213,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065149117,
+    "LookDirY": 1042234701
+}
+2022-12-10 21:11:49.819 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 214,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065149329,
+    "LookDirY": 1042229302
+}
+2022-12-10 21:11:49.840 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 215,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065149655,
+    "LookDirY": 1042221000
+}
+2022-12-10 21:11:49.855 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 216,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065149875,
+    "LookDirY": 1042215425
+}
+2022-12-10 21:11:49.876 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 217,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065150179,
+    "LookDirY": 1042207654
+}
+2022-12-10 21:11:49.889 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 218,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065150406,
+    "LookDirY": 1042201921
+}
+2022-12-10 21:11:49.904 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 219,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065150612,
+    "LookDirY": 1042196655
+}
+2022-12-10 21:11:49.926 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 220,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065150935,
+    "LookDirY": 1042188379
+}
+2022-12-10 21:11:49.940 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 221,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065151170,
+    "LookDirY": 1042182400
+}
+2022-12-10 21:11:49.953 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 222,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065151378,
+    "LookDirY": 1042177080
+}
+2022-12-10 21:11:49.973 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 223,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065151679,
+    "LookDirY": 1042169371
+}
+2022-12-10 21:11:49.988 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 224,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065151887,
+    "LookDirY": 1042164056
+}
+2022-12-10 21:11:50.008 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 225,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152215,
+    "LookDirY": 1042155668
+}
+2022-12-10 21:11:50.024 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 226,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152436,
+    "LookDirY": 1042150003
+}
+2022-12-10 21:11:50.039 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 227,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152671,
+    "LookDirY": 1042143999
+}
+2022-12-10 21:11:50.053 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 228,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152896,
+    "LookDirY": 1042138232
+}
+2022-12-10 21:11:50.074 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 229,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.088 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 230,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.110 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 231,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.125 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 232,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.141 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 233,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.155 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 234,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.174 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 235,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.188 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 236,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.205 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 237,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.220 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 238,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.240 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 239,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.257 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 240,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.272 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 241,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.287 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 242,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065152946,
+    "LookDirY": 1042136942
+}
+2022-12-10 21:11:50.303 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 243,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065141539,
+    "LookDirY": 1042425432
+}
+2022-12-10 21:11:50.321 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 244,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1065062555,
+    "LookDirY": 1044236473
+}
+2022-12-10 21:11:50.337 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 245,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064998248,
+    "LookDirY": 1045530351
+}
+2022-12-10 21:11:50.353 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 246,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064942750,
+    "LookDirY": 1046552477
+}
+2022-12-10 21:11:50.372 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 247,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064926433,
+    "LookDirY": 1046839163
+}
+2022-12-10 21:11:50.387 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 248,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064909828,
+    "LookDirY": 1047125115
+}
+2022-12-10 21:11:50.409 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 249,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064854570,
+    "LookDirY": 1048038556
+}
+2022-12-10 21:11:50.425 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 250,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064753700,
+    "LookDirY": 1049077163
+}
+2022-12-10 21:11:50.441 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 251,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064734282,
+    "LookDirY": 1049217316
+}
+2022-12-10 21:11:50.457 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 252,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064714595,
+    "LookDirY": 1049357061
+}
+2022-12-10 21:11:50.474 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 253,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064654035,
+    "LookDirY": 1049773165
+}
+2022-12-10 21:11:50.491 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 254,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064591271,
+    "LookDirY": 1050184602
+}
+2022-12-10 21:11:50.505 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 255,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064554245,
+    "LookDirY": 1050418850
+}
+2022-12-10 21:11:50.532 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 256,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064552888,
+    "LookDirY": 1050427317
+}
+2022-12-10 21:11:50.540 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 257,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064483166,
+    "LookDirY": 1050852666
+}
+2022-12-10 21:11:50.557 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 258,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064450615,
+    "LookDirY": 1051044935
+}
+2022-12-10 21:11:50.576 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 259,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064427247,
+    "LookDirY": 1051180647
+}
+2022-12-10 21:11:50.592 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 260,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064275508,
+    "LookDirY": 1052019623
+}
+2022-12-10 21:11:50.609 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 261,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1064045285,
+    "LookDirY": 1053176033
+}
+2022-12-10 21:11:50.624 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 262,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063459176,
+    "LookDirY": 1055674943
+}
+2022-12-10 21:11:50.640 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 263,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062663052,
+    "LookDirY": 1057688078
+}
+2022-12-10 21:11:50.657 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 264,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061725298,
+    "LookDirY": 1058995738
+}
+2022-12-10 21:11:50.674 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 265,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060218987,
+    "LookDirY": 1060655562
+}
+2022-12-10 21:11:50.691 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 266,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058649870,
+    "LookDirY": 1061992113
+}
+2022-12-10 21:11:50.708 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 267,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1055538597,
+    "LookDirY": 1063494448
+}
+2022-12-10 21:11:50.724 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 268,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1051710674,
+    "LookDirY": 1064332855
+}
+2022-12-10 21:11:50.741 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 269,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1045767992,
+    "LookDirY": 1064985717
+}
+2022-12-10 21:11:50.758 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 270,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1034980601,
+    "LookDirY": 1065290760
+}
+2022-12-10 21:11:50.774 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 271,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3153495040,
+    "LookDirY": 1065352741
+}
+2022-12-10 21:11:50.793 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 272,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3182893132,
+    "LookDirY": 1065286033
+}
+2022-12-10 21:11:50.808 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 273,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3189062939,
+    "LookDirY": 1065174082
+}
+2022-12-10 21:11:50.825 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 274,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3193268524,
+    "LookDirY": 1064984818
+}
+2022-12-10 21:11:50.841 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 275,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3197146469,
+    "LookDirY": 1064670379
+}
+2022-12-10 21:11:50.859 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 276,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3199455356,
+    "LookDirY": 1064284515
+}
+2022-12-10 21:11:50.874 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 277,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3201413912,
+    "LookDirY": 1063881500
+}
+2022-12-10 21:11:50.892 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 278,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3202607527,
+    "LookDirY": 1063599326
+}
+2022-12-10 21:11:50.903 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 279,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3202984516,
+    "LookDirY": 1063504139
+}
+2022-12-10 21:11:50.920 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 280,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3204022518,
+    "LookDirY": 1063226334
+}
+2022-12-10 21:11:50.943 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 281,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3204795586,
+    "LookDirY": 1062899350
+}
+2022-12-10 21:11:50.958 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 282,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205038553,
+    "LookDirY": 1062748306
+}
+2022-12-10 21:11:50.975 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 283,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205169711,
+    "LookDirY": 1062664355
+}
+2022-12-10 21:11:50.990 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 284,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205293069,
+    "LookDirY": 1062583816
+}
+2022-12-10 21:11:51.006 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 285,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205336866,
+    "LookDirY": 1062554849
+}
+2022-12-10 21:11:51.021 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 286,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205336866,
+    "LookDirY": 1062554849
+}
+2022-12-10 21:11:51.042 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 287,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205358886,
+    "LookDirY": 1062540209
+}
+2022-12-10 21:11:51.059 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 288,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3205128088,
+    "LookDirY": 1062691182
+}
+2022-12-10 21:11:51.075 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 289,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3204779076,
+    "LookDirY": 1062909407
+}
+2022-12-10 21:11:51.093 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 290,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3204030555,
+    "LookDirY": 1063224090
+}
+2022-12-10 21:11:51.105 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 291,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3203297824,
+    "LookDirY": 1063422746
+}
+2022-12-10 21:11:51.123 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 292,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3202019582,
+    "LookDirY": 1063741910
+}
+2022-12-10 21:11:51.139 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 293,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3200927039,
+    "LookDirY": 1063988482
+}
+2022-12-10 21:11:51.156 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 294,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3199570130,
+    "LookDirY": 1064262871
+}
+2022-12-10 21:11:51.172 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 295,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3197679497,
+    "LookDirY": 1064589515
+}
+2022-12-10 21:11:51.189 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 296,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3194265786,
+    "LookDirY": 1064929704
+}
+2022-12-10 21:11:51.207 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 297,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3188045690,
+    "LookDirY": 1065209560
+}
+2022-12-10 21:11:51.225 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 298,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3176207864,
+    "LookDirY": 1065331343
+}
+2022-12-10 21:11:51.240 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 299,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1016291923,
+    "LookDirY": 1065350501
+}
+2022-12-10 21:11:51.256 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 300,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1032181285,
+    "LookDirY": 1065317354
+}
+2022-12-10 21:11:51.273 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 301,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1037476157,
+    "LookDirY": 1065260830
+}
+2022-12-10 21:11:51.288 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 302,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1040248659,
+    "LookDirY": 1065219691
+}
+2022-12-10 21:11:51.305 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 303,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1040812321,
+    "LookDirY": 1065201199
+}
+2022-12-10 21:11:51.322 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 304,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1041142029,
+    "LookDirY": 1065189819
+}
+2022-12-10 21:11:51.336 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 305,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1041142029,
+    "LookDirY": 1065189819
+}
+2022-12-10 21:11:51.358 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 306,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1041142029,
+    "LookDirY": 1065189819
+}
+2022-12-10 21:11:51.373 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 307,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1041423943,
+    "LookDirY": 1065179757
+}
+2022-12-10 21:11:51.390 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 308,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1041986239,
+    "LookDirY": 1065158776
+}
+2022-12-10 21:11:51.406 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 309,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1042266569,
+    "LookDirY": 1065147861
+}
+2022-12-10 21:11:51.421 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 310,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1043104130,
+    "LookDirY": 1065113436
+}
+2022-12-10 21:11:51.437 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 311,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1043659545,
+    "LookDirY": 1065089104
+}
+2022-12-10 21:11:51.460 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 312,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1043936316,
+    "LookDirY": 1065076530
+}
+2022-12-10 21:11:51.473 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 313,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044212431,
+    "LookDirY": 1065063687
+}
+2022-12-10 21:11:51.489 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 314,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044212431,
+    "LookDirY": 1065063687
+}
+2022-12-10 21:11:51.506 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 315,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044212431,
+    "LookDirY": 1065063687
+}
+2022-12-10 21:11:51.522 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 316,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.537 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 317,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.558 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 318,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.574 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 319,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.588 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 320,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.606 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 321,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.628 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 322,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.638 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 323,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1044762733,
+    "LookDirY": 1065037196
+}
+2022-12-10 21:11:51.655 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 324,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1046093793,
+    "LookDirY": 1064968171
+}
+2022-12-10 21:11:51.670 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 325,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1047770597,
+    "LookDirY": 1064871131
+}
+2022-12-10 21:11:51.690 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 326,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1049013599,
+    "LookDirY": 1064762399
+}
+2022-12-10 21:11:51.705 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 327,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1049837774,
+    "LookDirY": 1064644370
+}
+2022-12-10 21:11:51.725 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 328,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1050643435,
+    "LookDirY": 1064517856
+}
+2022-12-10 21:11:51.740 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 329,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1051429563,
+    "LookDirY": 1064383542
+}
+2022-12-10 21:11:51.754 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 330,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1052195380,
+    "LookDirY": 1064242111
+}
+2022-12-10 21:11:51.775 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 331,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1052940266,
+    "LookDirY": 1064094248
+}
+2022-12-10 21:11:51.790 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 332,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1053663753,
+    "LookDirY": 1063940631
+}
+2022-12-10 21:11:51.806 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 333,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1054365505,
+    "LookDirY": 1063781928
+}
+2022-12-10 21:11:51.820 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 334,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1055045321,
+    "LookDirY": 1063618789
+}
+2022-12-10 21:11:51.840 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 335,
+    "MoveDirX": 3212836864,
+    "MoveDirY": 0,
+    "LookDirX": 1055703118,
+    "LookDirY": 1063451838
+}
+2022-12-10 21:11:51.859 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 336,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1056338924,
+    "LookDirY": 1063281679
+}
+2022-12-10 21:11:51.872 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 337,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1056952867,
+    "LookDirY": 1063108883
+}
+2022-12-10 21:11:51.889 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 338,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1057285173,
+    "LookDirY": 1062915641
+}
+2022-12-10 21:11:51.906 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 339,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1057519395,
+    "LookDirY": 1062770740
+}
+2022-12-10 21:11:51.920 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 340,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1057722083,
+    "LookDirY": 1062640996
+}
+2022-12-10 21:11:51.940 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 341,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1057916746,
+    "LookDirY": 1062512480
+}
+2022-12-10 21:11:51.956 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 342,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058105901,
+    "LookDirY": 1062383823
+}
+2022-12-10 21:11:51.970 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 343,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058289836,
+    "LookDirY": 1062255049
+}
+2022-12-10 21:11:51.990 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 344,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058468657,
+    "LookDirY": 1062126288
+}
+2022-12-10 21:11:52.005 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 345,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058642418,
+    "LookDirY": 1061997707
+}
+2022-12-10 21:11:52.021 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 346,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058811289,
+    "LookDirY": 1061869376
+}
+2022-12-10 21:11:52.043 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 347,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1058975338,
+    "LookDirY": 1061741437
+}
+2022-12-10 21:11:52.056 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 348,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059134678,
+    "LookDirY": 1061613994
+}
+2022-12-10 21:11:52.071 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 349,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059289419,
+    "LookDirY": 1061487143
+}
+2022-12-10 21:11:52.093 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 350,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059439698,
+    "LookDirY": 1061360954
+}
+2022-12-10 21:11:52.109 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 351,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059585597,
+    "LookDirY": 1061235531
+}
+2022-12-10 21:11:52.125 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 352,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059727225,
+    "LookDirY": 1061110957
+}
+2022-12-10 21:11:52.140 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 353,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059864732,
+    "LookDirY": 1060987265
+}
+2022-12-10 21:11:52.157 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 354,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059998173,
+    "LookDirY": 1060864569
+}
+2022-12-10 21:11:52.173 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 355,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060127720,
+    "LookDirY": 1060742871
+}
+2022-12-10 21:11:52.188 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 356,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060253431,
+    "LookDirY": 1060622268
+}
+2022-12-10 21:11:52.206 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 357,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060375467,
+    "LookDirY": 1060502759
+}
+2022-12-10 21:11:52.220 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 358,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060493882,
+    "LookDirY": 1060384433
+}
+2022-12-10 21:11:52.236 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 359,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060608818,
+    "LookDirY": 1060267290
+}
+2022-12-10 21:11:52.258 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 360,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060720374,
+    "LookDirY": 1060151368
+}
+2022-12-10 21:11:52.274 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 361,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060828625,
+    "LookDirY": 1060036723
+}
+2022-12-10 21:11:52.292 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 362,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060933712,
+    "LookDirY": 1059923331
+}
+2022-12-10 21:11:52.309 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 363,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061035700,
+    "LookDirY": 1059811251
+}
+2022-12-10 21:11:52.325 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 364,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061134700,
+    "LookDirY": 1059700479
+}
+2022-12-10 21:11:52.340 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 365,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061230813,
+    "LookDirY": 1059591022
+}
+2022-12-10 21:11:52.356 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 366,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061324113,
+    "LookDirY": 1059482905
+}
+2022-12-10 21:11:52.371 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 367,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061414700,
+    "LookDirY": 1059376129
+}
+2022-12-10 21:11:52.389 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 368,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061502661,
+    "LookDirY": 1059270690
+}
+2022-12-10 21:11:52.404 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 369,
+    "MoveDirX": 3207922935,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061588072,
+    "LookDirY": 1059166606
+}
+2022-12-10 21:11:52.423 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 370,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061671007,
+    "LookDirY": 1059063887
+}
+2022-12-10 21:11:52.441 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 371,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061751565,
+    "LookDirY": 1058962503
+}
+2022-12-10 21:11:52.456 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 372,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061802005,
+    "LookDirY": 1058898197
+}
+2022-12-10 21:11:52.471 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 373,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061812660,
+    "LookDirY": 1058884530
+}
+2022-12-10 21:11:52.491 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 374,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813673,
+    "LookDirY": 1058883231
+}
+2022-12-10 21:11:52.507 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 375,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813736,
+    "LookDirY": 1058883147
+}
+2022-12-10 21:11:52.521 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 376,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813762,
+    "LookDirY": 1058883116
+}
+2022-12-10 21:11:52.542 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 377,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813753,
+    "LookDirY": 1058883126
+}
+2022-12-10 21:11:52.557 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 378,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813757,
+    "LookDirY": 1058883123
+}
+2022-12-10 21:11:52.571 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 379,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813759,
+    "LookDirY": 1058883119
+}
+2022-12-10 21:11:52.586 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 380,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813761,
+    "LookDirY": 1058883117
+}
+2022-12-10 21:11:52.603 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 381,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813758,
+    "LookDirY": 1058883121
+}
+2022-12-10 21:11:52.624 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 382,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813756,
+    "LookDirY": 1058883125
+}
+2022-12-10 21:11:52.640 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 383,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813769,
+    "LookDirY": 1058883107
+}
+2022-12-10 21:11:52.655 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 384,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813765,
+    "LookDirY": 1058883110
+}
+2022-12-10 21:11:52.671 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 385,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813752,
+    "LookDirY": 1058883128
+}
+2022-12-10 21:11:52.689 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 386,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061813752,
+    "LookDirY": 1058883128
+}
+2022-12-10 21:11:52.708 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 387,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061735119,
+    "LookDirY": 1058983331
+}
+2022-12-10 21:11:52.725 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 388,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061578285,
+    "LookDirY": 1059178620
+}
+2022-12-10 21:11:52.744 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 389,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061448121,
+    "LookDirY": 1059336273
+}
+2022-12-10 21:11:52.752 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 390,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061370321,
+    "LookDirY": 1059428664
+}
+2022-12-10 21:11:52.772 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 391,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061266972,
+    "LookDirY": 1059549340
+}
+2022-12-10 21:11:52.788 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 392,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061208752,
+    "LookDirY": 1059616315
+}
+2022-12-10 21:11:52.808 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 393,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061157550,
+    "LookDirY": 1059674629
+}
+2022-12-10 21:11:52.823 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 394,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061132009,
+    "LookDirY": 1059703515
+}
+2022-12-10 21:11:52.838 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 395,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061132001,
+    "LookDirY": 1059703524
+}
+2022-12-10 21:11:52.855 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 396,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061106494,
+    "LookDirY": 1059732241
+}
+2022-12-10 21:11:52.871 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 397,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061093979,
+    "LookDirY": 1059746281
+}
+2022-12-10 21:11:52.890 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 398,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061068685,
+    "LookDirY": 1059774561
+}
+2022-12-10 21:11:52.909 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 399,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061018188,
+    "LookDirY": 1059830639
+}
+2022-12-10 21:11:52.925 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 400,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992991,
+    "LookDirY": 1059858435
+}
+2022-12-10 21:11:52.944 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 401,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992983,
+    "LookDirY": 1059858443
+}
+2022-12-10 21:11:52.953 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 402,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992995,
+    "LookDirY": 1059858430
+}
+2022-12-10 21:11:52.972 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 403,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992988,
+    "LookDirY": 1059858437
+}
+2022-12-10 21:11:52.988 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 404,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992993,
+    "LookDirY": 1059858431
+}
+2022-12-10 21:11:53.008 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 405,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992993,
+    "LookDirY": 1059858431
+}
+2022-12-10 21:11:53.025 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 406,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992996,
+    "LookDirY": 1059858429
+}
+2022-12-10 21:11:53.043 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 407,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992988,
+    "LookDirY": 1059858437
+}
+2022-12-10 21:11:53.058 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 408,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992992,
+    "LookDirY": 1059858433
+}
+2022-12-10 21:11:53.076 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 409,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992984,
+    "LookDirY": 1059858441
+}
+2022-12-10 21:11:53.091 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 410,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992988,
+    "LookDirY": 1059858437
+}
+2022-12-10 21:11:53.113 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 411,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992988,
+    "LookDirY": 1059858437
+}
+2022-12-10 21:11:53.124 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 412,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992987,
+    "LookDirY": 1059858439
+}
+2022-12-10 21:11:53.145 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 413,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992985,
+    "LookDirY": 1059858440
+}
+2022-12-10 21:11:53.154 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 414,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992991,
+    "LookDirY": 1059858435
+}
+2022-12-10 21:11:53.173 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 415,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992995,
+    "LookDirY": 1059858430
+}
+2022-12-10 21:11:53.189 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 1,
+    "TeamId": 0,
+    "StartTick": 416,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992991,
+    "LookDirY": 1059858435
+}
+2022-12-10 21:11:53.212 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 417,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1060992993,
+    "LookDirY": 1059858431
+}
+2022-12-10 21:11:53.222 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 418,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060992996,
+    "LookDirY": 1059858429
+}
+2022-12-10 21:11:53.241 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 419,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060993001,
+    "LookDirY": 1059858423
+}
+2022-12-10 21:11:53.258 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 420,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060889771,
+    "LookDirY": 1059971001
+}
+2022-12-10 21:11:53.277 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 421,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.289 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 422,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.306 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 423,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.322 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 424,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.337 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 425,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.358 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 426,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.372 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 427,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.388 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 428,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.405 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 429,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.423 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 430,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060858047,
+    "LookDirY": 1060005185
+}
+2022-12-10 21:11:53.444 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 431,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060916454,
+    "LookDirY": 1059942098
+}
+2022-12-10 21:11:53.455 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 432,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060935705,
+    "LookDirY": 1059921160
+}
+2022-12-10 21:11:53.473 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 433,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061049018,
+    "LookDirY": 1059796464
+}
+2022-12-10 21:11:53.489 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 434,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061122498,
+    "LookDirY": 1059714239
+}
+2022-12-10 21:11:53.508 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 435,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061140622,
+    "LookDirY": 1059693790
+}
+2022-12-10 21:11:53.524 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 436,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061140622,
+    "LookDirY": 1059693790
+}
+2022-12-10 21:11:53.540 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 437,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061140622,
+    "LookDirY": 1059693790
+}
+2022-12-10 21:11:53.558 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 438,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061140622,
+    "LookDirY": 1059693790
+}
+2022-12-10 21:11:53.577 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 439,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061140622,
+    "LookDirY": 1059693790
+}
+2022-12-10 21:11:53.589 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 440,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.610 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 441,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.628 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 442,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.638 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 443,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.655 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 444,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.672 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 445,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.691 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 446,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.713 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 447,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.725 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 448,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061176559,
+    "LookDirY": 1059653044
+}
+2022-12-10 21:11:53.743 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 449,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061275747,
+    "LookDirY": 1059539185
+}
+2022-12-10 21:11:53.762 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 450,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061303510,
+    "LookDirY": 1059506941
+}
+2022-12-10 21:11:53.773 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 451,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061306245,
+    "LookDirY": 1059503755
+}
+2022-12-10 21:11:53.792 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 452,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061375956,
+    "LookDirY": 1059422018
+}
+2022-12-10 21:11:53.804 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 453,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061393101,
+    "LookDirY": 1059401751
+}
+2022-12-10 21:11:53.826 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 454,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061559268,
+    "LookDirY": 1059201898
+}
+2022-12-10 21:11:53.838 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 455,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1061716421,
+    "LookDirY": 1059006932
+}
+2022-12-10 21:11:53.857 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 456,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1062515277,
+    "LookDirY": 1057912570
+}
+2022-12-10 21:11:53.879 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 457,
+    "MoveDirX": 0,
+    "MoveDirY": 1065353216,
+    "LookDirX": 1063186048,
+    "LookDirY": 1056682418
+}
+2022-12-10 21:11:53.892 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 458,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063396486,
+    "LookDirY": 1055913568
+}
+2022-12-10 21:11:53.908 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 459,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063615329,
+    "LookDirY": 1055059318
+}
+2022-12-10 21:11:53.921 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 460,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063761405,
+    "LookDirY": 1054453217
+}
+2022-12-10 21:11:53.940 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 461,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063819829,
+    "LookDirY": 1054201768
+}
+2022-12-10 21:11:53.960 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 462,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063816850,
+    "LookDirY": 1054214719
+}
+2022-12-10 21:11:53.971 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 463,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063803987,
+    "LookDirY": 1054270482
+}
+2022-12-10 21:11:53.990 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 464,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063842425,
+    "LookDirY": 1054103030
+}
+2022-12-10 21:11:54.010 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 465,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063839862,
+    "LookDirY": 1054114267
+}
+2022-12-10 21:11:54.021 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 466,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063840107,
+    "LookDirY": 1054113199
+}
+2022-12-10 21:11:54.036 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 467,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063822256,
+    "LookDirY": 1054191198
+}
+2022-12-10 21:11:54.061 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 468,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063798882,
+    "LookDirY": 1054292547
+}
+2022-12-10 21:11:54.071 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 469,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1063780337,
+    "LookDirY": 1054372331
+}
+2022-12-10 21:11:54.091 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 470,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063756040,
+    "LookDirY": 1054476044
+}
+2022-12-10 21:11:54.104 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 471,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063731209,
+    "LookDirY": 1054581088
+}
+2022-12-10 21:11:54.122 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 472,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063656436,
+    "LookDirY": 1054891874
+}
+2022-12-10 21:11:54.141 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 473,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063607025,
+    "LookDirY": 1055092864
+}
+2022-12-10 21:11:54.161 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 474,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063528379,
+    "LookDirY": 1055405981
+}
+2022-12-10 21:11:54.172 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 475,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063420502,
+    "LookDirY": 1055822705
+}
+2022-12-10 21:11:54.193 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 476,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1063165610,
+    "LookDirY": 1056754622
+}
+2022-12-10 21:11:54.206 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 477,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062979996,
+    "LookDirY": 1057178318
+}
+2022-12-10 21:11:54.231 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 478,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062549325,
+    "LookDirY": 1057861536
+}
+2022-12-10 21:11:54.241 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 479,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062331660,
+    "LookDirY": 1058181039
+}
+2022-12-10 21:11:54.253 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 480,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062110960,
+    "LookDirY": 1058489619
+}
+2022-12-10 21:11:54.271 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 481,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061796449,
+    "LookDirY": 1058905312
+}
+2022-12-10 21:11:54.289 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 482,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061661596,
+    "LookDirY": 1059075626
+}
+2022-12-10 21:11:54.306 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 483,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061500269,
+    "LookDirY": 1059273581
+}
+2022-12-10 21:11:54.321 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 484,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061390020,
+    "LookDirY": 1059405399
+}
+2022-12-10 21:11:54.340 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 485,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061291434,
+    "LookDirY": 1059520986
+}
+2022-12-10 21:11:54.354 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 486,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061189653,
+    "LookDirY": 1059638130
+}
+2022-12-10 21:11:54.374 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 487,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061084565,
+    "LookDirY": 1059756822
+}
+2022-12-10 21:11:54.387 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 488,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1060976054,
+    "LookDirY": 1059877046
+}
+2022-12-10 21:11:54.405 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 489,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1060864001,
+    "LookDirY": 1059998785
+}
+2022-12-10 21:11:54.424 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 490,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1060748285,
+    "LookDirY": 1060122014
+}
+2022-12-10 21:11:54.442 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 491,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1060605712,
+    "LookDirY": 1060270486
+}
+2022-12-10 21:11:54.453 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 492,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1060498180,
+    "LookDirY": 1060380092
+}
+2022-12-10 21:11:54.476 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 493,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060425171,
+    "LookDirY": 1060453378
+}
+2022-12-10 21:11:54.487 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 494,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060358098,
+    "LookDirY": 1060519917
+}
+2022-12-10 21:11:54.507 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 495,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060640146,
+    "LookDirY": 1060234960
+}
+2022-12-10 21:11:54.529 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 496,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060891218,
+    "LookDirY": 1059969435
+}
+2022-12-10 21:11:54.541 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 497,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061045071,
+    "LookDirY": 1059800849
+}
+2022-12-10 21:11:54.558 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 498,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061160201,
+    "LookDirY": 1059671623
+}
+2022-12-10 21:11:54.569 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 499,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061176327,
+    "LookDirY": 1059653307
+}
+2022-12-10 21:11:54.589 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 500,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.606 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 501,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.621 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 502,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.642 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 2,
+    "TeamId": 0,
+    "StartTick": 503,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.661 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 504,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.670 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 505,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.689 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 506,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.706 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 507,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.723 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 508,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.739 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 509,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.756 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 510,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.774 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 511,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.790 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 512,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.810 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 513,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061245446,
+    "LookDirY": 1059574186
+}
+2022-12-10 21:11:54.819 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 514,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061282413,
+    "LookDirY": 1059531457
+}
+2022-12-10 21:11:54.840 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 515,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061482967,
+    "LookDirY": 1059294450
+}
+2022-12-10 21:11:54.860 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 516,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061785098,
+    "LookDirY": 1058919825
+}
+2022-12-10 21:11:54.874 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 517,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062292927,
+    "LookDirY": 1058236273
+}
+2022-12-10 21:11:54.889 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 518,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062435083,
+    "LookDirY": 1058031199
+}
+2022-12-10 21:11:54.911 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 519,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062648084,
+    "LookDirY": 1057711175
+}
+2022-12-10 21:11:54.922 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 520,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062680478,
+    "LookDirY": 1057661081
+}
+2022-12-10 21:11:54.940 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 521,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062711823,
+    "LookDirY": 1057612231
+}
+2022-12-10 21:11:54.961 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 522,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:54.978 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 523,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:54.989 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 524,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.016 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 525,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.026 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 526,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.045 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 527,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.057 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 528,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.076 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 529,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.089 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 530,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062721982,
+    "LookDirY": 1057596321
+}
+2022-12-10 21:11:55.108 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 531,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062671818,
+    "LookDirY": 1057674510
+}
+2022-12-10 21:11:55.130 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 532,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062605733,
+    "LookDirY": 1057776086
+}
+2022-12-10 21:11:55.140 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 533,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062668642,
+    "LookDirY": 1057679429
+}
+2022-12-10 21:11:55.160 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 534,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062613436,
+    "LookDirY": 1057764328
+}
+2022-12-10 21:11:55.172 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 535,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062517014,
+    "LookDirY": 1057909976
+}
+2022-12-10 21:11:55.189 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 536,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062433222,
+    "LookDirY": 1058033927
+}
+2022-12-10 21:11:55.209 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 537,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062314004,
+    "LookDirY": 1058206275
+}
+2022-12-10 21:11:55.229 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 538,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062206469,
+    "LookDirY": 1058357885
+}
+2022-12-10 21:11:55.241 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 539,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1062117745,
+    "LookDirY": 1058480348
+}
+2022-12-10 21:11:55.259 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 540,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061980198,
+    "LookDirY": 1058665720
+}
+2022-12-10 21:11:55.278 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 541,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061882024,
+    "LookDirY": 1058794841
+}
+2022-12-10 21:11:55.290 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 542,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061780023,
+    "LookDirY": 1058926303
+}
+2022-12-10 21:11:55.309 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 543,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061657107,
+    "LookDirY": 1059081219
+}
+2022-12-10 21:11:55.321 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 544,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1061546265,
+    "LookDirY": 1059217767
+}
+2022-12-10 21:11:55.343 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 545,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061431034,
+    "LookDirY": 1059356680
+}
+2022-12-10 21:11:55.356 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 546,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061272856,
+    "LookDirY": 1059542532
+}
+2022-12-10 21:11:55.375 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 547,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061253901,
+    "LookDirY": 1059564439
+}
+2022-12-10 21:11:55.389 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 548,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061241767,
+    "LookDirY": 1059578425
+}
+2022-12-10 21:11:55.404 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 549,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1061130958,
+    "LookDirY": 1059704702
+}
+2022-12-10 21:11:55.422 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 550,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060896521,
+    "LookDirY": 1059963702
+}
+2022-12-10 21:11:55.440 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 551,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060899143,
+    "LookDirY": 1059960864
+}
+2022-12-10 21:11:55.464 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 552,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060813499,
+    "LookDirY": 1060052873
+}
+2022-12-10 21:11:55.478 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 553,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060178606,
+    "LookDirY": 1060694356
+}
+2022-12-10 21:11:55.488 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 554,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1060066571,
+    "LookDirY": 1060800637
+}
+2022-12-10 21:11:55.506 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 555,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059951553,
+    "LookDirY": 1060907738
+}
+2022-12-10 21:11:55.525 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 556,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059833493,
+    "LookDirY": 1061015608
+}
+2022-12-10 21:11:55.538 +09:00 [INF] size : [182] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 557,
+    "MoveDirX": 1060439287,
+    "MoveDirY": 1060439287,
+    "LookDirX": 1059712306,
+    "LookDirY": 1061124214
+}
+2022-12-10 21:11:55.558 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 558,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1059587936,
+    "LookDirY": 1061233498
+}
+2022-12-10 21:11:55.571 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 559,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1059460279,
+    "LookDirY": 1061343436
+}
+2022-12-10 21:11:55.590 +09:00 [INF] size : [173] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 560,
+    "MoveDirX": 1065353216,
+    "MoveDirY": 0,
+    "LookDirX": 1059202748,
+    "LookDirY": 1061558574
+}
+2022-12-10 21:11:55.610 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 561,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058987370,
+    "LookDirY": 1061731924
+}
+2022-12-10 21:11:55.625 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 562,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058784912,
+    "LookDirY": 1061889643
+}
+2022-12-10 21:11:55.638 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 563,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058736460,
+    "LookDirY": 1061926656
+}
+2022-12-10 21:11:55.654 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 564,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058731779,
+    "LookDirY": 1061930217
+}
+2022-12-10 21:11:55.670 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 565,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058731414,
+    "LookDirY": 1061930495
+}
+2022-12-10 21:11:55.687 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 566,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058731388,
+    "LookDirY": 1061930515
+}
+2022-12-10 21:11:55.706 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 567,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058827436,
+    "LookDirY": 1061856928
+}
+2022-12-10 21:11:55.722 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 568,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058884196,
+    "LookDirY": 1061812921
+}
+2022-12-10 21:11:55.738 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 569,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058884196,
+    "LookDirY": 1061812921
+}
+2022-12-10 21:11:55.754 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 570,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058884196,
+    "LookDirY": 1061812921
+}
+2022-12-10 21:11:55.774 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 571,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1058944351,
+    "LookDirY": 1061765854
+}
+2022-12-10 21:11:55.788 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 572,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059030602,
+    "LookDirY": 1061697596
+}
+2022-12-10 21:11:55.806 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 573,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059209447,
+    "LookDirY": 1061553086
+}
+2022-12-10 21:11:55.824 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 574,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059327464,
+    "LookDirY": 1061455479
+}
+2022-12-10 21:11:55.845 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 575,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059321618,
+    "LookDirY": 1061460358
+}
+2022-12-10 21:11:55.854 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 576,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059320422,
+    "LookDirY": 1061461355
+}
+2022-12-10 21:11:55.877 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 577,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.894 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 578,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.903 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 579,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.929 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 580,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.939 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 581,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.954 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 582,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.977 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 583,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059381831,
+    "LookDirY": 1061409901
+}
+2022-12-10 21:11:55.986 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 584,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059444288,
+    "LookDirY": 1061357051
+}
+2022-12-10 21:11:56.011 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 585,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060314916,
+    "LookDirY": 1060562360
+}
+2022-12-10 21:11:56.019 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 586,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061012048,
+    "LookDirY": 1059837424
+}
+2022-12-10 21:11:56.038 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 587,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062709002,
+    "LookDirY": 1057616643
+}
+2022-12-10 21:11:56.054 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 588,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063268209,
+    "LookDirY": 1056387883
+}
+2022-12-10 21:11:56.071 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 589,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063471297,
+    "LookDirY": 1055628259
+}
+2022-12-10 21:11:56.093 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 590,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.108 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 591,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.125 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 592,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.139 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 593,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.154 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 594,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.170 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 595,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.189 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 596,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.206 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 597,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.220 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 598,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.241 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 599,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063626960,
+    "LookDirY": 1055012181
+}
+2022-12-10 21:11:56.260 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 600,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063612970,
+    "LookDirY": 1055068858
+}
+2022-12-10 21:11:56.270 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 601,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063528938,
+    "LookDirY": 1055403779
+}
+2022-12-10 21:11:56.288 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 602,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063374734,
+    "LookDirY": 1055995294
+}
+2022-12-10 21:11:56.309 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 603,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1063170694,
+    "LookDirY": 1056736695
+}
+2022-12-10 21:11:56.330 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 604,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062823366,
+    "LookDirY": 1057435319
+}
+2022-12-10 21:11:56.342 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 605,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1062484022,
+    "LookDirY": 1057959064
+}
+2022-12-10 21:11:56.360 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 606,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061720370,
+    "LookDirY": 1059001954
+}
+2022-12-10 21:11:56.370 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 607,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1061322421,
+    "LookDirY": 1059484884
+}
+2022-12-10 21:11:56.387 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 608,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060689936,
+    "LookDirY": 1060183219
+}
+2022-12-10 21:11:56.411 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 609,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060269822,
+    "LookDirY": 1060606358
+}
+2022-12-10 21:11:56.426 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 610,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1060049452,
+    "LookDirY": 1060816707
+}
+2022-12-10 21:11:56.447 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 611,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059866880,
+    "LookDirY": 1060985311
+}
+2022-12-10 21:11:56.461 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 612,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059692272,
+    "LookDirY": 1061141964
+}
+2022-12-10 21:11:56.472 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 613,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059596952,
+    "LookDirY": 1061225648
+}
+2022-12-10 21:11:56.490 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 614,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059559208,
+    "LookDirY": 1061258434
+}
+2022-12-10 21:11:56.508 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 615,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059540470,
+    "LookDirY": 1061274637
+}
+2022-12-10 21:11:56.530 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 616,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059540663,
+    "LookDirY": 1061274471
+}
+2022-12-10 21:11:56.545 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 617,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059553139,
+    "LookDirY": 1061263687
+}
+2022-12-10 21:11:56.560 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 618,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059559334,
+    "LookDirY": 1061258325
+}
+2022-12-10 21:11:56.573 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 619,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059553253,
+    "LookDirY": 1061263588
+}
+2022-12-10 21:11:56.586 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 620,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059559370,
+    "LookDirY": 1061258293
+}
+2022-12-10 21:11:56.606 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 621,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059571495,
+    "LookDirY": 1061247782
+}
+2022-12-10 21:11:56.627 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 622,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059577419,
+    "LookDirY": 1061242640
+}
+2022-12-10 21:11:56.638 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 623,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059571400,
+    "LookDirY": 1061247865
+}
+2022-12-10 21:11:56.655 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 624,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059577248,
+    "LookDirY": 1061242787
+}
+2022-12-10 21:11:56.672 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 625,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 1059571334,
+    "LookDirY": 1061247921
+}
+2022-12-10 21:11:56.705 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 626,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3210187886,
+    "LookDirY": 3205107733
+}
+2022-12-10 21:11:56.707 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 627,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3210187886,
+    "LookDirY": 3205107733
+}
+2022-12-10 21:11:56.720 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 628,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3210187886,
+    "LookDirY": 3205107733
+}
+2022-12-10 21:11:56.737 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 629,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3210187886,
+    "LookDirY": 3205107733
+}
+2022-12-10 21:11:56.753 +09:00 [INF] size : [164] 
+{
+    "Id": 5,
+    "UserId": 11,
+    "RoomId": 0,
+    "CharacterType": 0,
+    "ButtonPressed": 0,
+    "TeamId": 0,
+    "StartTick": 630,
+    "MoveDirX": 0,
+    "MoveDirY": 0,
+    "LookDirX": 3210187886,
+    "LookDirY": 3205107733
+}

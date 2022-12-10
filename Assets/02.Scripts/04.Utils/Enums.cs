@@ -7,7 +7,8 @@ public static partial class Enums
 		Entry,
 		Login,
 		Lobby,
-		Game
+		Game,
+		Loading
 	}
 
 	public enum CharacterType

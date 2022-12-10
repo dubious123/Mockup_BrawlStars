@@ -25,6 +25,7 @@ public class Scene_Login : BaseScene
 		_packet = new C_Login();
 		IsReady = true;
 	}
+
 	public void Login()
 	{
 		if (_input_Id.text.Length == 0)
@@ -39,17 +40,20 @@ public class Scene_Login : BaseScene
 			_fadeTool.StartFade();
 			return;
 		}
+
 		_packet.loginId = _input_Id.text;
 		_packet.loginPw = _input_Pw.text;
 		_btn_Login.enabled = false;
 		Network.RegisterSend(_packet);
 	}
+
 	public void OnLoginFailed()
 	{
 		_warning.text = _warningText_LoginFailed;
 		_fadeTool.StartFade();
 		_btn_Login.enabled = true;
 	}
+
 	public void OnLoginSuccess(S_Login res)
 	{
 		User.Init(res);

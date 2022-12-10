@@ -1,10 +1,11 @@
 using MEC;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene_Entry : BaseScene
 {
-
+	[SerializeField] private GameObject _eventSystemPrefab;
 	public override void Init(object param)
 	{
 		Scenetype = Enums.SceneType.Entry;
@@ -21,5 +22,12 @@ public class Scene_Entry : BaseScene
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
+		DontDestroyOnLoad(new GameObject("@Audio", typeof(Audio)));
+		DontDestroyOnLoad(Instantiate(_eventSystemPrefab));
+		Loggers.Init();
+		JobMgr.Init();
+		Network.Init();
+		Audio.Init();
+		Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby);
 	}
 }

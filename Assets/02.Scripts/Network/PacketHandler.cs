@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 using ServerCore;
+
+using UnityEngine;
 
 using static Enums;
 using static ServerCore.Utils.Enums;
@@ -33,25 +36,38 @@ public static class PacketHandler
 
 	private static void S_InitHandle(BasePacket packet, ServerSession session)
 	{
-		Debug.Assert(packet is S_Init);
+		System.Diagnostics.Debug.Assert(packet is S_Init);
 		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Login, null));
 	}
 
 	private static void S_LoginHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_Login;
-		if (Scene.CurrentScene is not Scene_Login loginScene || loginScene.IsReady == false) return;
-		if (req.result == false)
+		//if (Scene.CurrentScene is not Scene_Login loginScene || loginScene.IsReady == false) return;
+		//if (req.result == false)
+		//{
+		//	JobMgr.PushUnityJob(loginScene.OnLoginFailed);
+		//	return;
+		//}
+		//JobMgr.PushUnityJob(() => loginScene.OnLoginSuccess(req));
+		if (Scene.CurrentScene is not Scene_Loading loadingScene || loadingScene.IsReady == false)
 		{
-			JobMgr.PushUnityJob(loginScene.OnLoginFailed);
 			return;
 		}
-		JobMgr.PushUnityJob(() => loginScene.OnLoginSuccess(req));
+
+		if (req.result == false)
+		{
+			JobMgr.PushUnityJob(Application.Quit);
+		}
+
+		User.Init(req);
+
+		JobMgr.PushUnityJob(loadingScene.LoginSuccess);
 	}
 
 	private static void S_EnterLobbyHandle(BasePacket packet, ServerSession session)
 	{
-		Debug.Assert(packet is S_EnterLobby);
+		System.Diagnostics.Debug.Assert(packet is S_EnterLobby);
 		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Lobby, CharacterType.Knight));
 	}
 

@@ -34,8 +34,8 @@ public class ServerSession : Session
 		base.OnConnected();
 		JobMgr.PushUnityJob(() =>
 		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed"));
-		RegisterSend(new C_Init());
-		Send();
+		//RegisterSend(new C_Init());
+		//Send();
 	}
 	protected override void Send()
 	{

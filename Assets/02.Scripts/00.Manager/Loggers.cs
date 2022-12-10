@@ -18,7 +18,7 @@ public class Loggers : MonoBehaviour
 
 	private static List<Logger> _loggers;
 
-	private void Start()
+	public static void Init()
 	{
 		var path = Application.dataPath + "/02.Scripts/Logs/";
 
