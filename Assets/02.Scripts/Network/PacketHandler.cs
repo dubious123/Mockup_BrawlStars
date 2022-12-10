@@ -59,6 +59,7 @@ public static class PacketHandler
 	{
 		var req = packet as S_EnterGame;
 		if (req.TeamId == -1) return;
+
 		User.TeamId = req.TeamId;
 		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Game, req));
 	}
@@ -80,8 +81,8 @@ public static class PacketHandler
 		var req = packet as S_BroadcastEnterGame;
 		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
 		JobMgr.PushUnityJob(() => game.Enter(req.TeamId, (CharacterType)req.Charactertype));
-
 	}
+
 	private static void S_BroadcastStartGameHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_BroadcastStartGame;

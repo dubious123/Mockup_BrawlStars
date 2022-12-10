@@ -20,23 +20,34 @@ public class CharacterController : MonoBehaviour
 	public virtual void Init()
 	{
 		_playerInput = GetComponent<PlayerInput>();
-		_moveAction = _playerInput.actions[InputActionMeta.Move];
+		if (User.Team == Enums.TeamType.Blue)
+		{
+			_moveAction = _playerInput.actions[InputActionMeta.Move];
+		}
+		else
+		{
+			_moveAction = _playerInput.actions[InputActionMeta.MoveInverted];
+		}
+
 		_lookAction = _playerInput.actions[InputActionMeta.Look];
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
 		{
 			_basicAttackAction.started += _ => _buttonPressed |= 0b0001;
 			_basicAttackAction.canceled += _ => _buttonPressed &= 0b1110;
 		}
+
 		_abilityQ = _playerInput.actions[InputActionMeta.Q];
 		{
 			_abilityQ.started += _ => _buttonPressed |= 0b0010;
 			_abilityQ.canceled += _ => _buttonPressed &= 0b1101;
 		}
+
 		_abilityCancel = _playerInput.actions[InputActionMeta.CancelAbility];
 		{
 			_abilityCancel.started += _ => _buttonPressed |= 0b0100;
 			_abilityCancel.canceled += _ => _buttonPressed &= 0b1011;
 		}
+
 		Debug.Assert(Scene.CurrentScene is Scene_Map1);
 		_game = Scene.CurrentScene as Scene_Map1;
 		_isReady = true;

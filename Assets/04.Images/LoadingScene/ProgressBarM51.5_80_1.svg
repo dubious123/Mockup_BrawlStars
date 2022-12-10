@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.5 80">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d85a3d;
+      }
+
+      .cls-2 {
+        fill: #ea7124;
+      }
+    </style>
+  </defs>
+  <g id="_레이어_3" data-name="레이어 3">
+    <rect x="0" width="51.5" height="80"/>
+    <rect class="cls-2" x="0" y="5" width="51.5" height="70"/>
+    <rect class="cls-1" x="0" y="40" width="51.5" height="35"/>
+  </g>
+</svg>

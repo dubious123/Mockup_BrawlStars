@@ -41,7 +41,7 @@ namespace Server.Game
 		public static bool CheckCircleCircleCollision(NetCircleCollider2D left, NetCircleCollider2D right)
 		{
 			var deltaX = left.Center.x - right.Center.x;
-			var deltaY = left.Center.y - right.Center.y;
+			var deltaY = left.Center.z - right.Center.z;
 			var dist = left.Radius + right.Radius;
 			return deltaX * deltaX + deltaY * deltaY <= dist * dist;
 		}

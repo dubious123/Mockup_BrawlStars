@@ -13,7 +13,8 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 {
 
 	[SerializeField] private GameObject _indicator;
-	[SerializeField] private GameObject _bulletPrefab;
+	[SerializeField] private GameObject _bulletPrefabBlue;
+	[SerializeField] private GameObject _bulletPrefabRed;
 
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
@@ -21,12 +22,22 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 
 	private List<CProjectile> _cBullets;
 	private NShellyBuckShot _netBuckShot;
+	private GameObject _bulletPrefab;
 
 	public void Init(CPlayerShelly shelly)
 	{
 		Player = shelly;
 		_netBuckShot = (shelly.NPlayer as NCharacterShelly).BuckShot as NShellyBuckShot;
 		_cBullets = new List<CProjectile>(_netBuckShot.AmmoCount * _netBuckShot.BulletAmountPerAttack);
+		if (shelly.NPlayer.Team == User.Team)
+		{
+			_bulletPrefab = _bulletPrefabBlue;
+		}
+		else
+		{
+			_bulletPrefab = _bulletPrefabRed;
+		}
+
 		foreach (var netBulletArr in _netBuckShot.BulletArrQueue)
 		{
 			foreach (var bullet in netBulletArr)

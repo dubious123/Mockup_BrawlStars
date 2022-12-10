@@ -1,114 +1,173 @@
 using System.Collections.Generic;
+using System.Linq;
 
 using Server.Game;
 
+using UnityEngine;
+
 public class NShellySuperShell : NetBaseSkill
 {
-	public bool BtnPressed { get; private set; }
+	public bool Holding { get; private set; }
+	public bool IsAttack { get; private set; }
+	public int AmmoCount => _ammoCount;
 	public int BulletAmountPerAttack => _bulletAmountPerAttack;
 	public sfloat BulletAngle => _bulletAngle;
-	public NetProjectile[] Bullets;
+	public LinkedList<NetProjectile[]> AliveBulletArrArr { get; private set; }
+	public Queue<NetProjectile[]> BulletArrQueue { get; private set; }
 
 	private IEnumerator<int> _coHandler;
 	private readonly NCharacterShelly _shelly;
 	private readonly HitInfo _hitInfo;
-	private int _bulletAmountPerAttack, _reloadFrame, _currentReloadDeltaFrame,
+	private int _ammoCount, _maxAmmoCount, _bulletAmountPerAttack, _reloadFrame, _currentReloadDeltaFrame,
 		_waitFrameBeforePerform, _waitFrameAfterPerform, _bulletMaxTravelTime;
 	private sfloat _bulletCollisionRange, _bulletSpeed, _bulletAngle;
+
+	private bool _nowPressed, _beforePressed;
 
 	public NShellySuperShell(NCharacterShelly character)
 	{
 		_shelly = character;
-		Character = character;
 		Id = 0x11;
-		_bulletAmountPerAttack = 10;
-		_reloadFrame = 600;
-		_currentReloadDeltaFrame = 0;
-		_waitFrameBeforePerform = 20;
-		_waitFrameAfterPerform = 20;
+		_maxAmmoCount = 3;
+		_ammoCount = _maxAmmoCount;
+		_bulletAmountPerAttack = 9;
+		_reloadFrame = 60;
+		_waitFrameBeforePerform = 10;
+		_waitFrameAfterPerform = 10;
 		_bulletMaxTravelTime = 60;
 		_bulletCollisionRange = (sfloat)0.2f;
-		_bulletSpeed = (sfloat)10 / (sfloat)_bulletMaxTravelTime;
+		_bulletSpeed = (sfloat)12 / (sfloat)_bulletMaxTravelTime;
+		_bulletAngle = (sfloat)50f;
 		_hitInfo = new HitInfo()
 		{
 			Damage = 25,
-			KnockbackDistance = (sfloat)1f,
-			KnockbackDuration = 15
+			KnockbackDuration = 20,
+			KnockbackDistance = (sfloat)0.5f
 		};
 
-		Bullets = new NetProjectile[_bulletAmountPerAttack];
-		for (int j = 0; j < _bulletAmountPerAttack; ++j)
+		AliveBulletArrArr = new();
+		BulletArrQueue = new Queue<NetProjectile[]>(_maxAmmoCount);
+		var degreeOffset = 90 - _bulletAngle * 0.5f;
+		var degreeDelta = _bulletAngle / _bulletAmountPerAttack;
+		for (int i = 0; i < _maxAmmoCount; i++)
 		{
-			//Bullets[j] = new NetProjectile(_shelly, _bulletCollisionRange, _bulletSpeed, _hitInfo, _bulletMaxTravelTime);
+			var arr = new NetProjectile[_bulletAmountPerAttack];
+			for (int j = 0; j < _bulletAmountPerAttack; ++j)
+			{
+				var angle = (degreeOffset + degreeDelta * j) * sMathf.Deg2Rad;
+				arr[j] = new NetProjectile(_shelly, _bulletCollisionRange, _bulletSpeed, _hitInfo, _bulletMaxTravelTime, new sVector3(sMathf.Cos(angle), sfloat.Zero, sMathf.Sin(angle)));
+			}
+
+			BulletArrQueue.Enqueue(arr);
 		}
 	}
 
 	public override void Update()
 	{
-		//if (Active is false)
-		//{
-		//	return;
-		//}
+		if (Active is false)
+		{
+			return;
+		}
 
-		//if (Performing is true)
-		//{
-		//	_coHandler.MoveNext();
-		//}
+		HandleInputInternal();
 
-		//foreach (var bullet in Bullets)
-		//{
-		//	if (bullet.IsAlive)
-		//	{
-		//		bullet.Update();
-		//	}
-		//}
+		UpdateBullets();
 
-		//if (_currentReloadDeltaFrame < _reloadFrame && (Performing is false))
-		//{
-		//	++_currentReloadDeltaFrame;
-		//}
+		if (_currentReloadDeltaFrame < _reloadFrame)
+		{
+			++_currentReloadDeltaFrame;
+		}
+		else if (_ammoCount < _maxAmmoCount)
+		{
+			_currentReloadDeltaFrame = 0;
+			++_ammoCount;
+		}
 	}
 
 	public override void HandleInput(in InputData input)
 	{
-		//var nowPressed = (input.ButtonInput & 0) == 1;
-		//if (BtnPressed is true && nowPressed is false && _currentReloadDeltaFrame >= _reloadFrame)
-		//{
-		//	_shelly.SetActiveOtherSkills(this, false);
-		//	Performing = true;
-		//	_coHandler = Co_Perform();
-		//	_currentReloadDeltaFrame = 0;
-		//	return;
-		//}
-
-		//BtnPressed = nowPressed;
+		_beforePressed = _nowPressed;
+		_nowPressed = (input.ButtonInput & 2) != 0;
 	}
 
 	protected override IEnumerator<int> Co_Perform()
 	{
+		_shelly.CanControlMove = false;
+		_shelly.CanControlLook = false;
 		for (int i = 0; i < _waitFrameBeforePerform; i++)
 		{
 			yield return 0;
 		}
 
-		foreach (var bullet in Bullets)
+		IsAttack = true;
+		var bullets = BulletArrQueue.Dequeue();
+		AliveBulletArrArr.AddLast(bullets);
+
+		for (int i = 0; i < _bulletAmountPerAttack; i++)
 		{
+			var bullet = bullets[i];
+
 			bullet.Reset(_shelly.Position, _shelly.Rotation);
 		}
 
+		yield return 0;
+
+		IsAttack = false;
 		for (int i = 0; i < _waitFrameAfterPerform; i++)
 		{
 			yield return 0;
 		}
-
+		_shelly.CanControlMove = true;
+		_shelly.CanControlLook = true;
 		_shelly.SetActiveOtherSkills(this, true);
 		Performing = false;
-		_currentReloadDeltaFrame = 0;
 		yield break;
+	}
+
+	public void UpdateBullets()
+	{
+		for (var arr = AliveBulletArrArr.First; arr is not null;)
+		{
+			var isAlive = false;
+			foreach (var bullet in arr.Value)
+			{
+				bullet.Update();
+				isAlive |= bullet.IsAlive;
+			}
+
+			if (isAlive)
+			{
+				arr = arr.Next;
+				continue;
+			}
+
+			var remove = arr;
+			arr = arr.Next;
+			AliveBulletArrArr.Remove(remove);
+			BulletArrQueue.Enqueue(remove.Value);
+		}
 	}
 
 	public override void Cancel()
 	{
 		throw new System.NotImplementedException();
+	}
+
+	private void HandleInputInternal()
+	{
+		if (Performing is true)
+		{
+			_coHandler.MoveNext();
+			return;
+		}
+
+		Holding = _beforePressed is true && _nowPressed is true && _ammoCount > 0;
+		if (_beforePressed is true && _nowPressed is false && _ammoCount > 0)
+		{
+			_shelly.SetActiveOtherSkills(this, false);
+			Performing = true;
+			_coHandler = Co_Perform();
+			--_ammoCount;
+		}
 	}
 }

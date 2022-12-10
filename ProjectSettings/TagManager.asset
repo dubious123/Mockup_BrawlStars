@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CoolTime
   - StunCoolTime
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Character
   - After Character
   - 
-  - 
+  - GameUI
   - 
   - 
   - 
@@ -42,4 +43,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hud
+    uniqueID: 672472139
+    locked: 0
+  - name: GameUI
+    uniqueID: 1835642569
     locked: 0

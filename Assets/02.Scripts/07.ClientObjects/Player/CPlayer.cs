@@ -1,4 +1,6 @@
-﻿using Server.Game;
+﻿using MEC;
+
+using Server.Game;
 
 using UnityEngine;
 using UnityEngine.Events;
@@ -19,11 +21,13 @@ public class CPlayer : MonoBehaviour
 	[SerializeField] private Sprite _selectCircleRed;
 	[SerializeField] private Sprite _selectCircleBlue;
 	[SerializeField] private SpriteRenderer SelectCircle;
+	[SerializeField] private GameObject _hud;
 
 	public virtual void Init(NetCharacter character, short teamId)
 	{
 		NPlayer = character;
 		TeamId = teamId;
+		Timing.CallDelayed(4.5f, () => _hud.SetActive(true));
 		if (teamId == User.TeamId)
 		{
 			SelectCircle.sprite = _selectCircleSelf;

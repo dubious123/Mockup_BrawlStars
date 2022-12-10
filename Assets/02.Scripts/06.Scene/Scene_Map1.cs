@@ -30,6 +30,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private WorldDataHelper _dataHelper;
 	[SerializeField] private Map00UI _mapUI;
 	[SerializeField] private GameCameraController _cam;
+	[SerializeField] private Transform _playerParentBlue, _playerParentRed;
 	#endregion
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _playerRenderers;
@@ -90,13 +91,13 @@ public class Scene_Map1 : BaseScene
 	public void Enter(short teamId, CharacterType type)
 	{
 		Debug.Assert(_playerRenderers[teamId] is null);
-		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity).GetComponent<CPlayer>();
 		var netCharacter = World.AddNewCharacter(teamId, type);
-		cPlayer.Init(netCharacter, teamId);
+		User.Team = netCharacter.Team;
+		var parent = User.Team == TeamType.Blue ? _playerParentBlue : _playerParentRed;
+		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity, parent).GetComponent<CPlayer>();
 		_playerRenderers[teamId] = cPlayer;
 		if (User.TeamId == teamId)
 		{
-			User.Team = netCharacter.Team;
 			var playerInput = cPlayer.gameObject.AddComponent<PlayerInput>();
 			{
 				playerInput.actions = _inputAsset;
@@ -107,6 +108,8 @@ public class Scene_Map1 : BaseScene
 			cPlayer.gameObject.AddComponent<CharacterController>().Init();
 			_cam.Init(cPlayer.transform);
 		}
+
+		cPlayer.Init(netCharacter, teamId);
 	}
 
 	public void StartGame(float waitTime)

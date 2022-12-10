@@ -76,7 +76,6 @@ public class NetProjectile : INetUpdatable, INetObject
 			return co.Collider.CheckCollision(Collider);
 		}, target =>
 		{
-			Debug.Log("Hit");
 			if (target is ITakeHit)
 			{
 				Owner.SendHit(target as ITakeHit, _hitInfo);

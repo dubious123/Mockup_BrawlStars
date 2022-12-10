@@ -36,7 +36,7 @@ public class NShellyBuckShot : NetBaseSkill
 		_waitFrameAfterPerform = 10;
 		_bulletMaxTravelTime = 48;
 		_bulletCollisionRange = (sfloat)0.2f;
-		_bulletSpeed = (sfloat)8 / (sfloat)_bulletMaxTravelTime;
+		_bulletSpeed = (sfloat)10 / (sfloat)_bulletMaxTravelTime;
 		_bulletAngle = (sfloat)30f;
 		_hitInfo = new HitInfo()
 		{
@@ -90,6 +90,8 @@ public class NShellyBuckShot : NetBaseSkill
 
 	protected override IEnumerator<int> Co_Perform()
 	{
+		_shelly.CanControlMove = false;
+		_shelly.CanControlLook = false;
 		for (int i = 0; i < _waitFrameBeforePerform; i++)
 		{
 			yield return 0;
@@ -113,7 +115,8 @@ public class NShellyBuckShot : NetBaseSkill
 		{
 			yield return 0;
 		}
-
+		_shelly.CanControlMove = true;
+		_shelly.CanControlLook = true;
 		_shelly.SetActiveOtherSkills(this, true);
 		Performing = false;
 		yield break;

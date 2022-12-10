@@ -18,6 +18,14 @@ public class GameCamWelcomeMove : MonoBehaviour
 
 	private void Start()
 	{
+		if (User.Team == Enums.TeamType.Red)
+		{
+			(_endTarget, _startTarget, _angle) = (_startTarget, _endTarget, 180 - _angle);
+			var rot = transform.rotation.eulerAngles;
+			rot.y = 180;
+			transform.rotation = Quaternion.Euler(rot);
+		}
+
 		Timing.RunCoroutine(CoRunWelcomeMove());
 	}
 

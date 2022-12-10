@@ -21,7 +21,6 @@ public class CProjectile : MonoBehaviour
 
 	private void OnEnable()
 	{
-		Debug.Log("OnEnable");
 		_onDisableEffect.gameObject.SetActive(false);
 		_bulletGo.SetActive(true);
 	}
@@ -42,6 +41,5 @@ public class CProjectile : MonoBehaviour
 	{
 		_onDisableEffect.gameObject.SetActive(true);
 		_onDisableEffect.Play();
-		Timing.CallDelayed(_onDisableEffect.main.duration, () => _onDisableEffect.gameObject.SetActive(false));
 	}
 }
