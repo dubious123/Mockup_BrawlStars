@@ -1,7 +1,12 @@
+using MEC;
+
+using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using static Enums;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class Scene : MonoBehaviour
 {
@@ -9,14 +14,25 @@ public class Scene : MonoBehaviour
 
 	private static Scene _instance;
 	private BaseScene _currentScene;
+	private UIChangeSceneAnim _changeSceneAnim;
 
 	private void Awake()
 	{
 		_instance = this;
 	}
 
+	public static void Init()
+	{
+		_instance._changeSceneAnim = _instance.GetComponentInChildren<UIChangeSceneAnim>();
+	}
+
 	public static AsyncOperation MoveTo(SceneType type, object sceneParam, LoadSceneMode mode = LoadSceneMode.Single)
 	{
+		//var scene = SceneManager.GetSceneByBuildIndex((int)type);
+		//if (scene.isLoaded)
+		//{
+		//	var asyncHandle = SceneManager.UnloadSceneAsync(scene);
+		//}
 		var handle = SceneManager.LoadSceneAsync((int)type, mode);
 		handle.completed += _ =>
 		{
@@ -25,5 +41,10 @@ public class Scene : MonoBehaviour
 		};
 
 		return handle;
+	}
+
+	public static void PlaySceneChangeAnim()
+	{
+		_instance._changeSceneAnim.FadeOut();
 	}
 }

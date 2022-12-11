@@ -13,6 +13,7 @@ public class UIWelcomeAnimThird : MonoBehaviour, IUIAnim
 {
 	[SerializeField] private UIWelcomeAnimBrawl _brawl;
 	[SerializeField] private UIWelcomeAnimSpinLight _spinLight;
+	[SerializeField] private AudioClip _audioClip;
 
 	public void Reset()
 	{
@@ -22,6 +23,7 @@ public class UIWelcomeAnimThird : MonoBehaviour, IUIAnim
 
 	public void PlayAnim(Action callback = null)
 	{
+		Audio.PlayOnce(_audioClip);
 		_spinLight.gameObject.SetActive(true);
 		_spinLight.PlayAnim();
 		_brawl.gameObject.SetActive(true);

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.66 53.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: #ffb101;
+      }
+
+      .cls-3 {
+        fill: #ffd540;
+      }
+    </style>
+  </defs>
+  <g id="Text">
+    <circle class="cls-3" cx="25.75" cy="27.65" r="25.75"/>
+    <circle cx="25.91" cy="25.75" r="25.75"/>
+    <path class="cls-2" d="M47.41,25.15c0,10.63-10.54,18-21.45,18S4.31,35.78,4.31,25.15,15.05,4.65,25.96,4.65s21.45,9.87,21.45,20.5Z"/>
+    <rect class="cls-2" x="14.96" y="38.15" width="22" height="7.25" rx="2" ry="2"/>
+    <circle cx="16.46" cy="29.65" r="6.5"/>
+    <circle cx="35.96" cy="29.65" r="6.5"/>
+    <polygon points="25.96 31.65 22.91 37.15 29.01 37.15 25.96 31.65"/>
+    <rect x="26.33" y="21.15" width="7.18" height="3" rx="1.5" ry="1.5" transform="translate(-7.25 27.79) rotate(-45)"/>
+    <rect x="18.52" y="21.15" width="7.18" height="3" rx="1.5" ry="1.5" transform="translate(22.49 -9) rotate(45)"/>
+    <ellipse class="cls-1" cx="16.85" cy="14.15" rx="7.57" ry="4.93" transform="translate(-4.99 11.46) rotate(-33)"/>
+  </g>
+</svg>

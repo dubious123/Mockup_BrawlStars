@@ -33,7 +33,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private Transform _playerParentBlue, _playerParentRed;
 	#endregion
 	private sVector3[] _spawnPoints;
-	private CPlayer[] _playerRenderers;
+	private CPlayer[] _cPlayers;
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
 	private IEnumerator<float> _coHandler;
 	private object _lock = new();
@@ -44,15 +44,14 @@ public class Scene_Map1 : BaseScene
 
 	public override void Init(object param)
 	{
-		var req = param as S_EnterGame;
 		Scenetype = SceneType.Game;
-
-		_playerRenderers = new CPlayer[6];
+		Scene.PlaySceneChangeAnim();
+		_cPlayers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		var data = _dataHelper.GetWorldData();
 		_spawnPoints = data.SpawnPoints;
 		World = new(data, new GameRule00());
-		Enter(req.TeamId, (CharacterType)req.PlayerInfo.CharacterType);
+		Enter(User.TeamId, User.CharType);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
 	}
@@ -80,7 +79,7 @@ public class Scene_Map1 : BaseScene
 
 			for (int i = 0; i < 6; i++)
 			{
-				_playerRenderers[i]?.HandleOneFrame();
+				_cPlayers[i]?.HandleOneFrame();
 			}
 
 			_currentTick++;
@@ -90,12 +89,12 @@ public class Scene_Map1 : BaseScene
 
 	public void Enter(short teamId, CharacterType type)
 	{
-		Debug.Assert(_playerRenderers[teamId] is null);
+		Debug.Assert(_cPlayers[teamId] is null);
 		var netCharacter = World.AddNewCharacter(teamId, type);
 		User.Team = netCharacter.Team;
 		var parent = User.Team == TeamType.Blue ? _playerParentBlue : _playerParentRed;
 		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity, parent).GetComponent<CPlayer>();
-		_playerRenderers[teamId] = cPlayer;
+		_cPlayers[teamId] = cPlayer;
 		if (User.TeamId == teamId)
 		{
 			var playerInput = cPlayer.gameObject.AddComponent<PlayerInput>();
@@ -114,13 +113,17 @@ public class Scene_Map1 : BaseScene
 
 	public void StartGame(float waitTime)
 	{
-		_mapUI.OnGameStart();
-		Timing.CallDelayed(waitTime, Internal_StartGame);
+		_mapUI.OnGameStart(Internal_StartGame);
 	}
 
 	private void Internal_StartGame()
 	{
 		_gameStarted = true;
+		foreach (var c in _cPlayers)
+		{
+			c?.StartGame();
+		}
+
 		_coHandler = Co_FixedUpdate();
 	}
 

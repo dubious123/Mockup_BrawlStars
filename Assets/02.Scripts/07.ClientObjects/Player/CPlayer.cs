@@ -27,7 +27,6 @@ public class CPlayer : MonoBehaviour
 	{
 		NPlayer = character;
 		TeamId = teamId;
-		Timing.CallDelayed(4.5f, () => _hud.SetActive(true));
 		if (teamId == User.TeamId)
 		{
 			SelectCircle.sprite = _selectCircleSelf;
@@ -40,6 +39,11 @@ public class CPlayer : MonoBehaviour
 		{
 			SelectCircle.sprite = _selectCircleRed;
 		}
+	}
+
+	public void StartGame()
+	{
+		_hud.SetActive(true);
 	}
 
 	public virtual void HandleOneFrame()

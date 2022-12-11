@@ -8,7 +8,8 @@ public static partial class Enums
 		Login,
 		Lobby,
 		Game,
-		Loading
+		Loading,
+		SearchingPlayers,
 	}
 
 	public enum CharacterType

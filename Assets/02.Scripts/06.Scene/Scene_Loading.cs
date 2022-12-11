@@ -11,20 +11,22 @@ using UnityEngine.SceneManagement;
 public class Scene_Loading : BaseScene
 {
 	[SerializeField] private ProgressBar _progressBar;
-	[SerializeField] private AudioSource _bgm;
+	[SerializeField] private AudioClip _loadingBgmClip;
+	[SerializeField] private AudioClip _brawlIntroClip;
 	private bool _loginSuccess;
 
 	public override void Init(object param)
 	{
 		IsReady = false;
+		Scene.PlaySceneChangeAnim();
 		Scenetype = Enums.SceneType.Loading;
 		switch ((Enums.SceneType)param)
 		{
 			case Enums.SceneType.Lobby:
-				Timing.RunCoroutine(CoLoadLobbyScene());
+				Timing.RunCoroutine(CoLoadLobbyScene().CancelWith(gameObject));
 				break;
 			case Enums.SceneType.Game:
-				Timing.RunCoroutine(CoLoadGameScene());
+				Timing.RunCoroutine(CoLoadGameScene().CancelWith(gameObject));
 				break;
 		}
 
@@ -58,7 +60,7 @@ public class Scene_Loading : BaseScene
 			loginPw = "0827"
 		});
 
-		_bgm.Play();
+		Audio.PlayOnce(_loadingBgmClip);
 		while (_loginSuccess == false)
 		{
 			yield return 0;
@@ -71,19 +73,25 @@ public class Scene_Loading : BaseScene
 			_progressBar.UpdateProgress((int)(handle.progress * 100));
 			yield return 0;
 		}
+
+		SceneManager.UnloadSceneAsync((int)Enums.SceneType.Loading);
 	}
 
 	private IEnumerator<float> CoLoadGameScene()
 	{
-		yield break;
-	}
-
-	private IEnumerator CoUpdateProgress()
-	{
-		for (int i = 10; i < 101; i++)
+		Audio.PlayOnce(_brawlIntroClip);
+		var loadHandle = Scene.MoveTo(Enums.SceneType.Game, Enums.CharacterType.Knight, LoadSceneMode.Single);
+		loadHandle.allowSceneActivation = false;
+		while (loadHandle.progress < 0.9f)
 		{
-			_progressBar.UpdateProgress(i);
-			yield return new WaitForSeconds(0.1f);
+			_progressBar.UpdateProgress((int)(loadHandle.progress * 100));
+			yield return 0f;
 		}
+
+		_progressBar.UpdateProgress(100);
+		yield return Timing.WaitForSeconds(2);
+
+		loadHandle.allowSceneActivation = true;
+		yield break;
 	}
 }

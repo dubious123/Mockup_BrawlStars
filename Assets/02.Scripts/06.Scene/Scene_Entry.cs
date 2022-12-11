@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class Scene_Entry : BaseScene
 {
 	[SerializeField] private GameObject _eventSystemPrefab;
+	[SerializeField] private GameObject _sceneChangeAnimPrefab;
+	[SerializeField] private GameObject _audioPrefab;
+
 	public override void Init(object param)
 	{
 		Scenetype = Enums.SceneType.Entry;
@@ -22,12 +25,16 @@ public class Scene_Entry : BaseScene
 		DontDestroyOnLoad(new GameObject("@Timing", typeof(Timing)));
 		DontDestroyOnLoad(new GameObject("@Network", typeof(Network)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
-		DontDestroyOnLoad(new GameObject("@Audio", typeof(Audio)));
+		Instantiate(_sceneChangeAnimPrefab, GameObject.Find("@Scene").transform);
 		DontDestroyOnLoad(Instantiate(_eventSystemPrefab));
+		var go = Instantiate(_audioPrefab);
+		go.name = "@Audio";
+		DontDestroyOnLoad(go);
 		Loggers.Init();
 		JobMgr.Init();
 		Network.Init();
 		Audio.Init();
-		Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby);
+		Scene.Init();
+		Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive);
 	}
 }

@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01.Scenes/LoadingScene.unity
     guid: 8ee4743968a483b47bfc5e4ac5cc73ac
+  - enabled: 1
+    path: Assets/01.Scenes/SearchingPlayers.unity
+    guid: af704eae9986a6547b66a5824d6e6328
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: aa70fa7e30c17494a84c34f360913bfb, type: 2}

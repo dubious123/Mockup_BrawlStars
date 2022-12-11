@@ -2502,6 +2502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1280661934}
     m_Modifications:
+    - target: {fileID: 4208627134895287495, guid: 896018a677301e74d85b97220e8d268e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4789176020725782422, guid: 896018a677301e74d85b97220e8d268e, type: 3}
       propertyPath: m_Name
       value: Blcok3
@@ -9873,6 +9877,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _brawl: {fileID: 1548734191}
   _spinLight: {fileID: 1999134537}
+  _audioClip: {fileID: 8300000, guid: ac8af46aa8e28de45bb68fe5a39feeea, type: 3}
 --- !u!1 &567668663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1808702419829718140, guid: 49d03f88fbead24409f91539c75403d9, type: 3}
@@ -25750,6 +25755,7 @@ MonoBehaviour:
   _blue: {fileID: 2094483437}
   _red: {fileID: 1752227373}
   _textAnimDelayTime: 0.3
+  _audioClip: {fileID: 8300000, guid: bb60c492b89ed0d4d91918d05731542a, type: 3}
 --- !u!1001 &1521734499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30022,6 +30028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _holdTime: 0.75
   _shrinkTime: 0.3
+  _audioClip: {fileID: 8300000, guid: c24af333f26877a4bbe21c7c621feedd, type: 3}
 --- !u!1 &1792061220 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6643286334381012477, guid: 49d03f88fbead24409f91539c75403d9, type: 3}

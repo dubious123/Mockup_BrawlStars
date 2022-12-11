@@ -91,18 +91,25 @@ public class S_Login : BasePacket
 public class S_EnterLobby : BasePacket
 {
 }
+public class S_GameReady : BasePacket
+{
+}
 public class S_EnterGame : BasePacket
 {
 
 	[Serializable]
 	public struct PlayerInfoDto
 	{
-
 		public ushort CharacterType;
 	}
 
 	public short TeamId;
 	public PlayerInfoDto PlayerInfo;
+}
+public class S_BroadcastSearchPlayer : BasePacket
+{
+
+	public ushort FoundPlayersCount;
 }
 public class S_BroadcastEnterGame : BasePacket
 {

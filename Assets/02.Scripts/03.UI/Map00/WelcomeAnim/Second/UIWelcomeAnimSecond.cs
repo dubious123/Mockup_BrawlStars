@@ -10,6 +10,7 @@ public class UIWelcomeAnimSecond : MonoBehaviour, IUIAnim
 	[SerializeField] private UIWelcomAnimFlag _blue;
 	[SerializeField] private UIWelcomAnimFlag _red;
 	[SerializeField] private float _textAnimDelayTime;
+	[SerializeField] private AudioClip _audioClip;
 
 	public void Reset()
 	{
@@ -21,6 +22,7 @@ public class UIWelcomeAnimSecond : MonoBehaviour, IUIAnim
 
 	public void PlayAnim(Action callback = null)
 	{
+		Audio.PlayOnce(_audioClip);
 		_blue.PlayAnim();
 		_red.PlayAnim();
 		Timing.CallDelayed(_textAnimDelayTime, () =>

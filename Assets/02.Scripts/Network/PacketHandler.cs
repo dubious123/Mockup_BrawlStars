@@ -20,7 +20,9 @@ public static class PacketHandler
 		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_GameReady, (packet, session) => S_GameReadyHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastSearchPlayer, (packet, session) => S_BroadcastSearchPlayerHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet, session) => S_GameFrameInfoHandle(packet, session));
@@ -43,13 +45,6 @@ public static class PacketHandler
 	private static void S_LoginHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_Login;
-		//if (Scene.CurrentScene is not Scene_Login loginScene || loginScene.IsReady == false) return;
-		//if (req.result == false)
-		//{
-		//	JobMgr.PushUnityJob(loginScene.OnLoginFailed);
-		//	return;
-		//}
-		//JobMgr.PushUnityJob(() => loginScene.OnLoginSuccess(req));
 		if (Scene.CurrentScene is not Scene_Loading loadingScene || loadingScene.IsReady == false)
 		{
 			return;
@@ -77,7 +72,7 @@ public static class PacketHandler
 		if (req.TeamId == -1) return;
 
 		User.TeamId = req.TeamId;
-		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Game, req));
+		User.CharType = (CharacterType)req.PlayerInfo.CharacterType;
 	}
 
 	private static void S_GameFrameInfoHandle(BasePacket packet, ServerSession session)
@@ -115,5 +110,19 @@ public static class PacketHandler
 
 			game.StartGame(req.WaitTime);
 		});
+	}
+
+	private static void S_BroadcastSearchPlayerHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastSearchPlayer;
+		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false) return;
+		JobMgr.PushUnityJob(() => scene.UpdatePlayerFound(req.FoundPlayersCount));
+	}
+
+	private static void S_GameReadyHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_GameReady;
+		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false) return;
+		JobMgr.PushUnityJob(scene.OnGameReady);
 	}
 }

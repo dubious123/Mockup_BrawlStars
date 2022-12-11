@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -26,9 +27,13 @@ public class Map00UI : MonoBehaviour
 		_welcomeAnim.Reset();
 	}
 
-	public void OnGameStart()
+	public void OnGameStart(Action onCompleted = null)
 	{
-		_welcomeAnim.PlayAnim(() => _uiTop.SetActive(true));
+		_welcomeAnim.PlayAnim(() =>
+		{
+			_uiTop.SetActive(true);
+			onCompleted?.Invoke();
+		});
 		_camAnim.enabled = true;
 	}
 }

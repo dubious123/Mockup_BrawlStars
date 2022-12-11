@@ -198,6 +198,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _eventSystemPrefab: {fileID: 1233701106868056078, guid: 421b69ce9c613a94d879310c580775e3, type: 3}
+  _sceneChangeAnimPrefab: {fileID: 5104398020912516795, guid: d23fbf4fa76adf64f97b96c8972185c2, type: 3}
+  _audioPrefab: {fileID: 5866462126345145677, guid: d76ca43e9c175e64e9032cb8055451f9, type: 3}
 --- !u!4 &1303960318
 Transform:
   m_ObjectHideFlags: 0
