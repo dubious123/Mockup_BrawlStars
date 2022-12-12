@@ -5,17 +5,17 @@ using UnityEngine.InputSystem;
 
 public class CharacterController : MonoBehaviour
 {
-	protected PlayerInput _playerInput;
-	protected InputAction _lookAction;
-	protected InputAction _moveAction;
-	protected InputAction _basicAttackAction;
-	protected InputAction _abilityQ;
-	protected InputAction _abilityCancel;
-	protected RaycastHit _lookHit;
-	protected Vector3 _lookdir;
-	protected Scene_Map1 _game;
-	protected bool _isReady = false;
-	protected byte _buttonPressed = 0;
+	private PlayerInput _playerInput;
+	private InputAction _lookAction;
+	private InputAction _moveAction;
+	private InputAction _basicAttackAction;
+	private InputAction _abilityQ;
+	private InputAction _abilityCancel;
+	private RaycastHit _lookHit;
+	private Vector3 _lookdir;
+	private Scene_Map1 _game;
+	private bool _isReady = false;
+	private byte _buttonPressed = 0;
 
 	public virtual void Init()
 	{
@@ -33,12 +33,14 @@ public class CharacterController : MonoBehaviour
 		_basicAttackAction = _playerInput.actions[InputActionMeta.BasicAttack];
 		{
 			_basicAttackAction.started += _ => _buttonPressed |= 0b0001;
+			_basicAttackAction.started += _ => Audio.PlayBtnPressedNormal();
 			_basicAttackAction.canceled += _ => _buttonPressed &= 0b1110;
 		}
 
 		_abilityQ = _playerInput.actions[InputActionMeta.Q];
 		{
 			_abilityQ.started += _ => _buttonPressed |= 0b0010;
+			_abilityQ.started += _ => Audio.PlayBtnPressedNormal();
 			_abilityQ.canceled += _ => _buttonPressed &= 0b1101;
 		}
 

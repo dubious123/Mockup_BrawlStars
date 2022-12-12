@@ -12,6 +12,7 @@ public class CPlayer : MonoBehaviour
 	public short TeamId { get; set; }
 	[field: SerializeField] public Animator Animator { get; set; }
 	[field: SerializeField] public Image StunIndicator { get; set; }
+	[field: SerializeField] public Sprite ProfileIcon { get; set; }
 	public int MaxHp => NPlayer.MaxHp;
 	public int Hp => NPlayer.Hp;
 	public sVector3 Lookdir => NPlayer.TargetLookDir;
@@ -41,7 +42,7 @@ public class CPlayer : MonoBehaviour
 		}
 	}
 
-	public void StartGame()
+	public virtual void StartGame()
 	{
 		_hud.SetActive(true);
 	}

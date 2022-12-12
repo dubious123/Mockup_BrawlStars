@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSourcePrefab: {fileID: 485672423302014114, guid: 2ee2dd705a860dd40801003741fbb1c8, type: 3}
+  _btnPressedNormal: {fileID: 8300000, guid: 2f6cf6e6e6f83a143bfc3f0835327846, type: 3}
 --- !u!81 &6522332530376454726
 AudioListener:
   m_ObjectHideFlags: 0

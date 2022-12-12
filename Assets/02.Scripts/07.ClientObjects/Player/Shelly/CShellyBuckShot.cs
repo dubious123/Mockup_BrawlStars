@@ -11,10 +11,10 @@ using UnityEngine.UI;
 
 public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 {
-
 	[SerializeField] private GameObject _indicator;
 	[SerializeField] private GameObject _bulletPrefabBlue;
 	[SerializeField] private GameObject _bulletPrefabRed;
+	[SerializeField] private AudioClip _audio;
 
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
@@ -57,6 +57,7 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 		{
 			Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
 			_cBullets.ForEach(bullet => bullet.enabled = bullet.IsAlive);
+			Audio.PlayOnce(_audio);
 			return;
 		}
 

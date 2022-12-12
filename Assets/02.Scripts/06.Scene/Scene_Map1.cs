@@ -22,6 +22,7 @@ public class Scene_Map1 : BaseScene
 {
 	public long CurrentTick => _currentTick;
 	public bool GameStarted => _gameStarted;
+	public CPlayer[] CPlayers => _cPlayers;
 	#region SerializeField
 	//[SerializeField] AssetReference _dog;
 	[SerializeField] private GameObject _knight;
@@ -31,6 +32,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private Map00UI _mapUI;
 	[SerializeField] private GameCameraController _cam;
 	[SerializeField] private Transform _playerParentBlue, _playerParentRed;
+	[SerializeField] private AudioClip _ingameBgm;
 	#endregion
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _cPlayers;
@@ -124,6 +126,7 @@ public class Scene_Map1 : BaseScene
 			c?.StartGame();
 		}
 
+		Audio.PlayAudio(_ingameBgm, _ingameBgm.name, true);
 		_coHandler = Co_FixedUpdate();
 	}
 

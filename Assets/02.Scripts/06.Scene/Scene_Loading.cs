@@ -79,7 +79,8 @@ public class Scene_Loading : BaseScene
 
 	private IEnumerator<float> CoLoadGameScene()
 	{
-		Audio.PlayOnce(_brawlIntroClip);
+		Audio.PlayAudio(_brawlIntroClip, _brawlIntroClip.name, false);
+		Timing.CallDelayed(_brawlIntroClip.length - 1, () => Audio.StopAudio(_brawlIntroClip.name, 1));
 		var loadHandle = Scene.MoveTo(Enums.SceneType.Game, Enums.CharacterType.Knight, LoadSceneMode.Single);
 		loadHandle.allowSceneActivation = false;
 		while (loadHandle.progress < 0.9f)

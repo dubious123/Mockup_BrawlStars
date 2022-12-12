@@ -16,6 +16,7 @@ public static partial class Enums
 	{
 		None,
 		Knight,
+		Shelly
 	}
 
 	public enum LogSourceType

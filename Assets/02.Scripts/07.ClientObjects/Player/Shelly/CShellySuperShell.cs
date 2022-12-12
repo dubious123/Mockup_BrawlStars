@@ -9,6 +9,7 @@ public class CShellySuperShell : MonoBehaviour, ICBaseSkill
 	[SerializeField] private GameObject _bulletPrefabBlue;
 	[SerializeField] private GameObject _bulletPrefabRed;
 	[SerializeField] private ParticleSystem _effect;
+	[SerializeField] private AudioClip _audio;
 
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
@@ -46,13 +47,13 @@ public class CShellySuperShell : MonoBehaviour, ICBaseSkill
 	public void HandleOneFrame()
 	{
 		_indicator.SetActive(_netSuperShell.Holding);
-
 		if (_netSuperShell.IsAttack is true)
 		{
 			Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
 			_cBullets.ForEach(bullet => bullet.enabled = bullet.IsAlive);
 			_effect.gameObject.SetActive(true);
 			_effect.Play();
+			Audio.PlayOnce(_audio);
 			return;
 		}
 
