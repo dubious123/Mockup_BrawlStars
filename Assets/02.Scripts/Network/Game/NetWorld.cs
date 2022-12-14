@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Server.Game.Data;
 using Server.Game.GameRule;
+
+using UnityEditor.Rendering.Universal;
 
 using static Enums;
 
@@ -10,18 +13,21 @@ namespace Server.Game
 {
 	public class NetWorld
 	{
-		private readonly WorldData _worldData;
-		public readonly IGameRule GameRule;
-		private Action _update;
-		private Dictionary<uint, INetObject> _netObjDict = new();
+		public readonly BaseGameRule GameRule;
+
 		public NetPhysics2D Physics2D = new();
 		public GameFrameInfo InputInfo { get; set; }
 		public NetCharacter[] NetCharacters { get; set; }
 
-		public NetWorld(WorldData data, IGameRule gameRule)
+		private readonly WorldData _worldData;
+		private Action _update;
+		private Dictionary<uint, INetObject> _netObjDict = new();
+
+		public NetWorld(WorldData data, BaseGameRule gameRule)
 		{
-			_worldData = data;
 			GameRule = gameRule;
+			GameRule.World = this;
+			_worldData = data;
 			_update = UpdateGameLogic;
 			_update += UpdatePlayers;
 			uint i = 0x10;
@@ -43,21 +49,20 @@ namespace Server.Game
 
 		public void UpdateGameLogic()
 		{
-
+			GameRule.UpdateGameLogic();
 		}
 
 		public void UpdatePlayers()
 		{
-			for (int i = 0; i < 6; i++)
+			foreach (var player in NetCharacters)
 			{
-				var player = NetCharacters[i];
-				if (player is null)
+				if (player is null || player.Active is false)
 				{
-					return;
+					continue;
 				}
 
-				Loggers.Game.Information("Player [{0}]", i);
-				player.UpdateInput(InputInfo.Inputs[i]);
+				Loggers.Game.Information("Player [{0}]", player.ObjectId);
+				player.UpdateInput(InputInfo.Inputs[player.ObjectId]);
 				player.Update();
 				Loggers.Game.Information("Position [{0:x},{1:x},{2:x}]] : ", player.Position.x.RawValue, player.Position.y.RawValue, player.Position.z.RawValue);
 			}

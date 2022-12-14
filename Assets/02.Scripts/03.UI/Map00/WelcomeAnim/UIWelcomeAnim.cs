@@ -2,7 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+using MEC;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIWelcomeAnim : MonoBehaviour, IUIAnim
 {
@@ -26,9 +29,21 @@ public class UIWelcomeAnim : MonoBehaviour, IUIAnim
 			_secondAnim.gameObject.SetActive(true);
 			_secondAnim.PlayAnim(() =>
 			{
+				Timing.RunCoroutine(CoInternalFade());
 				_thirdAnim.gameObject.SetActive(true);
 				_thirdAnim.PlayAnim(callback);
 			});
 		});
+	}
+
+	private IEnumerator<float> CoInternalFade()
+	{
+		var image = GetComponent<RawImage>();
+		for (float delta = 0; delta < 1; delta += Time.deltaTime)
+		{
+			var alpha = Mathf.Lerp(0.5f, 0, delta);
+			image.ChangeAlpha(alpha);
+			yield return 0f;
+		}
 	}
 }

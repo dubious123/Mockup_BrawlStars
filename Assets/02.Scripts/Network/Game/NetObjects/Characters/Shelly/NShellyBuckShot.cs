@@ -109,12 +109,12 @@ public class NShellyBuckShot : NetBaseSkill
 		}
 
 		yield return 0;
-
 		IsAttack = false;
 		for (int i = 0; i < _waitFrameAfterPerform; i++)
 		{
 			yield return 0;
 		}
+
 		_shelly.CanControlMove = true;
 		_shelly.CanControlLook = true;
 		_shelly.SetActiveOtherSkills(this, true);

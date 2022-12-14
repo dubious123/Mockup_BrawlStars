@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using static Enums;
 
@@ -21,6 +22,7 @@ namespace Server.Game
 		public CCFlags CCFlag { get; protected set; }
 		public bool CanControlMove { get; set; }
 		public bool CanControlLook { get; set; }
+		public bool Active { get; set; }
 		public int KnockbackDuration { get; protected set; }
 		public int StunDuration { get; protected set; }
 		public sVector2 KnockbackDelta { get; protected set; }
@@ -31,6 +33,9 @@ namespace Server.Game
 
 		public int MaxHp { get; protected set; }
 		public int Hp { get; protected set; }
+
+		public Action OnCharacterDead { private get; set; }
+		public Action OnFrameStart { private get; set; }
 
 		protected IEnumerator<int> KnockbackCoHandler { get; set; }
 		protected IEnumerator<int> StunCoHandler { get; set; }
@@ -51,12 +56,14 @@ namespace Server.Game
 			MoveSmoothTime = (sfloat)0.01f;
 			CanControlMove = true;
 			CanControlLook = true;
+			Active = true;
 			KnockbackCoHandler = CoKnockback();
 			StunCoHandler = CoStun();
 		}
 
 		public virtual void Update()
 		{
+			OnFrameStart?.Invoke();
 			HandleCC();
 
 			if (CanControlMove && TargetMoveDir != sVector3.zero)
@@ -168,6 +175,7 @@ namespace Server.Game
 		{
 			CanControlMove = false;
 			CanControlLook = false;
+			OnCharacterDead?.Invoke();
 		}
 
 		protected virtual IEnumerator<int> CoKnockback()

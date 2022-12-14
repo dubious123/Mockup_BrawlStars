@@ -6,7 +6,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 using static Enums;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class Scene : MonoBehaviour
 {

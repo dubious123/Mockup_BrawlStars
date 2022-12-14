@@ -21,6 +21,7 @@ public class ProfileHolder : MonoBehaviour
 	[SerializeField] private Image _effect;
 	[SerializeField] private float _effectTargetScale;
 
+	public Image ProfileImage => _profileImage;
 
 	private void Start()
 	{

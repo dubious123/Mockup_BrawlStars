@@ -21,7 +21,10 @@ public class CPlayerShelly : CPlayer
 	public override void StartGame()
 	{
 		base.StartGame();
-		Audio.PlayOnce(_audio_start[Random.Range(0, _audio_start.Length)]);
+		if (User.TeamId == TeamId)
+		{
+			Audio.PlayOnce(_audio_start[Random.Range(0, _audio_start.Length)]);
+		}
 	}
 
 	public override void HandleOneFrame()

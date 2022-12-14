@@ -34,6 +34,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private Transform _playerParentBlue, _playerParentRed;
 	[SerializeField] private AudioClip _ingameBgm;
 	#endregion
+	private GameRule00 _gameRule;
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _cPlayers;
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
@@ -46,13 +47,22 @@ public class Scene_Map1 : BaseScene
 
 	public override void Init(object param)
 	{
+		Debug.Log("Init");
 		Scenetype = SceneType.Game;
 		Scene.PlaySceneChangeAnim();
+		var data = _dataHelper.GetWorldData();
+		_gameRule = new GameRule00()
+		{
+			OnRoundStart = OnRoundStart,
+			OnRoundEnd = OnRoundEnd,
+			OnGameEnd = OnGameEnd,
+			OnPlayerDead = OnPlayerDead
+		};
+
 		_cPlayers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
-		var data = _dataHelper.GetWorldData();
 		_spawnPoints = data.SpawnPoints;
-		World = new(data, new GameRule00());
+		World = new(data, _gameRule);
 		Enter(User.TeamId, User.CharType);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
@@ -79,11 +89,6 @@ public class Scene_Map1 : BaseScene
 			World.InputInfo = info;
 			World.Update();
 
-			for (int i = 0; i < 6; i++)
-			{
-				_cPlayers[i]?.HandleOneFrame();
-			}
-
 			_currentTick++;
 			yield return 0f;
 		}
@@ -93,9 +98,9 @@ public class Scene_Map1 : BaseScene
 	{
 		Debug.Assert(_cPlayers[teamId] is null);
 		var netCharacter = World.AddNewCharacter(teamId, type);
-		User.Team = netCharacter.Team;
-		var parent = User.Team == TeamType.Blue ? _playerParentBlue : _playerParentRed;
+		var parent = netCharacter.Team == TeamType.Blue ? _playerParentBlue : _playerParentRed;
 		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity, parent).GetComponent<CPlayer>();
+		netCharacter.OnFrameStart = cPlayer.HandleOneFrame;
 		_cPlayers[teamId] = cPlayer;
 		if (User.TeamId == teamId)
 		{
@@ -106,6 +111,7 @@ public class Scene_Map1 : BaseScene
 				playerInput.actions.Enable();
 			}
 
+			User.Team = netCharacter.Team;
 			cPlayer.gameObject.AddComponent<CharacterController>().Init();
 			_cam.Init(cPlayer.transform);
 		}
@@ -115,6 +121,7 @@ public class Scene_Map1 : BaseScene
 
 	public void StartGame(float waitTime)
 	{
+		Debug.Log("StartGame");
 		_mapUI.OnGameStart(Internal_StartGame);
 	}
 
@@ -141,5 +148,27 @@ public class Scene_Map1 : BaseScene
 		var info = new GameFrameInfo(req);
 
 		_frameInfoQueue.Enqueue(info);
+	}
+
+	private void OnRoundStart()
+	{
+		Debug.Log("OnRoundStart");
+	}
+
+	private void OnRoundEnd(GameRule00.RoundResult result)
+	{
+		Debug.Log("OnRoundEnd");
+	}
+
+	private void OnGameEnd(GameRule00.GameResult result)
+	{
+		Debug.Log("OnGameEnd");
+	}
+
+	private void OnPlayerDead(NetCharacter character)
+	{
+		Debug.Log($"OnPlayerDead{character.ObjectId}");
+		_mapUI.OnPlayerDead(character.ObjectId);
+		CPlayers[character.ObjectId].gameObject.SetActive(false);
 	}
 }

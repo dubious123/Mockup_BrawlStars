@@ -23,6 +23,7 @@ public class CPlayer : MonoBehaviour
 	[SerializeField] private Sprite _selectCircleBlue;
 	[SerializeField] private SpriteRenderer SelectCircle;
 	[SerializeField] private GameObject _hud;
+	[SerializeField] private ParticleSystem _moveSmokeEffect;
 
 	public virtual void Init(NetCharacter character, short teamId)
 	{
@@ -61,5 +62,11 @@ public class CPlayer : MonoBehaviour
 		}
 
 		transform.SetPositionAndRotation((Vector3)NPlayer.Position, (Quaternion)NPlayer.Rotation);
+
+		if (NPlayer.TargetMoveDir != sVector3.zero && _moveSmokeEffect.isPlaying is false)
+		{
+			_moveSmokeEffect.gameObject.SetActive(true);
+			_moveSmokeEffect.Play();
+		}
 	}
 }

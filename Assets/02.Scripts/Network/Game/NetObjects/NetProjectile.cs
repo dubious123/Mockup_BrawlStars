@@ -67,20 +67,15 @@ public class NetProjectile : INetUpdatable, INetObject
 		Position += Velocity;
 		Owner.World.FindAllAndBroadcast(target =>
 		{
-			if (target == Owner || target is not INetCollidable2D)
+			if (Owner.World.GameRule.CanSendHit(Owner, target) is false)
 			{
 				return false;
 			}
 
-			var co = target as INetCollidable2D;
-			return co.Collider.CheckCollision(Collider);
+			return (target as INetCollidable2D).Collider.CheckCollision(Collider);
 		}, target =>
 		{
-			if (target is ITakeHit)
-			{
-				Owner.SendHit(target as ITakeHit, _hitInfo);
-			}
-
+			Owner.SendHit(target as ITakeHit, _hitInfo);
 			Disable();
 		});
 

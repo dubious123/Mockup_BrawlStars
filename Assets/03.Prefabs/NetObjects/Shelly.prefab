@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &325851702447469773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1006248572960646842}
+  m_Layer: 22
+  m_Name: MoveSmokeEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1006248572960646842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325851702447469773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.236}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7795605479308495840}
+  m_Father: {fileID: 6141469600993790980}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &488282088763080598
 GameObject:
   m_ObjectHideFlags: 0
@@ -10093,6 +10125,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3762122520554434267}
+  - {fileID: 1006248572960646842}
   m_Father: {fileID: 6455835301831051292}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20341,7 +20374,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6455835301831051266}
-  m_LocalRotation: {x: 0, y: 0.44768104, z: 0, w: 0.89419335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -20355,7 +20388,7 @@ Transform:
   - {fileID: 6141469600993790980}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 53.19, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &6455835301831051267
 Animator:
   serializedVersion: 4
@@ -20396,6 +20429,7 @@ MonoBehaviour:
   _selectCircleBlue: {fileID: 3286163911610860551, guid: a2c573811e377944b977055c8d8b260a, type: 3}
   SelectCircle: {fileID: 488282090527741399}
   _hud: {fileID: 488282090418619715}
+  _moveSmokeEffect: {fileID: 7795605479294340768}
   <Buckshot>k__BackingField: {fileID: 6146652440431096053}
   <SuperShell>k__BackingField: {fileID: 1466085974802735558}
   _audio_start:
@@ -26873,6 +26907,97 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8601895642742607285, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
   m_PrefabInstance: {fileID: 488282089440182844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1444996177052623916
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1006248572960646842}
+    m_Modifications:
+    - target: {fileID: 114979979335704276, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: clearBehavior
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.222
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925564163052, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_Name
+      value: CFXR Smoke Source 3D 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925564163052, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_Layer
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925564163052, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925583198860, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925583198860, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656522925583198860, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+      propertyPath: InitialModule.startColor.minMaxState
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+--- !u!198 &7795605479294340768 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8656522925583198860, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+  m_PrefabInstance: {fileID: 1444996177052623916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7795605479308495840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8656522925563801548, guid: 2b50049b0418a6943bc0d7d35ce5fd69, type: 3}
+  m_PrefabInstance: {fileID: 1444996177052623916}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3197512249817163813
 PrefabInstance:

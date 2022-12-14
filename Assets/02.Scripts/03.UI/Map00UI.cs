@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Map00UI : MonoBehaviour
 {
 	[SerializeField] private GameObject _uiTop;
-	[SerializeField] private Image[] _profileIcons;
+	[SerializeField] private ProfileHolder[] _profileHolders;
 	[SerializeField] private UIWelcomeAnim _welcomeAnim;
 
 	#region for debug
@@ -39,7 +39,7 @@ public class Map00UI : MonoBehaviour
 				continue;
 			}
 
-			_profileIcons[cp.TeamId].sprite = cp.ProfileIcon;
+			_profileHolders[cp.TeamId].ProfileImage.sprite = cp.ProfileIcon;
 		}
 
 		_welcomeAnim.PlayAnim(() =>
@@ -47,6 +47,12 @@ public class Map00UI : MonoBehaviour
 			_uiTop.SetActive(true);
 			onCompleted?.Invoke();
 		});
+
 		_camAnim.enabled = true;
+	}
+
+	public void OnPlayerDead(uint playerId)
+	{
+		_profileHolders[playerId].OnDead();
 	}
 }

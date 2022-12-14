@@ -122,7 +122,13 @@ public static class PacketHandler
 	private static void S_GameReadyHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_GameReady;
-		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false) return;
+		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false)
+		{
+			Loggers.Error.Error("Scene_SearchingPlayers is not ready yet");
+			JobMgr.PushUnityJob(() => S_GameReadyHandle(packet, session));
+			return;
+		}
+
 		JobMgr.PushUnityJob(scene.OnGameReady);
 	}
 }
