@@ -12,6 +12,7 @@ public class Scene_Lobby : BaseScene
 	public override void Init(object param)
 	{
 		Scenetype = SceneType.Lobby;
+		Scene.PlaySceneChangeAnim();
 		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
 		User.CharType = (CharacterType)param;
 		User.CharType = CharacterType.Knight;

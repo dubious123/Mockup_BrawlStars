@@ -49,7 +49,14 @@ public class Scene_Loading : BaseScene
 
 	private IEnumerator<float> CoLoadLobbyScene()
 	{
+		var startTime = Time.time;
+		Audio.PlayOnce(_loadingBgmClip);
 		_progressBar.UpdateProgress(10, "Connecting To Server");
+		while (Network.Connected is false)
+		{
+			yield return Timing.WaitForSeconds(0.1f);
+		}
+
 		Network.RegisterSend(new C_Login
 		{
 #if UNITY_EDITOR
@@ -60,25 +67,34 @@ public class Scene_Loading : BaseScene
 			loginPw = "0827"
 		});
 
-		Audio.PlayOnce(_loadingBgmClip);
 		while (_loginSuccess == false)
 		{
 			yield return 0;
 		}
 
 		var handle = Scene.MoveTo(Enums.SceneType.Lobby, Enums.CharacterType.Knight, LoadSceneMode.Additive);
+		handle.allowSceneActivation = false;
 
-		while (handle.isDone == false)
+		while (handle.progress < 0.9f)
 		{
 			_progressBar.UpdateProgress((int)(handle.progress * 100));
 			yield return 0;
 		}
 
+		_progressBar.UpdateProgress(100);
+		for (; Time.time - startTime < _loadingBgmClip.length;)
+		{
+			Debug.Log("hi");
+			yield return Timing.WaitForOneFrame;
+		}
+
+		handle.allowSceneActivation = true;
 		SceneManager.UnloadSceneAsync((int)Enums.SceneType.Loading);
 	}
 
 	private IEnumerator<float> CoLoadGameScene()
 	{
+		var startTime = Time.time;
 		Audio.PlayAudio(_brawlIntroClip, _brawlIntroClip.name, false);
 		Timing.CallDelayed(_brawlIntroClip.length - 1, () => Audio.StopAudio(_brawlIntroClip.name, 1));
 		var loadHandle = Scene.MoveTo(Enums.SceneType.Game, Enums.CharacterType.Knight, LoadSceneMode.Single);
@@ -90,7 +106,10 @@ public class Scene_Loading : BaseScene
 		}
 
 		_progressBar.UpdateProgress(100);
-		yield return Timing.WaitForSeconds(2);
+		for (; Time.time - startTime < _loadingBgmClip.length;)
+		{
+			yield return Timing.WaitForOneFrame;
+		}
 
 		loadHandle.allowSceneActivation = true;
 		yield break;

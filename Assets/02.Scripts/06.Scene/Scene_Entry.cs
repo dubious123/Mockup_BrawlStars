@@ -8,6 +8,7 @@ public class Scene_Entry : BaseScene
 	[SerializeField] private GameObject _eventSystemPrefab;
 	[SerializeField] private GameObject _sceneChangeAnimPrefab;
 	[SerializeField] private GameObject _audioPrefab;
+	[SerializeField] private LogoAnim _logoAnim;
 
 	public override void Init(object param)
 	{
@@ -35,6 +36,6 @@ public class Scene_Entry : BaseScene
 		Network.Init();
 		Audio.Init();
 		Scene.Init();
-		Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive);
+		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
 	}
 }

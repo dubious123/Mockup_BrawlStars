@@ -11,6 +11,8 @@ public class Network : MonoBehaviour
 	private Connector _connector;
 	private static Network _instance;
 
+	public static bool Connected => _instance._session is not null;
+
 	public static void Init()
 	{
 		_instance = GameObject.Find("@Network").GetComponent<Network>();
