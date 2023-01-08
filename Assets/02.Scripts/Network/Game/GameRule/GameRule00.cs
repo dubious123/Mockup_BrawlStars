@@ -12,7 +12,7 @@ namespace Server.Game.GameRule
 		public const int REQUIRED_WIN_COUNT = 2;
 		public const int ROUND_WAIT_FRAMECOUNT = 60;
 
-		public NetCharacter[] NetCharacters => World.NetCharacters;
+		//public NetCharacter[] NetCharacters => World.NetCharacters;
 		public Action<RoundResult> OnRoundEnd { private get; set; }
 		public Action<GameResult> OnGameEnd { private get; set; }
 		public Action<NetCharacter> OnPlayerDead { private get; set; }
@@ -27,18 +27,19 @@ namespace Server.Game.GameRule
 
 		private bool _gameStarted = false;
 
-		public override TeamType GetTeamType(uint objectId)
+		public override TeamType GetTeamType(NetObject netObj)
 		{
-			if (objectId < 6)
+			var instanceId = netObj.ObjectId.InstanceId;
+			if (instanceId < 6)
 			{
-				return objectId % 2 == 0 ? TeamType.Blue : TeamType.Red;
+				return instanceId % 2 == 0 ? TeamType.Blue : TeamType.Red;
 			}
 
 			Loggers.Error.Error("Something is wrong");
 			return TeamType.None;
 		}
 
-		public override bool CanSendHit(INetObject from, INetObject to)
+		public override bool CanSendHit(NetBaseComponent from, NetBaseComponent to)
 		{
 			if (from is NetCharacter && to is NetCharacter)
 			{
@@ -46,7 +47,7 @@ namespace Server.Game.GameRule
 				return (from as NetCharacter).Team != target.Team && target.Active;
 			}
 
-			return to is INetCollidable2D and ITakeHit;
+			return to is ITakeHit;
 		}
 
 		public override void UpdateGameLogic()
@@ -82,7 +83,7 @@ namespace Server.Game.GameRule
 
 		private void HandleGameStart()
 		{
-			foreach (var player in NetCharacters)
+			foreach (var player in World.CharacterSystem.ComponentDict.Values)
 			{
 				if (player is null)
 				{
@@ -98,7 +99,7 @@ namespace Server.Game.GameRule
 		private void HandleGameEnd()
 		{
 			OnGameEnd?.Invoke(GetGameResult());
-			foreach (var player in NetCharacters)
+			foreach (var player in World.CharacterSystem.ComponentDict.Values)
 			{
 				if (player is null)
 				{

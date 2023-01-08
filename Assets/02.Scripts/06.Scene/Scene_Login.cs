@@ -57,6 +57,6 @@ public class Scene_Login : BaseScene
 	public void OnLoginSuccess(S_Login res)
 	{
 		User.Init(res);
-		Scene.MoveTo(Enums.SceneType.Lobby, CharacterType.Knight);
+		Scene.MoveTo(Enums.SceneType.Lobby, NetObjectType.Character_Shelly);
 	}
 }

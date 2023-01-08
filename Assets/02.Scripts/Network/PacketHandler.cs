@@ -63,7 +63,7 @@ public static class PacketHandler
 	private static void S_EnterLobbyHandle(BasePacket packet, ServerSession session)
 	{
 		System.Diagnostics.Debug.Assert(packet is S_EnterLobby);
-		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Lobby, CharacterType.Knight));
+		JobMgr.PushUnityJob(() => Scene.MoveTo(SceneType.Lobby, NetObjectType.Character_Shelly));
 	}
 
 	private static void S_EnterGameHandle(BasePacket packet, ServerSession session)
@@ -72,7 +72,7 @@ public static class PacketHandler
 		if (req.TeamId == -1) return;
 
 		User.TeamId = req.TeamId;
-		User.CharType = (CharacterType)req.PlayerInfo.CharacterType;
+		User.CharType = (NetObjectType)req.PlayerInfo.CharacterType;
 	}
 
 	private static void S_GameFrameInfoHandle(BasePacket packet, ServerSession session)
@@ -91,7 +91,7 @@ public static class PacketHandler
 	{
 		var req = packet as S_BroadcastEnterGame;
 		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
-		JobMgr.PushUnityJob(() => game.Enter(req.TeamId, (CharacterType)req.Charactertype));
+		JobMgr.PushUnityJob(() => game.Enter(req.TeamId, (NetObjectType)req.Charactertype));
 	}
 
 	private static void S_BroadcastStartGameHandle(BasePacket packet, ServerSession session)
@@ -105,7 +105,7 @@ public static class PacketHandler
 			for (int i = 0; i < length; i++)
 			{
 				if (i == User.TeamId) continue;
-				game.Enter((short)i, (CharacterType)req.CharacterTypeArr[i]);
+				game.Enter((short)i, (NetObjectType)req.CharacterTypeArr[i]);
 			}
 
 			game.StartGame(req.WaitTime);

@@ -23,7 +23,7 @@ public class CShellySuperShell : MonoBehaviour, ICBaseSkill
 	{
 		Player = shelly;
 		_netSuperShell = (shelly.NPlayer as NCharacterShelly).SuperShell as NShellySuperShell;
-		_cBullets = new List<CProjectile>(_netSuperShell.AmmoCount * _netSuperShell.BulletAmountPerAttack);
+		_cBullets = new List<CProjectile>(_netSuperShell.PalletsCountPerShot);
 		if (shelly.NPlayer.Team == User.Team)
 		{
 			_bulletPrefab = _bulletPrefabBlue;
@@ -33,14 +33,11 @@ public class CShellySuperShell : MonoBehaviour, ICBaseSkill
 			_bulletPrefab = _bulletPrefabRed;
 		}
 
-		foreach (var netBulletArr in _netSuperShell.BulletArrQueue)
+		foreach (var pallet in _netSuperShell.Pallets)
 		{
-			foreach (var bullet in netBulletArr)
-			{
-				var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
-				cBullet.Init(bullet);
-				_cBullets.Add(cBullet);
-			}
+			var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
+			cBullet.Init(pallet);
+			_cBullets.Add(cBullet);
 		}
 	}
 

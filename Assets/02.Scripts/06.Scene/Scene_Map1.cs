@@ -94,10 +94,10 @@ public class Scene_Map1 : BaseScene
 		}
 	}
 
-	public void Enter(short teamId, CharacterType type)
+	public void Enter(short teamId, NetObjectType type)
 	{
 		Debug.Assert(_cPlayers[teamId] is null);
-		var netCharacter = World.AddNewCharacter(teamId, type);
+		var netCharacter = World.ObjectBuilder.GetNewObject(type).GetComponent<NetCharacter>();
 		var parent = netCharacter.Team == TeamType.Blue ? _playerParentBlue : _playerParentRed;
 		var cPlayer = Instantiate(_shelly, (Vector3)_spawnPoints[teamId], Quaternion.identity, parent).GetComponent<CPlayer>();
 		netCharacter.OnFrameStart = cPlayer.HandleOneFrame;
@@ -122,6 +122,7 @@ public class Scene_Map1 : BaseScene
 	public void StartGame(float waitTime)
 	{
 		Debug.Log("StartGame");
+		World.OnWorldStart();
 		_mapUI.OnGameStart(Internal_StartGame);
 	}
 
@@ -167,8 +168,8 @@ public class Scene_Map1 : BaseScene
 
 	private void OnPlayerDead(NetCharacter character)
 	{
-		Debug.Log($"OnPlayerDead{character.ObjectId}");
-		_mapUI.OnPlayerDead(character.ObjectId);
-		CPlayers[character.ObjectId].gameObject.SetActive(false);
+		Debug.Log($"OnPlayerDead{character.NetObjId.InstanceId}");
+		_mapUI.OnPlayerDead((uint)character.NetObjId.InstanceId);
+		CPlayers[character.NetObjId.InstanceId].gameObject.SetActive(false);
 	}
 }

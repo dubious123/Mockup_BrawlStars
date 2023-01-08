@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ServerCore.Utils
 {
-	public static class Extensions
+	public static partial class Extensions
 	{
 
 	}

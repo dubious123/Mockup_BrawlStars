@@ -38,14 +38,11 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 			_bulletPrefab = _bulletPrefabRed;
 		}
 
-		foreach (var netBulletArr in _netBuckShot.BulletArrQueue)
+		foreach (var pallet in _netBuckShot.Shots)
 		{
-			foreach (var bullet in netBulletArr)
-			{
-				var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
-				cBullet.Init(bullet);
-				_cBullets.Add(cBullet);
-			}
+			var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
+			cBullet.Init(pallet);
+			_cBullets.Add(cBullet);
 		}
 	}
 

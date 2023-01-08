@@ -7,8 +7,8 @@ namespace Server.Game.GameRule
 	public abstract class BaseGameRule
 	{
 		public NetWorld World { get; set; }
-		public abstract TeamType GetTeamType(uint objectId);
-		public abstract bool CanSendHit(INetObject from, INetObject to);
+		public abstract TeamType GetTeamType(NetObject netObj);
+		public abstract bool CanSendHit(NetBaseComponent from, NetBaseComponent to);
 		public abstract void UpdateGameLogic();
 	}
 }

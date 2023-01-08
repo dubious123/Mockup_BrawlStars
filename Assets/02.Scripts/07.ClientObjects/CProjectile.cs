@@ -10,7 +10,7 @@ public class CProjectile : MonoBehaviour
 {
 	[SerializeField] private GameObject _bulletGo;
 	[SerializeField] private ParticleSystem _onDisableEffect;
-	public bool IsAlive => _projectile.IsAlive;
+	public bool IsAlive => _projectile.Active;
 	private NetProjectile _projectile;
 
 	public void Init(NetProjectile projectile)
@@ -27,7 +27,7 @@ public class CProjectile : MonoBehaviour
 
 	private void Update()
 	{
-		if (_projectile.IsAlive is false)
+		if (_projectile.Active is false)
 		{
 			enabled = false;
 			_bulletGo.SetActive(false);

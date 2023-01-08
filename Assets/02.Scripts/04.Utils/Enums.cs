@@ -12,13 +12,6 @@ public static partial class Enums
 		SearchingPlayers,
 	}
 
-	public enum CharacterType
-	{
-		None,
-		Knight,
-		Shelly
-	}
-
 	public enum LogSourceType
 	{
 		Packet,

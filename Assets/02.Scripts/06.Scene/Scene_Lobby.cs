@@ -14,15 +14,15 @@ public class Scene_Lobby : BaseScene
 		Scenetype = SceneType.Lobby;
 		Scene.PlaySceneChangeAnim();
 		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
-		User.CharType = (CharacterType)param;
-		User.CharType = CharacterType.Knight;
+		User.CharType = (NetObjectType)param;
+		User.CharType = NetObjectType.Character_Shelly;
 		IsReady = true;
 		GetComponent<AudioSource>().PlayDelayed(1f);
 	}
 
 	public void EnterGame()
 	{
-		Network.RegisterSend(new C_EnterGame() { CharacterType = (int)Enums.CharacterType.Knight, UserId = User.UserId });
+		Network.RegisterSend(new C_EnterGame() { CharacterType = (int)Enums.NetObjectType.Character_Shelly, UserId = User.UserId });
 		SceneManager.UnloadSceneAsync((int)Scenetype);
 		Scene.MoveTo(SceneType.SearchingPlayers, 1, LoadSceneMode.Additive);
 	}

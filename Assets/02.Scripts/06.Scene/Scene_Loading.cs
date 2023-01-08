@@ -72,7 +72,7 @@ public class Scene_Loading : BaseScene
 			yield return 0;
 		}
 
-		var handle = Scene.MoveTo(Enums.SceneType.Lobby, Enums.CharacterType.Knight, LoadSceneMode.Additive);
+		var handle = Scene.MoveTo(Enums.SceneType.Lobby, Enums.NetObjectType.Character_Shelly, LoadSceneMode.Additive);
 		handle.allowSceneActivation = false;
 
 		while (handle.progress < 0.9f)
@@ -84,7 +84,6 @@ public class Scene_Loading : BaseScene
 		_progressBar.UpdateProgress(100);
 		for (; Time.time - startTime < _loadingBgmClip.length;)
 		{
-			Debug.Log("hi");
 			yield return Timing.WaitForOneFrame;
 		}
 
@@ -97,7 +96,7 @@ public class Scene_Loading : BaseScene
 		var startTime = Time.time;
 		Audio.PlayAudio(_brawlIntroClip, _brawlIntroClip.name, false);
 		Timing.CallDelayed(_brawlIntroClip.length - 1, () => Audio.StopAudio(_brawlIntroClip.name, 1));
-		var loadHandle = Scene.MoveTo(Enums.SceneType.Game, Enums.CharacterType.Knight, LoadSceneMode.Single);
+		var loadHandle = Scene.MoveTo(Enums.SceneType.Game, Enums.NetObjectType.Character_Shelly, LoadSceneMode.Single);
 		loadHandle.allowSceneActivation = false;
 		while (loadHandle.progress < 0.9f)
 		{
