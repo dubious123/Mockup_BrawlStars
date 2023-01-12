@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 using Server.Game.Data;
@@ -45,6 +46,14 @@ namespace Server.Game
 				var collider = obj.GetComponent<NetBoxCollider2D>();
 				collider.SetOffsetAndSize(netObjData.BoxCollider.Offset, netObjData.BoxCollider.Size);
 			}
+		}
+
+		public void SetNetObjectActive(NetObject netObj, bool active)
+		{
+			ColliderSystem.SetActive(netObj, active);
+			CharacterSystem.SetActive(netObj, active);
+			EnvSystem.SetActive(netObj, active);
+			ProjectileSystem.SetActive(netObj, active);
 		}
 
 		public void OnWorldStart()

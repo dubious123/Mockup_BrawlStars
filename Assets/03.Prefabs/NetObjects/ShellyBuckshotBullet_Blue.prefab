@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191534103566937956}
   - component: {fileID: 191534103566937957}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 191534104047469462}
   - component: {fileID: 191534104047469464}
   - component: {fileID: 191534104047469463}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4916,7 +4916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191534104987688180}
   - component: {fileID: 6626587064184625919}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: ShellyBuckshotBullet_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4964,7 +4964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 354544705245619089}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,7 +4978,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770820066699737419}
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
@@ -4989,7 +4989,7 @@ Transform:
   - {fileID: 3134636626318141857}
   m_Father: {fileID: 191534104987688180}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1135457392687722058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5000,7 +5000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3305472130992499304}
   - component: {fileID: 3030347545935998138}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5140,7 +5140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3134636626318141857}
   - component: {fileID: 1089338970501815997}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5225,7 +5225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6806373131667187894}
   - component: {fileID: 4162683899603219631}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5365,7 +5365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 613346474268575615}
   - component: {fileID: 3721489033435411520}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5507,7 +5507,7 @@ GameObject:
   - component: {fileID: 711196452817463745}
   - component: {fileID: 352967956756148589}
   - component: {fileID: 8341370670642336310}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: CFX3_Hit_SmokePuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10221,7 +10221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2579307992454676232}
   - component: {fileID: 7518754557106537358}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10306,7 +10306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8693093313183001545}
   - component: {fileID: 4200256798288790757}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10391,7 +10391,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4944222792586256367}
   - component: {fileID: 1377356217421456683}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Trail (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

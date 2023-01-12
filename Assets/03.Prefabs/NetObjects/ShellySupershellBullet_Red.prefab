@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1393984750225184753}
   - component: {fileID: 1393984750225184767}
   - component: {fileID: 1393984750225184752}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4831,7 +4831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393984751430092947}
   - component: {fileID: 5334029069288263320}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: ShellySupershellBullet_Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4879,7 +4879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520952759469062134}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 1742531976932851110}
   - component: {fileID: 1519371698836546826}
   - component: {fileID: 7075887908524852817}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: CFX3_Hit_SmokePuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9633,7 +9633,7 @@ GameObject:
   - component: {fileID: 3965019991113159407}
   - component: {fileID: 5958517133588087337}
   - component: {fileID: 5073376826438599397}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: Spikes 144-216
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14371,7 +14371,7 @@ GameObject:
   - component: {fileID: 5707532996039012375}
   - component: {fileID: 5549049085946592137}
   - component: {fileID: 1537512442486922532}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: Spikes 72-144
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19110,7 +19110,7 @@ GameObject:
   - component: {fileID: 8912867300226692356}
   - component: {fileID: 8912867300226692411}
   - component: {fileID: 8912867300226692358}
-  m_Layer: 23
+  m_Layer: 24
   m_Name: CFXR Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

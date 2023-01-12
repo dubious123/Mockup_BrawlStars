@@ -63,7 +63,7 @@ public class Scene_Map1 : BaseScene
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		_spawnPoints = data.SpawnPoints;
 		World = new(data, _gameRule);
-		Enter(User.TeamId, User.CharType);
+		//Enter(User.TeamId, User.CharType);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
 	}
@@ -83,12 +83,12 @@ public class Scene_Map1 : BaseScene
 			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
 				//todo
+				Debug.Log("empty");
 				yield return 0f;
 			}
 
 			World.InputInfo = info;
 			World.Update();
-
 			_currentTick++;
 			yield return 0f;
 		}

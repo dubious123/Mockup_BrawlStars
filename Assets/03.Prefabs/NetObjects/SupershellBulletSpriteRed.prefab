@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8335193918689364880}
   - component: {fileID: 8394180700114701634}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6691113840970682012}
   - component: {fileID: 6691113840970682013}
-  m_Layer: 21
+  m_Layer: 24
   m_Name: SupershellBulletSpriteRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}

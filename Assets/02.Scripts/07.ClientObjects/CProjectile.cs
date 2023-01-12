@@ -17,6 +17,7 @@ public class CProjectile : MonoBehaviour
 	{
 		_projectile = projectile;
 		transform.SetPositionAndRotation((Vector3)_projectile.Position, (Quaternion)_projectile.Rotation);
+		Debug.Log(_onDisableEffect.gameObject);
 	}
 
 	private void OnEnable()
@@ -34,7 +35,8 @@ public class CProjectile : MonoBehaviour
 			return;
 		}
 
-		transform.SetPositionAndRotation((Vector3)_projectile.Position, (Quaternion)_projectile.Rotation);
+		//transform.SetPositionAndRotation((Vector3)_projectile.Position, (Quaternion)_projectile.Rotation);
+		transform.position = new Vector3((float)_projectile.Position.x, 1, (float)_projectile.Position.z);
 	}
 
 	private void OnDisable()

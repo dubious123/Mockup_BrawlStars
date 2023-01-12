@@ -72,7 +72,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &488282088763080594
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 488282089482199857}
   - component: {fileID: 488282089482199859}
   - component: {fileID: 488282089482199856}
-  m_Layer: 23
+  m_Layer: 21
   m_Name: MoveCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 6455835301831051295}
+  _indicatorAnchor: {fileID: 488282088763080593}
 --- !u!1 &488282090020320053
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488282090527741396}
   - component: {fileID: 488282090527741399}
-  m_Layer: 23
+  m_Layer: 21
   m_Name: SelectCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10063,7 +10064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.000028610226}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1000, y: 520}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &9144762013511955563

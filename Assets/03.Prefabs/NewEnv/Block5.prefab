@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 993089605419303195}
   - component: {fileID: 9161813691113976933}
   - component: {fileID: 8790003910712817250}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3908465287576895908}
   - component: {fileID: 2525334883689505691}
   - component: {fileID: 4219744088245585299}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 8218114899058313171}
   - component: {fileID: 1013302763559196521}
   - component: {fileID: 4109060895389242322}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 6514892515174524789}
   - component: {fileID: 6364076349694009663}
   - component: {fileID: 6699675454597218258}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1341884187685227805}
   - component: {fileID: -1377458460906632479}
-  m_Layer: 19
+  m_Layer: 20
   m_Name: Block5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 4357502483661190482, guid: b0ef87ff9989cb84fa3b5af12474cae3, type: 3}
       propertyPath: m_Name
       value: Quad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357502483661190482, guid: b0ef87ff9989cb84fa3b5af12474cae3, type: 3}
+      propertyPath: m_Layer
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4357502483661190482, guid: b0ef87ff9989cb84fa3b5af12474cae3, type: 3}
       propertyPath: m_IsActive

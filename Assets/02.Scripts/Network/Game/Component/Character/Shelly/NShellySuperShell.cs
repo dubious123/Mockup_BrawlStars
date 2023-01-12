@@ -44,9 +44,10 @@ public class NShellySuperShell : NetBaseSkill
 		var degreeDelta = _bulletAngle / _palletCountPerShell;
 		for (int j = 0; j < _palletCountPerShell; ++j)
 		{
-			var obj = _shelly.ObjectBuilder.GetNewObject(NetObjectType.Projectile_Shelly_Buckshot);
+			var obj = _shelly.ObjectBuilder.GetNewObject(NetObjectType.Projectile_Shelly_SuperShell);
 			Pallets[j] = obj.GetComponent<NetProjectile>()
 				.SetAngle((degreeOffset + degreeDelta * j) * sMathf.Deg2Rad);
+			obj.Active = false;
 		}
 	}
 
@@ -86,7 +87,7 @@ public class NShellySuperShell : NetBaseSkill
 		{
 			pallet.Reset();
 			pallet.NetObj.SetPositionAndRotation(_shelly.Position, _shelly.Rotation);
-			pallet.Active = true;
+			pallet.NetObj.Active = true;
 		}
 
 		yield return 0;
@@ -139,7 +140,7 @@ public class NShellySuperShell : NetBaseSkill
 		if (character is not null && _shelly.World.GameRule.CanSendHit(_shelly, character))
 		{
 			_shelly.SendHit(character, _hitInfo);
-			pallet.Active = false;
+			pallet.NetObj.Active = false;
 			return;
 		}
 	}

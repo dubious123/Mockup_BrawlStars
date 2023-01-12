@@ -58,7 +58,6 @@ public class NetProjectile : NetBaseComponent, INetUpdatable
 		}
 
 		NetObj.Position += NetObj.Rotation * (_speed * _moveDir * Define.FixedDeltaTime);
-		Loggers.Debug.Information("{0}", NetObj.Position);
 		//Owner.World.FindAllAndBroadcast(target =>
 		//{
 		//	if (target == Owner)
