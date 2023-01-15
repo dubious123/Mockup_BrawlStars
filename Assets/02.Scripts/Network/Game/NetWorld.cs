@@ -26,6 +26,8 @@ namespace Server.Game
 		public NetProjectileSystem ProjectileSystem { get; }
 		public GameFrameInfo InputInfo { get; set; }
 		public NetCharacter[] NetCharacters = new NetCharacter[6];
+		public bool Active { get; set; }
+		public WorldData Data => _worldData;
 
 		private readonly WorldData _worldData;
 
@@ -39,13 +41,6 @@ namespace Server.Game
 			EnvSystem = new() { World = this };
 			ProjectileSystem = new() { World = this };
 			_worldData = data;
-			foreach (var netObjData in data.NetObjectDatas)
-			{
-				var obj = ObjectBuilder.GetNewObject(NetObjectType.Env_Wall)
-					.SetPositionAndRotation(netObjData.Position, netObjData.Rotation);
-				var collider = obj.GetComponent<NetBoxCollider2D>();
-				collider.SetOffsetAndSize(netObjData.BoxCollider.Offset, netObjData.BoxCollider.Size);
-			}
 		}
 
 		public void SetNetObjectActive(NetObject netObj, bool active)
@@ -58,25 +53,32 @@ namespace Server.Game
 
 		public void OnWorldStart()
 		{
-			foreach (var character in CharacterSystem.ComponentDict.Values)
-			{
-				character.Position = _worldData.SpawnPoints[character.NetObjId.InstanceId];
-			}
+			Active = true;
+			Reset();
+		}
+
+
+		public void Reset()
+		{
+			ColliderSystem.Reset();
+			CharacterSystem.Reset();
+			EnvSystem.Reset();
+			ProjectileSystem.Reset();
 		}
 
 		public void Update()
 		{
-			UpdateGameLogic();
+			if (Active is false)
+			{
+				return;
+			}
+
 			UpdateInputs();
 			ColliderSystem.Update();
 			CharacterSystem.Update();
 			EnvSystem.Update();
 			ProjectileSystem.Update();
-		}
-
-		public void UpdateGameLogic()
-		{
-			GameRule.UpdateGameLogic();
+			GameRule.Update();
 		}
 
 		public void UpdateInputs()
@@ -97,6 +99,15 @@ namespace Server.Game
 		public void AddNewNetObject(NetObject obj)
 		{
 			NetObjectDict.Add(obj.ObjectId, obj);
+		}
+
+		public void RemoveNetObject(NetObject obj)
+		{
+			NetObjectDict.Remove(obj.ObjectId);
+			ColliderSystem.RemoveComponent(obj);
+			CharacterSystem.RemoveComponent(obj);
+			EnvSystem.RemoveComponent(obj);
+			ProjectileSystem.RemoveComponent(obj);
 		}
 
 		public NetObject FindNetObject(NetObjectId inGameId) => NetObjectDict[inGameId];

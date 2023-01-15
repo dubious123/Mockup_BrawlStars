@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 52
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 115
+  controlID: 113
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 394.80005
     height: 334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -466,7 +466,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25.2}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -625,9 +625,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.00058829784, y: 1.0942245, z: -11.237691}
+    m_Target: {x: 6.0043507, y: 4.32967, z: -1.4054756}
     speed: 2
-    m_Value: {x: -0.00058829784, y: 1.0942245, z: -11.237691}
+    m_Value: {x: 6.0043507, y: 4.32967, z: -1.4054756}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -674,13 +674,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3301384, y: 0.09868414, z: -0.03539765, w: 0.93821734}
+    m_Target: {x: 0.2965487, y: 0.12685208, z: -0.040433187, w: 0.9458157}
     speed: 2
-    m_Value: {x: 0.33009967, y: 0.09867256, z: -0.0353935, w: 0.9381073}
+    m_Value: {x: 0.29651392, y: 0.12683721, z: -0.040428445, w: 0.94570476}
   m_Size:
-    m_Target: 8.062025
+    m_Target: 14.434557
     speed: 2
-    m_Value: 8.062025
+    m_Value: 14.434557
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -832,7 +832,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a403feff5a04feffc606feffe406feffec96feffba97feffde97feffe697feff2afbffff
+      m_ExpandedIDs: 103efaffc63efaff3241faff5041faff58d1faff26d2faff4ad2faff52d2faff34a9fbffeaa9fbff56acfbff74acfbff7c3cfcff4a3dfcff6e3dfcff763dfcff18ebfcfff2effcffa8f0fcff14f3fcff32f3fcff3a83fdff0884fdff2c84fdff3484fdff342afeff6e36feffc636feff683ffeff1e40feff8a42feffa842feffb0d2feff7ed3feffa2d3feffaad3feff1cfbffffb0a702008ad602005c340300fc3d0300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -897,22 +897,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/07.Animations/Controllers/01.Charactor
+    - Assets/02.Scripts/07.ClientObjects/Player/Shelly
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/07.Animations/Controllers/01.Charactor
+  - Assets/02.Scripts/07.ClientObjects/Player/Shelly
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\JH\Desktop\projects\Mockup_BrawlStars
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 288.6}
-    m_SelectedIDs: 3a9a0000
-    m_LastClickedID: 39482
-    m_ExpandedIDs: 00000000aa990000ac990000ae9900001e9a00003c9a000000ca9a3b
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: de440300
+    m_LastClickedID: 214238
+    m_ExpandedIDs: 00000000be990000c0990000c2990000089a0000249a0000429a0000e044030000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -940,7 +940,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa990000ac990000ae990000
+    m_ExpandedIDs: 00000000be990000c0990000c2990000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -967,7 +967,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: ec8d000086770000847700008277000036510600aa500600e0a21100dea21100aca8110092af1100b2af11006ec511007a9a00007e9a00003c840000fcb60000e64c0d00089800000a8a0000b8be2800a458270040d428003ed4280068845b0060845b0070845b0062285c006c845b0070285c0064845b00c4320300bc3203001233030000000000ca9400003619050052fa040006c41100
     m_RenameOverlay:
       m_UserAcceptedRename: 0

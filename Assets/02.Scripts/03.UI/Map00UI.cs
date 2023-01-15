@@ -5,6 +5,8 @@ using System.Runtime.InteropServices;
 
 using MEC;
 
+using Server.Game.GameRule;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,8 +20,11 @@ public class Map00UI : MonoBehaviour
 	[SerializeField] private GameCamWelcomeMove _camAnim;
 	#endregion
 
+	private CenterScores _centerScores;
+
 	private void Start()
 	{
+		_centerScores = GetComponentInChildren<CenterScores>(true);
 		Reset();
 	}
 
@@ -49,6 +54,24 @@ public class Map00UI : MonoBehaviour
 		});
 
 		_camAnim.enabled = true;
+	}
+
+	public void OnRoundStart()
+	{
+		_centerScores.OnRoundStart();
+	}
+
+	public void OnRoundEnd(GameRule00.RoundResult result)
+	{
+		if (result == GameRule00.RoundResult.Blue)
+		{
+			_centerScores.OnBlueWin();
+		}
+		else
+		{
+			//Todo
+			_centerScores.OnRedWin();
+		}
 	}
 
 	public void OnPlayerDead(uint playerId)

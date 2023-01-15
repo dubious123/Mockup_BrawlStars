@@ -1,3 +1,8 @@
+using System;
+using System.Runtime;
+
+using MEC;
+
 using ServerCore;
 using ServerCore.Managers;
 
@@ -10,8 +15,11 @@ public class Network : MonoBehaviour
 	private ServerSession _session;
 	private Connector _connector;
 	private static Network _instance;
-
+	public static int RTT;
+	public static int Latency => RTT / 2;
 	public static bool Connected => _instance._session is not null;
+
+	private CoroutineHandle _syncTimeHandle;
 
 	public static void Init()
 	{
@@ -27,13 +35,32 @@ public class Network : MonoBehaviour
 		Debug.Log($"Connecting to {endPoint}");
 	}
 
-	private void OnApplicationQuit()
-	{
-		SessionMgr.CloseAll();
-	}
-
 	public static void RegisterSend(BasePacket packet)
 	{
 		_instance._session.RegisterSend(packet);
+	}
+
+	public static void StartSyncTime()
+	{
+		Timing.KillCoroutines(_instance._syncTimeHandle);
+		_instance._syncTimeHandle = Timing.CallPeriodically(float.PositiveInfinity, 5, SyncTime);
+	}
+
+	public static void StopSyncTime()
+	{
+		Timing.KillCoroutines(_instance._syncTimeHandle);
+	}
+
+	public static void SyncTime()
+	{
+		RegisterSend(new C_SyncTime()
+		{
+			ClientLocalTime = DateTime.UtcNow.ToFileTimeUtc()
+		});
+	}
+
+	private void OnApplicationQuit()
+	{
+		SessionMgr.CloseAll();
 	}
 }

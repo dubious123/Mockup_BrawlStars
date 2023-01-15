@@ -20,10 +20,12 @@ namespace ServerCore
 			_sendArgs.Completed += (obj, e) => OnSendCompleted(e);
 			_recvArgs.Completed += (obj, e) => OnRecvCompleted(e);
 		}
+
 		public virtual void OnConnected()
 		{
 			RegisterRecv();
 		}
+
 		public abstract bool RegisterSend(BasePacket packet);
 
 		protected virtual void Send()
@@ -33,19 +35,20 @@ namespace ServerCore
 			if (_socket.SendAsync(_sendArgs) == false)
 				OnSendCompleted(_sendArgs);
 		}
+
 		public virtual void Close()
 		{
 			Shutdown();
 			Disconnect();
 			_socket.Close(100);
 		}
+
 		protected virtual void OnSendCompleted(SocketAsyncEventArgs args)
 		{
 			_sending = 0;
 			if (args.SocketError != SocketError.Success)
 				throw new Exception();
 		}
-
 
 		protected virtual void RegisterRecv()
 		{
@@ -56,6 +59,7 @@ namespace ServerCore
 				OnRecvCompleted(_recvArgs);
 			}
 		}
+
 		protected virtual void OnRecvCompleted(SocketAsyncEventArgs args)
 		{
 			//Todo Socket Error Operation Aborted
@@ -63,19 +67,15 @@ namespace ServerCore
 				throw new Exception();
 			_recvBuffer.OnWrite(args.BytesTransferred);
 		}
+
 		protected virtual void Disconnect()
 		{
 			_socket.Disconnect(false);
 		}
+
 		protected virtual void Shutdown()
 		{
 			_socket.Shutdown(SocketShutdown.Both);
 		}
-
-
-
-
-
-
 	}
 }

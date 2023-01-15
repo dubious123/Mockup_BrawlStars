@@ -14,7 +14,7 @@ namespace Server.Game.GameRule
 
 		//public NetCharacter[] NetCharacters => World.NetCharacters;
 		public Action<RoundResult> OnRoundEnd { private get; set; }
-		public Action<GameResult> OnGameEnd { private get; set; }
+		public Action<MatchResult> OnMatchOver { private get; set; }
 		public Action<NetCharacter> OnPlayerDead { private get; set; }
 		public Action OnRoundStart { private get; set; }
 		public int CurrentRound { get; private set; } //0,1,2
@@ -22,7 +22,6 @@ namespace Server.Game.GameRule
 		public int RedWinCount { get; private set; }
 		public int BluePlayerDeadCount { get; private set; }
 		public int RedPlayerDeadCount { get; private set; }
-		public int CurrentRoundWaitFrameCount { get; private set; }
 		public int CurrentRoundFrameCount { get; private set; }
 
 		private bool _gameStarted = false;
@@ -50,17 +49,11 @@ namespace Server.Game.GameRule
 			return to is ITakeHit;
 		}
 
-		public override void UpdateGameLogic()
+		public override void Update()
 		{
 			if (_gameStarted is false)
 			{
-				HandleGameStart();
-			}
-
-			if (CurrentRoundWaitFrameCount > 0)
-			{
-				--CurrentRoundWaitFrameCount;
-				return;
+				HandleMatchStart();
 			}
 
 			if (CurrentRoundFrameCount++ == 0)
@@ -68,20 +61,10 @@ namespace Server.Game.GameRule
 				HandleRoundStart();
 			}
 
-			var roundResult = GetRoundResult();
-			if (roundResult == RoundResult.None)
-			{
-				return;
-			}
-
-			HandleRoundEnd(roundResult);
-			if (BlueWinCount >= REQUIRED_WIN_COUNT && RedWinCount >= REQUIRED_WIN_COUNT && CurrentRound >= MAX_ROUND_COUNT)
-			{
-				HandleGameEnd();
-			}
+			HandleRoundEnd(GetRoundResult());
 		}
 
-		private void HandleGameStart()
+		private void HandleMatchStart()
 		{
 			foreach (var player in World.CharacterSystem.ComponentDict.Values)
 			{
@@ -96,9 +79,10 @@ namespace Server.Game.GameRule
 			_gameStarted = true;
 		}
 
-		private void HandleGameEnd()
+		private void HandleMatchOver()
 		{
-			OnGameEnd?.Invoke(GetGameResult());
+			OnMatchOver?.Invoke(GetMatchResult());
+			World.Active = false;
 			foreach (var player in World.CharacterSystem.ComponentDict.Values)
 			{
 				if (player is null)
@@ -119,16 +103,30 @@ namespace Server.Game.GameRule
 
 		private void HandleRoundEnd(RoundResult roundResult)
 		{
-			OnRoundEnd?.Invoke(roundResult);
-			CurrentRoundFrameCount = 0;
-			CurrentRoundWaitFrameCount = 300;
-			if (roundResult == RoundResult.Blue)
+			if (roundResult == RoundResult.None)
+			{
+				return;
+			}
+			else if (roundResult == RoundResult.Blue)
 			{
 				BlueWinCount++;
 			}
-			else
+			else if (roundResult == RoundResult.Red)
 			{
 				RedWinCount++;
+			}
+
+			World.Active = false;
+			++CurrentRound;
+			CurrentRoundFrameCount = 0;
+
+			if (BlueWinCount >= REQUIRED_WIN_COUNT || RedWinCount >= REQUIRED_WIN_COUNT || CurrentRound >= MAX_ROUND_COUNT)
+			{
+				HandleMatchOver();
+			}
+			else
+			{
+				OnRoundEnd?.Invoke(roundResult);
 			}
 		}
 
@@ -163,9 +161,9 @@ namespace Server.Game.GameRule
 			return roundResult;
 		}
 
-		private GameResult GetGameResult() => BlueWinCount > RedWinCount ? GameResult.Blue :
-											  BlueWinCount < RedWinCount ? GameResult.Red :
-											  GameResult.Draw;
+		private MatchResult GetMatchResult() => BlueWinCount > RedWinCount ? MatchResult.Blue :
+											  BlueWinCount < RedWinCount ? MatchResult.Red :
+											  MatchResult.Draw;
 		[Flags]
 		public enum RoundResult
 		{
@@ -175,7 +173,7 @@ namespace Server.Game.GameRule
 			Draw = 3,
 		}
 
-		public enum GameResult
+		public enum MatchResult
 		{
 			None,
 			Blue,

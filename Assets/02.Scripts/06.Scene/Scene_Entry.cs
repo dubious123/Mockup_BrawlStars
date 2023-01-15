@@ -1,3 +1,5 @@
+using System;
+
 using MEC;
 
 using UnityEngine;
@@ -36,6 +38,7 @@ public class Scene_Entry : BaseScene
 		Network.Init();
 		Audio.Init();
 		Scene.Init();
+
 		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
 	}
 }

@@ -34,10 +34,15 @@ namespace Server.Game
 			return component;
 		}
 
-		public T GetComponent(NetObject netOjbect)
+		public T GetComponent(NetObject netObject)
 		{
-			_componentDict.TryGetValue(netOjbect.ObjectId, out var component);
+			_componentDict.TryGetValue(netObject.ObjectId, out var component);
 			return component;
+		}
+
+		public void RemoveComponent(NetObject netObj)
+		{
+			_componentDict.Remove(netObj.ObjectId);
 		}
 
 		public void SetActive(NetObject netObj, bool active)
@@ -58,6 +63,11 @@ namespace Server.Game
 					(c as INetUpdatable)?.Update();
 				}
 			}
+		}
+
+		public virtual void Reset()
+		{
+
 		}
 	}
 }

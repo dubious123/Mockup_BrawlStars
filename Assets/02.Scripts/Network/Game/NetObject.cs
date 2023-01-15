@@ -30,6 +30,11 @@ namespace Server.Game
 
 		private bool _active;
 
+		public void Destroy()
+		{
+			World.RemoveNetObject(this);
+		}
+
 		public NetObject SetPositionAndRotation(sVector3 position, sQuaternion rotation)
 		{
 			Position = position;

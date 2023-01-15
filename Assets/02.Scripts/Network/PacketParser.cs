@@ -18,12 +18,14 @@ public static class PacketParser
 		_packetHandlerQueue = JobMgr.GetQueue("PacketHandler");
 		_readDict = new ConcurrentDictionary<ushort, Func<string, BasePacket>>();
 		_readDict.TryAdd((ushort)PacketId.C_Init, json => JsonUtility.FromJson<C_Init>(json));
+		_readDict.TryAdd((ushort)PacketId.C_SyncTime, json => JsonUtility.FromJson<C_SyncTime>(json));
 		_readDict.TryAdd((ushort)PacketId.C_Login, json => JsonUtility.FromJson<C_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterLobby, json => JsonUtility.FromJson<C_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.C_EnterGame, json => JsonUtility.FromJson<C_EnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.C_GameReady, json => JsonUtility.FromJson<C_GameReady>(json));
 		_readDict.TryAdd((ushort)PacketId.C_PlayerInput, json => JsonUtility.FromJson<C_PlayerInput>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Init, json => JsonUtility.FromJson<S_Init>(json));
+		_readDict.TryAdd((ushort)PacketId.S_SyncTime, json => JsonUtility.FromJson<S_SyncTime>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Login, json => JsonUtility.FromJson<S_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
 		_readDict.TryAdd((ushort)PacketId.S_GameReady, json => JsonUtility.FromJson<S_GameReady>(json));
@@ -32,6 +34,8 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastEnterGame, json => JsonUtility.FromJson<S_BroadcastEnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartGame, json => JsonUtility.FromJson<S_BroadcastStartGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_GameFrameInfo, json => JsonUtility.FromJson<S_GameFrameInfo>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartNewRound, json => JsonUtility.FromJson<S_BroadcastStartNewRound>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastEndGame, json => JsonUtility.FromJson<S_BroadcastEndGame>(json));
 	}
 
 	public static IEnumerator<float> ReadPacket(this RecvBuffer buffer, ServerSession session)

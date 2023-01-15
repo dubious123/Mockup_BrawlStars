@@ -3,6 +3,8 @@ using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Security.Cryptography;
 
+using MEC;
+
 using ServerCore;
 
 using UnityEngine;
@@ -18,6 +20,7 @@ public static class PacketHandler
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
 		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_SyncTime, (packet, session) => S_SyncTimeHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_GameReady, (packet, session) => S_GameReadyHandle(packet, session));
@@ -26,6 +29,8 @@ public static class PacketHandler
 		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
 		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet, session) => S_GameFrameInfoHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartNewRound, (packet, session) => S_BroadcastStartNewRoundHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEndGame, (packet, session) => S_BroadcastEndGameHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -130,5 +135,37 @@ public static class PacketHandler
 		}
 
 		JobMgr.PushUnityJob(scene.OnGameReady);
+	}
+
+	private static void S_SyncTimeHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_SyncTime;
+		if (Network.RTT == 0)
+		{
+			Network.RTT = (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ClientLocalTime)).Milliseconds;
+		}
+		else
+		{
+			Network.RTT = (Network.RTT + (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ClientLocalTime)).Milliseconds) / 2;
+		}
+
+		JobMgr.PushUnityJob(() => UnityEngine.Debug.Log($"Latency : {Network.Latency}"));
+	}
+
+	private static void S_BroadcastStartNewRoundHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastStartNewRound;
+		if (Scene.CurrentScene is not Scene_Map1 scene || scene.IsReady == false)
+		{
+			Loggers.Error.Error("Scene_Map1 is not ready yet");
+			return;
+		}
+
+		JobMgr.PushUnityJob(() => Timing.CallDelayed((req.WaitMilliseconds - Network.Latency) / 1000f, scene.StartNewRound));
+	}
+
+	private static void S_BroadcastEndGameHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastEndGame;
 	}
 }

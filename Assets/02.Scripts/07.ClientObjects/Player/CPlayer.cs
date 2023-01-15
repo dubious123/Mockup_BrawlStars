@@ -23,6 +23,7 @@ public class CPlayer : MonoBehaviour
 	[SerializeField] private Sprite _selectCircleBlue;
 	[SerializeField] private SpriteRenderer SelectCircle;
 	[SerializeField] private GameObject _hud;
+	[SerializeField] private GameObject _mesh;
 	[SerializeField] private ParticleSystem _moveSmokeEffect;
 
 	public virtual void Init(NetCharacter character, short teamId)
@@ -45,7 +46,7 @@ public class CPlayer : MonoBehaviour
 
 	public virtual void StartGame()
 	{
-		_hud.SetActive(true);
+		Reset();
 	}
 
 	public virtual void HandleOneFrame()
@@ -68,5 +69,17 @@ public class CPlayer : MonoBehaviour
 			_moveSmokeEffect.gameObject.SetActive(true);
 			_moveSmokeEffect.Play();
 		}
+	}
+
+	public virtual void OnDead()
+	{
+		_mesh.SetActive(false);
+		_hud.SetActive(false);
+	}
+
+	public virtual void Reset()
+	{
+		_mesh.SetActive(true);
+		_hud.SetActive(true);
 	}
 }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
 
+using MEC;
+
 using ServerCore;
 using ServerCore.Managers;
 
@@ -32,10 +34,8 @@ public class ServerSession : Session
 	public override void OnConnected()
 	{
 		base.OnConnected();
-		JobMgr.PushUnityJob(() =>
-		Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed"));
-		//RegisterSend(new C_Init());
-		//Send();
+		JobMgr.PushUnityJob(() => Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed"));
+		JobMgr.PushUnityJob(Network.SyncTime);
 	}
 	protected override void Send()
 	{
