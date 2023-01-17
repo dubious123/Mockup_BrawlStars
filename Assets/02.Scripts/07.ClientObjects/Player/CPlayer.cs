@@ -46,7 +46,7 @@ public class CPlayer : MonoBehaviour
 
 	public virtual void StartGame()
 	{
-		Reset();
+		_hud.SetActive(true);
 	}
 
 	public virtual void HandleOneFrame()
@@ -73,12 +73,20 @@ public class CPlayer : MonoBehaviour
 
 	public virtual void OnDead()
 	{
+		Debug.Log("onDead");
+		_mesh.SetActive(false);
+		_hud.SetActive(false);
+	}
+
+	public virtual void OnClear()
+	{
 		_mesh.SetActive(false);
 		_hud.SetActive(false);
 	}
 
 	public virtual void Reset()
 	{
+		Debug.Log("Reset");
 		_mesh.SetActive(true);
 		_hud.SetActive(true);
 	}

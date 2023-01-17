@@ -161,7 +161,7 @@ public static class PacketHandler
 			return;
 		}
 
-		JobMgr.PushUnityJob(() => Timing.CallDelayed((req.WaitMilliseconds - Network.Latency) / 1000f, scene.StartNewRound));
+		//JobMgr.PushUnityJob(() => Timing.CallDelayed((req.WaitMilliseconds - Network.Latency) / 1000f, scene.StartNewRound));
 	}
 
 	private static void S_BroadcastEndGameHandle(BasePacket packet, ServerSession session)

@@ -36,7 +36,6 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private AudioClip _ingameBgm;
 	#endregion
 
-	private GameRule00 _gameRule;
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _cPlayers;
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
@@ -53,18 +52,20 @@ public class Scene_Map1 : BaseScene
 		Scenetype = SceneType.Game;
 		Scene.PlaySceneChangeAnim();
 		var data = _dataHelper.GetWorldData();
-		_gameRule = new GameRule00()
+		World = new(data, new GameRule00()
 		{
+			OnMatchStart = OnMatchStart,
 			OnRoundStart = OnRoundStart,
 			OnRoundEnd = OnRoundEnd,
+			OnRoundClear = OnRoundClear,
+			OnRoundReset = OnRoundReset,
 			OnMatchOver = OnMatchOver,
-			OnPlayerDead = OnPlayerDead
-		};
+			OnPlayerDead = OnPlayerDead,
+		});
 
 		_cPlayers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		_spawnPoints = data.SpawnPoints;
-		World = new(data, _gameRule);
 		IsReady = true;
 		Network.RegisterSend(new C_GameReady(User.UserId));
 		Network.StartSyncTime();
@@ -82,12 +83,6 @@ public class Scene_Map1 : BaseScene
 		while (true)
 		{
 			Loggers.Game.Information("---------------Frame [{0}]----------------", _currentTick);
-			while (World.Active is false)
-			{
-				yield return 0f;
-				continue;
-			}
-
 			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
 				//todo
@@ -95,7 +90,7 @@ public class Scene_Map1 : BaseScene
 				yield return 0f;
 			}
 
-			World.InputInfo = info;
+			World.UpdateInputs(info);
 			World.Update();
 			_currentTick++;
 			Loggers.Game.Information("------------------------------------------");
@@ -130,17 +125,8 @@ public class Scene_Map1 : BaseScene
 
 	public void StartGame(float waitTime)
 	{
-		Debug.Log("StartGame");
-		World.OnWorldStart();
-		_mapUI.OnGameStart(Internal_StartGame);
-	}
-
-	public void StartNewRound()
-	{
-		Debug.Log("StartNewRound");
 		World.Reset();
-		World.Active = true;
-		OnRoundStart();
+		_mapUI.OnGameStart(Internal_StartGame);
 	}
 
 	private void Internal_StartGame()
@@ -164,24 +150,42 @@ public class Scene_Map1 : BaseScene
 	{
 		//Debug.Assert(_characters[teamId] is not null);
 		var info = new GameFrameInfo(req);
-
 		_frameInfoQueue.Enqueue(info);
+	}
+
+	private void OnMatchStart()
+	{
+		Loggers.Game.Information("Match Start");
 	}
 
 	private void OnRoundStart()
 	{
 		Loggers.Game.Information("Round Start");
 		_mapUI.OnRoundStart();
-		foreach (var c in _cPlayers)
-		{
-			c?.Reset();
-		}
 	}
 
 	private void OnRoundEnd(GameRule00.RoundResult result)
 	{
-		Loggers.Game.Information("Round End {0}", Enum.GetName(typeof(GameRule00.MatchResult), result));
+		Loggers.Game.Information("Round End {0}", Enum.GetName(typeof(GameRule00.RoundResult), result));
 		_mapUI.OnRoundEnd(result);
+	}
+
+	private void OnRoundClear()
+	{
+		Loggers.Game.Information("Round Clear");
+		foreach (var c in _cPlayers)
+		{
+			c?.OnClear();
+		}
+	}
+
+	private void OnRoundReset()
+	{
+		Loggers.Game.Information("Round Reset");
+		foreach (var c in _cPlayers)
+		{
+			c?.Reset();
+		}
 	}
 
 	private void OnMatchOver(GameRule00.MatchResult result)
@@ -191,7 +195,7 @@ public class Scene_Map1 : BaseScene
 
 	private void OnPlayerDead(NetCharacter character)
 	{
-		Debug.Log($"OnPlayerDead{character.NetObjId.InstanceId}");
+		Loggers.Game.Information("Player dead {0}", character.NetObjId.InstanceId);
 		_mapUI.OnPlayerDead((uint)character.NetObjId.InstanceId);
 		CPlayers[character.NetObjId.InstanceId].OnDead();
 	}

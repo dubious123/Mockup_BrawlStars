@@ -38,7 +38,7 @@ namespace Server.Game
 		public NetObject GetRawObject(NetObjectType type)
 		{
 			var instanceId = _instanceNumDict[(int)type]++;
-			if (instanceId > 0xff)
+			if (instanceId > 0xffff)
 			{
 				throw new Exception("too many instances");
 			}
@@ -46,7 +46,7 @@ namespace Server.Game
 			return new NetObject()
 			{
 				World = World,
-				ObjectId = NetObjectId.FromRaw((((uint)type) << 8) | instanceId),
+				ObjectId = NetObjectId.FromRaw((((uint)type) << 16) | instanceId),
 			};
 		}
 

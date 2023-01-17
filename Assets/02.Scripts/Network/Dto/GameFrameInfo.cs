@@ -1,4 +1,6 @@
-﻿using Server.Game;
+﻿using System;
+
+using Server.Game;
 
 public class GameFrameInfo
 {
@@ -23,4 +25,12 @@ public class GameFrameInfo
 	public long StartTick => _req.StartTick;
 	public long TargetTick => _req.TargetTick;
 	public InputData[] Inputs { get; private set; }
+
+	public void Reset()
+	{
+		for (int i = 0; i < Inputs.Length; i++)
+		{
+			Inputs[i] = default;
+		}
+	}
 }
