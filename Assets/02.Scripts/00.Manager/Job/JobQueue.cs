@@ -3,16 +3,15 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
-using UnityEngine;
 
+using UnityEngine;
 public class JobQueue
 {
-	readonly string _name;
-	readonly int _waitTick;
-
-	bool _isJobQueueRunning;
-	Thread[] _threads;
-	ConcurrentQueue<Action> _jobQueue = new();
+	private readonly string _name;
+	private readonly int _waitTick;
+	private bool _isJobQueueRunning;
+	private Thread[] _threads;
+	private ConcurrentQueue<Action> _jobQueue = new();
 	public JobQueue(string name, int threadNum, int waitTick)
 	{
 		_name = name;
@@ -48,7 +47,8 @@ public class JobQueue
 			t.Interrupt();
 		}
 	}
-	void Loop()
+
+	private void Loop()
 	{
 	Loop:
 		long nowTick = 0;

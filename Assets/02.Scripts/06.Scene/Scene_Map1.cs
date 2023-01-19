@@ -40,7 +40,6 @@ public class Scene_Map1 : BaseScene
 	private CPlayer[] _cPlayers;
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
 	private IEnumerator<float> _coHandler;
-	private object _lock = new();
 	private long _currentTick = 0;
 	private bool _gameStarted = false;
 
@@ -63,6 +62,7 @@ public class Scene_Map1 : BaseScene
 			OnPlayerDead = OnPlayerDead,
 		});
 
+		GetComponentInChildren<CEnvSystem>(true).Init(World.EnvSystem);
 		_cPlayers = new CPlayer[6];
 		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		_spawnPoints = data.SpawnPoints;

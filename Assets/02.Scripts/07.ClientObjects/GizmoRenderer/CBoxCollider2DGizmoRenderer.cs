@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class CBoxCollider2DGizmoRenderer : MonoBehaviour
+public class CBoxCollider2DGizmoRenderer : CWall
 {
 	public Vector2 Offset;
 	public Vector2 Size;

@@ -4,10 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Unity.VisualScripting;
-
-using UnityEngine;
-
 using static Enums;
 
 namespace Server.Game
@@ -15,10 +11,15 @@ namespace Server.Game
 	public abstract class NetBaseComponentSystem<T> : INetUpdatable where T : NetBaseComponent
 	{
 		public bool Active { get; set; } = true;
-		public NetWorld World { get; init; }
+		public NetWorld World { get; private set; }
 		public DetDictionary<NetObjectId, T> ComponentDict => _componentDict;
 
 		private DetDictionary<NetObjectId, T> _componentDict = new();
+
+		public virtual void Init(NetWorld world)
+		{
+			World = world;
+		}
 
 		public bool AddComponent(NetObjectId netObjectId, T component)
 		{
@@ -34,9 +35,9 @@ namespace Server.Game
 			return component;
 		}
 
-		public T GetComponent(NetObject netObject)
+		public T GetComponent(NetObject netOjbect)
 		{
-			_componentDict.TryGetValue(netObject.ObjectId, out var component);
+			_componentDict.TryGetValue(netOjbect.ObjectId, out var component);
 			return component;
 		}
 

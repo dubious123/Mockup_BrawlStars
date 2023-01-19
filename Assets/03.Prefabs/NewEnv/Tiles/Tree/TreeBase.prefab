@@ -919,7 +919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effect: {fileID: 4806545055431208891}
   _target: {fileID: 3462968088126680864}
-  _shakePeriod: 3.5
+  _shakePeriod: 1
   _shakeAmplitude: 5
   _shakeTime: 1
 --- !u!114 &4806545055431208891
@@ -934,9 +934,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a4f1f857390be43b0c786c03401a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderers: []
-  _fadeTime: 0.6
-  _alpha: 0.8
+  _renderers:
+  - {fileID: 8694791422258702019}
+  - {fileID: 9135621765069038225}
+  - {fileID: 7838357183833652545}
+  - {fileID: 3090958521396705749}
+  - {fileID: 1982147693632109851}
+  - {fileID: 7760046889326258713}
+  - {fileID: 2333277327811803888}
+  - {fileID: 3620367941773773467}
+  _fadeTime: 0.4
+  _alpha: 0.5
 --- !u!1 &6947981326606284368
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using System.Linq;
 using Server.Game;
 using Server.Game.Data;
 
+using Unity.VisualScripting;
+
 using UnityEngine;
 
 using static Enums;
@@ -12,8 +14,6 @@ public class WorldDataHelper : MonoBehaviour
 {
 	[Header("Create World")]
 	[SerializeField] private Transform[] _spawnPoints;
-	[SerializeField] private CBoxCollider2DGizmoRenderer[] _walls;
-	[SerializeField] private Transform _env;
 
 #if UNITY_EDITOR
 	[SerializeField] private string _filePath;
@@ -29,58 +29,46 @@ public class WorldDataHelper : MonoBehaviour
 #endif
 	public WorldData GetWorldData()
 	{
-		var walls = _env.GetComponentsInChildren<CWall>(true);
-		var trees = _env.GetComponentsInChildren<CTree>(true);
+		var envs = transform.GetComponentsInChildren<CEnv>(true);
 
 		var data = new WorldData
 		{
-			NetObjectDatas = new NetObjectData[walls.Length + _walls.Length + trees.Length],
+			NetObjectDatas = new NetObjectData[envs.Length],
 			SpawnPoints = _spawnPoints.Select(t => (sVector3)t.position).ToArray()
 		};
 
-		for (int i = 0; i < walls.Length; i++)
+		for (int i = 0; i < envs.Length; i++)
 		{
-			data.NetObjectDatas[i] = new NetObjectData()
+			var env = envs[i];
+			if (env is CWall wall)
 			{
-				NetObjectId = (uint)NetObjectType.Env_Wall,
-				Position = (sVector3)walls[i].transform.position,
-				Rotation = sQuaternion.identity,
-				BoxCollider = new NetBoxCollider2DData()
+				var size = wall is not CBoxCollider2DGizmoRenderer renderer ? sVector2.one : (sVector2)renderer.Size;
+				data.NetObjectDatas[i] = new NetObjectData()
 				{
-					Size = sVector2.one,
-					Offset = sVector2.zero,
-				}
-			};
-		}
-
-		for (int i = 0; i < _walls.Length; i++)
-		{
-			data.NetObjectDatas[i + walls.Length] = new NetObjectData()
+					NetObjectId = (uint)NetObjectType.Env_Wall,
+					Position = (sVector3)wall.transform.position,
+					Rotation = sQuaternion.identity,
+					BoxCollider = new NetBoxCollider2DData()
+					{
+						Size = size,
+						Offset = sVector2.zero,
+					}
+				};
+			}
+			else if (env is CTree tree)
 			{
-				NetObjectId = (uint)NetObjectType.Env_Wall,
-				Position = (sVector3)_walls[i].transform.position,
-				Rotation = sQuaternion.identity,
-				BoxCollider = new NetBoxCollider2DData()
+				data.NetObjectDatas[i] = new NetObjectData()
 				{
-					Size = (sVector2)_walls[i].Size,
-					Offset = (sVector2)_walls[i].Offset,
-				}
-			};
-		}
-
-		for (int i = 0; i < trees.Length; i++)
-		{
-			data.NetObjectDatas[i + walls.Length + _walls.Length] = new NetObjectData()
-			{
-				NetObjectId = (uint)NetObjectType.Env_Tree,
-				Position = (sVector3)trees[i].transform.position,
-				Rotation = sQuaternion.identity,
-				BoxCollider = new NetBoxCollider2DData()
-				{
-					Size = sVector2.one,
-					Offset = sVector2.zero,
-				}
-			};
+					NetObjectId = (uint)NetObjectType.Env_Tree,
+					Position = (sVector3)tree.transform.position,
+					Rotation = sQuaternion.identity,
+					BoxCollider = new NetBoxCollider2DData()
+					{
+						Size = sVector2.one,
+						Offset = sVector2.zero,
+					}
+				};
+			}
 		}
 
 		Debug.Log("Create world data Complete");
