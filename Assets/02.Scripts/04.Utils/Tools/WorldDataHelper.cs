@@ -1,9 +1,12 @@
 using System.IO;
 using System.Linq;
 
+using Server.Game;
 using Server.Game.Data;
 
 using UnityEngine;
+
+using static Enums;
 
 public class WorldDataHelper : MonoBehaviour
 {
@@ -27,10 +30,11 @@ public class WorldDataHelper : MonoBehaviour
 	public WorldData GetWorldData()
 	{
 		var walls = _env.GetComponentsInChildren<CWall>(true);
+		var trees = _env.GetComponentsInChildren<CTree>(true);
 
 		var data = new WorldData
 		{
-			NetObjectDatas = new NetObjectData[walls.Length + _walls.Length],
+			NetObjectDatas = new NetObjectData[walls.Length + _walls.Length + trees.Length],
 			SpawnPoints = _spawnPoints.Select(t => (sVector3)t.position).ToArray()
 		};
 
@@ -38,7 +42,7 @@ public class WorldDataHelper : MonoBehaviour
 		{
 			data.NetObjectDatas[i] = new NetObjectData()
 			{
-				NetObjectId = 1,
+				NetObjectId = (uint)NetObjectType.Env_Wall,
 				Position = (sVector3)walls[i].transform.position,
 				Rotation = sQuaternion.identity,
 				BoxCollider = new NetBoxCollider2DData()
@@ -53,7 +57,7 @@ public class WorldDataHelper : MonoBehaviour
 		{
 			data.NetObjectDatas[i + walls.Length] = new NetObjectData()
 			{
-				NetObjectId = 1,
+				NetObjectId = (uint)NetObjectType.Env_Wall,
 				Position = (sVector3)_walls[i].transform.position,
 				Rotation = sQuaternion.identity,
 				BoxCollider = new NetBoxCollider2DData()
@@ -63,6 +67,23 @@ public class WorldDataHelper : MonoBehaviour
 				}
 			};
 		}
+
+		for (int i = 0; i < trees.Length; i++)
+		{
+			data.NetObjectDatas[i + walls.Length + _walls.Length] = new NetObjectData()
+			{
+				NetObjectId = (uint)NetObjectType.Env_Tree,
+				Position = (sVector3)trees[i].transform.position,
+				Rotation = sQuaternion.identity,
+				BoxCollider = new NetBoxCollider2DData()
+				{
+					Size = sVector2.one,
+					Offset = sVector2.zero,
+				}
+			};
+		}
+
+		Debug.Log("Create world data Complete");
 
 		return data;
 	}

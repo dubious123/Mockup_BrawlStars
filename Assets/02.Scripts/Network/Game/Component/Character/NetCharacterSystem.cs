@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,6 +36,11 @@ namespace Server.Game
 				character.Rotation = sQuaternion.identity;
 				character.Reset();
 			}
+		}
+
+		public void SetVisible(NetCharacter character, bool visible)
+		{
+			character.IsVisible = visible;
 		}
 	}
 }

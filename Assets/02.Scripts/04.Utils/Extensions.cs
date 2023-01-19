@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 using UnityEngine;
 using UnityEngine.UI;
 
-public static class Extensions
+public static partial class Extensions
 {
 	public static AnimationClip GetAnimationClipOrNull(this RuntimeAnimatorController anim, string name)
 	{
@@ -71,5 +72,11 @@ public static class Extensions
 	{
 		rect.anchorMin = new Vector2(rect.anchorMin.x, rect.anchorMin.y + deltaY.x);
 		rect.anchorMax = new Vector2(rect.anchorMax.x, rect.anchorMax.y + deltaY.y);
+	}
+
+	public static Dictionary<K, V> ResetValues<K, V>(this Dictionary<K, V> dic, V value = default)
+	{
+		dic.Keys.ToList().ForEach(x => dic[x] = value);
+		return dic;
 	}
 }

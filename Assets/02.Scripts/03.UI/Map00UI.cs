@@ -15,6 +15,7 @@ public class Map00UI : MonoBehaviour
 	[SerializeField] private GameObject _uiTop;
 	[SerializeField] private ProfileHolder[] _profileHolders;
 	[SerializeField] private UIWelcomeAnim _welcomeAnim;
+	[SerializeField] private UIGameMessage _gameMessage;
 
 	#region for debug
 	[SerializeField] private GameCamWelcomeMove _camAnim;
@@ -56,6 +57,11 @@ public class Map00UI : MonoBehaviour
 		_camAnim.enabled = true;
 	}
 
+	//public void OnMatchStart()
+	//{
+
+	//}
+
 	public void OnRoundStart()
 	{
 		_centerScores.OnRoundStart();
@@ -66,12 +72,47 @@ public class Map00UI : MonoBehaviour
 		if (result == GameRule00.RoundResult.Blue)
 		{
 			_centerScores.OnBlueWin();
+			if (User.Team == Enums.TeamType.Blue)
+			{
+				_gameMessage.ChangeText("Knockout win");
+			}
+			else if (User.Team == Enums.TeamType.Red)
+			{
+				_gameMessage.ChangeText("Knockout lose");
+			}
 		}
 		else
 		{
-			//Todo
 			_centerScores.OnRedWin();
+			if (User.Team == Enums.TeamType.Blue)
+			{
+				_gameMessage.ChangeText("Knockout lose");
+			}
+			else if (User.Team == Enums.TeamType.Red)
+			{
+				_gameMessage.ChangeText("Knockout win");
+			}
 		}
+	}
+
+	public void OnRoundClear()
+	{
+
+	}
+
+	public void OnRoundReset()
+	{
+		foreach (var profile in _profileHolders)
+		{
+			profile.Reset();
+		}
+
+		_gameMessage.OnRoundReset();
+	}
+
+	public void OnMatchOver()
+	{
+		_gameMessage.ChangeText("Match over");
 	}
 
 	public void OnPlayerDead(uint playerId)

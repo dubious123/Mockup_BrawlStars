@@ -177,6 +177,8 @@ public class Scene_Map1 : BaseScene
 		{
 			c?.OnClear();
 		}
+
+		_mapUI.OnRoundClear();
 	}
 
 	private void OnRoundReset()
@@ -186,11 +188,14 @@ public class Scene_Map1 : BaseScene
 		{
 			c?.Reset();
 		}
+
+		_mapUI.OnRoundReset();
 	}
 
 	private void OnMatchOver(GameRule00.MatchResult result)
 	{
 		Loggers.Game.Information("Match End {0}", Enum.GetName(typeof(GameRule00.MatchResult), result));
+		_mapUI.OnMatchOver();
 	}
 
 	private void OnPlayerDead(NetCharacter character)

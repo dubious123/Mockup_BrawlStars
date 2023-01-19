@@ -57,6 +57,20 @@ public class CPlayer : MonoBehaviour
 			return;
 		}
 
+		if (NPlayer.IsVisible is false)
+		{
+			if (NPlayer.Team != User.Team)
+			{
+				_mesh.SetActive(false);
+				_hud.SetActive(false);
+			}
+		}
+		else
+		{
+			_mesh.SetActive(true);
+			_hud.SetActive(true);
+		}
+
 		if (NPlayer.CCFlag.HasFlag(Enums.CCFlags.Stun))
 		{
 			Animator.SetBool(AnimatorMeta.IsStun_Bool, true);
