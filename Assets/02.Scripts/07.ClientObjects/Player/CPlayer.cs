@@ -10,13 +10,15 @@ public class CPlayer : MonoBehaviour
 {
 	public NetCharacter NPlayer { get; set; }
 	public short TeamId { get; set; }
-	[field: SerializeField] public Animator Animator { get; set; }
-	[field: SerializeField] public Image StunIndicator { get; set; }
-	[field: SerializeField] public Sprite ProfileIcon { get; set; }
 	public int MaxHp => NPlayer.MaxHp;
 	public int Hp => NPlayer.Hp;
 	public sVector3 Lookdir => NPlayer.TargetLookDir;
 	public sVector3 MoveDir => NPlayer.TargetMoveDir;
+	[field: SerializeField] public Animator Animator { get; set; }
+	[field: SerializeField] public Image StunIndicator { get; set; }
+	[field: SerializeField] public Sprite ProfileIcon { get; set; }
+
+	protected bool Active { get; set; }
 
 	[SerializeField] private Sprite _selectCircleSelf;
 	[SerializeField] private Sprite _selectCircleRed;
@@ -25,6 +27,8 @@ public class CPlayer : MonoBehaviour
 	[SerializeField] private GameObject _hud;
 	[SerializeField] private GameObject _mesh;
 	[SerializeField] private ParticleSystem _moveSmokeEffect;
+	[SerializeField] private CPlayerEffect _cPlayerEffect;
+	[SerializeField] private MoveCircle _moveCircle;
 
 	public virtual void Init(NetCharacter character, short teamId)
 	{
@@ -33,6 +37,7 @@ public class CPlayer : MonoBehaviour
 		if (teamId == User.TeamId)
 		{
 			SelectCircle.sprite = _selectCircleSelf;
+			_moveCircle.gameObject.SetActive(true);
 		}
 		else if (character.Team == User.Team)
 		{
@@ -44,16 +49,16 @@ public class CPlayer : MonoBehaviour
 		}
 	}
 
-	public virtual void StartGame()
+	public virtual void OnMatchStart()
 	{
 		_hud.SetActive(true);
+		Active = true;
 	}
 
 	public virtual void HandleOneFrame()
 	{
-		if (NPlayer.IsDead())
+		if (Active is false)
 		{
-			Animator.SetBool(AnimatorMeta.IsDead_Bool, true);
 			return;
 		}
 
@@ -88,12 +93,20 @@ public class CPlayer : MonoBehaviour
 	public virtual void OnDead()
 	{
 		Debug.Log("onDead");
+		_cPlayerEffect.PlayeDeadEffect();
 		_mesh.SetActive(false);
 		_hud.SetActive(false);
+		Active = false;
 	}
 
 	public virtual void OnClear()
 	{
+		if (Active is false)
+		{
+			return;
+		}
+
+		_cPlayerEffect.PlayeDeadEffect();
 		_mesh.SetActive(false);
 		_hud.SetActive(false);
 	}
@@ -103,5 +116,6 @@ public class CPlayer : MonoBehaviour
 		Debug.Log("Reset");
 		_mesh.SetActive(true);
 		_hud.SetActive(true);
+		Active = true;
 	}
 }

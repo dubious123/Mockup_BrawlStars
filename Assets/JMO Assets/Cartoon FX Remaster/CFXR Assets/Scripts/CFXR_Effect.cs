@@ -15,6 +15,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------
 
 using UnityEngine;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -26,16 +27,16 @@ namespace CartoonFX
 	public partial class CFXR_Effect : MonoBehaviour
 	{
 		// Change this value to easily tune the camera shake strength for all effects
-		const float GLOBAL_CAMERA_SHAKE_MULTIPLIER = 1.0f;
+		private const float GLOBAL_CAMERA_SHAKE_MULTIPLIER = 1.0f;
 
 #if UNITY_EDITOR
 		[InitializeOnLoadMethod]
-		static void InitGlobalOptions()
+		private static void InitGlobalOptions()
 		{
 			AnimatedLight.editorPreview = EditorPrefs.GetBool("CFXR Light EditorPreview", true);
-	#if !DISABLE_CAMERA_SHAKE
+#if !DISABLE_CAMERA_SHAKE
 			CameraShake.editorPreview = EditorPrefs.GetBool("CFXR CameraShake EditorPreview", true);
-	#endif
+#endif
 		}
 #endif
 
@@ -49,7 +50,7 @@ namespace CartoonFX
 		[System.Serializable]
 		public class AnimatedLight
 		{
-			static public bool editorPreview = true;
+			public static bool editorPreview = true;
 
 			public Light light;
 
@@ -95,7 +96,7 @@ namespace CartoonFX
 				{
 					if (animateIntensity)
 					{
-						float delta = loop ? Mathf.Clamp01((time % intensityDuration)/intensityDuration) : Mathf.Clamp01(time/intensityDuration);
+						float delta = loop ? Mathf.Clamp01((time % intensityDuration) / intensityDuration) : Mathf.Clamp01(time / intensityDuration);
 						delta = perlinIntensity ? Mathf.PerlinNoise(Time.time * perlinIntensitySpeed, 0f) : intensityCurve.Evaluate(delta);
 						light.intensity = Mathf.LerpUnclamped(intensityEnd, intensityStart, delta);
 
@@ -107,14 +108,14 @@ namespace CartoonFX
 
 					if (animateRange)
 					{
-						float delta = loop ? Mathf.Clamp01((time % rangeDuration)/rangeDuration) : Mathf.Clamp01(time/rangeDuration);
+						float delta = loop ? Mathf.Clamp01((time % rangeDuration) / rangeDuration) : Mathf.Clamp01(time / rangeDuration);
 						delta = perlinRange ? Mathf.PerlinNoise(Time.time * perlinRangeSpeed, 10f) : rangeCurve.Evaluate(delta);
 						light.range = Mathf.LerpUnclamped(rangeEnd, rangeStart, delta);
 					}
 
 					if (animateColor)
 					{
-						float delta = loop ? Mathf.Clamp01((time % colorDuration)/colorDuration) : Mathf.Clamp01(time/colorDuration);
+						float delta = loop ? Mathf.Clamp01((time % colorDuration) / colorDuration) : Mathf.Clamp01(time / colorDuration);
 						delta = perlinColor ? Mathf.PerlinNoise(Time.time * perlinColorSpeed, 0f) : colorCurve.Evaluate(delta);
 						light.color = colorGradient.Evaluate(delta);
 					}
@@ -155,86 +156,81 @@ namespace CartoonFX
 			[CustomPropertyDrawer(typeof(AnimatedLight))]
 			public class AnimatedLightDrawer : PropertyDrawer
 			{
-				SerializedProperty light;
+				private SerializedProperty light;
+				private SerializedProperty loop;
+				private SerializedProperty animateIntensity;
+				private SerializedProperty intensityStart;
+				private SerializedProperty intensityEnd;
+				private SerializedProperty intensityDuration;
+				private SerializedProperty intensityCurve;
+				private SerializedProperty perlinIntensity;
+				private SerializedProperty perlinIntensitySpeed;
+				private SerializedProperty fadeIn;
+				private SerializedProperty fadeInDuration;
+				private SerializedProperty fadeOut;
+				private SerializedProperty fadeOutDuration;
+				private SerializedProperty animateRange;
+				private SerializedProperty rangeStart;
+				private SerializedProperty rangeEnd;
+				private SerializedProperty rangeDuration;
+				private SerializedProperty rangeCurve;
+				private SerializedProperty perlinRange;
+				private SerializedProperty perlinRangeSpeed;
+				private SerializedProperty animateColor;
+				private SerializedProperty colorGradient;
+				private SerializedProperty colorDuration;
+				private SerializedProperty colorCurve;
+				private SerializedProperty perlinColor;
+				private SerializedProperty perlinColorSpeed;
 
-				SerializedProperty loop;
-
-				SerializedProperty animateIntensity;
-				SerializedProperty intensityStart;
-				SerializedProperty intensityEnd;
-				SerializedProperty intensityDuration;
-				SerializedProperty intensityCurve;
-				SerializedProperty perlinIntensity;
-				SerializedProperty perlinIntensitySpeed;
-				SerializedProperty fadeIn;
-				SerializedProperty fadeInDuration;
-				SerializedProperty fadeOut;
-				SerializedProperty fadeOutDuration;
-
-				SerializedProperty animateRange;
-				SerializedProperty rangeStart;
-				SerializedProperty rangeEnd;
-				SerializedProperty rangeDuration;
-				SerializedProperty rangeCurve;
-				SerializedProperty perlinRange;
-				SerializedProperty perlinRangeSpeed;
-
-				SerializedProperty animateColor;
-				SerializedProperty colorGradient;
-				SerializedProperty colorDuration;
-				SerializedProperty colorCurve;
-				SerializedProperty perlinColor;
-				SerializedProperty perlinColorSpeed;
-
-				void fetchProperties(SerializedProperty property)
+				private void fetchProperties(SerializedProperty property)
 				{
-					light                 = property.FindPropertyRelative("light");
+					light = property.FindPropertyRelative("light");
 
-					loop                  = property.FindPropertyRelative("loop");
+					loop = property.FindPropertyRelative("loop");
 
-					animateIntensity      = property.FindPropertyRelative("animateIntensity");
-					intensityStart        = property.FindPropertyRelative("intensityStart");
-					intensityEnd          = property.FindPropertyRelative("intensityEnd");
-					intensityDuration     = property.FindPropertyRelative("intensityDuration");
-					intensityCurve        = property.FindPropertyRelative("intensityCurve");
-					perlinIntensity       = property.FindPropertyRelative("perlinIntensity");
-					perlinIntensitySpeed  = property.FindPropertyRelative("perlinIntensitySpeed");
-					fadeIn                = property.FindPropertyRelative("fadeIn");
-					fadeInDuration        = property.FindPropertyRelative("fadeInDuration");
-					fadeOut               = property.FindPropertyRelative("fadeOut");
-					fadeOutDuration       = property.FindPropertyRelative("fadeOutDuration");
+					animateIntensity = property.FindPropertyRelative("animateIntensity");
+					intensityStart = property.FindPropertyRelative("intensityStart");
+					intensityEnd = property.FindPropertyRelative("intensityEnd");
+					intensityDuration = property.FindPropertyRelative("intensityDuration");
+					intensityCurve = property.FindPropertyRelative("intensityCurve");
+					perlinIntensity = property.FindPropertyRelative("perlinIntensity");
+					perlinIntensitySpeed = property.FindPropertyRelative("perlinIntensitySpeed");
+					fadeIn = property.FindPropertyRelative("fadeIn");
+					fadeInDuration = property.FindPropertyRelative("fadeInDuration");
+					fadeOut = property.FindPropertyRelative("fadeOut");
+					fadeOutDuration = property.FindPropertyRelative("fadeOutDuration");
 
-					animateRange          = property.FindPropertyRelative("animateRange");
-					rangeStart            = property.FindPropertyRelative("rangeStart");
-					rangeEnd              = property.FindPropertyRelative("rangeEnd");
-					rangeDuration         = property.FindPropertyRelative("rangeDuration");
-					rangeCurve            = property.FindPropertyRelative("rangeCurve");
-					perlinRange           = property.FindPropertyRelative("perlinRange");
-					perlinRangeSpeed      = property.FindPropertyRelative("perlinRangeSpeed");
+					animateRange = property.FindPropertyRelative("animateRange");
+					rangeStart = property.FindPropertyRelative("rangeStart");
+					rangeEnd = property.FindPropertyRelative("rangeEnd");
+					rangeDuration = property.FindPropertyRelative("rangeDuration");
+					rangeCurve = property.FindPropertyRelative("rangeCurve");
+					perlinRange = property.FindPropertyRelative("perlinRange");
+					perlinRangeSpeed = property.FindPropertyRelative("perlinRangeSpeed");
 
-					animateColor          = property.FindPropertyRelative("animateColor");
-					colorGradient         = property.FindPropertyRelative("colorGradient");
-					colorDuration         = property.FindPropertyRelative("colorDuration");
-					colorCurve            = property.FindPropertyRelative("colorCurve");
-					perlinColor           = property.FindPropertyRelative("perlinColor");
-					perlinColorSpeed      = property.FindPropertyRelative("perlinColorSpeed");
+					animateColor = property.FindPropertyRelative("animateColor");
+					colorGradient = property.FindPropertyRelative("colorGradient");
+					colorDuration = property.FindPropertyRelative("colorDuration");
+					colorCurve = property.FindPropertyRelative("colorCurve");
+					perlinColor = property.FindPropertyRelative("perlinColor");
+					perlinColorSpeed = property.FindPropertyRelative("perlinColorSpeed");
 				}
 
-				static GUIContent[] ModePopupLabels = new GUIContent[] { new GUIContent("Curve"), new GUIContent("Perlin Noise") };
-				static GUIContent IntensityModeLabel = new GUIContent("Intensity Mode");
-				static GUIContent RangeModeLabel = new GUIContent("Range Mode");
-				static GUIContent ColorModeLabel = new GUIContent("Color Mode");
+				private static GUIContent[] ModePopupLabels = new GUIContent[] { new GUIContent("Curve"), new GUIContent("Perlin Noise") };
+				private static GUIContent IntensityModeLabel = new GUIContent("Intensity Mode");
+				private static GUIContent RangeModeLabel = new GUIContent("Range Mode");
+				private static GUIContent ColorModeLabel = new GUIContent("Color Mode");
+				private const float INDENT_WIDTH = 15f;
+				private const float PADDING = 4f;
 
-				const float INDENT_WIDTH = 15f;
-				const float PADDING = 4f;
-
-				void startIndent(ref Rect rect)
+				private void startIndent(ref Rect rect)
 				{
 					EditorGUIUtility.labelWidth -= INDENT_WIDTH;
 					rect.xMin += INDENT_WIDTH;
 				}
 
-				void endIndent(ref Rect rect)
+				private void endIndent(ref Rect rect)
 				{
 					EditorGUIUtility.labelWidth += INDENT_WIDTH;
 					rect.xMin -= INDENT_WIDTH;
@@ -451,11 +447,10 @@ namespace CartoonFX
 		public AnimatedLight[] animatedLights;
 		[Tooltip("Defines which Particle System to track to trigger light fading out.\nLeave empty if not using fading out.")]
 		public ParticleSystem fadeOutReference;
-
-		float time;
-		ParticleSystem rootParticleSystem;
-		[System.NonSerialized] MaterialPropertyBlock materialPropertyBlock;
-		[System.NonSerialized] Renderer particleRenderer;
+		private float time;
+		private ParticleSystem rootParticleSystem;
+		[System.NonSerialized] private MaterialPropertyBlock materialPropertyBlock;
+		[System.NonSerialized] private Renderer particleRenderer;
 
 		// ================================================================================================================================
 
@@ -484,27 +479,27 @@ namespace CartoonFX
 		}
 
 #if !DISABLE_CAMERA_SHAKE || !DISABLE_CLEAR_BEHAVIOR
-		void Awake()
+		private void Awake()
 		{
-	#if !DISABLE_CAMERA_SHAKE
+#if !DISABLE_CAMERA_SHAKE
 			if (cameraShake != null && cameraShake.enabled)
 			{
 				cameraShake.fetchCameras();
 			}
-	#endif
-	#if !DISABLE_CLEAR_BEHAVIOR
+#endif
+#if !DISABLE_CLEAR_BEHAVIOR
 			startFrameOffset = GlobalStartFrameOffset++;
 #endif
 			// Detect if world position needs to be passed to the shader
 			particleRenderer = this.GetComponent<ParticleSystemRenderer>();
 			if (particleRenderer.sharedMaterial != null && particleRenderer.sharedMaterial.IsKeywordEnabled("_CFXR_LIGHTING_WPOS_OFFSET"))
-			{ 
+			{
 				materialPropertyBlock = new MaterialPropertyBlock();
 			}
 		}
 #endif
 
-			void OnEnable()
+		private void OnEnable()
 		{
 			foreach (var animLight in animatedLights)
 			{
@@ -519,16 +514,17 @@ namespace CartoonFX
 			}
 		}
 
-		void OnDisable()
+		private void OnDisable()
 		{
 			ResetState();
 		}
 
 #if !DISABLE_LIGHTS || !DISABLE_CAMERA_SHAKE || !DISABLE_CLEAR_BEHAVIOR
-		const int CHECK_EVERY_N_FRAME = 20;
-		static int GlobalStartFrameOffset = 0;
-		int startFrameOffset;
-		void Update()
+		private const int CHECK_EVERY_N_FRAME = 20;
+		private static int GlobalStartFrameOffset = 0;
+		private int startFrameOffset;
+
+		private void Update()
 		{
 #if !DISABLE_LIGHTS || !DISABLE_CAMERA_SHAKE
 			time += Time.deltaTime;
@@ -603,8 +599,8 @@ namespace CartoonFX
 #endif
 
 #if !DISABLE_LIGHTS
-		bool isFadingOut;
-		float fadingOutStartTime;
+		private bool isFadingOut;
+		private float fadingOutStartTime;
 		public void FadeOut(float time)
 		{
 			if (animatedLights == null)
@@ -629,8 +625,9 @@ namespace CartoonFX
 		// Editor preview
 		// Detect when the Particle System is previewing and trigger this animation too
 
-		[System.NonSerialized] ParticleSystem _parentParticle;
-		ParticleSystem parentParticle
+		[System.NonSerialized] private ParticleSystem _parentParticle;
+
+		private ParticleSystem parentParticle
 		{
 			get
 			{
@@ -643,11 +640,11 @@ namespace CartoonFX
 		}
 		[System.NonSerialized] public bool editorUpdateRegistered;
 
-		[System.NonSerialized] bool particleWasStopped;
-		[System.NonSerialized] float particleTime;
-		[System.NonSerialized] float particleTimeUnwrapped;
+		[System.NonSerialized] private bool particleWasStopped;
+		[System.NonSerialized] private float particleTime;
+		[System.NonSerialized] private float particleTimeUnwrapped;
 
-		void OnDestroy()
+		private void OnDestroy()
 		{
 			UnregisterEditorUpdate();
 		}
@@ -680,7 +677,7 @@ namespace CartoonFX
 			ResetState();
 		}
 
-		void onEditorUpdate()
+		private void onEditorUpdate()
 		{
 			if (EditorApplication.isPlayingOrWillChangePlaymode)
 			{
@@ -760,11 +757,11 @@ namespace CartoonFX
 	[CanEditMultipleObjects]
 	public class CFXR_Effect_Editor : Editor
 	{
-		bool? lightEditorPreview;
-		bool? shakeEditorPreview;
+		private bool? lightEditorPreview;
+		private bool? shakeEditorPreview;
+		private GUIStyle _PaddedRoundedRect;
 
-		GUIStyle _PaddedRoundedRect;
-		GUIStyle PaddedRoundedRect
+		private GUIStyle PaddedRoundedRect
 		{
 			get
 			{
@@ -788,7 +785,7 @@ namespace CartoonFX
 			base.OnInspectorGUI();
 		}
 
-		void GlobalOptionsGUI()
+		private void GlobalOptionsGUI()
 		{
 			EditorGUILayout.BeginVertical(PaddedRoundedRect);
 			{
@@ -823,7 +820,7 @@ namespace CartoonFX
 			EditorGUILayout.EndVertical();
 		}
 
-		void OnEnable()
+		private void OnEnable()
 		{
 			if (this.targets == null)
 			{
@@ -844,7 +841,7 @@ namespace CartoonFX
 			}
 		}
 
-		void OnDisable()
+		private void OnDisable()
 		{
 			if (this.targets == null)
 			{
@@ -866,7 +863,7 @@ namespace CartoonFX
 			}
 		}
 
-		static bool isPrefabSource(GameObject gameObject)
+		private static bool isPrefabSource(GameObject gameObject)
 		{
 			var assetType = PrefabUtility.GetPrefabAssetType(gameObject);
 			var prefabType = PrefabUtility.GetPrefabInstanceStatus(gameObject);

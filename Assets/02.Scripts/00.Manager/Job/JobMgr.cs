@@ -22,7 +22,7 @@ public class JobMgr : MonoBehaviour
 
 	private void Update()
 	{
-		while (_unityJobQueue.Count > 0)
+		while (_unityJobQueue?.Count > 0)
 		{
 			_unityJobQueue.TryDequeue(out Action job);
 			job.Invoke();

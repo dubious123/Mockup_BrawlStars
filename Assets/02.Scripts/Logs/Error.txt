@@ -1,0 +1,13 @@
+2023-01-20 23:50:22.376 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 0
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 1
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 2
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 3
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 4
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 5
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 6
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 7
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 8
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 9
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed 10
+2023-01-20 23:50:22.390 +09:00 [ERR] handling S_BroadcastSearchPlayerHandle failed more than 10 time
+2023-01-20 23:50:22.401 +09:00 [ERR] Scene_SearchingPlayers is not ready yet

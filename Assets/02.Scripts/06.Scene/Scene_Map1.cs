@@ -15,12 +15,14 @@ using Server.Game.GameRule;
 
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 using static Enums;
 
 public class Scene_Map1 : BaseScene
 {
-	public long CurrentTick => _currentTick;
+	public int CurrentTick => World.GameRule.CurrentRoundFrameCount;
+	public int MaxTick => World.GameRule.MaxFrameCount;
 	public bool GameStarted => _gameStarted;
 	public CPlayer[] CPlayers => _cPlayers;
 
@@ -40,7 +42,6 @@ public class Scene_Map1 : BaseScene
 	private CPlayer[] _cPlayers;
 	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
 	private IEnumerator<float> _coHandler;
-	private long _currentTick = 0;
 	private bool _gameStarted = false;
 
 	public NetWorld World;
@@ -82,7 +83,7 @@ public class Scene_Map1 : BaseScene
 		Loggers.Game.Information("---------------StartGame----------------");
 		while (true)
 		{
-			Loggers.Game.Information("---------------Frame [{0}]----------------", _currentTick);
+			Loggers.Game.Information("---------------Frame [{0}]----------------", CurrentTick);
 			while (_frameInfoQueue.TryDequeue(out info) == false)
 			{
 				//todo
@@ -92,7 +93,7 @@ public class Scene_Map1 : BaseScene
 
 			World.UpdateInputs(info);
 			World.Update();
-			_currentTick++;
+			_mapUI.HandleOneFrame();
 			Loggers.Game.Information("------------------------------------------");
 			yield return 0f;
 		}
@@ -132,11 +133,6 @@ public class Scene_Map1 : BaseScene
 	private void Internal_StartGame()
 	{
 		_gameStarted = true;
-		foreach (var c in _cPlayers)
-		{
-			c?.StartGame();
-		}
-
 		Audio.PlayAudio(_ingameBgm, _ingameBgm.name, true);
 		_coHandler = Co_FixedUpdate();
 	}
@@ -153,9 +149,23 @@ public class Scene_Map1 : BaseScene
 		_frameInfoQueue.Enqueue(info);
 	}
 
+	public void EndGame()
+	{
+		Network.StopSyncTime();
+		Timing.CallDelayed(3f, () =>
+		{
+			Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
+			_coHandler = null;
+		});
+	}
+
 	private void OnMatchStart()
 	{
 		Loggers.Game.Information("Match Start");
+		foreach (var c in _cPlayers)
+		{
+			c?.OnMatchStart();
+		}
 	}
 
 	private void OnRoundStart()
@@ -194,7 +204,7 @@ public class Scene_Map1 : BaseScene
 
 	private void OnMatchOver(GameRule00.MatchResult result)
 	{
-		Loggers.Game.Information("Match End {0}", Enum.GetName(typeof(GameRule00.MatchResult), result));
+		Loggers.Game.Information("Match Over {0}", Enum.GetName(typeof(GameRule00.MatchResult), result));
 		_mapUI.OnMatchOver();
 	}
 

@@ -18,9 +18,9 @@ public class CPlayerShelly : CPlayer
 		SuperShell.Init(this);
 	}
 
-	public override void StartGame()
+	public override void OnMatchStart()
 	{
-		base.StartGame();
+		base.OnMatchStart();
 		if (User.TeamId == TeamId)
 		{
 			Audio.PlayOnce(_audio_start[Random.Range(0, _audio_start.Length)]);

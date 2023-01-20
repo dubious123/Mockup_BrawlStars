@@ -89,6 +89,7 @@ public static class PacketHandler
 			UnityEngine.Debug.LogError("scene is not game or scene is not ready");
 			return;
 		}
+
 		game.HandleGameState(req);
 	}
 
@@ -117,10 +118,24 @@ public static class PacketHandler
 		});
 	}
 
+	private static int _retryCount;
 	private static void S_BroadcastSearchPlayerHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_BroadcastSearchPlayer;
-		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false) return;
+		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false)
+		{
+			if (_retryCount > 10)
+			{
+				Loggers.Error.Error("handling S_BroadcastSearchPlayerHandle failed more than 10 time");
+				return;
+			}
+
+			Loggers.Error.Error("handling S_BroadcastSearchPlayerHandle failed {0}", _retryCount++);
+			JobMgr.PushUnityJob(() => S_BroadcastSearchPlayerHandle(packet, session));
+			return;
+		}
+
+		_retryCount = 0;
 		JobMgr.PushUnityJob(() => scene.UpdatePlayerFound(req.FoundPlayersCount));
 	}
 
@@ -167,5 +182,12 @@ public static class PacketHandler
 	private static void S_BroadcastEndGameHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_BroadcastEndGame;
+		if (Scene.CurrentScene is not Scene_Map1 scene || scene.IsReady == false)
+		{
+			Loggers.Error.Error("Scene_Map1 is not ready yet");
+			return;
+		}
+
+		JobMgr.PushUnityJob(scene.EndGame);
 	}
 }

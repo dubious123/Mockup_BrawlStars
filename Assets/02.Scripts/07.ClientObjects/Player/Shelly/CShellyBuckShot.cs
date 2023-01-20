@@ -48,7 +48,7 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 
 	public void HandleOneFrame()
 	{
-		_indicator.SetActive(_netBuckShot.Holding);
+		_indicator.SetActive(_netBuckShot.Holding && Player.TeamId == User.TeamId);
 
 		if (_netBuckShot.IsAttack is true)
 		{

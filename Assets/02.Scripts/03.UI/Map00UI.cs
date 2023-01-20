@@ -16,6 +16,7 @@ public class Map00UI : MonoBehaviour
 	[SerializeField] private ProfileHolder[] _profileHolders;
 	[SerializeField] private UIWelcomeAnim _welcomeAnim;
 	[SerializeField] private UIGameMessage _gameMessage;
+	[SerializeField] private UIClock _clock;
 
 	#region for debug
 	[SerializeField] private GameCamWelcomeMove _camAnim;
@@ -33,6 +34,11 @@ public class Map00UI : MonoBehaviour
 	{
 		_uiTop.SetActive(false);
 		_welcomeAnim.Reset();
+	}
+
+	public void HandleOneFrame()
+	{
+		_clock.UpdateClock();
 	}
 
 	public void OnGameStart(Action onCompleted = null)
@@ -65,6 +71,7 @@ public class Map00UI : MonoBehaviour
 	public void OnRoundStart()
 	{
 		_centerScores.OnRoundStart();
+		_clock.OnRoundStart();
 	}
 
 	public void OnRoundEnd(GameRule00.RoundResult result)
