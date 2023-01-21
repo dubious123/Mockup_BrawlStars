@@ -20,39 +20,26 @@ public class CPlayer : MonoBehaviour
 
 	protected bool Active { get; set; }
 
-	[SerializeField] private Sprite _selectCircleSelf;
-	[SerializeField] private Sprite _selectCircleRed;
-	[SerializeField] private Sprite _selectCircleBlue;
-	[SerializeField] private SpriteRenderer SelectCircle;
-	[SerializeField] private GameObject _hud;
+	[SerializeField] private CPlayerUI _ui;
 	[SerializeField] private GameObject _mesh;
 	[SerializeField] private ParticleSystem _moveSmokeEffect;
 	[SerializeField] private CPlayerEffect _cPlayerEffect;
-	[SerializeField] private MoveCircle _moveCircle;
 
 	public virtual void Init(NetCharacter character, short teamId)
 	{
 		NPlayer = character;
 		TeamId = teamId;
-		if (teamId == User.TeamId)
-		{
-			SelectCircle.sprite = _selectCircleSelf;
-			_moveCircle.gameObject.SetActive(true);
-		}
-		else if (character.Team == User.Team)
-		{
-			SelectCircle.sprite = _selectCircleBlue;
-		}
-		else
-		{
-			SelectCircle.sprite = _selectCircleRed;
-		}
+		_ui.Init(character, teamId);
 	}
 
 	public virtual void OnMatchStart()
 	{
-		_hud.SetActive(true);
 		Active = true;
+	}
+
+	public virtual void OnRoundStart()
+	{
+		_ui.OnRoundStart();
 	}
 
 	public virtual void HandleOneFrame()
@@ -67,14 +54,16 @@ public class CPlayer : MonoBehaviour
 			if (NPlayer.Team != User.Team)
 			{
 				_mesh.SetActive(false);
-				_hud.SetActive(false);
+				_ui.gameObject.SetActive(false);
 			}
 		}
 		else
 		{
 			_mesh.SetActive(true);
-			_hud.SetActive(true);
+			_ui.gameObject.SetActive(true);
 		}
+
+		_ui.HandleOneFrame();
 
 		if (NPlayer.CCFlag.HasFlag(Enums.CCFlags.Stun))
 		{
@@ -95,11 +84,11 @@ public class CPlayer : MonoBehaviour
 		Debug.Log("onDead");
 		_cPlayerEffect.PlayeDeadEffect();
 		_mesh.SetActive(false);
-		_hud.SetActive(false);
+		_ui.OnPlayerDead();
 		Active = false;
 	}
 
-	public virtual void OnClear()
+	public virtual void OnRoundClear()
 	{
 		if (Active is false)
 		{
@@ -108,14 +97,14 @@ public class CPlayer : MonoBehaviour
 
 		_cPlayerEffect.PlayeDeadEffect();
 		_mesh.SetActive(false);
-		_hud.SetActive(false);
+		_ui.OnRoundClear();
 	}
 
-	public virtual void Reset()
+	public virtual void OnRoundReset()
 	{
 		Debug.Log("Reset");
 		_mesh.SetActive(true);
-		_hud.SetActive(true);
+		_ui.OnRoundReset();
 		Active = true;
 	}
 }

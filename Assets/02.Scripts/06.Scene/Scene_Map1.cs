@@ -171,6 +171,11 @@ public class Scene_Map1 : BaseScene
 	private void OnRoundStart()
 	{
 		Loggers.Game.Information("Round Start");
+		foreach (var c in _cPlayers)
+		{
+			c?.OnRoundStart();
+		}
+
 		_mapUI.OnRoundStart();
 	}
 
@@ -185,7 +190,7 @@ public class Scene_Map1 : BaseScene
 		Loggers.Game.Information("Round Clear");
 		foreach (var c in _cPlayers)
 		{
-			c?.OnClear();
+			c?.OnRoundClear();
 		}
 
 		_mapUI.OnRoundClear();
@@ -196,7 +201,7 @@ public class Scene_Map1 : BaseScene
 		Loggers.Game.Information("Round Reset");
 		foreach (var c in _cPlayers)
 		{
-			c?.Reset();
+			c?.OnRoundReset();
 		}
 
 		_mapUI.OnRoundReset();

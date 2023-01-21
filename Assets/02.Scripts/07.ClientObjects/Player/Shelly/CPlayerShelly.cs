@@ -29,6 +29,11 @@ public class CPlayerShelly : CPlayer
 
 	public override void HandleOneFrame()
 	{
+		if (Active is false)
+		{
+			return;
+		}
+
 		base.HandleOneFrame();
 		Animator.SetFloat(AnimatorMeta.Speed_Float, (float)NPlayer.MoveSpeed * (float)NPlayer.TargetMoveDir.magnitude);
 		Buckshot.HandleOneFrame();
