@@ -28,12 +28,12 @@ namespace Server.Game
 			}
 		}
 
-		private bool _active;
-
 		public void Destroy()
 		{
 			World.RemoveNetObject(this);
 		}
+
+		private bool _active = true;
 
 		public NetObject SetPositionAndRotation(sVector3 position, sQuaternion rotation)
 		{
@@ -42,9 +42,6 @@ namespace Server.Game
 			return this;
 		}
 
-		public override int GetHashCode()
-		{
-			return (int)ObjectId.GetRaw();
-		}
+		public override int GetHashCode() => ObjectId.GetHashCode();
 	}
 }

@@ -17,4 +17,6 @@ public class CWall : CEnv
 			throw new System.Exception();
 		}
 	}
+
+	public override void Reset() { }
 }

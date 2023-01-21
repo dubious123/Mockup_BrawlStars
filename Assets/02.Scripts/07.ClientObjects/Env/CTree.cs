@@ -62,6 +62,15 @@ public class CTree : CEnv
 		}
 	}
 
+	public override void Reset()
+	{
+		if (_userCount != 0)
+		{
+			_userCount = 0;
+			FadeOut();
+		}
+	}
+
 	private IEnumerator<float> CoShake()
 	{
 		for (int i = 0; i < _shakeTime; i++)

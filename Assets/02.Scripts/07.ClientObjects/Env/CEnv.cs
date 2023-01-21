@@ -11,4 +11,5 @@ using UnityEngine;
 public abstract class CEnv : MonoBehaviour
 {
 	public abstract void Init(NetEnv netEnv);
+	public abstract void Reset();
 }

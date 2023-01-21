@@ -33,4 +33,12 @@ public class CEnvSystem : MonoBehaviour
 		_netEnvSystem.OnCharEnterTree = (netEnv, netChar) => (_envDict[netEnv] as CTree).OnCharacterEnter(netChar);
 		_netEnvSystem.OnCharExitTree = (netEnv, netChar) => (_envDict[netEnv] as CTree).OnCharacterExit(netChar);
 	}
+
+	public void OnRoundReset()
+	{
+		foreach (var env in _envDict.Values)
+		{
+			env.Reset();
+		}
+	}
 }
