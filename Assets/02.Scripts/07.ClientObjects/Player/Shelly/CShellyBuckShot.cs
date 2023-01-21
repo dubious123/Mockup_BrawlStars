@@ -11,10 +11,12 @@ using UnityEngine.UI;
 
 public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 {
-	[SerializeField] private GameObject _indicator;
+	[SerializeField] private Graphic _indicator;
 	[SerializeField] private GameObject _bulletPrefabBlue;
 	[SerializeField] private GameObject _bulletPrefabRed;
 	[SerializeField] private AudioClip _audio;
+	[SerializeField] private Color _red;
+	[SerializeField] private Color _white;
 
 	public bool Performing { get; set; }
 	public bool Active { get; set; }
@@ -27,8 +29,8 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 	public void Init(CPlayerShelly shelly)
 	{
 		Player = shelly;
-		_netBuckShot = (shelly.NPlayer as NCharacterShelly).BuckShot as NShellyBuckShot;
-		_cBullets = new List<CProjectile>(_netBuckShot.AmmoCount * _netBuckShot.BulletAmountPerAttack);
+		_netBuckShot = (shelly.NPlayer as NCharacterShelly).BasicAttack as NShellyBuckShot;
+		_cBullets = new List<CProjectile>(_netBuckShot.MaxShellCount * _netBuckShot.BulletAmountPerAttack);
 		if (shelly.NPlayer.Team == User.Team)
 		{
 			_bulletPrefab = _bulletPrefabBlue;
@@ -48,7 +50,15 @@ public class CShellyBuckShot : MonoBehaviour, ICBaseSkill
 
 	public void HandleOneFrame()
 	{
-		_indicator.SetActive(_netBuckShot.Holding && Player.TeamId == User.TeamId);
+		if (_netBuckShot.Holding && Player.TeamId == User.TeamId)
+		{
+			_indicator.gameObject.SetActive(true);
+			_indicator.color = _netBuckShot.CurrentShellCount > 0 ? _white : _red;
+		}
+		else
+		{
+			_indicator.gameObject.SetActive(false);
+		}
 
 		if (_netBuckShot.IsAttack is true)
 		{

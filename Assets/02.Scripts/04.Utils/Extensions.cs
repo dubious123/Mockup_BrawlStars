@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,27 @@ public static partial class Extensions
 		return child;
 	}
 
+	public static Transform FirstChildOrDefault(this Transform parent, Func<Transform, bool> query)
+	{
+		if (parent.childCount == 0)
+		{
+			return null;
+		}
+
+		Transform result = null;
+		for (int i = 0; i < parent.childCount; i++)
+		{
+			var child = parent.GetChild(i);
+			if (query(child))
+			{
+				return child;
+			}
+			result = FirstChildOrDefault(child, query);
+		}
+
+		return result;
+	}
+
 	public static T ChangeAlpha<T>(this T g, float newAlpha)
 		where T : Graphic
 	{
@@ -36,6 +58,26 @@ public static partial class Extensions
 		color.a = newAlpha;
 		g.color = color;
 		return g;
+	}
+
+	public static void SetMinX(this RectTransform rect, float x)
+	{
+		rect.anchorMin = new Vector2(x, rect.anchorMin.y);
+	}
+
+	public static void SetMaxX(this RectTransform rect, float x)
+	{
+		rect.anchorMax = new Vector2(x, rect.anchorMax.y);
+	}
+
+	public static void SetMinY(this RectTransform rect, float y)
+	{
+		rect.anchorMin = new Vector2(rect.anchorMin.x, y);
+	}
+
+	public static void SetMaxY(this RectTransform rect, float y)
+	{
+		rect.anchorMax = new Vector2(rect.anchorMax.x, y);
 	}
 
 	public static void SetAnchorX(this RectTransform rect, float x)

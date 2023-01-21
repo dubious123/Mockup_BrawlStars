@@ -55,7 +55,6 @@ public class HudHP : MonoBehaviour
 
 		if (_player.TeamId == User.TeamId)
 		{
-			transform.parent.GetComponent<Canvas>().sortingOrder = 1;
 			_fillImage.sprite = _SpriteFillSelf;
 			_followImage.sprite = _SpriteFollowSelf;
 			_isSelf = true;
@@ -80,7 +79,7 @@ public class HudHP : MonoBehaviour
 
 	public void HandleOneFrame()
 	{
-		_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _targetTransform.position + _offset);
+		//_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _targetTransform.position + _offset);
 		_currentHp = _player.Hp;
 		if (_beforeHp == _currentHp)
 		{
