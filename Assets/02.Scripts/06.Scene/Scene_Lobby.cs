@@ -31,7 +31,6 @@ public class Scene_Lobby : BaseScene
 		}
 
 		_playBtnPressed = true;
-		Network.RegisterSend(new C_EnterGame() { CharacterType = (int)Enums.NetObjectType.Character_Shelly, UserId = User.UserId });
 		SceneManager.UnloadSceneAsync((int)Scenetype);
 		Scene.MoveTo(SceneType.SearchingPlayers, 1, LoadSceneMode.Additive);
 	}

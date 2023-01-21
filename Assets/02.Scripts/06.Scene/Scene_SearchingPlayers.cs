@@ -14,6 +14,7 @@ public class Scene_SearchingPlayers : BaseScene
 		var targetPlayerCount = (int)param;
 		_ui.Init(targetPlayerCount);
 		GetComponent<AudioSource>().Play();
+		Network.RegisterSend(new C_EnterGame() { CharacterType = (int)Enums.NetObjectType.Character_Shelly, UserId = User.UserId });
 		IsReady = true;
 	}
 

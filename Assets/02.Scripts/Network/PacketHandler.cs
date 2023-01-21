@@ -131,7 +131,7 @@ public static class PacketHandler
 			}
 
 			Loggers.Error.Error("handling S_BroadcastSearchPlayerHandle failed {0}", _retryCount++);
-			JobMgr.PushUnityJob(() => S_BroadcastSearchPlayerHandle(packet, session));
+			JobMgr.PushUnityJob(() => Timing.CallDelayed(1, () => S_BroadcastSearchPlayerHandle(packet, session)));
 			return;
 		}
 
