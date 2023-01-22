@@ -60,11 +60,11 @@ public class Scene_Loading : BaseScene
 		Network.RegisterSend(new C_Login
 		{
 #if UNITY_EDITOR
-			loginId = "jonghun",
+			loginId = Config.Id,
 #elif UNITY_STANDALONE_WIN
-			loginId = "jonghun" + Application.dataPath.Split('/')[^2].Last(),
+			loginId = Config.Id + Application.dataPath.Split('/')[^2].Last(),
 #endif
-			loginPw = "0827"
+			loginPw = Config.Pw
 		});
 
 		while (_loginSuccess == false)

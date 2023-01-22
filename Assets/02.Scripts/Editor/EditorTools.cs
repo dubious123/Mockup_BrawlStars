@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -48,7 +49,7 @@ public static class EditorTools
 			return;
 		}
 
-		foreach (GameObject go in Object.FindObjectsOfType<GameObject>())
+		foreach (GameObject go in UnityEngine.Object.FindObjectsOfType<GameObject>())
 			go.SetActive(false);
 
 		SceneManager.LoadScene((int)Enums.SceneType.Entry);
@@ -99,15 +100,42 @@ public static class EditorTools
 		PerformWin64Build(6);
 	}
 
-	[MenuItem("Tools/Build Multiplayer/3 Players")]
-	private static void BuildWin62Build3()
+
+
+	[MenuItem("Tools/Build Script Only/1 Players")]
+	private static void BuildWin62Build1()
 	{
-		for (int i = 2; i < 6; i++)
-		{
-			BuildWin62Build(i);
-		}
+		BuildWin64Build(1);
+	}
+	[MenuItem("Tools/Build Script Only/2 Players")]
+	private static void BuildWin62Build2()
+	{
+		BuildWin64Build(2);
 	}
 
+	[MenuItem("Tools/Build Script Only/3 Players")]
+	private static void BuildWin62Build3()
+	{
+		BuildWin64Build(3);
+	}
+
+	[MenuItem("Tools/Build Script Only/4 Players")]
+	private static void BuildWin62Build4()
+	{
+		BuildWin64Build(4);
+	}
+
+	[MenuItem("Tools/Build Script Only/5 Players")]
+	private static void BuildWin62Build5()
+	{
+		BuildWin64Build(5);
+	}
+
+	[MenuItem("Tools/Build Script Only/6 Players")]
+	private static void BuildWin62Build6()
+	{
+		BuildWin64Build(6);
+	}
 
 	private static void PerformWin64Build(int playerCount)
 	{
@@ -120,12 +148,15 @@ public static class EditorTools
 		}
 	}
 
-	private static void BuildWin62Build(int index)
+	private static void BuildWin64Build(int playerCount)
 	{
-		EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
-		BuildPipeline.BuildPlayer(GetScenePaths(),
-			"Builds/Win64" + GetProjectName() + index.ToString() + "/" + GetProjectName() + index.ToString() + ".exe",
-			BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
+		for (int i = 0; i < playerCount; i++)
+		{
+			EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+			BuildPipeline.BuildPlayer(GetScenePaths(),
+			"Builds/Win64" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe",
+			BuildTarget.StandaloneWindows64, BuildOptions.Development);
+		}
 	}
 
 	private static string GetProjectName()

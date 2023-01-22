@@ -110,7 +110,6 @@ public static class PacketHandler
 			var length = req.CharacterTypeArr.Length;
 			for (int i = 0; i < length; i++)
 			{
-				//if (i == User.TeamId) continue;
 				game.Enter((short)i, (NetObjectType)req.CharacterTypeArr[i]);
 			}
 

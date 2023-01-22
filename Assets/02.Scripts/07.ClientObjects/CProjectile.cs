@@ -23,6 +23,10 @@ public class CProjectile : MonoBehaviour
 	{
 		_onDisableEffect.gameObject.SetActive(false);
 		_bulletGo.SetActive(true);
+		if (_projectile is not null)
+		{
+			transform.position = new Vector3((float)_projectile.Position.x, 1, (float)_projectile.Position.z);
+		}
 	}
 
 	private void Update()
@@ -31,7 +35,6 @@ public class CProjectile : MonoBehaviour
 		{
 			enabled = false;
 			_bulletGo.SetActive(false);
-			return;
 		}
 
 		//transform.SetPositionAndRotation((Vector3)_projectile.Position, (Quaternion)_projectile.Rotation);

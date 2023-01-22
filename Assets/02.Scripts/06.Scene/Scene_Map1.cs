@@ -72,10 +72,10 @@ public class Scene_Map1 : BaseScene
 		Network.StartSyncTime();
 	}
 
-	private void FixedUpdate()
-	{
-		_coHandler?.MoveNext();
-	}
+	//private void FixedUpdate()
+	//{
+	//	_coHandler?.MoveNext();
+	//}
 
 	private IEnumerator<float> Co_FixedUpdate()
 	{
@@ -84,13 +84,7 @@ public class Scene_Map1 : BaseScene
 		while (true)
 		{
 			Loggers.Game.Information("---------------Frame [{0}]----------------", CurrentTick);
-			while (_frameInfoQueue.TryDequeue(out info) == false)
-			{
-				//todo
-				//Debug.Log("empty");
-				yield return 0f;
-			}
-
+			_frameInfoQueue.TryDequeue(out info);
 			World.UpdateInputs(info);
 			World.Update();
 			_mapUI.HandleOneFrame();
@@ -120,13 +114,16 @@ public class Scene_Map1 : BaseScene
 			cPlayer.gameObject.AddComponent<CharacterController>().Init();
 			_cam.Init(cPlayer.transform);
 		}
-
-		cPlayer.Init(netCharacter, teamId);
 	}
 
 	public void StartGame(float waitTime)
 	{
 		World.Reset();
+		foreach (var nPlayer in World.CharacterSystem.ComponentDict)
+		{
+			CPlayers[nPlayer.NetObjId.InstanceId].Init(nPlayer, (short)nPlayer.NetObjId.InstanceId);
+		}
+
 		_mapUI.OnGameStart(Internal_StartGame);
 	}
 
@@ -147,6 +144,7 @@ public class Scene_Map1 : BaseScene
 		//Debug.Assert(_characters[teamId] is not null);
 		var info = new GameFrameInfo(req);
 		_frameInfoQueue.Enqueue(info);
+		JobMgr.PushUnityJob(() => _coHandler?.MoveNext());
 	}
 
 	public void EndGame()
@@ -216,7 +214,7 @@ public class Scene_Map1 : BaseScene
 	private void OnPlayerDead(NetCharacter character)
 	{
 		Loggers.Game.Information("Player dead {0}", character.NetObjId.InstanceId);
-		_mapUI.OnPlayerDead((uint)character.NetObjId.InstanceId);
+		_mapUI.OnPlayerDead(CPlayers[character.NetObjId.InstanceId]);
 		CPlayers[character.NetObjId.InstanceId].OnDead();
 	}
 }

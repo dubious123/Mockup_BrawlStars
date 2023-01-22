@@ -15,7 +15,6 @@ public class Scene_Lobby : BaseScene
 	{
 		Scenetype = SceneType.Lobby;
 		Scene.PlaySceneChangeAnim();
-		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
 		User.CharType = (NetObjectType)param;
 		User.CharType = NetObjectType.Character_Shelly;
 		IsReady = true;

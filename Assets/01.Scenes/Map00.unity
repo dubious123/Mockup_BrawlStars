@@ -39360,13 +39360,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiTop: {fileID: 2078755716}
-  _profileHolders:
+  _profileHoldersBlue:
   - {fileID: 9010340530238593405}
-  - {fileID: 1190948620}
   - {fileID: 154762976}
-  - {fileID: 353377776}
   - {fileID: 1536861795}
+  _profileHoldersRed:
   - {fileID: 1155715696}
+  - {fileID: 353377776}
+  - {fileID: 1190948620}
   _welcomeAnim: {fileID: 939187802}
   _gameMessage: {fileID: 314327237}
   _clock: {fileID: 239124394}

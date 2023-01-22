@@ -14,14 +14,14 @@ public class UICenterScoresEditorBtn : Editor
 	{
 		base.OnInspectorGUI();
 		var scores = (CenterScores)target;
-		if (GUILayout.Button("BlueWin"))
+		if (GUILayout.Button("PlayerWin"))
 		{
-			scores.OnBlueWin();
+			scores.OnPlayerWin();
 		}
 
-		if (GUILayout.Button("RedWin"))
+		if (GUILayout.Button("PlayerLose"))
 		{
-			scores.OnRedWin();
+			scores.OnPlayerLose();
 
 		}
 

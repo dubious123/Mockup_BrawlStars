@@ -14,10 +14,10 @@ public class JobMgr : MonoBehaviour
 		_instance = GameObject.Find("@JobMgr").GetComponent<JobMgr>();
 		_instance._unityJobQueue = new ConcurrentQueue<Action>();
 
-		CreatejobQueue("PacketSend", 1, true, 1);
-		CreatejobQueue("PacketRecv", 1, true, 1);
-		CreatejobQueue("PacketHandler", 1, true, 1);
-		CreatejobQueue("PacketParser", 1, true, 1);
+		//CreatejobQueue("PacketSend", 1, true, 1);
+		//CreatejobQueue("PacketRecv", 1, true, 1);
+		//CreatejobQueue("PacketHandler", 1, true, 1);
+		//CreatejobQueue("PacketParser", 1, true, 1);
 	}
 
 	private void Update()
@@ -38,14 +38,17 @@ public class JobMgr : MonoBehaviour
 			queue.Start();
 		return queue;
 	}
+
 	public static void PushUnityJob(Action job)
 	{
 		_instance._unityJobQueue.Enqueue(job);
 	}
+
 	public static void Push(string name, Action job)
 	{
 		_instance._jobDict[name].Push(job);
 	}
+
 	public static JobQueue GetQueue(string name)
 	{
 		var queue = _instance._jobDict[name];

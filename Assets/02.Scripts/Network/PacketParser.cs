@@ -12,10 +12,10 @@ using static ServerCore.Utils.Enums;
 public static class PacketParser
 {
 	private static readonly ConcurrentDictionary<ushort, Func<string, BasePacket>> _readDict;
-	private static JobQueue _packetHandlerQueue;
+	//private static JobQueue _packetHandlerQueue;
 	static PacketParser()
 	{
-		_packetHandlerQueue = JobMgr.GetQueue("PacketHandler");
+		//_packetHandlerQueue = JobMgr.GetQueue("PacketHandler");
 		_readDict = new ConcurrentDictionary<ushort, Func<string, BasePacket>>();
 		_readDict.TryAdd((ushort)PacketId.C_Init, json => JsonUtility.FromJson<C_Init>(json));
 		_readDict.TryAdd((ushort)PacketId.C_SyncTime, json => JsonUtility.FromJson<C_SyncTime>(json));
@@ -58,7 +58,7 @@ public static class PacketParser
 			string json = Encoding.UTF8.GetString(buffer.Read(size));
 			Loggers.Recv.Information(json);
 			var packet = func.Invoke(json);
-			_packetHandlerQueue.Push(() => PacketHandler.HandlePacket(packet, session));
+			PacketHandler.HandlePacket(packet, session);
 		}
 	}
 

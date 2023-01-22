@@ -13,7 +13,8 @@ using UnityEngine.UI;
 public class Map00UI : MonoBehaviour
 {
 	[SerializeField] private GameObject _uiTop;
-	[SerializeField] private ProfileHolder[] _profileHolders;
+	[SerializeField] private ProfileHolder[] _profileHoldersBlue;
+	[SerializeField] private ProfileHolder[] _profileHoldersRed;
 	[SerializeField] private UIWelcomeAnim _welcomeAnim;
 	[SerializeField] private UIGameMessage _gameMessage;
 	[SerializeField] private UIClock _clock;
@@ -51,7 +52,7 @@ public class Map00UI : MonoBehaviour
 				continue;
 			}
 
-			_profileHolders[cp.TeamId].ProfileImage.sprite = cp.ProfileIcon;
+			GetHolder(cp).ProfileImage.sprite = cp.ProfileIcon;
 		}
 
 		_welcomeAnim.PlayAnim(() =>
@@ -76,29 +77,22 @@ public class Map00UI : MonoBehaviour
 
 	public void OnRoundEnd(GameRule00.RoundResult result)
 	{
-		if (result == GameRule00.RoundResult.Blue)
+		if (result == GameRule00.RoundResult.Blue && User.Team == Enums.TeamType.Blue ||
+			result == GameRule00.RoundResult.Red && User.Team == Enums.TeamType.Red)
 		{
-			_centerScores.OnBlueWin();
-			if (User.Team == Enums.TeamType.Blue)
-			{
-				_gameMessage.ChangeText("Knockout win");
-			}
-			else if (User.Team == Enums.TeamType.Red)
-			{
-				_gameMessage.ChangeText("Knockout lose");
-			}
+			_centerScores.OnPlayerWin();
+			_gameMessage.ChangeText("Knockout win");
+		}
+		else if (result == GameRule00.RoundResult.Blue && User.Team == Enums.TeamType.Red ||
+			result == GameRule00.RoundResult.Red && User.Team == Enums.TeamType.Blue)
+		{
+			_centerScores.OnPlayerLose();
+			_gameMessage.ChangeText("Knockout lose");
 		}
 		else
 		{
-			_centerScores.OnRedWin();
-			if (User.Team == Enums.TeamType.Blue)
-			{
-				_gameMessage.ChangeText("Knockout lose");
-			}
-			else if (User.Team == Enums.TeamType.Red)
-			{
-				_gameMessage.ChangeText("Knockout win");
-			}
+			_centerScores.OnPlayerDraw();
+			_gameMessage.ChangeText("Knockout draw");
 		}
 	}
 
@@ -109,7 +103,11 @@ public class Map00UI : MonoBehaviour
 
 	public void OnRoundReset()
 	{
-		foreach (var profile in _profileHolders)
+		foreach (var profile in _profileHoldersBlue)
+		{
+			profile.Reset();
+		}
+		foreach (var profile in _profileHoldersRed)
 		{
 			profile.Reset();
 		}
@@ -122,8 +120,14 @@ public class Map00UI : MonoBehaviour
 		_gameMessage.ChangeText("Match over");
 	}
 
-	public void OnPlayerDead(uint playerId)
+	public void OnPlayerDead(CPlayer player)
 	{
-		_profileHolders[playerId].OnDead();
+		GetHolder(player).OnDead();
+	}
+
+	private ProfileHolder GetHolder(CPlayer player)
+	{
+		return player.Team == User.Team ? _profileHoldersBlue[player.TeamId / 2] :
+										  _profileHoldersRed[player.TeamId / 2];
 	}
 }

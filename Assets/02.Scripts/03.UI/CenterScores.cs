@@ -36,18 +36,22 @@ public class CenterScores : MonoBehaviour
 		_currentScoreUI.rectTransform.localScale = new Vector3(_scoreBigScale, _scoreBigScale, _scoreBigScale);
 	}
 
-	public void OnBlueWin()
+	public void OnPlayerWin()
 	{
 		_scores[_currentScore].sprite = _imageScoreBlue;
-		InternalHandleWin();
-		Debug.Log("Blue");
+		InternalHandleRoundEnd();
 	}
 
-	public void OnRedWin()
+	public void OnPlayerLose()
 	{
 		_scores[_currentScore].sprite = _imageScoreRed;
-		InternalHandleWin();
-		Debug.Log("Red");
+		InternalHandleRoundEnd();
+	}
+
+	public void OnPlayerDraw()
+	{
+		_scores[_currentScore].sprite = _imageScoreGray;
+		InternalHandleRoundEnd();
 	}
 
 	public void Reset()
@@ -60,7 +64,7 @@ public class CenterScores : MonoBehaviour
 		}
 	}
 
-	private void InternalHandleWin()
+	private void InternalHandleRoundEnd()
 	{
 		_currentScoreUI = _scores[_currentScore++];
 		Timing.RunCoroutine(CoShrink());

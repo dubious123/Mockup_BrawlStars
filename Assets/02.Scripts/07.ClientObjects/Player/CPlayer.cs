@@ -6,9 +6,12 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+using static Enums;
+
 public class CPlayer : MonoBehaviour
 {
 	public NetCharacter NPlayer { get; set; }
+	public TeamType Team => NPlayer.Team;
 	public short TeamId { get; set; }
 	public int MaxHp => NPlayer.MaxHp;
 	public int Hp => NPlayer.Hp;
