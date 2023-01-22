@@ -99,6 +99,16 @@ public static class EditorTools
 		PerformWin64Build(6);
 	}
 
+	[MenuItem("Tools/Build Multiplayer/3 Players")]
+	private static void BuildWin62Build3()
+	{
+		for (int i = 2; i < 6; i++)
+		{
+			BuildWin62Build(i);
+		}
+	}
+
+
 	private static void PerformWin64Build(int playerCount)
 	{
 		EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
@@ -108,6 +118,14 @@ public static class EditorTools
 				"Builds/Win64" + GetProjectName() + i.ToString() + "/" + GetProjectName() + i.ToString() + ".exe",
 				BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
 		}
+	}
+
+	private static void BuildWin62Build(int index)
+	{
+		EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+		BuildPipeline.BuildPlayer(GetScenePaths(),
+			"Builds/Win64" + GetProjectName() + index.ToString() + "/" + GetProjectName() + index.ToString() + ".exe",
+			BuildTarget.StandaloneWindows64, BuildOptions.AutoRunPlayer);
 	}
 
 	private static string GetProjectName()

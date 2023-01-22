@@ -20,8 +20,9 @@ public class Scene_Entry : BaseScene
 
 	private void Awake()
 	{
+		//Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
 		Screen.SetResolution(3840 / 2, 2160 / 2, false);
-		Application.targetFrameRate = 300;
+		Application.targetFrameRate = 60;
 		Time.fixedDeltaTime = (float)((sfloat)1 / (sfloat)60f);
 		DontDestroyOnLoad(new GameObject("@Loggers", typeof(Loggers)));
 		DontDestroyOnLoad(new GameObject("@JobMgr", typeof(JobMgr)));
@@ -38,6 +39,7 @@ public class Scene_Entry : BaseScene
 		Network.Init();
 		Audio.Init();
 		Scene.Init();
+
 		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
 	}
 }

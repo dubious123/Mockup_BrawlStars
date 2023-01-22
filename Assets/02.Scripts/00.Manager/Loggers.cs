@@ -20,7 +20,12 @@ public class Loggers : MonoBehaviour
 
 	public static void Init()
 	{
-		var path = Application.dataPath + "/02.Scripts/Logs/";
+		var path = Application.dataPath + "/02.Scripts/Logs";
+		DirectoryInfo di = new DirectoryInfo(path);
+		if (di.Exists == false)
+		{
+			di.Create();
+		}
 
 		File.WriteAllText(path + "/Debug.txt", "");
 		File.WriteAllText(path + "/Game.txt", "");
