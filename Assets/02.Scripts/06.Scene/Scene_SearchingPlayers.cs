@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Scene_SearchingPlayers : BaseScene
 {
+	public static int FoundPlayerCount { get; set; }
 	[SerializeField] private SearchingPlayersUI _ui;
 
 	public override void Init(object param)
@@ -18,7 +19,15 @@ public class Scene_SearchingPlayers : BaseScene
 		IsReady = true;
 	}
 
-	public void UpdatePlayerFound(ushort foundPlayersCount) => _ui.UpdateText(foundPlayersCount);
+	private void Update()
+	{
+		if (IsReady is false)
+		{
+			return;
+		}
+
+		_ui.UpdateText(FoundPlayerCount);
+	}
 
 	public void OnGameReady()
 	{

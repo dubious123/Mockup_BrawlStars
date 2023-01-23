@@ -19,18 +19,19 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_SyncTime, (packet, session) => S_SyncTimeHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_GameReady, (packet, session) => S_GameReadyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastSearchPlayer, (packet, session) => S_BroadcastSearchPlayerHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet, session) => S_BroadcastEnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet, session) => S_GameFrameInfoHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastStartNewRound, (packet, session) => S_BroadcastStartNewRoundHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEndGame, (packet, session) => S_BroadcastEndGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_SyncTime, (packet,session) => S_SyncTimeHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => S_LoginHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastFoundPlayer, (packet,session) => S_BroadcastFoundPlayerHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => S_BroadcastEnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet,session) => S_BroadcastStartGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet,session) => S_GameFrameInfoHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastRoundEnd, (packet,session) => S_BroadcastRoundEndHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastRoundClear, (packet,session) => S_BroadcastRoundClearHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastRoundReset, (packet,session) => S_BroadcastRoundResetHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastMatchOver, (packet,session) => S_BroadcastMatchOverHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -90,7 +91,7 @@ public static class PacketHandler
 			return;
 		}
 
-		game.HandleGameState(req);
+		game.HandleGameInput(req);
 	}
 
 	private static void S_BroadcastEnterGameHandle(BasePacket packet, ServerSession session)
@@ -104,51 +105,21 @@ public static class PacketHandler
 	{
 		var req = packet as S_BroadcastStartGame;
 
-		JobMgr.PushUnityJob(() =>
-		{
-			if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
-			var length = req.CharacterTypeArr.Length;
-			for (int i = 0; i < length; i++)
-			{
-				game.Enter((short)i, (NetObjectType)req.CharacterTypeArr[i]);
-			}
-
-			game.StartGame(req.WaitTime);
-		});
-	}
-
-	private static int _retryCount;
-	private static void S_BroadcastSearchPlayerHandle(BasePacket packet, ServerSession session)
-	{
-		var req = packet as S_BroadcastSearchPlayer;
-		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false)
-		{
-			if (_retryCount > 10)
-			{
-				Loggers.Error.Error("handling S_BroadcastSearchPlayerHandle failed more than 10 time");
-				return;
-			}
-
-			Loggers.Error.Error("handling S_BroadcastSearchPlayerHandle failed {0}", _retryCount++);
-			JobMgr.PushUnityJob(() => Timing.CallDelayed(1, () => S_BroadcastSearchPlayerHandle(packet, session)));
-			return;
-		}
-
-		_retryCount = 0;
-		JobMgr.PushUnityJob(() => scene.UpdatePlayerFound(req.FoundPlayersCount));
-	}
-
-	private static void S_GameReadyHandle(BasePacket packet, ServerSession session)
-	{
-		var req = packet as S_GameReady;
 		if (Scene.CurrentScene is not Scene_SearchingPlayers scene || scene.IsReady == false)
 		{
 			Loggers.Error.Error("Scene_SearchingPlayers is not ready yet");
-			JobMgr.PushUnityJob(() => S_GameReadyHandle(packet, session));
+			Timing.CallDelayed(1f, () => S_BroadcastStartGameHandle(packet, session));
 			return;
 		}
 
+		Scene_Map1.StartInfo = new(req);
 		JobMgr.PushUnityJob(scene.OnGameReady);
+	}
+
+	private static void S_BroadcastFoundPlayerHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastFoundPlayer;
+		Scene_SearchingPlayers.FoundPlayerCount = req.FoundPlayersCount;
 	}
 
 	private static void S_SyncTimeHandle(BasePacket packet, ServerSession session)
@@ -166,27 +137,23 @@ public static class PacketHandler
 		JobMgr.PushUnityJob(() => UnityEngine.Debug.Log($"Latency : {Network.Latency}"));
 	}
 
-	private static void S_BroadcastStartNewRoundHandle(BasePacket packet, ServerSession session)
+	private static void S_BroadcastRoundEndHandle(BasePacket packet, ServerSession session)
 	{
-		var req = packet as S_BroadcastStartNewRound;
-		if (Scene.CurrentScene is not Scene_Map1 scene || scene.IsReady == false)
-		{
-			Loggers.Error.Error("Scene_Map1 is not ready yet");
-			return;
-		}
-
-		//JobMgr.PushUnityJob(() => Timing.CallDelayed((req.WaitMilliseconds - Network.Latency) / 1000f, scene.StartNewRound));
+		var req = packet as S_BroadcastRoundEnd;
 	}
 
-	private static void S_BroadcastEndGameHandle(BasePacket packet, ServerSession session)
+	private static void S_BroadcastRoundClearHandle(BasePacket packet, ServerSession session)
 	{
-		var req = packet as S_BroadcastEndGame;
-		if (Scene.CurrentScene is not Scene_Map1 scene || scene.IsReady == false)
-		{
-			Loggers.Error.Error("Scene_Map1 is not ready yet");
-			return;
-		}
+		var req = packet as S_BroadcastRoundClear;
+	}
 
-		JobMgr.PushUnityJob(scene.EndGame);
+	private static void S_BroadcastRoundResetHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastRoundReset;
+	}
+
+	private static void S_BroadcastMatchOverHandle(BasePacket packet, ServerSession session)
+	{
+		var req = packet as S_BroadcastMatchOver;
 	}
 }

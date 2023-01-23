@@ -16,11 +16,13 @@ using Server.Game.GameRule;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 using static Enums;
 
 public class Scene_Map1 : BaseScene
 {
+	public static GameStartInfo StartInfo { private get; set; }
 	public int CurrentTick => World.GameRule.CurrentRoundFrameCount;
 	public int MaxTick => World.GameRule.MaxFrameCount;
 	public bool GameStarted => _gameStarted;
@@ -40,8 +42,10 @@ public class Scene_Map1 : BaseScene
 
 	private sVector3[] _spawnPoints;
 	private CPlayer[] _cPlayers;
-	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue;
+	private ConcurrentQueue<GameFrameInfo> _frameInfoQueue = new();
 	private IEnumerator<float> _coHandler;
+	private CharacterController _input;
+	private System.Timers.Timer _gameLoopTimer;
 	private bool _gameStarted = false;
 
 	public NetWorld World;
@@ -64,29 +68,39 @@ public class Scene_Map1 : BaseScene
 		});
 
 		GetComponentInChildren<CEnvSystem>(true).Init(World.EnvSystem);
-		_cPlayers = new CPlayer[6];
-		_frameInfoQueue = new ConcurrentQueue<GameFrameInfo>();
 		_spawnPoints = data.SpawnPoints;
+		_cPlayers = new CPlayer[Config.MAX_PLAYER_COUNT];
+		for (int i = 0; i < StartInfo.CharacterType.Length; i++)
+		{
+			Enter((short)i, StartInfo.CharacterType[i]);
+		}
+
 		IsReady = true;
-		Network.RegisterSend(new C_GameReady(User.UserId));
-		Network.StartSyncTime();
+		StartGame();
 	}
 
-	//private void FixedUpdate()
-	//{
-	//	_coHandler?.MoveNext();
-	//}
-
-	private IEnumerator<float> Co_FixedUpdate()
+	private void MoveGameLoop()
 	{
+		JobMgr.PushUnityJob(() => _coHandler.MoveNext());
+	}
+
+	private IEnumerator<float> Co_ClientGameLoop()
+	{
+		World.Reset();
 		GameFrameInfo info;
 		Loggers.Game.Information("---------------StartGame----------------");
 		while (true)
 		{
 			Loggers.Game.Information("---------------Frame [{0}]----------------", CurrentTick);
-			_frameInfoQueue.TryDequeue(out info);
+			if (_frameInfoQueue.TryDequeue(out info) is false || CurrentTick != info.FrameNum)
+			{
+				throw new Exception();
+			}
+
+			Loggers.Game.Information("Reserve Count : {0}", _frameInfoQueue.Count);
 			World.UpdateInputs(info);
 			World.Update();
+			_input.SendInput(CurrentTick + Config.FRAME_BUFFER_COUNT);
 			_mapUI.HandleOneFrame();
 			Loggers.Game.Information("------------------------------------------");
 			yield return 0f;
@@ -111,40 +125,44 @@ public class Scene_Map1 : BaseScene
 			}
 
 			User.Team = netCharacter.Team;
-			cPlayer.gameObject.AddComponent<CharacterController>().Init();
+			_input = cPlayer.gameObject.AddComponent<CharacterController>();
+			_input.Init();
 			_cam.Init(cPlayer.transform);
 		}
 	}
 
-	public void StartGame(float waitTime)
+	public void StartGame()
 	{
-		World.Reset();
+		_coHandler = Co_ClientGameLoop();
 		foreach (var nPlayer in World.CharacterSystem.ComponentDict)
 		{
 			CPlayers[nPlayer.NetObjId.InstanceId].Init(nPlayer, (short)nPlayer.NetObjId.InstanceId);
 		}
 
-		_mapUI.OnGameStart(Internal_StartGame);
+		_mapUI.OnGameStart(() =>
+		{
+			_gameStarted = true;
+			Audio.PlayAudio(_ingameBgm, _ingameBgm.name, true);
+			_input.SendInput(CurrentTick);
+		});
+
+		Network.StartSyncTime();
 	}
 
-	private void Internal_StartGame()
+	public void HandleGameInput(S_GameFrameInfo req)
 	{
-		_gameStarted = true;
-		Audio.PlayAudio(_ingameBgm, _ingameBgm.name, true);
-		_coHandler = Co_FixedUpdate();
-	}
-
-	public void Exit()
-	{
-
-	}
-
-	public void HandleGameState(S_GameFrameInfo req)
-	{
-		//Debug.Assert(_characters[teamId] is not null);
 		var info = new GameFrameInfo(req);
 		_frameInfoQueue.Enqueue(info);
-		JobMgr.PushUnityJob(() => _coHandler?.MoveNext());
+		if (info.FrameNum == 0)
+		{
+			_gameLoopTimer = new System.Timers.Timer(1000 / 60d);
+			_gameLoopTimer.Elapsed += (_, _) => MoveGameLoop();
+			_gameLoopTimer.Start();
+		}
+		else if (info.FrameNum < 0)
+		{
+			_input.SendInput(info.FrameNum + 1);
+		}
 	}
 
 	public void EndGame()

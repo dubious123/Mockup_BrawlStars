@@ -16,6 +16,7 @@ namespace ServerCore
 		public void StartConnect(IPEndPoint endPoint)
 		{
 			_socket = new(endPoint.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+			_socket.NoDelay = true;
 			var args = new SocketAsyncEventArgs();
 			args.Completed += (obj, args) => OnConnectCompleted(args);
 			args.RemoteEndPoint = endPoint;

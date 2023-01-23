@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using System.Runtime;
 
 using MEC;
@@ -30,7 +31,8 @@ public class Network : MonoBehaviour
 			return _instance._session;
 		});
 
-		var endPoint = GetNewEndPoint(7777);
+		//var endPoint = GetNewEndPoint(7777);
+		var endPoint = new IPEndPoint(0x000000001200a8c0, 7777);
 		_instance._connector.StartConnect(endPoint);
 		Debug.Log($"Connecting to {endPoint}");
 	}

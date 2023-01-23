@@ -6,7 +6,7 @@ public class GameFrameInfo
 {
 	public GameFrameInfo(S_GameFrameInfo req)
 	{
-		_req = req;
+		FrameNum = req.FrameNum;
 		Inputs = new InputData[req.PlayerMoveDirXArr.Length];
 
 		var length = req.PlayerMoveDirXArr.Length;
@@ -21,10 +21,8 @@ public class GameFrameInfo
 		}
 	}
 
-	private S_GameFrameInfo _req;
-	public long StartTick => _req.StartTick;
-	public long TargetTick => _req.TargetTick;
 	public InputData[] Inputs { get; private set; }
+	public int FrameNum { get; private set; }
 
 	public void Reset()
 	{

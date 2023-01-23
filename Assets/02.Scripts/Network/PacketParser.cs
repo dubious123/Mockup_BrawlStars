@@ -28,14 +28,15 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.S_SyncTime, json => JsonUtility.FromJson<S_SyncTime>(json));
 		_readDict.TryAdd((ushort)PacketId.S_Login, json => JsonUtility.FromJson<S_Login>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterLobby, json => JsonUtility.FromJson<S_EnterLobby>(json));
-		_readDict.TryAdd((ushort)PacketId.S_GameReady, json => JsonUtility.FromJson<S_GameReady>(json));
 		_readDict.TryAdd((ushort)PacketId.S_EnterGame, json => JsonUtility.FromJson<S_EnterGame>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastSearchPlayer, json => JsonUtility.FromJson<S_BroadcastSearchPlayer>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastFoundPlayer, json => JsonUtility.FromJson<S_BroadcastFoundPlayer>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastEnterGame, json => JsonUtility.FromJson<S_BroadcastEnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartGame, json => JsonUtility.FromJson<S_BroadcastStartGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_GameFrameInfo, json => JsonUtility.FromJson<S_GameFrameInfo>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartNewRound, json => JsonUtility.FromJson<S_BroadcastStartNewRound>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastEndGame, json => JsonUtility.FromJson<S_BroadcastEndGame>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundEnd, json => JsonUtility.FromJson<S_BroadcastRoundEnd>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundClear, json => JsonUtility.FromJson<S_BroadcastRoundClear>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundReset, json => JsonUtility.FromJson<S_BroadcastRoundReset>(json));
+		_readDict.TryAdd((ushort)PacketId.S_BroadcastMatchOver, json => JsonUtility.FromJson<S_BroadcastMatchOver>(json));
 	}
 
 	public static IEnumerator<float> ReadPacket(this RecvBuffer buffer, ServerSession session)

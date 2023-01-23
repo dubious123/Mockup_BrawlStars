@@ -11,6 +11,7 @@ public class Config
 	public static string Id => _instance._configData.ID;
 	public static string Pw => _instance._configData.PW;
 #endif
+	public static int FRAME_BUFFER_COUNT = 6;
 	public static int MAX_PLAYER_COUNT => _instance._configData.MAX_PLAYER_COUNT;
 	public static int MAX_ROUND_COUNT => _instance._configData.MAX_ROUND_COUNT;
 	public static int TEAM_MEMBER_COUNT => _instance._configData.TEAM_MEMBER_COUNT;//3;

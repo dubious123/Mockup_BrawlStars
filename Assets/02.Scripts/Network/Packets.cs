@@ -69,11 +69,11 @@ public class C_GameReady : AuthPacket
 }
 public class C_PlayerInput : GamePacket
 {
-	public C_PlayerInput(int userId, long startTick, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
+	public C_PlayerInput(int userId, int frameNum, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
 	{
 		Id = 0x0006;
 		UserId = userId;
-		StartTick = startTick;
+		FrameNum = frameNum;
 		MoveDirX = moveDir.x.RawValue;
 		MoveDirY = moveDir.y.RawValue;
 		LookDirX = lookDir.x.RawValue;
@@ -83,7 +83,7 @@ public class C_PlayerInput : GamePacket
 
 	public byte ButtonPressed;
 	public short TeamId;
-	public long StartTick;
+	public int FrameNum;
 	public uint MoveDirX;
 	public uint MoveDirY;
 	public uint LookDirX;
@@ -105,9 +105,6 @@ public class S_Login : BasePacket
 public class S_EnterLobby : BasePacket
 {
 }
-public class S_GameReady : BasePacket
-{
-}
 public class S_EnterGame : BasePacket
 {
 
@@ -121,10 +118,10 @@ public class S_EnterGame : BasePacket
 	public short TeamId;
 	public PlayerInfoDto PlayerInfo;
 }
-public class S_BroadcastSearchPlayer : BasePacket
+public class S_BroadcastFoundPlayer : BasePacket
 {
 
-	public ushort FoundPlayersCount;
+	public int FoundPlayersCount;
 }
 public class S_BroadcastEnterGame : BasePacket
 {
@@ -136,23 +133,26 @@ public class S_BroadcastStartGame : BasePacket
 {
 
 	public ushort[] CharacterTypeArr;
-	public float WaitTime;
 }
 public class S_GameFrameInfo : BasePacket
 {
 
-	public long StartTick;
-	public long TargetTick;
+	public int FrameNum;
 	public uint[] PlayerMoveDirXArr;
 	public uint[] PlayerMoveDirYArr;
 	public uint[] PlayerLookDirXArr;
 	public uint[] PlayerLookDirYArr;
 	public ushort[] ButtonPressedArr;
 }
-public class S_BroadcastStartNewRound : BasePacket
+public class S_BroadcastRoundEnd : BasePacket
 {
-	public int WaitMilliseconds;
 }
-public class S_BroadcastEndGame : BasePacket
+public class S_BroadcastRoundClear : BasePacket
+{
+}
+public class S_BroadcastRoundReset : BasePacket
+{
+}
+public class S_BroadcastMatchOver : BasePacket
 {
 }
