@@ -32,6 +32,13 @@ public static partial class Enums
 		Stun = 2,
 	}
 
+	public enum GameState
+	{
+		Waiting,
+		Started,
+		Ended,
+	}
+
 	public enum TeamType
 	{
 		None,

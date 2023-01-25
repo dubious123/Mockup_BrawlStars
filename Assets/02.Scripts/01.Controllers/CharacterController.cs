@@ -69,7 +69,7 @@ public class CharacterController : MonoBehaviour
 
 	public void SendInput(int frameNum)
 	{
-		Network.RegisterSend(new C_PlayerInput(User.UserId, frameNum, (sVector2)ToVector(_moveInput), (sVector2)ToVector(_lookInput), _buttonPressed));
+		Network.RegisterSend(new C_PlayerInput(User.UserId, User.TeamId, frameNum, (sVector2)ToVector(_moveInput), (sVector2)ToVector(_lookInput), _buttonPressed));
 	}
 
 	private long ToLong(ref Vector2 vector)

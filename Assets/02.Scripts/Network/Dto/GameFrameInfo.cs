@@ -2,8 +2,12 @@
 
 using Server.Game;
 
+using UnityEngine.ResourceManagement.Util;
+
 public class GameFrameInfo
 {
+	private GameFrameInfo() { }
+
 	public GameFrameInfo(S_GameFrameInfo req)
 	{
 		FrameNum = req.FrameNum;
@@ -19,6 +23,14 @@ public class GameFrameInfo
 				ButtonInput = req.ButtonPressedArr[i]
 			};
 		}
+	}
+
+	public static GameFrameInfo GetDefault(int playerNum)
+	{
+		return new GameFrameInfo()
+		{
+			Inputs = new InputData[playerNum],
+		};
 	}
 
 	public InputData[] Inputs { get; private set; }

@@ -69,10 +69,11 @@ public class C_GameReady : AuthPacket
 }
 public class C_PlayerInput : GamePacket
 {
-	public C_PlayerInput(int userId, int frameNum, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
+	public C_PlayerInput(int userId, short teamId, int frameNum, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
 	{
 		Id = 0x0006;
 		UserId = userId;
+		TeamId = teamId;
 		FrameNum = frameNum;
 		MoveDirX = moveDir.x.RawValue;
 		MoveDirY = moveDir.y.RawValue;
@@ -143,15 +144,6 @@ public class S_GameFrameInfo : BasePacket
 	public uint[] PlayerLookDirXArr;
 	public uint[] PlayerLookDirYArr;
 	public ushort[] ButtonPressedArr;
-}
-public class S_BroadcastRoundEnd : BasePacket
-{
-}
-public class S_BroadcastRoundClear : BasePacket
-{
-}
-public class S_BroadcastRoundReset : BasePacket
-{
 }
 public class S_BroadcastMatchOver : BasePacket
 {

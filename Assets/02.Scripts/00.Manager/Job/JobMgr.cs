@@ -20,7 +20,7 @@ public class JobMgr : MonoBehaviour
 		//CreatejobQueue("PacketParser", 1, true, 1);
 	}
 
-	private void Update()
+	private void FixedUpdate()
 	{
 		while (_unityJobQueue?.Count > 0)
 		{

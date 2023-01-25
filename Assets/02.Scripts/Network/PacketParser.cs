@@ -33,9 +33,6 @@ public static class PacketParser
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastEnterGame, json => JsonUtility.FromJson<S_BroadcastEnterGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastStartGame, json => JsonUtility.FromJson<S_BroadcastStartGame>(json));
 		_readDict.TryAdd((ushort)PacketId.S_GameFrameInfo, json => JsonUtility.FromJson<S_GameFrameInfo>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundEnd, json => JsonUtility.FromJson<S_BroadcastRoundEnd>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundClear, json => JsonUtility.FromJson<S_BroadcastRoundClear>(json));
-		_readDict.TryAdd((ushort)PacketId.S_BroadcastRoundReset, json => JsonUtility.FromJson<S_BroadcastRoundReset>(json));
 		_readDict.TryAdd((ushort)PacketId.S_BroadcastMatchOver, json => JsonUtility.FromJson<S_BroadcastMatchOver>(json));
 	}
 

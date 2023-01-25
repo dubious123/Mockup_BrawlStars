@@ -30,8 +30,8 @@ public class CEnvSystem : MonoBehaviour
 			cEnv.Init(netEnv);
 		}
 
-		_netEnvSystem.OnCharEnterTree = (netEnv, netChar) => (_envDict[netEnv] as CTree).OnCharacterEnter(netChar);
-		_netEnvSystem.OnCharExitTree = (netEnv, netChar) => (_envDict[netEnv] as CTree).OnCharacterExit(netChar);
+		_netEnvSystem.OnCharEnterTree = (netEnv, netChar) => JobMgr.PushUnityJob(() => (_envDict[netEnv] as CTree).OnCharacterEnter(netChar));
+		_netEnvSystem.OnCharExitTree = (netEnv, netChar) => JobMgr.PushUnityJob(() => (_envDict[netEnv] as CTree).OnCharacterExit(netChar));
 	}
 
 	public void OnRoundReset()

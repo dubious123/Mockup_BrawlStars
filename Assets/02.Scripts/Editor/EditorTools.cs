@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 using UnityEditor;
 
@@ -175,6 +176,18 @@ public static class EditorTools
 		return scenes;
 	}
 
+	[MenuItem("Tools/Copy and Paste Config File")]
+	private static void BuildConfigFile()
+	{
+		var str = File.ReadAllText(Application.dataPath + "/../config.json");
+		for (int i = 0; i < 6; i++)
+		{
+			File.WriteAllText(Application.dataPath + $"/../Builds/Win64Mockup_BrawlStars{i}/config.json", str);
+		}
+
+		File.WriteAllText(Application.dataPath + $"/../../Mockup_BrawlStars_Server/Server/Data/config.json", str);
+		Debug.Log("Completed");
+	}
 	#endregion
 }
 #endif

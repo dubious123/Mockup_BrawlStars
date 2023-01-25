@@ -29,7 +29,7 @@ public class UIClock : MonoBehaviour
 
 	public void UpdateClock()
 	{
-		var _remainedSecond = (_scene.MaxTick - _scene.CurrentTick) / 60;
+		var _remainedSecond = (Config.MAX_FRAME_COUNT - _scene.CurrentTick) / 60;
 		var min = Math.DivRem(_remainedSecond, 60, out var second);
 		if (min == _min && second == _second)
 		{
