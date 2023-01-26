@@ -31,12 +31,13 @@ public class ServerSession : Session
 		//_parserQueue = JobMgr.GetQueue("PacketParser");
 		_coPacketParserHandler = _recvBuffer.ReadPacket(this);
 	}
+
 	public override void OnConnected()
 	{
 		base.OnConnected();
 		JobMgr.PushUnityJob(() => Debug.Log($"[client] connecting to {_socket.RemoteEndPoint} completed"));
-		JobMgr.PushUnityJob(Network.SyncTime);
 	}
+
 	protected override void Send()
 	{
 		try
@@ -55,6 +56,7 @@ public class ServerSession : Session
 			throw;
 		}
 	}
+
 	protected override void OnSendCompleted(SocketAsyncEventArgs args)
 	{
 		base.OnSendCompleted(args);
@@ -71,6 +73,7 @@ public class ServerSession : Session
 
 		Send();
 	}
+
 	protected override void OnRecvCompleted(SocketAsyncEventArgs args)
 	{
 		base.OnRecvCompleted(args);

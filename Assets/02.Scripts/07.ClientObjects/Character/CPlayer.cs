@@ -12,7 +12,7 @@ public class CPlayer : MonoBehaviour
 {
 	public NetCharacter NPlayer { get; set; }
 	public TeamType Team => NPlayer.Team;
-	public short TeamId { get; set; }
+	public int TeamId { get; set; }
 	public int MaxHp => NPlayer.MaxHp;
 	public int Hp => NPlayer.Hp;
 	public sVector3 Lookdir => NPlayer.TargetLookDir;
@@ -28,14 +28,15 @@ public class CPlayer : MonoBehaviour
 	[SerializeField] private ParticleSystem _moveSmokeEffect;
 	[SerializeField] private CPlayerEffect _cPlayerEffect;
 
-	public virtual void Init(NetCharacter character, short teamId)
+	public virtual void Init(NetCharacter character)
 	{
 		NPlayer = character;
-		TeamId = teamId;
-		_ui.Init(character, teamId);
+		TeamId = NPlayer.NetObjId.InstanceId;
+
+		_ui.Init(this);
 	}
 
-	public virtual void OnMatchStart()
+	public virtual void OnGameStart()
 	{
 		Active = true;
 	}

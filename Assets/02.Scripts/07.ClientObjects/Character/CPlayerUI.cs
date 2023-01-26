@@ -19,9 +19,9 @@ public class CPlayerUI : MonoBehaviour
 	[SerializeField] private SpriteRenderer _selectCircle;
 	[SerializeField] private MoveCircle _moveCircle;
 
-	public void Init(NetCharacter character, short teamId)
+	public void Init(CPlayer character)
 	{
-		if (teamId == User.TeamId)
+		if (character.TeamId == User.TeamId)
 		{
 			_selectCircle.sprite = _selectCircleSelf;
 			_moveCircle.gameObject.SetActive(true);

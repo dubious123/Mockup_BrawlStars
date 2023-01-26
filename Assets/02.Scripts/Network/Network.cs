@@ -42,25 +42,6 @@ public class Network : MonoBehaviour
 		_instance._session.RegisterSend(packet);
 	}
 
-	public static void StartSyncTime()
-	{
-		Timing.KillCoroutines(_instance._syncTimeHandle);
-		_instance._syncTimeHandle = Timing.CallPeriodically(float.PositiveInfinity, 5, SyncTime);
-	}
-
-	public static void StopSyncTime()
-	{
-		Timing.KillCoroutines(_instance._syncTimeHandle);
-	}
-
-	public static void SyncTime()
-	{
-		RegisterSend(new C_SyncTime()
-		{
-			ClientLocalTime = DateTime.UtcNow.ToFileTimeUtc()
-		});
-	}
-
 	private void OnApplicationQuit()
 	{
 		SessionMgr.CloseAll();

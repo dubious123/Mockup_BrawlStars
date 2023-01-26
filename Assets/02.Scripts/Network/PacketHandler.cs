@@ -19,16 +19,14 @@ public static class PacketHandler
 	static PacketHandler()
 	{
 		_handlerDict = new ConcurrentDictionary<PacketId, Action<BasePacket, ServerSession>>();
-		_handlerDict.TryAdd(PacketId.S_Init, (packet,session) => S_InitHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_SyncTime, (packet,session) => S_SyncTimeHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_Login, (packet,session) => S_LoginHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet,session) => S_EnterLobbyHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet,session) => S_EnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastFoundPlayer, (packet,session) => S_BroadcastFoundPlayerHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastEnterGame, (packet,session) => S_BroadcastEnterGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet,session) => S_BroadcastStartGameHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet,session) => S_GameFrameInfoHandle(packet, session));
-		_handlerDict.TryAdd(PacketId.S_BroadcastMatchOver, (packet,session) => S_BroadcastMatchOverHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Init, (packet, session) => S_InitHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_Login, (packet, session) => S_LoginHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterLobby, (packet, session) => S_EnterLobbyHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_EnterGame, (packet, session) => S_EnterGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastFoundPlayer, (packet, session) => S_BroadcastFoundPlayerHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastStartGame, (packet, session) => S_BroadcastStartGameHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_GameFrameInfo, (packet, session) => S_GameFrameInfoHandle(packet, session));
+		_handlerDict.TryAdd(PacketId.S_BroadcastMatchOver, (packet, session) => S_BroadcastMatchOverHandle(packet, session));
 	}
 
 	public static void HandlePacket(BasePacket packet, ServerSession session)
@@ -81,21 +79,14 @@ public static class PacketHandler
 	private static void S_GameFrameInfoHandle(BasePacket packet, ServerSession session)
 	{
 		var req = packet as S_GameFrameInfo;
-		var game = Scene.CurrentScene as Scene_Map1;
-		if (game is null || game.IsReady == false)
+		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false)
 		{
 			UnityEngine.Debug.LogError("scene is not game or scene is not ready");
 			return;
 		}
 
-		game.HandleGameInput(req);
-	}
-
-	private static void S_BroadcastEnterGameHandle(BasePacket packet, ServerSession session)
-	{
-		var req = packet as S_BroadcastEnterGame;
-		if (Scene.CurrentScene is not Scene_Map1 game || game.IsReady == false) return;
-		JobMgr.PushUnityJob(() => game.Enter(req.TeamId, (NetObjectType)req.Charactertype));
+		Network.RTT = (Network.RTT * 3 + (req.C2STTime[User.TeamId] + (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ServerSendTime)).Milliseconds) * 7) / 10;
+		game.NetGameLoop.HandleGameInput(req);
 	}
 
 	private static void S_BroadcastStartGameHandle(BasePacket packet, ServerSession session)
@@ -117,21 +108,6 @@ public static class PacketHandler
 	{
 		var req = packet as S_BroadcastFoundPlayer;
 		Scene_SearchingPlayers.FoundPlayerCount = req.FoundPlayersCount;
-	}
-
-	private static void S_SyncTimeHandle(BasePacket packet, ServerSession session)
-	{
-		var req = packet as S_SyncTime;
-		if (Network.RTT == 0)
-		{
-			Network.RTT = (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ClientLocalTime)).Milliseconds;
-		}
-		else
-		{
-			Network.RTT = (Network.RTT + (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ClientLocalTime)).Milliseconds) / 2;
-		}
-
-		JobMgr.PushUnityJob(() => UnityEngine.Debug.Log($"Latency : {Network.Latency}"));
 	}
 
 	private static void S_BroadcastMatchOverHandle(BasePacket packet, ServerSession session)

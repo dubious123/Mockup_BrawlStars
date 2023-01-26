@@ -42,10 +42,10 @@ public class Map00UI : MonoBehaviour
 		_clock.UpdateClock();
 	}
 
-	public void OnGameStart(Action onCompleted = null)
+	public void PlayWelcomeAnim(Action onCompleted = null)
 	{
 		var scene = Scene.CurrentScene as Scene_Map1;
-		foreach (var cp in scene.CPlayers)
+		foreach (var cp in scene.ClientGameLoop.PlayerSystem)
 		{
 			if (cp is null)
 			{

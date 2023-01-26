@@ -15,9 +15,9 @@ public class Map00UIEditor : Editor
 		base.OnInspectorGUI();
 		var mapUI = (Map00UI)target;
 
-		if (GUILayout.Button("OnGameStart"))
+		if (GUILayout.Button("PlayWelcomeAnim"))
 		{
-			mapUI.OnGameStart();
+			mapUI.PlayWelcomeAnim();
 		}
 		if (GUILayout.Button("Reset"))
 		{

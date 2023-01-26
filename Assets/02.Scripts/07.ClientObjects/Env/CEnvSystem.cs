@@ -5,16 +5,16 @@ using Server.Game;
 
 using UnityEngine;
 
-public class CEnvSystem : MonoBehaviour
+public class CEnvSystem : CBaseComponentSystem<NetEnv>
 {
 	[SerializeField] private GameObject _envGo;
 
 	private NetEnvSystem _netEnvSystem;
 	private Dictionary<NetEnv, CEnv> _envDict;
 
-	public void Init(NetEnvSystem netEnvSystem)
+	public override void Init(NetBaseComponentSystem<NetEnv> netEnvSystem)
 	{
-		_netEnvSystem = netEnvSystem;
+		_netEnvSystem = netEnvSystem as NetEnvSystem;
 		var cEnvDict = _envGo.GetComponentsInChildren<CEnv>(true).ToDictionary(env => env.transform.position);
 #if UNITY_EDITOR
 		if (cEnvDict.Count != _netEnvSystem.ComponentDict.Count)
@@ -34,7 +34,16 @@ public class CEnvSystem : MonoBehaviour
 		_netEnvSystem.OnCharExitTree = (netEnv, netChar) => JobMgr.PushUnityJob(() => (_envDict[netEnv] as CTree).OnCharacterExit(netChar));
 	}
 
+	public override void MoveClientLoop()
+	{
+	}
+
 	public void OnRoundReset()
+	{
+
+	}
+
+	public override void Reset()
 	{
 		foreach (var env in _envDict.Values)
 		{

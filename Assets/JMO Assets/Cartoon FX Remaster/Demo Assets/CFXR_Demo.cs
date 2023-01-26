@@ -4,6 +4,7 @@
 //--------------------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -122,21 +123,19 @@ namespace CartoonFX
 		public MonoBehaviour bloom;
 		public float rotationSpeed = 10f;
 		public float zoomFactor = 1f;
-
-		bool slowMotion = false;
-		bool rotateCamera = false;
-		bool showGround = true;
+		private bool slowMotion = false;
+		private bool rotateCamera = false;
+		private bool showGround = true;
 
 		//----------------------------------------------------------------------------------------------------------------------------
 
 		[System.NonSerialized] public GameObject currentEffect;
-		GameObject[] effectsList;
-		int index = 0;
+		private GameObject[] effectsList;
+		private int index = 0;
+		private Vector3 camInitialPosition;
+		private Quaternion camInitialRotation;
 
-		Vector3 camInitialPosition;
-		Quaternion camInitialRotation;
-
-		void Awake()
+		private void Awake()
 		{
 			camInitialPosition = Camera.main.transform.position;
 			camInitialRotation = Camera.main.transform.rotation;
@@ -147,7 +146,7 @@ namespace CartoonFX
 				var effect = this.transform.GetChild(i).gameObject;
 				list.Add(effect);
 
-				var cfxrEffect= effect.GetComponent<CFXR_Effect>();
+				var cfxrEffect = effect.GetComponent<CFXR_Effect>();
 				if (cfxrEffect != null) cfxrEffect.clearBehavior = CFXR_Effect.ClearBehavior.Disable;
 			}
 			effectsList = list.ToArray();
@@ -156,7 +155,7 @@ namespace CartoonFX
 			UpdateLabels();
 		}
 
-		void Update()
+		private void Update()
 		{
 			if (rotateCamera)
 			{
@@ -248,16 +247,16 @@ namespace CartoonFX
 			UpdateLabels();
 		}
 
-		void WrapIndex()
+		private void WrapIndex()
 		{
 			if (index < 0) index = effectsList.Length - 1;
 			if (index >= effectsList.Length) index = 0;
 		}
 
-		void UpdateLabels()
+		private void UpdateLabels()
 		{
 			labelEffect.text = currentEffect.name;
-			labelIndex.text = string.Format("{0}/{1}", (index+1), effectsList.Length);
+			labelIndex.text = string.Format("{0}/{1}", (index + 1), effectsList.Length);
 		}
 	}
 }

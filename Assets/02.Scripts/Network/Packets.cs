@@ -24,20 +24,11 @@ public class C_Init : BasePacket
 		Id = 0x0000;
 	}
 }
-public class C_SyncTime : BasePacket
-{
-	public C_SyncTime()
-	{
-		Id = 0x0001;
-	}
-
-	public long ClientLocalTime;
-}
 public class C_Login : BasePacket
 {
 	public C_Login()
 	{
-		Id = 0x0002;
+		Id = 0x0001;
 	}
 
 	public string loginId;
@@ -47,14 +38,14 @@ public class C_EnterLobby : AuthPacket
 {
 	public C_EnterLobby()
 	{
-		Id = 0x0003;
+		Id = 0x0002;
 	}
 }
 public class C_EnterGame : AuthPacket
 {
 	public C_EnterGame()
 	{
-		Id = 0x0004;
+		Id = 0x0003;
 	}
 
 	public ushort CharacterType;
@@ -63,7 +54,7 @@ public class C_GameReady : AuthPacket
 {
 	public C_GameReady(int userId)
 	{
-		Id = 0x0005;
+		Id = 0x0004;
 		UserId = userId;
 	}
 }
@@ -71,7 +62,7 @@ public class C_PlayerInput : GamePacket
 {
 	public C_PlayerInput(int userId, short teamId, int frameNum, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
 	{
-		Id = 0x0006;
+		Id = 0x0005;
 		UserId = userId;
 		TeamId = teamId;
 		FrameNum = frameNum;
@@ -92,11 +83,6 @@ public class C_PlayerInput : GamePacket
 }
 public class S_Init : BasePacket
 {
-}
-public class S_SyncTime : BasePacket
-{
-	public long ClientLocalTime;
-	public long ServerTime;
 }
 public class S_Login : BasePacket
 {
@@ -124,12 +110,6 @@ public class S_BroadcastFoundPlayer : BasePacket
 
 	public int FoundPlayersCount;
 }
-public class S_BroadcastEnterGame : BasePacket
-{
-
-	public ushort Charactertype;
-	public short TeamId;
-}
 public class S_BroadcastStartGame : BasePacket
 {
 
@@ -139,6 +119,8 @@ public class S_GameFrameInfo : BasePacket
 {
 
 	public int FrameNum;
+	public long ServerSendTime;
+	public int[] C2STTime;
 	public uint[] PlayerMoveDirXArr;
 	public uint[] PlayerMoveDirYArr;
 	public uint[] PlayerLookDirXArr;

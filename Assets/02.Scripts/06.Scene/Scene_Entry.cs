@@ -3,6 +3,7 @@ using System;
 using MEC;
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Scene_Entry : BaseScene
@@ -10,6 +11,7 @@ public class Scene_Entry : BaseScene
 	[SerializeField] private GameObject _eventSystemPrefab;
 	[SerializeField] private GameObject _sceneChangeAnimPrefab;
 	[SerializeField] private GameObject _audioPrefab;
+	[SerializeField] private GameObject _inputPrefab;
 	[SerializeField] private LogoAnim _logoAnim;
 
 	public override void Init(object param)
@@ -32,15 +34,19 @@ public class Scene_Entry : BaseScene
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
 		Instantiate(_sceneChangeAnimPrefab, GameObject.Find("@Scene").transform);
 		DontDestroyOnLoad(Instantiate(_eventSystemPrefab));
-		var go = Instantiate(_audioPrefab);
-		go.name = "@Audio";
-		DontDestroyOnLoad(go);
+		var audioGo = Instantiate(_audioPrefab);
+		audioGo.name = "@Audio";
+		DontDestroyOnLoad(audioGo);
+		var inputGo = Instantiate(_inputPrefab);
+		inputGo.name = "@Input";
+		DontDestroyOnLoad(inputGo);
 		Config.Init();
 		Loggers.Init();
 		JobMgr.Init();
 		Network.Init();
 		Audio.Init();
 		Scene.Init();
+		GameInput.Init();
 
 		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
 	}
