@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-
 using Server.Game;
 
 using UnityEngine;
@@ -9,34 +6,20 @@ public class CPlayerShelly : CPlayer
 {
 	[field: SerializeField] public CShellyBuckShot Buckshot { get; set; }
 	[field: SerializeField] public CShellySuperShell SuperShell { get; set; }
-	[SerializeField] private AudioClip[] _audio_start;
 
 	public override void Init(NetCharacter character)
 	{
 		base.Init(character);
 		Buckshot.Init(this);
-		SuperShell.Init(this);
 	}
 
-	public override void OnGameStart()
+	public override void OnNetFrameUpdate()
 	{
-		base.OnGameStart();
-		if (User.TeamId == TeamId)
-		{
-			Audio.PlayOnce(_audio_start[Random.Range(0, _audio_start.Length)]);
-		}
-	}
+		base.OnNetFrameUpdate();
 
-	public override void HandleOneFrame()
-	{
-		if (Active is false)
+		if (Now.IsAttack)
 		{
-			return;
+			Buckshot.HandleAttack();
 		}
-
-		base.HandleOneFrame();
-		Animator.SetFloat(AnimatorMeta.Speed_Float, (float)NPlayer.MoveSpeed * (float)NPlayer.TargetMoveDir.magnitude);
-		Buckshot.HandleOneFrame();
-		SuperShell.HandleOneFrame();
 	}
 }

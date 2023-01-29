@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Concurrent;
-using System.Diagnostics;
-using System.Security.Cryptography;
 
 using MEC;
 
@@ -85,7 +83,7 @@ public static class PacketHandler
 			return;
 		}
 
-		Network.RTT = (Network.RTT * 3 + (req.C2STTime[User.TeamId] + (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ServerSendTime)).Milliseconds) * 7) / 10;
+		Network.RTT = (Network.RTT * 3 + (DateTime.FromFileTimeUtc(req.C2STTime[User.TeamId]).Millisecond + (DateTime.UtcNow - DateTime.FromFileTimeUtc(req.ServerSendTime)).Milliseconds) * 7) / 10;
 		game.NetGameLoop.HandleGameInput(req);
 	}
 

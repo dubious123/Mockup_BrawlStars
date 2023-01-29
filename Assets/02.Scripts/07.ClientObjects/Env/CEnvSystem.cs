@@ -34,13 +34,24 @@ public class CEnvSystem : CBaseComponentSystem<NetEnv>
 		_netEnvSystem.OnCharExitTree = (netEnv, netChar) => JobMgr.PushUnityJob(() => (_envDict[netEnv] as CTree).OnCharacterExit(netChar));
 	}
 
-	public override void MoveClientLoop()
+	public override void OnNetFrameUpdate()
 	{
 	}
 
-	public void OnRoundReset()
+	public override void Interpretate(float _)
 	{
+	}
 
+	public override void OnRoundStart()
+	{
+	}
+
+	public override void OnRoundEnd()
+	{
+	}
+
+	public override void Clear()
+	{
 	}
 
 	public override void Reset()

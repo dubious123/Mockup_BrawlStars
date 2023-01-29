@@ -36,7 +36,9 @@ public static partial class Enums
 	{
 		Waiting,
 		Started,
-		Ended,
+		RoundEnded,
+		RoundCleared,
+		MatchOvered,
 	}
 
 	public enum TeamType

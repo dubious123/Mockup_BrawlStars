@@ -1,9 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
 
-public class CShellySuperShell : MonoBehaviour, ICBaseSkill
+public class CShellySuperShell : MonoBehaviour
 {
 	[SerializeField] private GameObject _indicator;
 	[SerializeField] private GameObject _bulletPrefabBlue;

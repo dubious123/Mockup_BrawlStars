@@ -1,9 +1,6 @@
-using System;
-
 using MEC;
 
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Scene_Entry : BaseScene
@@ -41,12 +38,12 @@ public class Scene_Entry : BaseScene
 		inputGo.name = "@Input";
 		DontDestroyOnLoad(inputGo);
 		Config.Init();
+		GameInput.Init();
 		Loggers.Init();
 		JobMgr.Init();
 		Network.Init();
 		Audio.Init();
 		Scene.Init();
-		GameInput.Init();
 
 		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
 	}

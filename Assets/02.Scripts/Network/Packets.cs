@@ -1,10 +1,7 @@
 
 using System;
-using System.Collections.Generic;
 
 using ServerCore;
-
-using UnityEngine;
 
 public class AuthPacket : BasePacket
 {
@@ -60,7 +57,7 @@ public class C_GameReady : AuthPacket
 }
 public class C_PlayerInput : GamePacket
 {
-	public C_PlayerInput(int userId, short teamId, int frameNum, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
+	public C_PlayerInput(int userId, short teamId, int frameNum, long clientSendTime, sVector2 moveDir, sVector2 lookDir, byte buttonPressed)
 	{
 		Id = 0x0005;
 		UserId = userId;
@@ -76,6 +73,7 @@ public class C_PlayerInput : GamePacket
 	public byte ButtonPressed;
 	public short TeamId;
 	public int FrameNum;
+	public long ClientSendTime;
 	public uint MoveDirX;
 	public uint MoveDirY;
 	public uint LookDirX;
@@ -120,7 +118,7 @@ public class S_GameFrameInfo : BasePacket
 
 	public int FrameNum;
 	public long ServerSendTime;
-	public int[] C2STTime;
+	public long[] C2STTime;
 	public uint[] PlayerMoveDirXArr;
 	public uint[] PlayerMoveDirYArr;
 	public uint[] PlayerLookDirXArr;

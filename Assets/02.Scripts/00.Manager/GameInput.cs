@@ -2,15 +2,15 @@
 using System;
 using System.Threading;
 
-using Unity.VisualScripting;
-
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-using static UnityEditor.Experimental.GraphView.GraphView;
-
 public class GameInput : MonoBehaviour
 {
+	public static InputAction BasicAttackInputAction => _instance._basicAttackAction;
+	public static InputAction MoveInputAction => _instance._moveAction;
+	public static Vector2 MoveDir => ToVector(_instance._moveInput);
+
 	private static GameInput _instance;
 	private PlayerInput _playerInput;
 	private InputAction _lookAction;
@@ -19,6 +19,7 @@ public class GameInput : MonoBehaviour
 	private InputAction _abilityQ;
 	private InputAction _abilityCancel;
 	private RaycastHit _lookHit;
+	private Transform _targetTransform;
 	private long _moveInput;
 	private long _lookInput;
 	private byte _buttonPressed = 0;
@@ -32,6 +33,7 @@ public class GameInput : MonoBehaviour
 			_instance._playerInput.actions.Enable();
 		}
 
+		_instance._moveAction = _instance._playerInput.actions[InputActionMeta.Move];
 		_instance._lookAction = _instance._playerInput.actions[InputActionMeta.Look];
 		_instance._basicAttackAction = _instance._playerInput.actions[InputActionMeta.BasicAttack];
 		{
@@ -54,8 +56,9 @@ public class GameInput : MonoBehaviour
 		}
 	}
 
-	public static void SetGameInput()
+	public static void SetGameInput(Transform targetTransform)
 	{
+		_instance._targetTransform = targetTransform;
 		if (User.Team == Enums.TeamType.Blue)
 		{
 			_instance._moveAction = _instance._playerInput.actions[InputActionMeta.Move];
@@ -71,21 +74,10 @@ public class GameInput : MonoBehaviour
 		_instance.enabled = active;
 	}
 
-	private void FixedUpdate()
-	{
-		var moveDir = _moveAction.ReadValue<Vector2>();
-		Interlocked.Exchange(ref _moveInput, ToLong(ref moveDir));
-		if (Physics.Raycast(Camera.main.ScreenPointToRay(_lookAction.ReadValue<Vector2>()), out _lookHit, Camera.main.farClipPlane, LayerMeta.Env))
-		{
-			var temp = _lookHit.point - transform.position;
-			var lookDir = new Vector2(temp.x, temp.z).normalized;
-			Interlocked.Exchange(ref _lookInput, ToLong(ref lookDir));
-		}
-	}
-
 	public static void SendInput(int frameNum)
 	{
-		Network.RegisterSend(new C_PlayerInput(User.UserId, User.TeamId, frameNum, (sVector2)ToVector(_instance._moveInput), (sVector2)ToVector(_instance._lookInput), _instance._buttonPressed));
+		Loggers.Game.Information("Sending input for frameNum{0}", frameNum);
+		Network.RegisterSend(new C_PlayerInput(User.UserId, User.TeamId, frameNum, DateTime.UtcNow.ToFileTimeUtc(), (sVector2)ToVector(_instance._moveInput), (sVector2)ToVector(_instance._lookInput), _instance._buttonPressed));
 	}
 
 	private static long ToLong(ref Vector2 vector)
@@ -96,5 +88,17 @@ public class GameInput : MonoBehaviour
 	private static Vector2 ToVector(long l)
 	{
 		return new Vector2(BitConverter.Int32BitsToSingle((int)((ulong)l >> 32)), BitConverter.Int32BitsToSingle((int)(l & 0x0000_0000_ffff_ffff)));
+	}
+
+	private void FixedUpdate()
+	{
+		var moveDir = _instance._moveAction.ReadValue<Vector2>();
+		Interlocked.Exchange(ref _instance._moveInput, ToLong(ref moveDir));
+		if (Physics.Raycast(Camera.main.ScreenPointToRay(_instance._lookAction.ReadValue<Vector2>()), out _instance._lookHit, Camera.main.farClipPlane, LayerMeta.Env))
+		{
+			var temp = _instance._lookHit.point - _targetTransform.position;
+			var lookDir = new Vector2(temp.x, temp.z).normalized;
+			Interlocked.Exchange(ref _instance._lookInput, ToLong(ref lookDir));
+		}
 	}
 }

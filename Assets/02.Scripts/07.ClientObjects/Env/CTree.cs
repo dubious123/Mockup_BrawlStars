@@ -1,11 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 
 using MEC;
 
 using Server.Game;
-
-using Unity.VisualScripting;
 
 using UnityEngine;
 
@@ -67,7 +64,7 @@ public class CTree : CEnv
 		if (_userCount != 0)
 		{
 			_userCount = 0;
-			FadeOut();
+			FadeIn();
 		}
 	}
 

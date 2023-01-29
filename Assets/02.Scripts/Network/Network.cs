@@ -1,6 +1,4 @@
-using System;
 using System.Net;
-using System.Runtime;
 
 using MEC;
 
@@ -8,8 +6,6 @@ using ServerCore;
 using ServerCore.Managers;
 
 using UnityEngine;
-
-using static ServerCore.Utils.Tools;
 
 public class Network : MonoBehaviour
 {
@@ -31,8 +27,7 @@ public class Network : MonoBehaviour
 			return _instance._session;
 		});
 
-		//var endPoint = GetNewEndPoint(7777);
-		var endPoint = new IPEndPoint(0x000000001900a8c0, 7777);
+		var endPoint = new IPEndPoint(Config.CONNECT_ADDRESS, 7777);
 		_instance._connector.StartConnect(endPoint);
 		Debug.Log($"Connecting to {endPoint}");
 	}

@@ -20585,17 +20585,17 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 6455835301831051267}
   <StunIndicator>k__BackingField: {fileID: 0}
   <ProfileIcon>k__BackingField: {fileID: 21300000, guid: 6d6f5feede0c19c489958ae9bb94ab16, type: 3}
+  _audio_start:
+  - {fileID: 8300000, guid: 88a80c5d556349f4e9ba07cf599c55bf, type: 3}
+  - {fileID: 8300000, guid: b29e7be0b92c2214d89a9855ad253540, type: 3}
+  - {fileID: 8300000, guid: e469a340f9c490d4fadcef6b53d73b12, type: 3}
+  - {fileID: 8300000, guid: a2f6858f54679ce4ea8f42419efa8a0a, type: 3}
   _ui: {fileID: 3023898630983504850}
   _mesh: {fileID: 2461558612262124124}
   _moveSmokeEffect: {fileID: 7795605479294340768}
   _cPlayerEffect: {fileID: 5693741007216724799}
   <Buckshot>k__BackingField: {fileID: 6146652440431096053}
   <SuperShell>k__BackingField: {fileID: 1466085974802735558}
-  _audio_start:
-  - {fileID: 8300000, guid: 88a80c5d556349f4e9ba07cf599c55bf, type: 3}
-  - {fileID: 8300000, guid: b29e7be0b92c2214d89a9855ad253540, type: 3}
-  - {fileID: 8300000, guid: e469a340f9c490d4fadcef6b53d73b12, type: 3}
-  - {fileID: 8300000, guid: a2f6858f54679ce4ea8f42419efa8a0a, type: 3}
 --- !u!114 &6146652440431096053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20610,7 +20610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _indicator: {fileID: 7088886447463143992}
   _bulletPrefabBlue: {fileID: 191534104987688179, guid: 09fdef87d2471904081cba8f75c95f50, type: 3}
-  _bulletPrefabRed: {fileID: 191534104987688179, guid: f11e965248f40a94990a8bf99d1564a4, type: 3}
+  _bulletPrefabRed: {fileID: 6795436678132101501, guid: 48f862556d07fda4fbc073400b3e909b, type: 3}
   _audio: {fileID: 8300000, guid: 26d8939f6a46a1348b05564133ccce0c, type: 3}
   _red: {r: 1, g: 0.44905663, b: 0.44905663, a: 0.8509804}
   _white: {r: 1, g: 1, b: 1, a: 0.8509804}

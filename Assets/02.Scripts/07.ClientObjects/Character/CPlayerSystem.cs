@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Server.Game;
 
@@ -13,13 +11,11 @@ using static Enums;
 
 public class CPlayerSystem : CBaseComponentSystem<NetCharacter>, IEnumerable<CPlayer>
 {
-	[SerializeField] private CPlayer _shellyPrefab;
+	[SerializeField] private GameObject _shellyPrefab;
 	private CPlayer[] _cPlayers;
-	private NetCharacterSystem _netSystem;
 
 	public override void Init(NetBaseComponentSystem<NetCharacter> netSystem)
 	{
-		_netSystem = netSystem as NetCharacterSystem;
 		_cPlayers = new CPlayer[Config.MAX_PLAYER_COUNT];
 		foreach (var nPlayer in netSystem.ComponentDict)
 		{
@@ -28,24 +24,64 @@ public class CPlayerSystem : CBaseComponentSystem<NetCharacter>, IEnumerable<CPl
 #if UNITY_EDITOR
 			_cPlayers[nPlayer.NetObjId.InstanceId].gameObject.name = Enum.GetName(typeof(NetObjectType), nPlayer.NetObjId.Type) + nPlayer.NetObjId.InstanceId;
 #endif
-			if (nPlayer.NetObjId.InstanceId == User.TeamId)
+		}
+
+		Camera.main.GetComponent<GameCameraController>().Init(_cPlayers[User.TeamId].transform);
+		GameInput.SetGameInput(_cPlayers[User.TeamId].transform);
+		GameInput.SetActive(true);
+	}
+
+	public override void OnNetFrameUpdate()
+	{
+		foreach (var cPlayer in _cPlayers)
+		{
+			if (cPlayer.Active)
 			{
-				Camera.main.GetComponent<GameCameraController>().Init(_cPlayers[nPlayer.NetObjId.InstanceId].transform);
+				cPlayer.OnNetFrameUpdate();
+				cPlayer.Interpretate(0f);
 			}
 		}
 	}
 
-	public override void MoveClientLoop()
+	public override void Interpretate(float ratio)
 	{
-		//todo
+		foreach (var cPlayer in _cPlayers)
+		{
+			if (cPlayer.Active)
+			{
+				cPlayer.Interpretate(ratio);
+			}
+		}
+	}
+
+
+	public override void OnRoundStart()
+	{
+		foreach (var cPlayer in _cPlayers)
+		{
+			cPlayer.OnRoundStart();
+		}
+	}
+
+	public override void OnRoundEnd()
+	{
+
+	}
+
+	public override void Clear()
+	{
+		foreach (var cPlayer in _cPlayers)
+		{
+			cPlayer.OnRoundClear();
+		}
 	}
 
 	public override void Reset()
 	{
-		//foreach (var cPlayer in _cPlayers)
-		//{
-		//	cPlayer.OnRoundReset();
-		//}
+		foreach (var cPlayer in _cPlayers)
+		{
+			cPlayer.Reset();
+		}
 	}
 
 	public IEnumerator<CPlayer> GetEnumerator()

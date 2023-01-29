@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-
-using Server.Game;
-
 using UnityEngine;
 
 public class CPlayerUI : MonoBehaviour
@@ -49,30 +44,36 @@ public class CPlayerUI : MonoBehaviour
 		}
 	}
 
-	public void OnMatchStart()
+	public void Reset()
 	{
-
+		_hudHp.Reset();
+		//_hudShell.Reset();
 	}
 
-	public void OnRoundStart()
-	{
-		gameObject.SetActive(true);
-	}
+	//public void OnMatchStart()
+	//{
 
-	public void OnRoundClear()
-	{
-		gameObject.SetActive(false);
-	}
+	//}
 
-	public void OnRoundReset()
-	{
-		_hudHp.OnRoundReset();
-	}
+	//public void OnRoundStart()
+	//{
+	//	gameObject.SetActive(true);
+	//}
 
-	public void OnPlayerDead()
-	{
-		gameObject.SetActive(false);
-	}
+	//public void OnRoundClear()
+	//{
+	//	gameObject.SetActive(false);
+	//}
+
+	//public void OnRoundReset()
+	//{
+	//	_hudHp.OnRoundReset();
+	//}
+
+	//public void OnPlayerDead()
+	//{
+	//	gameObject.SetActive(false);
+	//}
 
 	private void LateUpdate()
 	{

@@ -1,14 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
-using MEC;
 
 using Server.Game.GameRule;
 
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Map00UI : MonoBehaviour
 {
@@ -29,6 +23,7 @@ public class Map00UI : MonoBehaviour
 	{
 		_centerScores = GetComponentInChildren<CenterScores>(true);
 		Reset();
+		//PlayWelcomeAnim((Scene.CurrentScene as Scene_Map1).StartGame);
 	}
 
 	public void Reset()
@@ -64,11 +59,6 @@ public class Map00UI : MonoBehaviour
 		_camAnim.enabled = true;
 	}
 
-	//public void OnMatchStart()
-	//{
-
-	//}
-
 	public void OnRoundStart()
 	{
 		_centerScores.OnRoundStart();
@@ -96,11 +86,6 @@ public class Map00UI : MonoBehaviour
 		}
 	}
 
-	public void OnRoundClear()
-	{
-
-	}
-
 	public void OnRoundReset()
 	{
 		foreach (var profile in _profileHoldersBlue)
@@ -113,6 +98,7 @@ public class Map00UI : MonoBehaviour
 		}
 
 		_gameMessage.OnRoundReset();
+		_clock.Reset();
 	}
 
 	public void OnMatchOver()

@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Server.Game;
+﻿using Server.Game;
 
 using UnityEngine;
 
-public abstract class CBaseComponentSystem<T> : MonoBehaviour where T : NetBaseComponent
+public abstract class CBaseComponentSystem<T> : MonoBehaviour, IClientComponentSystem where T : NetBaseComponent
 {
 	public abstract void Init(NetBaseComponentSystem<T> netSystem);
-	public abstract void MoveClientLoop();
+	public abstract void OnNetFrameUpdate();
+	public abstract void Interpretate(float t);
 	public abstract void Reset();
+	public abstract void Clear();
+	public abstract void OnRoundStart();
+	public abstract void OnRoundEnd();
 }

@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 using MEC;
-
-using Unity.Mathematics;
 
 using UnityEngine;
 
@@ -17,8 +14,19 @@ public class UIClock : MonoBehaviour
 	private CoroutineHandle _coShrinkHandle;
 	private int _min;
 	private int _second;
-
 	public UIGameMessage _message;
+
+	private void Start()
+	{
+		Reset();
+	}
+
+	public void Reset()
+	{
+		var min = Math.DivRem(Config.MAX_FRAME_COUNT / 60, 60, out var second);
+		_text.Text = string.Format("{0}:{1:00}", min, second);
+		_text.BodyColor = Color.white;
+	}
 
 	public void OnRoundStart()
 	{
@@ -29,7 +37,17 @@ public class UIClock : MonoBehaviour
 
 	public void UpdateClock()
 	{
+		if ((Scene.CurrentScene as Scene_Map1).NetGameLoop.State != Enums.GameState.Started)
+		{
+			return;
+		}
+
 		var _remainedSecond = (Config.MAX_FRAME_COUNT - _scene.CurrentFrameCount) / 60;
+		if (_remainedSecond < 0)
+		{
+			return;
+		}
+
 		var min = Math.DivRem(_remainedSecond, 60, out var second);
 		if (min == _min && second == _second)
 		{

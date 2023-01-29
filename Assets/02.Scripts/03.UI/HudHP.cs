@@ -94,8 +94,9 @@ public class HudHP : MonoBehaviour
 		_beforeHp = _currentHp;
 	}
 
-	public void OnRoundReset()
+	public void Reset()
 	{
+		Timing.KillCoroutines(_coHandle);
 		_beforeHp = _currentHp = _player.Hp;
 		_fillRect.anchorMax = new Vector2(_currentHp / (float)_player.MaxHp, 1);
 		_followRect.anchorMax = new Vector2(_currentHp / (float)_player.MaxHp, 1);
