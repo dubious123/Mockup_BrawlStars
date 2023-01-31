@@ -32,5 +32,10 @@
 		{
 			--CurrentShellCount;
 		}
+
+		public override bool CanAttack()
+		{
+			return CurrentShellCount > 0;
+		}
 	}
 }

@@ -2,6 +2,8 @@ using Server.Game;
 
 public class NetProjectile : NetBaseComponent, INetUpdatable
 {
+	public NetCollider2D Collider { get; private set; }
+	public NetObject Owner { get; private set; }
 	private sVector3 _moveDir;
 	private sfloat _speed;
 
@@ -10,7 +12,8 @@ public class NetProjectile : NetBaseComponent, INetUpdatable
 
 	public override void Start()
 	{
-		Active = false;
+		NetObj.Active = false;
+		Collider = this.GetComponent<NetCollider2D>();
 	}
 
 	public NetProjectile SetSpeed(sfloat speed)
@@ -31,6 +34,12 @@ public class NetProjectile : NetBaseComponent, INetUpdatable
 		return this;
 	}
 
+	public NetProjectile SetOwner(NetObject owner)
+	{
+		Owner = owner;
+		return this;
+	}
+
 	public void Reset()
 	{
 		_currentTravelTime = 0;
@@ -46,7 +55,9 @@ public class NetProjectile : NetBaseComponent, INetUpdatable
 
 		if (_currentTravelTime > _maxTravelTime)
 		{
-			Active = false;
+			NetObj.Active = false;
+			_currentTravelTime = 0;
+			World.ProjectileSystem.Return(this);
 			return;
 		}
 

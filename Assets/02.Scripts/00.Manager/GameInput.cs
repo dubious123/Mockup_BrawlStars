@@ -9,7 +9,7 @@ public class GameInput : MonoBehaviour
 {
 	public static InputAction BasicAttackInputAction => _instance._basicAttackAction;
 	public static InputAction MoveInputAction => _instance._moveAction;
-	public static Vector2 MoveDir => ToVector(_instance._moveInput);
+	public static InputAction PowerInputAction => _instance._abilityQ;
 
 	private static GameInput _instance;
 	private PlayerInput _playerInput;
@@ -59,14 +59,9 @@ public class GameInput : MonoBehaviour
 	public static void SetGameInput(Transform targetTransform)
 	{
 		_instance._targetTransform = targetTransform;
-		if (User.Team == Enums.TeamType.Blue)
-		{
-			_instance._moveAction = _instance._playerInput.actions[InputActionMeta.Move];
-		}
-		else
-		{
-			_instance._moveAction = _instance._playerInput.actions[InputActionMeta.MoveInverted];
-		}
+		_instance._moveAction = User.Team == Enums.TeamType.Blue
+			? _instance._playerInput.actions[InputActionMeta.Move]
+			: _instance._playerInput.actions[InputActionMeta.MoveInverted];
 	}
 
 	public static void SetActive(bool active)

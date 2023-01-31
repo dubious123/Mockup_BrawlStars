@@ -39,62 +39,75 @@ public class ClientGameLoopHandler : MonoBehaviour
 		}
 
 		while (Interlocked.CompareExchange(ref _netGameLoop.GameLoopLock, 1, 0) == 1) { }
-		var lastUpdateTime = _netGameLoop.GetLastUpdateTime();
-		var expectedNextUpdateTime = lastUpdateTime.AddMilliseconds(_netGameLoop.Interval);
-		var nowTime = DateTime.Now;
-		Debug.Assert(lastUpdateTime <= nowTime);
-		var ratio = expectedNextUpdateTime == lastUpdateTime ? 0 : (nowTime - lastUpdateTime) / (expectedNextUpdateTime - lastUpdateTime);
-		Loggers.Game.Information("Client Handling Loop FrameNum[{0}]", _netGameLoop.FrameNum);
-		Loggers.Debug.Information("last update time {0} expected next update time : {1}, nowTime : {2}, ratio : {3}", lastUpdateTime, expectedNextUpdateTime, nowTime, ratio);
-		Math.Clamp(ratio, 0, 1);
+		try
+		{
+			var lastUpdateTime = _netGameLoop.GetLastUpdateTime();
+			var expectedNextUpdateTime = lastUpdateTime.AddMilliseconds(_netGameLoop.Interval);
+			var nowTime = DateTime.Now;
+			Debug.Assert(lastUpdateTime <= nowTime);
+			var ratio = expectedNextUpdateTime == lastUpdateTime ? 0 : (nowTime - lastUpdateTime) / (expectedNextUpdateTime - lastUpdateTime);
+			Loggers.Game.Information("Client Handling Loop FrameNum[{0}]", _netGameLoop.FrameNum);
+			Loggers.Debug.Information("last update time {0} expected next update time : {1}, nowTime : {2}, ratio : {3}", lastUpdateTime, expectedNextUpdateTime, nowTime, ratio);
+			Math.Clamp(ratio, 0, 1);
 
-		if (_state != _netGameLoop.State)
-		{
-			switch (_netGameLoop.State)
+			if (_state != _netGameLoop.State)
 			{
-				case GameState.Started:
-					HandleRoundStart();
-					break;
-				case GameState.RoundEnded:
-					HandleRoundEnd();
-					goto Return;
-				case GameState.RoundCleared:
-					HandleRoundClear();
-					break;
-				case GameState.Waiting:
-					HandleRoundReset();
-					break;
-				case GameState.MatchOvered:
-					HandleMatchOver();
-					goto Return;
+				switch (_netGameLoop.State)
+				{
+					case GameState.Started:
+						HandleRoundStart();
+						break;
+					case GameState.RoundEnded:
+						HandleRoundEnd();
+						goto Return;
+					case GameState.RoundCleared:
+						HandleRoundClear();
+						break;
+					case GameState.Waiting:
+						HandleRoundReset();
+						break;
+					case GameState.MatchOvered:
+						HandleMatchOver();
+						goto Return;
+				}
 			}
+
+			if (_frameNum == _netGameLoop.FrameNum)
+			{
+				Loggers.Debug.Information("Interpretate only");
+				foreach (var system in _systems)
+				{
+					system.Interpretate((float)ratio);
+				}
+			}
+			else if (_frameNum < _netGameLoop.FrameNum)
+			{
+				Loggers.Debug.Information("NetFrameUpdate");
+				_mapUI.HandleOneFrame();
+				foreach (var system in _systems)
+				{
+					system.OnNetFrameUpdate();
+				}
+			}
+			else
+			{
+				//Reset
+			}
+		Return:
+			_state = _netGameLoop.State;
+			_frameNum = _netGameLoop.FrameNum;
+		}
+		catch (Exception ex)
+		{
+			Debug.LogException(ex);
+		}
+		finally
+		{
+			Interlocked.Exchange(ref _netGameLoop.GameLoopLock, 0);
+
 		}
 
-		if (_frameNum == _netGameLoop.FrameNum)
-		{
-			Loggers.Debug.Information("Interpretate only");
-			foreach (var system in _systems)
-			{
-				system.Interpretate((float)ratio);
-			}
-		}
-		else if (_frameNum < _netGameLoop.FrameNum)
-		{
-			Loggers.Debug.Information("NetFrameUpdate");
-			_mapUI.HandleOneFrame();
-			foreach (var system in _systems)
-			{
-				system.OnNetFrameUpdate();
-			}
-		}
-		else
-		{
-			//Reset
-		}
-	Return:
-		_state = _netGameLoop.State;
-		_frameNum = _netGameLoop.FrameNum;
-		Interlocked.Exchange(ref _netGameLoop.GameLoopLock, 0);
+
 	}
 
 	private void HandleRoundStart()

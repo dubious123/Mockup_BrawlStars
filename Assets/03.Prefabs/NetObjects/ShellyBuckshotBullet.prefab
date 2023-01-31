@@ -5546,7 +5546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6344958762792095263
 Transform:
   m_ObjectHideFlags: 0
@@ -5575,9 +5575,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6795436678132101498}
-  - component: {fileID: 508932271046981489}
+  - component: {fileID: 7892907197147560947}
   m_Layer: 24
-  m_Name: ShellyBuckshotBullet_Red
+  m_Name: ShellyBuckshotBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5601,7 +5601,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &508932271046981489
+--- !u!114 &7892907197147560947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5610,16 +5610,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6795436678132101501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6a26833688e4984b8d424cc608b764f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fb7a023b8e1f084f9c77380ff7ef03b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletGo: {fileID: 6220819237430219973}
   _onDisableEffect: {fileID: 6140912631011296335}
-  _trails:
+  <Trails>k__BackingField:
   - {fileID: 8569153748195950900}
   - {fileID: 8017296190384986574}
   - {fileID: 7287554362791352609}
   - {fileID: 5763218607836514469}
+  _spriteRed: {fileID: 21300000, guid: 06decac861beb2444989332bdf7c2b4b, type: 3}
+  _spriteBlue: {fileID: 21300000, guid: c84d8e55531b6cd4da183e18e2da99a0, type: 3}
+  _trailBlue: {r: 0.003921569, g: 0.53333336, b: 0.9607843, a: 1}
+  _trailRed: {r: 0.81960785, g: 0.011764706, b: 0.29411766, a: 1}
+  _bulletRenderers:
+  - {fileID: 6795436678487622379}
+  - {fileID: 3797011160104955392}
+  - {fileID: 7398294517796628843}
+  - {fileID: 6050681632184120115}
 --- !u!1 &6795436678487622381
 GameObject:
   m_ObjectHideFlags: 0

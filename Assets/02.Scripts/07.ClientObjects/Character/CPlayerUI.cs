@@ -13,6 +13,7 @@ public class CPlayerUI : MonoBehaviour
 	[SerializeField] private Sprite _selectCircleBlue;
 	[SerializeField] private SpriteRenderer _selectCircle;
 	[SerializeField] private MoveCircle _moveCircle;
+	[SerializeField] private HudPowerCircle _powerCircle;
 
 	public void Init(CPlayer character)
 	{
@@ -22,13 +23,9 @@ public class CPlayerUI : MonoBehaviour
 			_moveCircle.gameObject.SetActive(true);
 			_hudCanvasRect.GetComponent<Canvas>().sortingOrder = 1;
 		}
-		else if (character.Team == User.Team)
-		{
-			_selectCircle.sprite = _selectCircleBlue;
-		}
 		else
 		{
-			_selectCircle.sprite = _selectCircleRed;
+			_selectCircle.sprite = character.Team == User.Team ? _selectCircleBlue : _selectCircleRed;
 		}
 
 		_hudHp.Init();
@@ -49,31 +46,6 @@ public class CPlayerUI : MonoBehaviour
 		_hudHp.Reset();
 		//_hudShell.Reset();
 	}
-
-	//public void OnMatchStart()
-	//{
-
-	//}
-
-	//public void OnRoundStart()
-	//{
-	//	gameObject.SetActive(true);
-	//}
-
-	//public void OnRoundClear()
-	//{
-	//	gameObject.SetActive(false);
-	//}
-
-	//public void OnRoundReset()
-	//{
-	//	_hudHp.OnRoundReset();
-	//}
-
-	//public void OnPlayerDead()
-	//{
-	//	gameObject.SetActive(false);
-	//}
 
 	private void LateUpdate()
 	{

@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShellySupershellBullet_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 1964301962929630508, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2647207388704613271, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
       propertyPath: m_IsActive
       value: 0
