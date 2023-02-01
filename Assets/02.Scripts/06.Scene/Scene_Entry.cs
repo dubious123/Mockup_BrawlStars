@@ -21,7 +21,7 @@ public class Scene_Entry : BaseScene
 	{
 		//Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
 		Screen.SetResolution(3840 / 2, 2160 / 2, false);
-		Application.targetFrameRate = 120;
+		Application.targetFrameRate = 180;
 		Time.fixedDeltaTime = (float)((sfloat)1 / (sfloat)60f);
 		DontDestroyOnLoad(new GameObject("@Loggers", typeof(Loggers)));
 		DontDestroyOnLoad(new GameObject("@JobMgr", typeof(JobMgr)));

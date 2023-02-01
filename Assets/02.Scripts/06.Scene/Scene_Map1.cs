@@ -20,6 +20,7 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private ClientGameLoopHandler _clientGameLoop;
 	[SerializeField] private Material _envColorChange1;
 	[SerializeField] private Material _envColorChange2;
+	[SerializeField] private Transform _envBase;
 
 	private CoroutineHandle _envCoHandle;
 
@@ -34,10 +35,10 @@ public class Scene_Map1 : BaseScene
 		IsReady = true;
 		UI.PlayWelcomeAnim(StartGame);
 		_envCoHandle = Timing.RunCoroutine(Co_EnvChangeColor());
-		//JobMgr.PushUnityJob(() =>
-		//{
-
-		//});
+		if (User.Team == TeamType.Red)
+		{
+			_envBase.Rotate(new(0, 1, 0), 180);
+		}
 	}
 
 	public void StartGame()
@@ -63,7 +64,6 @@ public class Scene_Map1 : BaseScene
 		for (var delta = 0f; ; delta += Time.deltaTime)
 		{
 			var sine = Mathf.Sin(delta) + 0.5f;
-			Debug.Log(_envColorChange1.GetFloat("_Ratio"));
 			_envColorChange1.SetFloat("_Ratio", sine);
 			_envColorChange2.SetFloat("_Ratio", sine);
 			yield return 0f;

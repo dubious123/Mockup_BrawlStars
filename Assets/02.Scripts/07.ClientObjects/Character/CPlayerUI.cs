@@ -44,7 +44,10 @@ public class CPlayerUI : MonoBehaviour
 	public void Reset()
 	{
 		_hudHp.Reset();
-		_hudShell.Reset();
+		if (_hudShell != null)
+		{
+			_hudShell.Reset();
+		}
 	}
 
 	private void LateUpdate()
