@@ -1,7 +1,3 @@
-using MEC;
-
-using Unity.VisualScripting;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,11 +23,6 @@ public class Scene : MonoBehaviour
 
 	public static AsyncOperation MoveTo(SceneType type, object sceneParam, LoadSceneMode mode = LoadSceneMode.Single)
 	{
-		//var scene = SceneManager.GetSceneByBuildIndex((int)type);
-		//if (scene.isLoaded)
-		//{
-		//	var asyncHandle = SceneManager.UnloadSceneAsync(scene);
-		//}
 		var handle = SceneManager.LoadSceneAsync((int)type, mode);
 		handle.completed += _ =>
 		{

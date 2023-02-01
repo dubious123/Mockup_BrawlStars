@@ -99,7 +99,7 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Ratio: 1
+    - _Ratio: 0.9741945
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -112,9 +112,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EndColor: {r: 0.9960784, g: 0.7098039, b: 0.2156863, a: 1}
+    - _EndColor: {r: 0.9529412, g: 0.43137255, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-    - _StartColor: {r: 0.9529412, g: 0.4313726, b: 0, a: 1}
+    - _StartColor: {r: 0.99607843, g: 0.70980394, b: 0.21568628, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &1655682610599808527
 MonoBehaviour:

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using MEC;
 
 using UnityEngine;
@@ -16,6 +18,10 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private WorldDataHelper _dataHelper;
 	[SerializeField] private AudioClip _ingameBgm;
 	[SerializeField] private ClientGameLoopHandler _clientGameLoop;
+	[SerializeField] private Material _envColorChange1;
+	[SerializeField] private Material _envColorChange2;
+
+	private CoroutineHandle _envCoHandle;
 
 	private readonly NetGameLoopHandler _netGameLoop = new();
 
@@ -27,6 +33,11 @@ public class Scene_Map1 : BaseScene
 		_clientGameLoop.Init(_netGameLoop);
 		IsReady = true;
 		UI.PlayWelcomeAnim(StartGame);
+		_envCoHandle = Timing.RunCoroutine(Co_EnvChangeColor());
+		//JobMgr.PushUnityJob(() =>
+		//{
+
+		//});
 	}
 
 	public void StartGame()
@@ -41,8 +52,21 @@ public class Scene_Map1 : BaseScene
 		{
 			Timing.CallDelayed(2, () =>
 			{
+				Timing.KillCoroutines(_envCoHandle);
 				Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
 			});
 		});
+	}
+
+	private IEnumerator<float> Co_EnvChangeColor()
+	{
+		for (var delta = 0f; ; delta += Time.deltaTime)
+		{
+			var sine = Mathf.Sin(delta) + 0.5f;
+			Debug.Log(_envColorChange1.GetFloat("_Ratio"));
+			_envColorChange1.SetFloat("_Ratio", sine);
+			_envColorChange2.SetFloat("_Ratio", sine);
+			yield return 0f;
+		}
 	}
 }
