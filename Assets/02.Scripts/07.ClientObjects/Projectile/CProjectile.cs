@@ -59,12 +59,10 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 		_bulletGo.SetActive(true);
 		_onDisableEffect.gameObject.SetActive(false);
 		Active = true;
-		Debug.Log("Activate");
 	}
 
 	protected void DeActivate()
 	{
-		Debug.Log("DeActivate");
 		_bulletGo.SetActive(false);
 		_onDisableEffect.gameObject.SetActive(true);
 		_onDisableEffect.Play(true);

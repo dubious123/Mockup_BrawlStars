@@ -1,10 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-
 using Server.Game;
-
-using UnityEditor.Rendering;
 
 using UnityEngine;
 
@@ -68,6 +62,15 @@ public class HudShell : MonoBehaviour
 		}
 
 		_beforeShellCount = _netBasicAttack.CurrentShellCount;
+	}
+
+	public void Reset()
+	{
+		_beforeShellCount = _netBasicAttack.CurrentShellCount;
+		foreach (var shell in _shells)
+		{
+			shell.Reset();
+		}
 	}
 
 	private class ShellHelper

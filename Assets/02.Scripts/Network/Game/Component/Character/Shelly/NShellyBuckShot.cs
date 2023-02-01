@@ -99,6 +99,9 @@ public class NShellyBuckShot : NetBasicAttack
 
 	public override void Reset()
 	{
+		Active = true;
+		_beforePressed = _nowPressed = false;
+		CurrentShellCount = MaxShellCount;
 	}
 
 	private void OnHit(NetProjectile pallet, NetCollider2D target)

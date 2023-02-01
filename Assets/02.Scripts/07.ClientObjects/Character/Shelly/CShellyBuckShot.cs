@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class CShellyBuckShot : MonoBehaviour
 {
 	[SerializeField] private Graphic _indicator;
-	//[SerializeField] private GameObject _bulletPrefabBlue;
-	//[SerializeField] private GameObject _bulletPrefabRed;
 	[SerializeField] private AudioClip _audio;
 	[SerializeField] private Color _red;
 	[SerializeField] private Color _white;
@@ -29,13 +27,6 @@ public class CShellyBuckShot : MonoBehaviour
 			GameInput.BasicAttackInputAction.canceled += OnReleased;
 			_coHandle = Timing.CallContinuously(float.MaxValue, () => _indicator.color = _netBuckShot.CurrentShellCount > 0 ? _white : _red);
 		}
-
-		//var bulletPrefab = shelly.NPlayer.Team == User.Team ? _bulletPrefabBlue : _bulletPrefabRed;
-		//foreach (var pallet in _netBuckShot.Shots)
-		//{
-		//	var cBullet = Instantiate(bulletPrefab, transform).GetComponent<CProjectile>();
-		//	(Scene.CurrentScene as Scene_Map1).ClientGameLoop.ProjectileSystem.AddAndInitProjectile(cBullet, pallet);
-		//}
 	}
 
 	public void HandleAttack()
