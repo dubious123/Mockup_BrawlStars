@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cProjectilePrefabArr:
   - {fileID: 6795436678132101501, guid: 48f862556d07fda4fbc073400b3e909b, type: 3}
-  - {fileID: 191534104987688179, guid: 08f881bb34171be4790a528ce059b52b, type: 3}
+  - {fileID: 6795436678132101501, guid: 48f862556d07fda4fbc073400b3e909b, type: 3}
 --- !u!1001 &137294846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57329,7 +57329,6 @@ GameObject:
   - component: {fileID: 1724587863}
   - component: {fileID: 1724587865}
   - component: {fileID: 1724587864}
-  - component: {fileID: 1724587866}
   m_Layer: 19
   m_Name: Extra
   m_TagString: Untagged
@@ -57445,18 +57444,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1724587866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724587862}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca814d0fbd1d5264c9dee4164f2597b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1725075120
 PrefabInstance:
   m_ObjectHideFlags: 0

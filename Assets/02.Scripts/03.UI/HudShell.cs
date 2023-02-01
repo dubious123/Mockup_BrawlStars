@@ -14,6 +14,7 @@ public class HudShell : MonoBehaviour
 	public void Init()
 	{
 		_netBasicAttack = _cPlayer.NPlayer.BasicAttack;
+		_beforeShellCount = _netBasicAttack.MaxShellCount;
 		if (_netBasicAttack.MaxShellCount <= 0 || _netBasicAttack.MaxShellCount > 100)
 		{
 			throw new System.Exception();
@@ -40,7 +41,7 @@ public class HudShell : MonoBehaviour
 
 	public void HandleOneFrame()
 	{
-		if (_beforeShellCount == _netBasicAttack.CurrentShellCount) //0,1,2
+		if (_beforeShellCount == _netBasicAttack.CurrentShellCount) //0,1,2,3
 		{
 			if (_beforeShellCount != _netBasicAttack.MaxShellCount)
 			{

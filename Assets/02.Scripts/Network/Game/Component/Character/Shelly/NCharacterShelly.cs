@@ -2,13 +2,11 @@ using Server.Game;
 
 public class NCharacterShelly : NetCharacter
 {
-	public NetBaseSkill SuperShell { get; set; }
-
 	public override void Start()
 	{
 		base.Start();
 		BasicAttack = new NShellyBuckShot(this);
-		SuperShell = new NShellySuperShell(this);
+		SpecialAttack = new NShellySuperShell(this);
 	}
 
 	public override void Reset()
@@ -17,17 +15,13 @@ public class NCharacterShelly : NetCharacter
 		MaxHp = 100;
 		Hp = MaxHp;
 		BasicAttack?.Reset();
-
-		if (SuperShell is not null)
-		{
-			SuperShell.Active = true;
-		}
+		SpecialAttack?.Reset();
 	}
 
 	public override void Update()
 	{
 		BasicAttack.Update();
-		SuperShell.Update();
+		SpecialAttack.Update();
 		base.Update();
 	}
 
@@ -35,7 +29,7 @@ public class NCharacterShelly : NetCharacter
 	{
 		base.UpdateInput(input);
 		BasicAttack.HandleInput(in input);
-		SuperShell.HandleInput(in input);
+		SpecialAttack.HandleInput(in input);
 	}
 
 	public override void SetActiveOtherSkills(NetBaseSkill from, bool Active)
@@ -45,9 +39,9 @@ public class NCharacterShelly : NetCharacter
 			BasicAttack.Active = Active;
 		}
 
-		if (from != SuperShell)
+		if (from != SpecialAttack)
 		{
-			SuperShell.Active = Active;
+			SpecialAttack.Active = Active;
 		}
 	}
 
@@ -55,7 +49,7 @@ public class NCharacterShelly : NetCharacter
 	{
 		base.OnDead();
 		BasicAttack.Active = false;
-		SuperShell.Active = false;
+		SpecialAttack.Active = false;
 	}
 
 	protected override void OnCCStart()
@@ -63,14 +57,14 @@ public class NCharacterShelly : NetCharacter
 		base.OnCCStart();
 		BasicAttack.Cancel();
 		BasicAttack.Active = false;
-		SuperShell.Cancel();
-		SuperShell.Active = false;
+		SpecialAttack.Cancel();
+		SpecialAttack.Active = false;
 	}
 
 	protected override void OnCCEnd()
 	{
 		base.OnCCEnd();
 		BasicAttack.Active = true;
-		SuperShell.Active = true;
+		SpecialAttack.Active = true;
 	}
 }

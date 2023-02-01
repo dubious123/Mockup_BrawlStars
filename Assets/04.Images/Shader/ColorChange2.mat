@@ -99,7 +99,7 @@ Material:
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Ratio: -0.36656988
+    - _Ratio: 0.6254715
     - _ReceiveShadows: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

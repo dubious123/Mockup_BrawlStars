@@ -14,8 +14,7 @@ public class CProjectileShellyBuckShot : CProjectile
 	{
 		base.Init(projectile);
 		var team = NProjectile.Owner.GetComponent<NetCharacter>().Team;
-		var sprite = User.Team == team ? _spriteBlue : _spriteRed;
-		var color = User.Team == team ? _trailBlue : _trailRed;
+		(var sprite, var color) = User.Team == team ? (_spriteBlue, _trailBlue) : (_spriteRed, _trailRed);
 
 		foreach (var renderer in _bulletRenderers)
 		{

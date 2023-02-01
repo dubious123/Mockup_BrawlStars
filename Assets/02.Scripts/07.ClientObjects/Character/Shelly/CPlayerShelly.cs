@@ -11,15 +11,20 @@ public class CPlayerShelly : CPlayer
 	{
 		base.Init(character);
 		Buckshot.Init(this);
+		SuperShell.Init(this);
 	}
 
 	public override void OnNetFrameUpdate()
 	{
 		base.OnNetFrameUpdate();
 
-		if (Now.IsAttack)
+		if (Now.IsBasicAttack)
 		{
 			Buckshot.HandleAttack();
+		}
+		if (Now.IsSpecialAttack)
+		{
+			SuperShell.HandleAttack();
 		}
 	}
 }

@@ -43,7 +43,6 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 
 	public override void OnNetFrameUpdate()
 	{
-		Loggers.Error.Information("Server : {0}", _netSystem.ActiveSet.Count);
 		foreach (var nProjectile in _netSystem.ActiveSet)
 		{
 			if (_activeDict.ContainsKey(nProjectile) is false)
@@ -59,7 +58,6 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 		}
 
 		Interpretate(0);
-		Loggers.Error.Information("Client : {0}", _activeDict.Values.Count - _removeArr.Count);
 
 		foreach (var cProjectile in _removeArr)
 		{

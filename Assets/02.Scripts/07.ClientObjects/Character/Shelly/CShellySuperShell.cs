@@ -1,58 +1,58 @@
-using System.Collections.Generic;
-
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CShellySuperShell : MonoBehaviour
 {
 	[SerializeField] private GameObject _indicator;
-	[SerializeField] private GameObject _bulletPrefabBlue;
-	[SerializeField] private GameObject _bulletPrefabRed;
 	[SerializeField] private ParticleSystem _effect;
 	[SerializeField] private AudioClip _audio;
+	[SerializeField] private HudPowerCircle _hudPowerCircle;
 
-	public bool Performing { get; set; }
 	public bool Active { get; set; }
 	public CPlayerShelly Player { get; set; }
 
-	private List<CProjectile> _cBullets;
 	private NShellySuperShell _netSuperShell;
-	private GameObject _bulletPrefab;
 
 	public void Init(CPlayerShelly shelly)
 	{
 		Player = shelly;
-		_netSuperShell = (shelly.NPlayer as NCharacterShelly).SuperShell as NShellySuperShell;
-		_cBullets = new List<CProjectile>(_netSuperShell.PalletsCountPerShot);
-		if (shelly.NPlayer.Team == User.Team)
+		_netSuperShell = (shelly.NPlayer as NCharacterShelly).SpecialAttack as NShellySuperShell;
+		_hudPowerCircle.Init(_netSuperShell);
+		if (shelly.TeamId == User.TeamId)
 		{
-			_bulletPrefab = _bulletPrefabBlue;
-		}
-		else
-		{
-			_bulletPrefab = _bulletPrefabRed;
-		}
-
-		foreach (var pallet in _netSuperShell.Pallets)
-		{
-			var cBullet = Instantiate(_bulletPrefab, transform).GetComponent<CProjectile>();
-			cBullet.Init(pallet);
-			_cBullets.Add(cBullet);
+			GameInput.PowerInputAction.started += OnPressed;
+			GameInput.PowerInputAction.canceled += OnReleased;
 		}
 	}
 
-	public void HandleOneFrame()
+	public void HandleAttack()
 	{
-		_indicator.SetActive(_netSuperShell.Holding);
-		if (_netSuperShell.IsAttack is true)
-		{
-			Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
-			_cBullets.ForEach(bullet => bullet.enabled = bullet.IsAlive);
-			_effect.gameObject.SetActive(true);
-			_effect.Play();
-			Audio.PlayOnce(_audio);
-			return;
-		}
+		Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
+		_effect.gameObject.SetActive(true);
+		_effect.Play();
+	}
 
-		Player.Animator.SetBool(AnimatorMeta.IsAttack, false);
+	public void Reset()
+	{
+		_hudPowerCircle.Reset();
+	}
+
+	private void OnPressed(InputAction.CallbackContext _)
+	{
+		if (_netSuperShell.CanAttack())
+		{
+			_indicator.SetActive(true);
+		}
+	}
+
+	private void OnReleased(InputAction.CallbackContext _)
+	{
+		_indicator.SetActive(false);
+	}
+
+	private void OnDestroy()
+	{
+		GameInput.BasicAttackInputAction.started -= OnPressed;
+		GameInput.BasicAttackInputAction.canceled -= OnReleased;
 	}
 }

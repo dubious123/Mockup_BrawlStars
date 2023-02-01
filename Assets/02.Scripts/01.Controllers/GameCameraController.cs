@@ -17,7 +17,7 @@ public class GameCameraController : MonoBehaviour
 	private void Update()
 	{
 		if (_followTarget is null) return;
-		transform.position = new Vector3(-0.5f, _followTarget.position.y + _offSet.y, _followTarget.position.z + _offSet.z) + _shakeDelta;
+		transform.position = new Vector3(0, _followTarget.position.y + _offSet.y, _followTarget.position.z + _offSet.z) + _shakeDelta;
 	}
 
 	public void Init(Transform target)

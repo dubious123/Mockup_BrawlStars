@@ -46,7 +46,7 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		Next.TakePicture(NPlayer);
 		Hp = Now.Hp;
 		MaxHp = Now.MaxHp;
-		Animator.SetBool(AnimatorMeta.IsAttack, Now.IsAttack);
+		Animator.SetBool(AnimatorMeta.IsAttack, Now.IsBasicAttack);
 	}
 
 	public override void Interpretate(float ratio)
@@ -55,6 +55,7 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		{
 			return;
 		}
+
 		var pos = Vector3.Lerp(Now.Position, Next.Position, ratio);
 		var rot = Quaternion.Lerp(Now.Rotation, Next.Rotation, ratio);
 		transform.SetPositionAndRotation(pos, rot);
@@ -131,7 +132,8 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		public Quaternion Rotation { get; private set; }
 		public bool IsVisible { get; private set; }
 		public bool IsDead { get; private set; }
-		public bool IsAttack { get; private set; }
+		public bool IsBasicAttack { get; private set; }
+		public bool IsSpecialAttack { get; private set; }
 		public int MaxHp { get; private set; }
 		public int Hp { get; private set; }
 
@@ -143,7 +145,8 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 			Hp = nPlayer.Hp;
 			MaxHp = nPlayer.MaxHp;
 			IsDead = nPlayer.IsDead();
-			IsAttack = nPlayer.BasicAttack.IsAttack;
+			IsBasicAttack = nPlayer.BasicAttack.IsAttack;
+			IsSpecialAttack = nPlayer.SpecialAttack.IsAttack;
 		}
 	}
 }
