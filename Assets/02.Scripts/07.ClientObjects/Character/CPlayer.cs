@@ -107,6 +107,8 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		transform.SetPositionAndRotation((Vector3)NPlayer.Position, (Quaternion)NPlayer.Rotation);
 		Now.TakePicture(NPlayer);
 		Next.TakePicture(NPlayer);
+		MaxHp = Now.MaxHp;
+		Hp = Now.Hp;
 		SetVisible(true);
 		_ui.Reset();
 		Active = true;
