@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: cfxr stretch rectangle ray blur add
+  m_Name: Mat_PowerCharge
   m_Shader: {fileID: 4800000, guid: e198026df304af84a85675be636192ea, type: 3}
   m_ValidKeywords:
-  - _CFXR_ADDITIVE
+  - _ALPHABLEND_ON
   - _CFXR_SINGLE_CHANNEL
   - _FADING_ON
   m_InvalidKeywords:
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4077fe32903779747aeb714946d83235, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0b1da517105dcb24f8ff9bcb98aefea2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OverlayTex:
@@ -64,7 +64,7 @@ Material:
     - _AmbientColor: 0.5
     - _AmbientIntensity: 1
     - _BacklightTransmittance: 1
-    - _BlendingType: 3
+    - _BlendingType: 0
     - _BumpScale: 1
     - _CFXR_DITHERED_SHADOWS: 0
     - _CFXR_OVERLAYBLEND: 0
@@ -75,7 +75,7 @@ Material:
     - _DissolveSmooth: 0.1
     - _Distort: 0.1
     - _DoubleDissolve: 0
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _EdgeFadePow: 1
     - _FadeAlongU: 0
     - _HdrBoost: 0

@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 public class CShellySuperShell : MonoBehaviour
 {
 	[SerializeField] private GameObject _indicator;
-	[SerializeField] private ParticleSystem _effect;
 	[SerializeField] private AudioClip _audio;
 	[SerializeField] private HudPowerCircle _hudPowerCircle;
 
@@ -28,8 +27,7 @@ public class CShellySuperShell : MonoBehaviour
 	public void HandleAttack()
 	{
 		Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
-		_effect.gameObject.SetActive(true);
-		_effect.Play();
+		Player.PlayerEffect.PlaySpecialAttackEffect();
 	}
 
 	public void Reset()

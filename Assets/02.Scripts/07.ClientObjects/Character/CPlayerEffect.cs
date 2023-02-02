@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CPlayerEffect : MonoBehaviour
 {
 	[SerializeField] private ParticleSystem _playerDeadEffect;
+	[SerializeField] private ParticleSystem _specialAttackEffect;
+	[SerializeField] private ParticleSystem _chargeEffect;
 
 	private void Update()
 	{
@@ -18,7 +14,22 @@ public class CPlayerEffect : MonoBehaviour
 
 	public void PlayeDeadEffect()
 	{
-		_playerDeadEffect.gameObject.SetActive(true);
-		_playerDeadEffect.Play(true);
+		Play(_playerDeadEffect);
+	}
+
+	public void PlaySpecialAttackEffect()
+	{
+		Play(_specialAttackEffect);
+	}
+
+	public void PlayChargeEffect()
+	{
+		Play(_chargeEffect);
+	}
+
+	private void Play(ParticleSystem effect)
+	{
+		effect.gameObject.SetActive(true);
+		effect.Play(true);
 	}
 }

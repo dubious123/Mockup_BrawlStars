@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_SupercellLogoGlow
+  m_Name: Mat_BuckshotGlow
   m_Shader: {fileID: -6465566751694194690, guid: 8da32fea1ed8d7547bcb0999e4a868aa, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,6 +42,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Brightness: 0.00020414293
+    - _Brightness: 0.45
     m_Colors: []
   m_BuildTextureStacks: []

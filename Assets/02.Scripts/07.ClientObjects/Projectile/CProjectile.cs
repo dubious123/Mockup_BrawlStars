@@ -4,20 +4,23 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 {
 	[SerializeField] private GameObject _bulletGo;
 	[SerializeField] private ParticleSystem _onDisableEffect;
+	[SerializeField] private SpriteRenderer[] _renderers;
 	[field: SerializeField] protected TrailRenderer[] Trails { get; set; }
 
 	public static CProjectileSystem System;
 	public bool IsAlive => _projectile.Active;
 	public NetProjectile NProjectile => _projectile;
 
-	protected new NProjectileSnapshot Now { get; set; }
-	protected new NProjectileSnapshot Next { get; set; }
+	protected SpriteRenderer[] Renderers => _renderers;
+	protected NProjectileSnapshot Now { get; set; }
+	protected NProjectileSnapshot Next { get; set; }
 
 	private NetProjectile _projectile;
 
 	public override void Init(NetProjectile projectile)
 	{
 		_projectile = projectile;
+		_bulletGo.SetActive(false);
 		Now = new NProjectileSnapshot();
 		Now.TakePicture(projectile);
 		Next = new NProjectileSnapshot();
@@ -54,8 +57,12 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 		transform.position = Now.Position;
 		foreach (var trail in Trails)
 		{
-			trail.Clear();
+			if (trail != null)
+			{
+				trail.Clear();
+			}
 		}
+
 		_bulletGo.SetActive(true);
 		_onDisableEffect.gameObject.SetActive(false);
 		Active = true;

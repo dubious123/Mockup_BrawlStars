@@ -79,7 +79,6 @@ public class HudHP : MonoBehaviour
 
 	public void HandleOneFrame()
 	{
-		//_rect.anchoredPosition = Camera.main.WorldtoCanvasRectPos(_canvasRect.sizeDelta, _targetTransform.position + _offset);
 		_currentHp = _player.Hp;
 		if (_beforeHp == _currentHp)
 		{

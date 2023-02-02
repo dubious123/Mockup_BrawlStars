@@ -8,30 +8,26 @@ using static Enums;
 public class CPlayer : ClientBaseComponent<NetCharacter>
 {
 	public NetCharacter NPlayer { get; private set; }
-	public TeamType Team { get; private set; }
-	public int TeamId { get; private set; }
-	public int MaxHp { get; private set; }
-	public int Hp { get; private set; }
+	public TeamType Team => NPlayer.Team;
+	public int TeamId => NPlayer.NetObjId.InstanceId;
+	public int MaxHp => Now.MaxHp;
+	public int Hp => Now.Hp;
 	[field: SerializeField] public Animator Animator { get; set; }
 	[field: SerializeField] public Image StunIndicator { get; set; }
 	[field: SerializeField] public Sprite ProfileIcon { get; set; }
+	[field: SerializeField] public CPlayerEffect PlayerEffect { get; set; }
 
-	protected new NPlayerSnapShot Now { get; private set; }
-	protected new NPlayerSnapShot Next { get; private set; }
+	protected NPlayerSnapShot Now { get; private set; }
+	protected NPlayerSnapShot Next { get; private set; }
 
 	[SerializeField] private AudioClip[] _audio_start;
 	[SerializeField] private CPlayerUI _ui;
 	[SerializeField] private GameObject _mesh;
 	[SerializeField] private ParticleSystem _moveSmokeEffect;
-	[SerializeField] private CPlayerEffect _cPlayerEffect;
 
 	public override void Init(NetCharacter character)
 	{
 		NPlayer = character;
-		Team = character.Team;
-		TeamId = NPlayer.NetObjId.InstanceId;
-		MaxHp = character.MaxHp;
-		Hp = character.Hp;
 		Now = new NPlayerSnapShot();
 		Now.TakePicture(character);
 		Next = new NPlayerSnapShot();
@@ -42,10 +38,13 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 
 	public override void OnNetFrameUpdate()
 	{
+		if (Next.PowerAmount > Now.PowerAmount)
+		{
+			PlayerEffect.PlayChargeEffect();
+		}
+
 		(Now, Next) = (Next, Now);
 		Next.TakePicture(NPlayer);
-		Hp = Now.Hp;
-		MaxHp = Now.MaxHp;
 		Animator.SetBool(AnimatorMeta.IsAttack, Now.IsBasicAttack);
 	}
 
@@ -84,7 +83,7 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 
 	public virtual void HandleDead()
 	{
-		_cPlayerEffect.PlayeDeadEffect();
+		PlayerEffect.PlayeDeadEffect();
 		_mesh.SetActive(false);
 		_ui.gameObject.SetActive(false);
 		Active = false;
@@ -95,7 +94,7 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 	{
 		if (NPlayer.IsDead() is false)
 		{
-			_cPlayerEffect.PlayeDeadEffect();
+			PlayerEffect.PlayeDeadEffect();
 		}
 
 		_mesh.SetActive(false);
@@ -108,8 +107,6 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		transform.SetPositionAndRotation((Vector3)NPlayer.Position, (Quaternion)NPlayer.Rotation);
 		Now.TakePicture(NPlayer);
 		Next.TakePicture(NPlayer);
-		MaxHp = Now.MaxHp;
-		Hp = Now.Hp;
 		SetVisible(true);
 		_ui.Reset();
 		Active = true;
@@ -136,17 +133,19 @@ public class CPlayer : ClientBaseComponent<NetCharacter>
 		public bool IsSpecialAttack { get; private set; }
 		public int MaxHp { get; private set; }
 		public int Hp { get; private set; }
+		public int PowerAmount { get; private set; }
 
 		public override void TakePicture(NetCharacter nPlayer)
 		{
 			Position = (Vector3)nPlayer.Position;
 			Rotation = (Quaternion)nPlayer.Rotation;
 			IsVisible = nPlayer.IsVisible;
-			Hp = nPlayer.Hp;
-			MaxHp = nPlayer.MaxHp;
 			IsDead = nPlayer.IsDead();
 			IsBasicAttack = nPlayer.BasicAttack.IsAttack;
 			IsSpecialAttack = nPlayer.SpecialAttack.IsAttack;
+			Hp = nPlayer.Hp;
+			MaxHp = nPlayer.MaxHp;
+			PowerAmount = nPlayer.SpecialAttack.CurrentPowerAmount;
 		}
 	}
 }

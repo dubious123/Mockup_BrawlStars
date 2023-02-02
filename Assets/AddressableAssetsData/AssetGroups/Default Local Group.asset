@@ -17,10 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ed955f08be9618041868f6ca3a89d679
   m_SerializeEntries:
-  - m_GUID: 1e244351b1ef5f7429b6f69de7df8d3b
-    m_Address: Assets/03.Prefabs/Characters/Dog/Character_Dog.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 8b420ccc441795c439f90e023a1d350b
     m_Address: Assets/03.Prefabs/NewEnv/river.prefab
     m_ReadOnly: 0
