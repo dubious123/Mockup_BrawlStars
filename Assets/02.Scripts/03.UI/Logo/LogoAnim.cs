@@ -49,7 +49,7 @@ public class LogoAnim : MonoBehaviour, IUIAnim
 			{
 				var t = Mathf.Pow(delta / _fadeOutTime, 2);
 				_logoImage.transform.localScale = Vector3.Lerp(startSize, Vector3.one, t);
-				_logoImage.ChangeAlpha(t);
+				_logoImage.ChangeAlpha(t / _fadeOutTime);
 				yield return 0f;
 			}
 
@@ -71,6 +71,7 @@ public class LogoAnim : MonoBehaviour, IUIAnim
 			for (float delta = _glowStartTime; delta < _fadeOutTime; delta += Time.deltaTime)
 			{
 				var t = Mathf.Pow(delta / _fadeOutTime, 2);
+				//LogoBrightness = Mathf.Lerp(0, _logoStartBirghtness, t);
 				_logoGlow.ChangeAlpha(t);
 				yield return 0f;
 			}
@@ -83,6 +84,7 @@ public class LogoAnim : MonoBehaviour, IUIAnim
 				yield return 0f;
 			}
 
+			LogoBrightness = _logoStartBirghtness;
 			yield break;
 		}
 	}

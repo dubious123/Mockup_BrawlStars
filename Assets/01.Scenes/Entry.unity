@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -596,8 +596,8 @@ MonoBehaviour:
   _logoGlow: {fileID: 467491906}
   _fadeOutTime: 0.5
   _glowStartTime: 0
-  _glowFadeInTime: 1.5
+  _glowFadeInTime: 1.33
   _logoFadeInTime: 0.25
   _logoImageStartScale: 1.1
-  _logoStartBirghtness: 0.45
+  _logoStartBirghtness: 0.4
   _supercellJingle: {fileID: 8300000, guid: 3330dced56c6c9a498d121ca35996bd6, type: 3}

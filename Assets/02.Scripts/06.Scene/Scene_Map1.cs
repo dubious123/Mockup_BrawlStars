@@ -33,6 +33,7 @@ public class Scene_Map1 : BaseScene
 		_netGameLoop.Init(_dataHelper.GetWorldData(), StartInfo);
 		_clientGameLoop.Init(_netGameLoop);
 		IsReady = true;
+		UI.gameObject.SetActive(true);
 		UI.PlayWelcomeAnim(StartGame);
 		_envCoHandle = Timing.RunCoroutine(Co_EnvChangeColor());
 		if (User.Team == TeamType.Red)
