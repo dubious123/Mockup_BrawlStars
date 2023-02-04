@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 
 using MEC;
@@ -6,7 +5,6 @@ using MEC;
 using TMPro;
 
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SearchingPlayersUI : MonoBehaviour
 {
@@ -17,9 +15,9 @@ public class SearchingPlayersUI : MonoBehaviour
 	private int _targetPlayersCount;
 	private int _foundPlayers;
 
-	public void Init(int targetPlayersCount)
+	public void Init()
 	{
-		_targetPlayersCount = targetPlayersCount;
+		_targetPlayersCount = Config.MAX_PLAYER_COUNT;
 		Timing.RunCoroutine(RotateImage().CancelWith(gameObject));
 		Timing.RunCoroutine(ShrinkImage().CancelWith(gameObject));
 	}

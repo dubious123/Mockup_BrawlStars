@@ -1,7 +1,3 @@
-
-
-using MEC;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,6 +27,6 @@ public class Scene_Lobby : BaseScene
 
 		_playBtnPressed = true;
 		SceneManager.UnloadSceneAsync((int)Scenetype);
-		Scene.MoveTo(SceneType.SearchingPlayers, 1, LoadSceneMode.Additive);
+		Scene.MoveTo(SceneType.SearchingPlayers, null, LoadSceneMode.Additive);
 	}
 }
