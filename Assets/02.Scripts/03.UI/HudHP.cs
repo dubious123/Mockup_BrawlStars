@@ -13,7 +13,7 @@ using UnityEngine;
 public class HudHP : MonoBehaviour
 {
 	#region SerializeFields
-	[SerializeField] private CPlayer _player;
+	[SerializeField] private ClientCharacter _player;
 	[SerializeField] private float _holdTime;
 	[SerializeField] private float _followTime;
 	[SerializeField] private float _expandRate = 1.1f;

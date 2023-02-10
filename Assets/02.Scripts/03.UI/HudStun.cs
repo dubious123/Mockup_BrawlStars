@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HudStun : MonoBehaviour
 {
 	#region SerializeFields
-	[SerializeField] private CPlayer _player;
+	[SerializeField] private ClientCharacter _player;
 	[SerializeField] private RectTransform _canvasRect;
 	[SerializeField] private Vector2 _offset;
 	[SerializeField] private Image _centerIcon;

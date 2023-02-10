@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class MoveCircle : MonoBehaviour
 {
-	[SerializeField] private CPlayer _player;
+	[SerializeField] private ClientCharacter _player;
 	[SerializeField] private Transform _indicatorAnchor;
-	Vector2 _velocity;
-	Vector2 _moveDir;
+	private Vector2 _velocity;
+	private Vector2 _moveDir;
 
 	private void Start()
 	{

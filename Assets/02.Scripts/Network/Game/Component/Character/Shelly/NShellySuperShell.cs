@@ -26,6 +26,7 @@ public class NShellySuperShell : NetSpecialAttack
 		_hitInfo = new HitInfo()
 		{
 			Damage = 25,
+			PowerChargeAmount = 20,
 			KnockbackDuration = 20,
 			KnockbackDistance = (sfloat)0.5f
 		};
@@ -121,7 +122,6 @@ public class NShellySuperShell : NetSpecialAttack
 		if (character is not null && World.GameRule.CanSendHit(Character, character))
 		{
 			Character.SendHit(character, _hitInfo);
-			Character.SpecialAttack.ChargePower(PowerChargeAmount);
 			goto Return;
 		}
 

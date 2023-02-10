@@ -6,18 +6,22 @@ public static partial class Enums
 	{
 		None,
 
-		#region Character
-		Character_Shelly,
-		#endregion
-
 		#region Env
 		Env_Wall,
 		Env_Tree,
 		#endregion
 
+		#region Character
+		Character_Shelly,
+		Character_Spike,
+		#endregion
+
 		#region Projectile
 		Projectile_Shelly_Buckshot,
 		Projectile_Shelly_SuperShell,
+		Projectile_Spike_NeedleGranade,
+		Projectile_Spike_NeedleGranade_Needle,
+		Projectile_Spike_StickAround,
 		#endregion
 
 		#region Summons

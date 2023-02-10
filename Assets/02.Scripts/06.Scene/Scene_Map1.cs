@@ -20,6 +20,9 @@ public class Scene_Map1 : BaseScene
 	[SerializeField] private ClientGameLoopHandler _clientGameLoop;
 	[SerializeField] private Material _envColorChange1;
 	[SerializeField] private Material _envColorChange2;
+	[SerializeField] private Color _envColor1;
+	[SerializeField] private Color _envColor2;
+
 	[SerializeField] private Transform _envBase;
 
 	private CoroutineHandle _envCoHandle;
@@ -28,6 +31,8 @@ public class Scene_Map1 : BaseScene
 
 	public override void Init(object param)
 	{
+		_envColorChange1.SetColor("_BaseColor", _envColor1);
+		_envColorChange2.SetColor("_BaseColor", _envColor2);
 		Scene.PlaySceneChangeAnim();
 		Scenetype = SceneType.Game;
 		_netGameLoop.Init(_dataHelper.GetWorldData(), StartInfo);
@@ -64,10 +69,16 @@ public class Scene_Map1 : BaseScene
 	{
 		for (var delta = 0f; ; delta += Time.deltaTime)
 		{
-			var sine = Mathf.Sin(delta) + 0.5f;
-			_envColorChange1.SetFloat("_Ratio", sine);
-			_envColorChange2.SetFloat("_Ratio", sine);
+			var ratio = Mathf.Clamp(Mathf.Sin(delta) + 0.5f, 0, 1);
+			_envColorChange1.SetColor("_BaseColor", Color.Lerp(_envColor1, _envColor2, ratio));
+			_envColorChange2.SetColor("_BaseColor", Color.Lerp(_envColor2, _envColor1, ratio));
 			yield return 0f;
 		}
+	}
+
+	private void OnApplicationQuit()
+	{
+		_envColorChange1.SetColor("_BaseColor", _envColor1);
+		_envColorChange2.SetColor("_BaseColor", _envColor2);
 	}
 }

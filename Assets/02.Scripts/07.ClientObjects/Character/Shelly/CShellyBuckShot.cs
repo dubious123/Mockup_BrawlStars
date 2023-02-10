@@ -12,14 +12,14 @@ public class CShellyBuckShot : MonoBehaviour
 	[SerializeField] private Color _white;
 
 	public bool Active { get; set; }
-	public CPlayerShelly Player { get; set; }
+	public ClientCharacterShelly Character { get; set; }
 
 	private NShellyBuckShot _netBuckShot;
 	private CoroutineHandle _coHandle;
 
-	public void Init(CPlayerShelly shelly)
+	public void Init(ClientCharacterShelly shelly)
 	{
-		Player = shelly;
+		Character = shelly;
 		_netBuckShot = (shelly.NPlayer as NCharacterShelly).BasicAttack as NShellyBuckShot;
 		if (shelly.TeamId == User.TeamId)
 		{

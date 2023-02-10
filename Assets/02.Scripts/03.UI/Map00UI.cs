@@ -106,12 +106,12 @@ public class Map00UI : MonoBehaviour
 		_gameMessage.ChangeText("Match over");
 	}
 
-	public void OnPlayerDead(CPlayer player)
+	public void OnPlayerDead(ClientCharacter player)
 	{
 		GetHolder(player).OnDead();
 	}
 
-	private ProfileHolder GetHolder(CPlayer player)
+	private ProfileHolder GetHolder(ClientCharacter player)
 	{
 		return player.Team == User.Team ? _profileHoldersBlue[player.TeamId / 2] :
 										  _profileHoldersRed[player.TeamId / 2];

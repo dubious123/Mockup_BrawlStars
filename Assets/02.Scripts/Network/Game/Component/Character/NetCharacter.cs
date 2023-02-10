@@ -45,6 +45,8 @@ namespace Server.Game
 
 		public virtual void Reset()
 		{
+			BasicAttack?.Reset();
+			SpecialAttack?.Reset();
 			MoveSpeed = (sfloat)6f;
 			LookSpeed = (sfloat)360f;
 			MoveSmoothTime = (sfloat)0.01f;
@@ -68,6 +70,9 @@ namespace Server.Game
 				var targetRotation = sQuaternion.LookRotation(TargetLookDir, sVector3.up);
 				NetObj.Rotation = sQuaternion.RotateTowards(NetObj.Rotation, targetRotation, Define.FixedDeltaTime * LookSpeed);
 			}
+
+			BasicAttack.Update();
+			SpecialAttack.Update();
 		}
 
 		public virtual void Move(sVector3 deltaPos)
@@ -84,6 +89,8 @@ namespace Server.Game
 		{
 			TargetMoveDir = sVector3.SmoothDamp(TargetMoveDir, input.MoveInput, ref _smoothVelocity, MoveSmoothTime, sfloat.PositiveInfinity, Define.FixedDeltaTime);
 			TargetLookDir = input.LookInput;
+			BasicAttack.HandleInput(in input);
+			SpecialAttack.HandleInput(in input);
 		}
 
 		public virtual void SendHit(ITakeHit target, in HitInfo info)
@@ -103,6 +110,8 @@ namespace Server.Game
 			{
 				target.TakeStun(info.StunDuration);
 			}
+
+			SpecialAttack.ChargePower(info.PowerChargeAmount);
 		}
 
 		public virtual bool CanBeHit()
@@ -157,10 +166,23 @@ namespace Server.Game
 		{
 			CanControlMove = false;
 			CanControlLook = false;
+			BasicAttack.Active = false;
+			SpecialAttack.Active = false;
 			OnCharacterDead?.Invoke();
 		}
 
-		public abstract void SetActiveOtherSkills(NetBaseSkill from, bool Active);
+		public virtual void SetActiveOtherSkills(NetBaseSkill from, bool Active)
+		{
+			if (from != BasicAttack)
+			{
+				BasicAttack.Active = Active;
+			}
+
+			if (from != SpecialAttack)
+			{
+				SpecialAttack.Active = Active;
+			}
+		}
 
 		protected virtual IEnumerator<int> CoKnockback()
 		{
@@ -191,12 +213,18 @@ namespace Server.Game
 		{
 			CanControlMove = false;
 			CanControlLook = false;
+			BasicAttack.Cancel();
+			BasicAttack.Active = false;
+			SpecialAttack.Cancel();
+			SpecialAttack.Active = false;
 		}
 
 		protected virtual void OnCCEnd()
 		{
 			CanControlMove = true;
 			CanControlLook = true;
+			BasicAttack.Active = true;
+			SpecialAttack.Active = true;
 		}
 	}
 }

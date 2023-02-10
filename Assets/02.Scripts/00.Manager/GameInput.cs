@@ -92,7 +92,7 @@ public class GameInput : MonoBehaviour
 		if (Physics.Raycast(Camera.main.ScreenPointToRay(_instance._lookAction.ReadValue<Vector2>()), out _instance._lookHit, Camera.main.farClipPlane, LayerMeta.Env))
 		{
 			var temp = _instance._lookHit.point - _targetTransform.position;
-			var lookDir = new Vector2(temp.x, temp.z).normalized;
+			var lookDir = new Vector2(temp.x, temp.z);
 			Interlocked.Exchange(ref _instance._lookInput, ToLong(ref lookDir));
 		}
 	}

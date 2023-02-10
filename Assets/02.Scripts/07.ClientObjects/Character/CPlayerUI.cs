@@ -15,7 +15,7 @@ public class CPlayerUI : MonoBehaviour
 	[SerializeField] private MoveCircle _moveCircle;
 	[SerializeField] private HudPowerCircle _powerCircle;
 
-	public void Init(CPlayer character)
+	public void Init(ClientCharacter character)
 	{
 		if (character.TeamId == User.TeamId)
 		{

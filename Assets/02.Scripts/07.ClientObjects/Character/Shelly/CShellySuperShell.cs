@@ -8,13 +8,13 @@ public class CShellySuperShell : MonoBehaviour
 	[SerializeField] private HudPowerCircle _hudPowerCircle;
 
 	public bool Active { get; set; }
-	public CPlayerShelly Player { get; set; }
+	public ClientCharacterShelly Character { get; set; }
 
 	private NShellySuperShell _netSuperShell;
 
-	public void Init(CPlayerShelly shelly)
+	public void Init(ClientCharacterShelly shelly)
 	{
-		Player = shelly;
+		Character = shelly;
 		_netSuperShell = (shelly.NPlayer as NCharacterShelly).SpecialAttack as NShellySuperShell;
 		_hudPowerCircle.Init(_netSuperShell);
 		if (shelly.TeamId == User.TeamId)
@@ -26,8 +26,9 @@ public class CShellySuperShell : MonoBehaviour
 
 	public void HandleAttack()
 	{
-		Player.Animator.SetBool(AnimatorMeta.IsAttack, true);
-		Player.PlayerEffect.PlaySpecialAttackEffect();
+		Audio.PlayOnce(_audio);
+		Character.Animator.SetBool(AnimatorMeta.IsAttack, true);
+		Character.PlayerEffect.PlaySpecialAttackEffect();
 	}
 
 	public void Reset()

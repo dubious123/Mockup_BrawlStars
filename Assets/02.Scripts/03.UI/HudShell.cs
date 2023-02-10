@@ -5,7 +5,7 @@ using UnityEngine;
 public class HudShell : MonoBehaviour
 {
 	[SerializeField] private GameObject _shellPrefab;
-	[SerializeField] private CPlayer _cPlayer;
+	[SerializeField] private ClientCharacter _cPlayer;
 
 	private NetBasicAttack _netBasicAttack;
 	private ShellHelper[] _shells;
