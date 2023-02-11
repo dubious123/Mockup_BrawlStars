@@ -461,6 +461,7 @@ MonoBehaviour:
   _sceneChangeAnimPrefab: {fileID: 5104398020912516795, guid: d23fbf4fa76adf64f97b96c8972185c2, type: 3}
   _audioPrefab: {fileID: 5866462126345145677, guid: d76ca43e9c175e64e9032cb8055451f9, type: 3}
   _inputPrefab: {fileID: 8680379097651505069, guid: 47d562b911c4186408f710bcea68ddfb, type: 3}
+  _dataPrefab: {fileID: 5083204545270484775, guid: 1f84a86cd9a37d94bb5e98150bcbf798, type: 3}
   _logoAnim: {fileID: 1691953151}
 --- !u!4 &1303960318
 Transform:

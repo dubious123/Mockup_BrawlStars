@@ -9,6 +9,7 @@ public class Scene_Entry : BaseScene
 	[SerializeField] private GameObject _sceneChangeAnimPrefab;
 	[SerializeField] private GameObject _audioPrefab;
 	[SerializeField] private GameObject _inputPrefab;
+	[SerializeField] private GameObject _dataPrefab;
 	[SerializeField] private LogoAnim _logoAnim;
 
 	public override void Init(object param)
@@ -30,21 +31,28 @@ public class Scene_Entry : BaseScene
 		DontDestroyOnLoad(new GameObject("@User", typeof(User)));
 		DontDestroyOnLoad(new GameObject("@Scene", typeof(Scene)));
 		Instantiate(_sceneChangeAnimPrefab, GameObject.Find("@Scene").transform);
-		DontDestroyOnLoad(Instantiate(_eventSystemPrefab));
-		var audioGo = Instantiate(_audioPrefab);
-		audioGo.name = "@Audio";
-		DontDestroyOnLoad(audioGo);
-		var inputGo = Instantiate(_inputPrefab);
-		inputGo.name = "@Input";
-		DontDestroyOnLoad(inputGo);
+		InstantiateFromPrefab(_eventSystemPrefab, "@EventSystem");
+		InstantiateFromPrefab(_audioPrefab, "@Audio");
+		InstantiateFromPrefab(_inputPrefab, "@Input");
+		InstantiateFromPrefab(_dataPrefab, "@Data");
+
 		Config.Init();
 		GameInput.Init();
 		Loggers.Init();
 		JobMgr.Init();
 		Network.Init();
 		Audio.Init();
+		Data.Init();
 		Scene.Init();
 
 		_logoAnim.PlayAnim(() => Scene.MoveTo(Enums.SceneType.Loading, Enums.SceneType.Lobby, LoadSceneMode.Additive));
+	}
+
+	private GameObject InstantiateFromPrefab(GameObject prefab, string name)
+	{
+		var instance = Instantiate(prefab);
+		instance.name = name;
+		DontDestroyOnLoad(instance);
+		return instance;
 	}
 }

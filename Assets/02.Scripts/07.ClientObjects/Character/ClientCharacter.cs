@@ -12,9 +12,10 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 	public int TeamId => NPlayer.NetObjId.InstanceId;
 	public int MaxHp => Now.MaxHp;
 	public int Hp => Now.Hp;
+	public Sprite ProfileIcon { get; private set; }
+
 	[field: SerializeField] public Animator Animator { get; set; }
 	[field: SerializeField] public Image StunIndicator { get; set; }
-	[field: SerializeField] public Sprite ProfileIcon { get; set; }
 	[field: SerializeField] public CPlayerEffect PlayerEffect { get; set; }
 
 	protected NPlayerSnapShot Now { get; private set; }
@@ -28,6 +29,7 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 	public override void Init(NetCharacter character)
 	{
 		NPlayer = character;
+		ProfileIcon = Data.GetCharacterProfile(NPlayer.NetObjId.Type);
 		Now = new NPlayerSnapShot();
 		Now.TakePicture(character);
 		Next = new NPlayerSnapShot();
