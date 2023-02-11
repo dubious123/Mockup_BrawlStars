@@ -9903,7 +9903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffc57ad171c058449d099566e4ba450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 8081935724470910612}
   _indicatorAnchor: {fileID: 3420985573837965571}
 --- !u!1 &3420985574560612068
 GameObject:
@@ -15271,7 +15271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shellPrefab: {fileID: 8889368056600148039, guid: 646f581a3f782ac4cb26ce14a9830d80, type: 3}
-  _cPlayer: {fileID: 0}
+  _cPlayer: {fileID: 8081935724470910612}
 --- !u!1 &7228604214677561757
 GameObject:
   m_ObjectHideFlags: 0
@@ -25016,7 +25016,7 @@ Animator:
   m_GameObject: {fileID: 8081935724470910608}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9f078227c6f09b54392514bfaa25c741, type: 3}
-  m_Controller: {fileID: 9100000, guid: a32a13ed6a6fe774c839e08e54a6b392, type: 2}
+  m_Controller: {fileID: 9100000, guid: 95b724a941257fe488418045a9301d83, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -25038,9 +25038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8745caefd9a45b9439741eb6e64a4248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Animator>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 8081935724470910609}
   <StunIndicator>k__BackingField: {fileID: 0}
-  <ProfileIcon>k__BackingField: {fileID: 21300000, guid: 676eeb9064838814ead55e3807d77d5c, type: 3}
   <PlayerEffect>k__BackingField: {fileID: 7402592874116414893}
   _audio_start: []
   _ui: {fileID: 20400822130992448}
@@ -25304,7 +25303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b76b53e04a5f04fa23181d0fd36655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 8081935724470910612}
   _canvasRect: {fileID: 3420985574963086758}
   _offset: {x: 100, y: 100}
   _centerIcon: {fileID: 4989777631483482156}
@@ -25479,7 +25478,7 @@ PrefabInstance:
     - target: {fileID: 8601895642742607241, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8081935724470910612}
     - target: {fileID: 8601895642742607241, guid: 9c8450b8cbb15d046871bad7f904baa2, type: 3}
       propertyPath: _offset.y
       value: 1.45

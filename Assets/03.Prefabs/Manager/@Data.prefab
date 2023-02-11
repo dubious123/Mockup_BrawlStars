@@ -47,3 +47,12 @@ MonoBehaviour:
   _characterProfiles:
   - {fileID: 21300000, guid: 6d6f5feede0c19c489958ae9bb94ab16, type: 3}
   - {fileID: 21300000, guid: 676eeb9064838814ead55e3807d77d5c, type: 3}
+  _characterPrefab:
+  - {fileID: 6455835301831051266, guid: ce7944d6c19178a4b995b2babc2d6ee8, type: 3}
+  - {fileID: 8081935724470910608, guid: 90d3ee445e60dd143b8223541c2f998e, type: 3}
+  _projectilePrefab:
+  - {fileID: 6795436678132101501, guid: 99258db3cabeaf44f884ef8edc3feb17, type: 3}
+  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
+  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
+  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
+  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}

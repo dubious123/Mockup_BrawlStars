@@ -106,8 +106,6 @@ public class ClientGameLoopHandler : MonoBehaviour
 			Interlocked.Exchange(ref _netGameLoop.GameLoopLock, 0);
 
 		}
-
-
 	}
 
 	private void HandleRoundStart()

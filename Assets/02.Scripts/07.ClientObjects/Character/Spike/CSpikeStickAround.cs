@@ -17,7 +17,7 @@ public class CSpikeStickAround : MonoBehaviour
 	public void Init(ClientCharacterSpike spike)
 	{
 		Character = spike;
-		_netSuperShell = (spike.NPlayer as NCharacterShelly).SpecialAttack as NSpikeStickAround;
+		_netSuperShell = (spike.NPlayer as NCharacterSpike).SpecialAttack as NSpikeStickAround;
 		_hudPowerCircle.Init(_netSuperShell);
 		if (spike.TeamId == User.TeamId)
 		{

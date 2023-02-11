@@ -18,7 +18,7 @@ namespace Server.Game
 			var obj = builder.GetRawObject(NetObjectType.Character_Spike);
 			obj.AddComponent<NetCircleCollider2D>()
 				.SetOffsetAndRadius(sVector2.zero, (sfloat)0.5f);
-			//obj.AddComponent<NCharacterSpike>();
+			obj.AddComponent<NCharacterSpike>();
 			return obj;
 		}
 	}

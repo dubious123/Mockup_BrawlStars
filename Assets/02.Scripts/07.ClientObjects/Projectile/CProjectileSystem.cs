@@ -11,11 +11,10 @@ using static Enums;
 public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 {
 	private readonly Dictionary<NetProjectile, CProjectile> _activeDict = new(120);
-	private readonly Stack<CProjectile>[] _reservePool = new Stack<CProjectile>[2] { new(90), new(30) };
+	private readonly Stack<CProjectile>[] _reservePool = new Stack<CProjectile>[(int)NetObjectType.Projectile_Spike_StickAround - (int)NetObjectType.Projectile_Shelly_Buckshot + 1] { new(90), new(30), new(3), new(18), new(1) };
 	private readonly List<CProjectile> _removeArr = new(120);
 
 	[SerializeField]
-	private GameObject[] _cProjectilePrefabArr;
 	private Transform[] _reservePoolParent;
 	private NetProjectileSystem _netSystem;
 
@@ -23,12 +22,12 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 	{
 		CProjectile.System = this;
 		_netSystem = (NetProjectileSystem)netSystem;
-		_reservePoolParent = new Transform[] {
-		new GameObject(Enum.GetName(typeof(NetObjectType), NetObjectType.Projectile_Shelly_Buckshot)).transform,
-		new GameObject(Enum.GetName(typeof(NetObjectType), NetObjectType.Projectile_Shelly_SuperShell)).transform };
-		foreach (var trans in _reservePoolParent)
+		var enumArr = Enum.GetNames(typeof(NetObjectType));
+		_reservePoolParent = new Transform[_reservePool.Length];
+		for (int i = 0; i < _reservePool.Length; ++i)
 		{
-			trans.parent = transform;
+			_reservePoolParent[i] = new GameObject(enumArr[(int)NetObjectType.Projectile_Shelly_Buckshot + i - 1]).transform;
+			_reservePoolParent[i].parent = transform;
 		}
 
 		var query =
@@ -113,13 +112,13 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 		var index = NetProjectileSystem.GetIndex(type);
 		var stack = _reservePool[index];
 		return stack.Count != 0 ? _reservePool[index].Pop() :
-			Instantiate(_cProjectilePrefabArr[index], _reservePoolParent[index]).GetComponent<CProjectile>();
+			Instantiate(Data.GetProjectilePrefab(index), _reservePoolParent[index]).GetComponent<CProjectile>();
 	}
 
 	private CProjectile Reserve(NetObjectType type)
 	{
 		var index = NetProjectileSystem.GetIndex(type);
-		var cProjectile = Instantiate(_cProjectilePrefabArr[index], _reservePoolParent[index]).GetComponent<CProjectile>();
+		var cProjectile = Instantiate(Data.GetProjectilePrefab(index), _reservePoolParent[index]).GetComponent<CProjectile>();
 		_reservePool[index].Push(cProjectile);
 		return cProjectile;
 	}
@@ -129,7 +128,7 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 		var index = NetProjectileSystem.GetIndex(type);
 		for (int i = 0; i < count; i++)
 		{
-			var cProjectile = Instantiate(_cProjectilePrefabArr[index], _reservePoolParent[index]).GetComponent<CProjectile>();
+			var cProjectile = Instantiate(Data.GetProjectilePrefab(index), _reservePoolParent[index]).GetComponent<CProjectile>();
 			_reservePool[index].Push(cProjectile);
 		}
 	}

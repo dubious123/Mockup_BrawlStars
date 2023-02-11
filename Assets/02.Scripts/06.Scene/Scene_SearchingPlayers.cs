@@ -11,7 +11,7 @@ public class Scene_SearchingPlayers : BaseScene
 		Scenetype = Enums.SceneType.SearchingPlayers;
 		_ui.Init();
 		GetComponent<AudioSource>().Play();
-		Network.RegisterSend(new C_EnterGame() { CharacterType = (int)Enums.NetObjectType.Character_Shelly, UserId = User.UserId });
+		Network.RegisterSend(new C_EnterGame() { CharacterType = (ushort)User.CharType, UserId = User.UserId });
 		IsReady = true;
 	}
 

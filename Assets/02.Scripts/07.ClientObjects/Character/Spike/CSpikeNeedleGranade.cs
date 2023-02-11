@@ -22,7 +22,7 @@ public class CSpikeNeedleGranade : MonoBehaviour
 	public void Init(ClientCharacterSpike spike)
 	{
 		Character = spike;
-		_netNeedleGrenade = (spike.NPlayer as NCharacterShelly).BasicAttack as NSpikeNeedleGrenade;
+		_netNeedleGrenade = (spike.NPlayer as NCharacterSpike).BasicAttack as NSpikeNeedleGrenade;
 		if (spike.TeamId == User.TeamId)
 		{
 			GameInput.BasicAttackInputAction.started += OnPressed;

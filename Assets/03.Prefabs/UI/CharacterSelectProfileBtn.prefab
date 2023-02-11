@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterProfileImage: {fileID: 4114025227737511189}
+  _text: {fileID: 7362582881971928147}
 --- !u!1 &4114025227737511195
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +815,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb72134256e4af4e83678c3354ecbe0, type: 3}
+--- !u!114 &7362582881971928147 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6862028131049450723, guid: 2eb72134256e4af4e83678c3354ecbe0, type: 3}
+  m_PrefabInstance: {fileID: 4114025228013555888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2147f2aaf78b4f044bcea8d8ab077b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8451096629625876689 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5503301704221171809, guid: 2eb72134256e4af4e83678c3354ecbe0, type: 3}

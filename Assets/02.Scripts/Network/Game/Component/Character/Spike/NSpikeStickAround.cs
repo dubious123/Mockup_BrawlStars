@@ -44,7 +44,8 @@ namespace Server.Game
 #if CLIENT
 			Holding = _beforePressed is true && _nowPressed is true && CanAttack();
 #endif
-			if (IsAttack = (_beforePressed is true && _nowPressed is false && CanAttack() is false))
+			IsAttack = _beforePressed is true && _nowPressed is false && CanAttack() is false;
+			if (IsAttack is false)
 			{
 				return;
 			}

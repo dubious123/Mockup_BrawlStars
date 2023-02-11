@@ -59,6 +59,7 @@ public class Scene_Map1 : BaseScene
 		{
 			Timing.CallDelayed(2, () =>
 			{
+				Audio.StopAudio(_ingameBgm.name);
 				Timing.KillCoroutines(_envCoHandle);
 				Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
 			});

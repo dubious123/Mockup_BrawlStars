@@ -13,8 +13,6 @@ public class LobbyUI : MonoBehaviour
 	[SerializeField] private Transform _characterSelectContentTrans;
 	[SerializeField] private GameObject _characterSelectProfilePrefab;
 
-	private readonly Vector3 _camOffset = new(0, 460, -975);
-
 	private void Start()
 	{
 		for (var i = NetObjectType.Character_Shelly; i <= NetObjectType.Character_Spike; ++i)
@@ -36,8 +34,8 @@ public class LobbyUI : MonoBehaviour
 	public void MoveToLobbyUI()
 	{
 		var index = Math.Clamp((int)User.CharType, (int)NetObjectType.Character_Shelly, (int)NetObjectType.Character_Spike) - (int)NetObjectType.Character_Shelly;
-		_characterCamTrans.position = _characters[index].position + _camOffset;
-		_lobbyUI.SetActive(true);
+		_characterCamTrans.position = new Vector3(_characters[index].position.x, _characterCamTrans.position.y, _characterCamTrans.position.z);
 		_characterSelectUI.SetActive(false);
+		_lobbyUI.SetActive(true);
 	}
 }
