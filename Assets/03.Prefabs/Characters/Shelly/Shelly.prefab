@@ -20680,7 +20680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Animator>k__BackingField: {fileID: 6455835301831051267}
   <StunIndicator>k__BackingField: {fileID: 0}
-  <ProfileIcon>k__BackingField: {fileID: 21300000, guid: 6d6f5feede0c19c489958ae9bb94ab16, type: 3}
   <PlayerEffect>k__BackingField: {fileID: 5693741007216724799}
   _audio_start:
   - {fileID: 8300000, guid: 88a80c5d556349f4e9ba07cf599c55bf, type: 3}

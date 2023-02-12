@@ -10,7 +10,7 @@ using static Enums;
 public class ClientGameLoopHandler : MonoBehaviour
 {
 	[field: SerializeField] public CProjectileSystem ProjectileSystem { get; private set; }
-	[field: SerializeField] public CPlayerSystem PlayerSystem { get; private set; }
+	[field: SerializeField] public CPlayerSystem CharacterSystem { get; private set; }
 	[field: SerializeField] public CEnvSystem EnvSystem { get; private set; }
 
 	[SerializeField] private Map00UI _mapUI;
@@ -22,10 +22,10 @@ public class ClientGameLoopHandler : MonoBehaviour
 
 	public void Init(NetGameLoopHandler netGameLoop)
 	{
-		_systems = new IClientComponentSystem[] { PlayerSystem, EnvSystem, ProjectileSystem };
+		_systems = new IClientComponentSystem[] { CharacterSystem, EnvSystem, ProjectileSystem };
 		_netGameLoop = netGameLoop;
 		ProjectileSystem.Init(_netWorld.ProjectileSystem);
-		PlayerSystem.Init(_netWorld.CharacterSystem);
+		CharacterSystem.Init(_netWorld.CharacterSystem);
 		EnvSystem.Init(_netWorld.EnvSystem);
 		_frameNum = -Config.FRAME_BUFFER_COUNT;
 		_mapUI = (Scene.CurrentScene as Scene_Map1).UI;

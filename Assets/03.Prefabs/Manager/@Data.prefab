@@ -53,6 +53,6 @@ MonoBehaviour:
   _projectilePrefab:
   - {fileID: 6795436678132101501, guid: 99258db3cabeaf44f884ef8edc3feb17, type: 3}
   - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
-  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
-  - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}
+  - {fileID: 6907208262320337288, guid: 7218bdac12b364543ab2275c55da7919, type: 3}
+  - {fileID: 1393984751430092948, guid: 20391628d11c129439f5e6132eb8f0a7, type: 3}
   - {fileID: 1393984751430092948, guid: de815b3283ab13b4aa88df95e9ae7330, type: 3}

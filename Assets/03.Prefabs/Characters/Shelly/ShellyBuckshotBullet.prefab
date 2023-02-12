@@ -10193,6 +10193,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFX3_Hit_SmokePuff
       objectReference: {fileID: 0}
+    - target: {fileID: 7669069007041201951, guid: 17f30574155ec2145a875c345a7d2191, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17f30574155ec2145a875c345a7d2191, type: 3}
 --- !u!4 &4422846742402182969 stripped

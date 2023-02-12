@@ -95,7 +95,7 @@ namespace Server.Game
 
 		private void InitGranade(NetProjectile projectile)
 		{
-			projectile.SetAngle(sfloat.Zero).SetOwner(Character.NetObj).SetMaxDistance(_targetDir.magnitude);
+			projectile.SetAngle((sfloat)90 * sMathf.Deg2Rad).SetOwner(Character.NetObj).SetMaxDistance(_targetDir.magnitude);
 			projectile.NetObj.SetPositionAndRotation(Character.Position, sQuaternion.LookRotation(_targetDir, sVector3.up));
 			projectile.Collider.OnCollisionEnter = OnHit;
 			projectile.OnReachedMaxRadius = Explode;

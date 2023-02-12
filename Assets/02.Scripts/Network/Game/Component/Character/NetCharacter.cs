@@ -20,6 +20,7 @@ namespace Server.Game
 		public NetCollider2D Collider { get; protected set; }
 		public NetBasicAttack BasicAttack { get; protected set; }
 		public NetSpecialAttack SpecialAttack { get; protected set; }
+		public int TeamId { get; protected set; }
 		public int KnockbackDuration { get; protected set; }
 		public int StunDuration { get; protected set; }
 		public int MaxHp { get; protected set; }
@@ -33,10 +34,15 @@ namespace Server.Game
 
 		private sVector3 _smoothVelocity;
 
+		public void SetTeamId(int id)
+		{
+			TeamId = id;
+			Team = World.GameRule.GetTeamType(id);
+		}
+
 		public override void Start()
 		{
 			Collider = this.GetComponent<NetCollider2D>();
-			Team = World.GameRule.GetTeamType(NetObj);
 			KnockbackCoHandler = CoKnockback();
 			StunCoHandler = CoStun();
 			OnCharacterDead += () => World.GameRule.OnCharacterDead(this);

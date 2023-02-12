@@ -27,13 +27,14 @@ public class CSpikeNeedleGranade : MonoBehaviour
 		{
 			GameInput.BasicAttackInputAction.started += OnPressed;
 			GameInput.BasicAttackInputAction.canceled += OnReleased;
+			_indicator.transform.localScale = new Vector3(10 / 1.5f, 1, 1);
 			_coHandle = Timing.CallContinuously(float.MaxValue, () => _indicator.color = _netNeedleGrenade.CurrentShellCount > 0 ? _white : _red);
 		}
 	}
 
 	public void HandleAttack()
 	{
-		Audio.PlayOnce(_audio);
+		Audio.PlayOnce(_audio, 0.5f);
 	}
 
 	private void OnPressed(InputAction.CallbackContext _)

@@ -18,10 +18,10 @@ public class CPlayerSystem : CBaseComponentSystem<NetCharacter>, IEnumerable<Cli
 		_cPlayers = new ClientCharacter[Config.MAX_PLAYER_COUNT];
 		foreach (var nPlayer in netSystem.ComponentDict)
 		{
-			_cPlayers[nPlayer.NetObjId.InstanceId] = Instantiate(Data.GetCharacterGamePrefab(nPlayer.NetObjId.Type), (Vector3)nPlayer.Position, (Quaternion)nPlayer.Rotation, transform).GetComponent<ClientCharacter>();
-			_cPlayers[nPlayer.NetObjId.InstanceId].Init(nPlayer);
+			_cPlayers[nPlayer.TeamId] = Instantiate(Data.GetCharacterGamePrefab(nPlayer.NetObjId.Type), (Vector3)nPlayer.Position, (Quaternion)nPlayer.Rotation, transform).GetComponent<ClientCharacter>();
+			_cPlayers[nPlayer.TeamId].Init(nPlayer);
 #if UNITY_EDITOR
-			_cPlayers[nPlayer.NetObjId.InstanceId].gameObject.name = Enum.GetName(typeof(NetObjectType), nPlayer.NetObjId.Type) + nPlayer.NetObjId.InstanceId;
+			_cPlayers[nPlayer.TeamId].gameObject.name = Enum.GetName(typeof(NetObjectType), nPlayer.NetObjId.Type) + nPlayer.TeamId;
 #endif
 		}
 

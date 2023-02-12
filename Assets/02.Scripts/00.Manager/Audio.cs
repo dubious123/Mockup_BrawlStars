@@ -1,9 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 
 using MEC;
-
-using Unity.VisualScripting;
 
 using UnityEngine;
 
@@ -20,13 +17,14 @@ public class Audio : MonoBehaviour
 		_instance._audioDict = new();
 	}
 
-	public static void PlayOnce(AudioClip clip) => PlayOnce(clip, Vector3.zero);
+	public static void PlayOnce(AudioClip clip, float volume = 1f) => PlayOnce(clip, Vector3.zero, volume);
 
-	public static void PlayOnce(AudioClip clip, Vector3 position)
+	public static void PlayOnce(AudioClip clip, Vector3 position, float volume = 1f)
 	{
 		var source = Instantiate(_instance._audioSourcePrefab, _instance.transform).GetComponent<AudioSource>();
 		source.transform.position = position;
 		source.clip = clip;
+		source.volume = volume;
 		source.Play();
 		Timing.CallDelayed(clip.length + 0.5f, () => Destroy(source.gameObject));
 	}

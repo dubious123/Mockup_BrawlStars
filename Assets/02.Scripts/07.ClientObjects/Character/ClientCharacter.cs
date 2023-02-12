@@ -9,7 +9,7 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 {
 	public NetCharacter NPlayer { get; private set; }
 	public TeamType Team => NPlayer.Team;
-	public int TeamId => NPlayer.NetObjId.InstanceId;
+	public int TeamId => NPlayer.TeamId;
 	public int MaxHp => Now.MaxHp;
 	public int Hp => Now.Hp;
 	public Sprite ProfileIcon { get; private set; }

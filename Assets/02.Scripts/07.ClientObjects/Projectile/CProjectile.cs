@@ -11,6 +11,8 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 	public bool IsAlive => _projectile.Active;
 	public NetProjectile NProjectile => _projectile;
 
+	protected GameObject BulletGo => _bulletGo;
+	protected ParticleSystem OnDisableEffect => _onDisableEffect;
 	protected SpriteRenderer[] Renderers => _renderers;
 	protected NProjectileSnapshot Now { get; set; }
 	protected NProjectileSnapshot Next { get; set; }

@@ -20,7 +20,7 @@ public class HudShell : MonoBehaviour
 			throw new System.Exception();
 		}
 
-		if (User.TeamId != _netBasicAttack.Character.NetObjId.InstanceId)
+		if (User.TeamId != _netBasicAttack.Character.TeamId)
 		{
 			Destroy(gameObject);
 			return;

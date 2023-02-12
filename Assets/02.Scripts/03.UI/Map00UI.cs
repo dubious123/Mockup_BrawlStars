@@ -40,7 +40,7 @@ public class Map00UI : MonoBehaviour
 	public void PlayWelcomeAnim(Action onCompleted = null)
 	{
 		var scene = Scene.CurrentScene as Scene_Map1;
-		foreach (var cp in scene.ClientGameLoop.PlayerSystem)
+		foreach (var cp in scene.ClientGameLoop.CharacterSystem)
 		{
 			if (cp is null)
 			{
