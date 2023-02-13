@@ -26,7 +26,8 @@ public class CShellySuperShell : MonoBehaviour
 
 	public void HandleAttack()
 	{
-		Audio.PlayOnce(_audio);
+		Audio.PlayOnce(_audio, 0.5f);
+		Audio.PlayerPowerPerformed();
 		Character.Animator.SetBool(AnimatorMeta.IsAttack, true);
 		Character.PlayerEffect.PlaySpecialAttackEffect();
 	}

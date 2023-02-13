@@ -20,12 +20,12 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AreaSkill
+  m_Name: AoeBlue
   m_Shader: {fileID: -6465566751694194690, guid: cd7c6ec4d6ba9fc45a0abf3a7950b69f, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -53,6 +53,7 @@ Material:
     m_Floats:
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
+    - _BackgroundAlpha: 0.1
     - _CenterBrightness: 0
     - _OuterRingRadius: 0.9
     - _QueueControl: 0
@@ -71,7 +72,7 @@ Material:
     - _pi: 3.14128
     - _twoPi: 6.28256
     m_Colors:
-    - _MainColor: {r: 0, g: 0.68565154, b: 1, a: 1}
+    - _MainColor: {r: 0.003921569, g: 0.5333333, b: 0.96078426, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4660869236131853598
 MonoBehaviour:

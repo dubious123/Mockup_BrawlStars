@@ -17,7 +17,7 @@ public class Data : MonoBehaviour
 
 	public static Sprite GetCharacterProfile(NetObjectType characterType)
 	{
-		return _instance._characterProfiles[characterType - NetObjectType.Character_Shelly];
+		return _instance._characterProfiles[characterType - NetObjectType.CharacterStart - 1];
 	}
 
 	public static Sprite GetCharacterProfile(int characterIndex)
@@ -27,7 +27,7 @@ public class Data : MonoBehaviour
 
 	public static GameObject GetCharacterGamePrefab(NetObjectType characterType)
 	{
-		return _instance._characterPrefab[characterType - NetObjectType.Character_Shelly];
+		return _instance._characterPrefab[characterType - NetObjectType.CharacterStart - 1];
 	}
 
 	public static GameObject GetCharacterGamePrefab(int index)
@@ -37,7 +37,7 @@ public class Data : MonoBehaviour
 
 	public static GameObject GetProjectilePrefab(NetObjectType projectiletype)
 	{
-		return _instance._projectilePrefab[projectiletype - NetObjectType.Projectile_Shelly_Buckshot];
+		return _instance._projectilePrefab[projectiletype - NetObjectType.ProjectileStart - 1];
 	}
 
 	public static GameObject GetProjectilePrefab(int index)

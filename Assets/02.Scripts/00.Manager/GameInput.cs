@@ -49,11 +49,11 @@ public class GameInput : MonoBehaviour
 			_instance._abilityQ.canceled += _ => _instance._buttonPressed &= 0b1101;
 		}
 
-		_instance._abilityCancel = _instance._playerInput.actions[InputActionMeta.CancelAbility];
-		{
-			_instance._abilityCancel.started += _ => _instance._buttonPressed |= 0b0100;
-			_instance._abilityCancel.canceled += _ => _instance._buttonPressed &= 0b1011;
-		}
+		//_instance._abilityCancel = _instance._playerInput.actions[InputActionMeta.CancelAbility];
+		//{
+		//	_instance._abilityCancel.started += _ => _instance._buttonPressed |= 0b0100;
+		//	_instance._abilityCancel.canceled += _ => _instance._buttonPressed &= 0b1011;
+		//}
 	}
 
 	public static void SetGameInput(Transform targetTransform)

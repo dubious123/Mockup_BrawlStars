@@ -2,7 +2,7 @@ using Server.Game;
 
 using UnityEngine;
 
-public class CProjectileSpikeStickAroundGrenade : CProjectile
+public class CProjectileSpikeStickAround : CProjectile
 {
 	[SerializeField] private AudioClip _explodeSound;
 	[SerializeField] private Material _matBlue0;

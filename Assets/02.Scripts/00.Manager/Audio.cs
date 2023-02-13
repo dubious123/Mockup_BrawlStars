@@ -8,6 +8,12 @@ public class Audio : MonoBehaviour
 {
 	[SerializeField] private GameObject _audioSourcePrefab;
 	[SerializeField] private AudioClip _btnPressedNormal;
+	[SerializeField] private AudioClip _playerDeadBad;
+	[SerializeField] private AudioClip _playerDeadGood;
+	[SerializeField] private AudioClip _playerDisabled;
+	[SerializeField] private AudioClip _playerPowerGain;
+	[SerializeField] private AudioClip _playerPowerSelected;
+	[SerializeField] private AudioClip _playerPowerPerformed;
 	private static Audio _instance;
 	private Dictionary<string, AudioSource> _audioDict;
 
@@ -102,5 +108,31 @@ public class Audio : MonoBehaviour
 	public static void PlayBtnPressedNormal()
 	{
 		PlayAudio(_instance._btnPressedNormal, _instance._btnPressedNormal.name, false);
+	}
+
+	public static void PlayPlayerDead(bool isGood)
+	{
+		PlayOnce(isGood ? _instance._playerDeadGood : _instance._playerDeadBad, 0.5f);
+		PlayPlayerDisabled();
+	}
+
+	public static void PlayPlayerDisabled()
+	{
+		PlayOnce(_instance._playerDisabled, 0.5f);
+	}
+
+	public static void PlayerPowerGain()
+	{
+		PlayOnce(_instance._playerPowerGain, 0.2f);
+	}
+
+	public static void PlayerPowerSelected()
+	{
+		PlayOnce(_instance._playerPowerSelected, 0.2f);
+	}
+
+	public static void PlayerPowerPerformed()
+	{
+		PlayOnce(_instance._playerPowerPerformed, 0.2f);
 	}
 }

@@ -40,6 +40,7 @@ public class HudPowerCircle : MonoBehaviour
 			if (_pressed is false)
 			{
 				Timing.RunCoroutine(Co_Shrink());
+				Audio.PlayerPowerSelected();
 			}
 
 			_image.enabled = true;

@@ -10457,7 +10457,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4968565815825278410}
   serializedVersion: 8
-  lengthInSec: 1
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
@@ -11170,7 +11170,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
   EmissionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
@@ -15096,13 +15096,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clearBehavior: 1
   cameraShake:
-    enabled: 0
+    enabled: 1
     useMainCamera: 1
     cameras: []
     delay: 0
     duration: 0.25
     shakeSpace: 0
-    shakeStrength: {x: 0.1, y: 0.1, z: 0.1}
+    shakeStrength: {x: 0.25, y: 0.25, z: 0.25}
     shakeCurve:
       serializedVersion: 2
       m_Curve:

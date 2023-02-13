@@ -4,9 +4,6 @@
     "m_ObjectId": "32d09791fd9043079a76d7d186398b70",
     "m_Properties": [
         {
-            "m_Id": "4e0c9ea696264fa7a6d6b0b65935bb9e"
-        },
-        {
             "m_Id": "2018efb5ef9d4668a12c1cbd875c0ce6"
         },
         {
@@ -1454,7 +1451,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "RingTh",
     "m_DefaultReferenceName": "_RingTh",
-    "m_OverrideReferenceName": "_RingThickness",
+    "m_OverrideReferenceName": "_RingTh",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
@@ -1989,10 +1986,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 4892.3994140625,
-            "y": 3715.2001953125,
-            "width": 208.80078125,
-            "height": 302.7998046875
+            "x": 4744.7998046875,
+            "y": 3594.400146484375,
+            "width": 208.80029296875,
+            "height": 303.199951171875
         }
     },
     "m_Slots": [
@@ -2205,7 +2202,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "4688eb2dec5b47daaff9e6f17e38f89b",
     "m_Id": 0,
-    "m_DisplayName": "backgroundAlpha",
+    "m_DisplayName": "BackgroundAlpha",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2317,35 +2314,6 @@
         "x": 0.0,
         "y": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Texture2DShaderProperty",
-    "m_ObjectId": "4e0c9ea696264fa7a6d6b0b65935bb9e",
-    "m_Guid": {
-        "m_GuidSerialized": "84a97673-340c-4be5-9ce7-1334e4ad70c2"
-    },
-    "m_Name": "MainTex",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "MainTex",
-    "m_DefaultReferenceName": "_MainTex",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"48e93eef0688c4a259cb0eddcd8661f7\",\"type\":3}}",
-        "m_Guid": ""
-    },
-    "isMainTexture": false,
-    "useTilingAndOffset": false,
-    "m_Modifiable": true,
-    "m_DefaultType": 0
 }
 
 {
@@ -2897,10 +2865,10 @@
     "m_Guid": {
         "m_GuidSerialized": "3fcfd04a-0fe1-4359-93fd-6d41ce255d72"
     },
-    "m_Name": "backgroundAlpha",
+    "m_Name": "BackgroundAlpha",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "backgroundAlpha",
-    "m_DefaultReferenceName": "_backgroundAlpha",
+    "m_RefNameGeneratedByDisplayName": "BackgroundAlpha",
+    "m_DefaultReferenceName": "_BackgroundAlpha",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3197,7 +3165,7 @@
     "m_RenderFace": 2,
     "m_AlphaClip": false,
     "m_CastShadows": true,
-    "m_ReceiveShadows": true,
+    "m_ReceiveShadows": false,
     "m_CustomEditorGUI": "",
     "m_SupportVFX": false
 }
@@ -6260,9 +6228,6 @@
     "m_ObjectId": "fa3317f64d9f4614b9fb37b1cb9dc77e",
     "m_Name": "",
     "m_ChildObjectList": [
-        {
-            "m_Id": "4e0c9ea696264fa7a6d6b0b65935bb9e"
-        },
         {
             "m_Id": "2018efb5ef9d4668a12c1cbd875c0ce6"
         },

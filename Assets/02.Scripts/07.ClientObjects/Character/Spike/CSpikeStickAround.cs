@@ -12,13 +12,13 @@ public class CSpikeStickAround : MonoBehaviour
 	public bool Active { get; set; }
 	public ClientCharacterSpike Character { get; set; }
 
-	private NSpikeStickAround _netSuperShell;
+	private NSpikeStickAround _netStickAround;
 
 	public void Init(ClientCharacterSpike spike)
 	{
 		Character = spike;
-		_netSuperShell = (spike.NPlayer as NCharacterSpike).SpecialAttack as NSpikeStickAround;
-		_hudPowerCircle.Init(_netSuperShell);
+		_netStickAround = (spike.NPlayer as NCharacterSpike).SpecialAttack as NSpikeStickAround;
+		_hudPowerCircle.Init(_netStickAround);
 		if (spike.TeamId == User.TeamId)
 		{
 			GameInput.PowerInputAction.started += OnPressed;
@@ -28,9 +28,10 @@ public class CSpikeStickAround : MonoBehaviour
 
 	public void HandleAttack()
 	{
-		Audio.PlayOnce(_audio);
+		Audio.PlayOnce(_audio, 0.5f);
+		Audio.PlayerPowerPerformed();
 		Character.Animator.SetBool(AnimatorMeta.IsAttack, true);
-		Character.PlayerEffect.PlaySpecialAttackEffect();
+		//Character.PlayerEffect.PlaySpecialAttackEffect();
 	}
 
 	public void Reset()
@@ -40,7 +41,7 @@ public class CSpikeStickAround : MonoBehaviour
 
 	private void OnPressed(InputAction.CallbackContext _)
 	{
-		if (_netSuperShell.CanAttack())
+		if (_netStickAround.CanAttack())
 		{
 			_indicator.SetActive(true);
 		}
@@ -53,7 +54,7 @@ public class CSpikeStickAround : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		GameInput.BasicAttackInputAction.started -= OnPressed;
-		GameInput.BasicAttackInputAction.canceled -= OnReleased;
+		GameInput.PowerInputAction.started -= OnPressed;
+		GameInput.PowerInputAction.canceled -= OnReleased;
 	}
 }

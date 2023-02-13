@@ -17,6 +17,9 @@ public class Scene_Map1 : BaseScene
 
 	[SerializeField] private WorldDataHelper _dataHelper;
 	[SerializeField] private AudioClip _ingameBgm;
+	[SerializeField] private AudioClip _gameWinBgm;
+	[SerializeField] private AudioClip _gameLoseBgm;
+	[SerializeField] private AudioClip _gameDrawBgm;
 	[SerializeField] private ClientGameLoopHandler _clientGameLoop;
 	[SerializeField] private Material _envColorChange1;
 	[SerializeField] private Material _envColorChange2;
@@ -55,14 +58,25 @@ public class Scene_Map1 : BaseScene
 
 	public void EndGame()
 	{
-		JobMgr.PushUnityJob(() =>
+		Audio.StopAudio(_ingameBgm.name);
+		if (_netGameLoop.MatchRes == Server.Game.GameRule.GameRule00.MatchResult.None)
 		{
-			Timing.CallDelayed(2, () =>
-			{
-				Audio.StopAudio(_ingameBgm.name);
-				Timing.KillCoroutines(_envCoHandle);
-				Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
-			});
+			Audio.PlayOnce(_gameDrawBgm);
+		}
+		else if (_netGameLoop.MatchRes == Server.Game.GameRule.GameRule00.MatchResult.Blue)
+		{
+			Audio.PlayOnce(User.Team == TeamType.Blue ? _gameWinBgm : _gameLoseBgm);
+		}
+		else
+		{
+			Audio.PlayOnce(User.Team == TeamType.Red ? _gameWinBgm : _gameLoseBgm);
+		}
+
+		Camera.main.GetComponent<GameCameraController>().OnGameEnd();
+		Timing.CallDelayed(3.5f, () =>
+		{
+			Timing.KillCoroutines(_envCoHandle);
+			Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
 		});
 	}
 

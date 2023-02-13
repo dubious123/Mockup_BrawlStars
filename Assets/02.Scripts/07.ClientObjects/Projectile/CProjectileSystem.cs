@@ -11,7 +11,8 @@ using static Enums;
 public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 {
 	private readonly Dictionary<NetProjectile, CProjectile> _activeDict = new(120);
-	private readonly Stack<CProjectile>[] _reservePool = new Stack<CProjectile>[(int)NetObjectType.Projectile_Spike_StickAround - (int)NetObjectType.Projectile_Shelly_Buckshot + 1] { new(90), new(30), new(3), new(18), new(1) };
+	private readonly Stack<CProjectile>[] _reservePool =
+		new Stack<CProjectile>[(int)NetObjectType.ProjectileEnd - (int)NetObjectType.ProjectileStart - 1];
 	private readonly List<CProjectile> _removeArr = new(120);
 
 	[SerializeField]
@@ -21,12 +22,17 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 	public override void Init(NetBaseComponentSystem<NetProjectile> netSystem)
 	{
 		CProjectile.System = this;
+		for (int i = 0; i < _reservePool.Length; ++i)
+		{
+			_reservePool[i] = new();
+		}
+
 		_netSystem = (NetProjectileSystem)netSystem;
 		var enumArr = Enum.GetNames(typeof(NetObjectType));
 		_reservePoolParent = new Transform[_reservePool.Length];
 		for (int i = 0; i < _reservePool.Length; ++i)
 		{
-			_reservePoolParent[i] = new GameObject(enumArr[(int)NetObjectType.Projectile_Shelly_Buckshot + i - 1]).transform;
+			_reservePoolParent[i] = new GameObject(enumArr[(int)NetObjectType.ProjectileStart + i + 1]).transform;
 			_reservePoolParent[i].parent = transform;
 		}
 

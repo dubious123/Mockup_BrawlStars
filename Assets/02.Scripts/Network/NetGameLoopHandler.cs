@@ -19,6 +19,7 @@ public class NetGameLoopHandler
 	public GameState State { get; private set; } = GameState.Waiting;
 	public double Interval => _interval;
 	public RoundResult RoundRes { get; private set; }
+	public MatchResult MatchRes { get; private set; }
 	public bool NetGameStarted { get; private set; }
 
 	private volatile int _gameLoopLock;
@@ -94,16 +95,20 @@ public class NetGameLoopHandler
 
 	private void MoveGameLoop(object abj, ElapsedEventArgs args)
 	{
-		while (Interlocked.CompareExchange(ref _gameLoopLock, 1, 0) == 1) { }
-
 		_lastUpdateTime = args.SignalTime;
+		var targetInterval = _frameInfoQueue.Count > Config.FRAME_BUFFER_COUNT + 1 ? _fastInterval :
+			_frameInfoQueue.Count < Config.FRAME_BUFFER_COUNT - 1 ? _slowInterval :
+			_normalInterval;
 		switch (State)
 		{
 			case GameState.Started:
+				while (_frameInfoQueue.IsEmpty) { };
+				while (Interlocked.CompareExchange(ref _gameLoopLock, 1, 0) == 1) { }
 				HandleOneFrame();
 				break;
 			case GameState.RoundEnded:
 				Loggers.Debug.Information("Start Fake Update");
+				while (Interlocked.CompareExchange(ref _gameLoopLock, 1, 0) == 1) { }
 				_world.UpdateInputs(GameFrameInfo.GetDefault(Config.MAX_PLAYER_COUNT));
 				_world.Update();
 				break;
@@ -114,9 +119,7 @@ public class NetGameLoopHandler
 		}
 
 		Interlocked.Exchange(ref _gameLoopLock, 0);
-		var targetInterval = _frameInfoQueue.Count > Config.FRAME_BUFFER_COUNT + 1 ? _fastInterval :
-			_frameInfoQueue.Count < Config.FRAME_BUFFER_COUNT - 1 ? _slowInterval :
-			_normalInterval;
+
 		var netLoopFinishTime = (DateTime.Now - _lastUpdateTime).TotalMilliseconds;
 		_interval = Math.Max(targetInterval - netLoopFinishTime, double.Epsilon);
 		Loggers.Game.Information("Interval : {0}", _interval);
@@ -132,6 +135,7 @@ public class NetGameLoopHandler
 		if (_frameInfoQueue.TryDequeue(out var info) is false || FrameNum != info.FrameNum)
 		{
 			Loggers.Error.Information("frame queue is empty or invalid frameCount {0}", FrameNum);
+
 			return;
 		}
 
@@ -180,7 +184,9 @@ public class NetGameLoopHandler
 	{
 		Loggers.Game.Information("Match Over {0}", Enum.GetName(typeof(GameRule00.MatchResult), result));
 		State = GameState.RoundEnded;
-		Task.Delay(Config.ROUND_END_WAIT_DELAY).ContinueWith(t => State = GameState.MatchOvered);
+		MatchRes = result;
+		State = GameState.MatchOvered;
+		//Task.Delay(Config.ROUND_END_WAIT_DELAY).ContinueWith(t =>);
 	}
 }
 

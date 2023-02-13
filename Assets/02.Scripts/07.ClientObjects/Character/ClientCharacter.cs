@@ -42,6 +42,7 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 	{
 		if (Next.PowerAmount > Now.PowerAmount)
 		{
+			Audio.PlayerPowerGain();
 			PlayerEffect.PlayChargeEffect();
 		}
 
@@ -86,6 +87,7 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 	public virtual void HandleDead()
 	{
 		PlayerEffect.PlayeDeadEffect();
+		Audio.PlayPlayerDead(Team != User.Team);
 		_mesh.SetActive(false);
 		_ui.gameObject.SetActive(false);
 		Active = false;
@@ -97,6 +99,7 @@ public class ClientCharacter : ClientBaseComponent<NetCharacter>
 		if (NPlayer.IsDead() is false)
 		{
 			PlayerEffect.PlayeDeadEffect();
+			Audio.PlayPlayerDisabled();
 		}
 
 		_mesh.SetActive(false);

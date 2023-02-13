@@ -8,6 +8,8 @@ public class GameCameraController : MonoBehaviour
 {
 	#region SerializeFields
 	[SerializeField] private Vector3 _offSet;
+	[SerializeField] private float _zoomOutFactor;
+	[SerializeField] private float _zoomOutTime;
 	#endregion
 	public Transform FollowTarget { set { _followTarget = value; } }
 
@@ -45,5 +47,25 @@ public class GameCameraController : MonoBehaviour
 
 			yield break;
 		}
+	}
+
+	public void OnGameEnd()
+	{
+		enabled = false;
+		Timing.RunCoroutine(CoOnGameEnd());
+	}
+
+	private IEnumerator<float> CoOnGameEnd()
+	{
+		var targetPos = _followTarget.position + _offSet * _zoomOutFactor;
+		targetPos.x = 0;
+		for (float delta = 0; delta < _zoomOutTime; delta += Time.deltaTime)
+		{
+			transform.position = Vector3.Lerp(transform.position, targetPos, delta / _zoomOutTime);
+			yield return Timing.WaitForOneFrame;
+		}
+
+		transform.position = targetPos;
+		yield break;
 	}
 }
