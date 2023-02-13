@@ -9,6 +9,8 @@ public class NetProjectile : NetBaseComponent, INetUpdatable
 	public Action<NetProjectile> OnReachedMaxRadius { get; set; }
 #if CLIENT
 	public sVector3 MoveDir => _moveDir;
+	public int CurrentTravelTime => _currentTravelTime;
+	public int MaxTravelTime => _maxTravelTime;
 #endif
 
 	private sVector3 _moveDir;

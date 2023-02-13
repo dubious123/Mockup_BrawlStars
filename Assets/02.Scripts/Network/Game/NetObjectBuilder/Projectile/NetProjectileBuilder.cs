@@ -54,7 +54,7 @@ namespace Server.Game
 			obj.AddComponent<NetCircleCollider2D>()
 				.SetOffsetAndRadius(sVector2.zero, (sfloat)2.5f);
 			obj.AddComponent<NetProjectile>()
-				.SetSpeed((sfloat)16)
+				.SetSpeed((sfloat)8)
 				.SetMaxDistance((sfloat)10f);
 			return obj;
 		}
