@@ -29,6 +29,7 @@ namespace Server.Game
 
 		public void Awake(NetObjectType type, Action<NetProjectile> initFunc = null)
 		{
+			Reserve(type, 1 - _reservePool[GetIndex(type)].Count);
 			var projectile = _reservePool[GetIndex(type)].Pop();
 			initFunc?.Invoke(projectile);
 			_addList.Add(projectile);

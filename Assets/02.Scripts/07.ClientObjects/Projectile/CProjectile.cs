@@ -54,7 +54,7 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 		DeActivate();
 	}
 
-	protected void Activate()
+	protected virtual void Activate()
 	{
 		transform.position = Now.Position;
 		foreach (var trail in Trails)
@@ -70,7 +70,7 @@ public class CProjectile : ClientBaseComponent<NetProjectile>
 		Active = true;
 	}
 
-	protected void DeActivate()
+	protected virtual void DeActivate()
 	{
 		_bulletGo.SetActive(false);
 		_onDisableEffect.gameObject.SetActive(true);

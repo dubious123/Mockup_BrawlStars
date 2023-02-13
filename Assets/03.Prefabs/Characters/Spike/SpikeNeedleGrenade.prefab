@@ -58929,7 +58929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3460625058678438349
 Transform:
   m_ObjectHideFlags: 0
@@ -61814,18 +61814,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 6907208262320337288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 374a8e75f51414d4d8a40943dff94287, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a0637b9ba431414a93af6136d891153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletGo: {fileID: 5913957920357418105}
   _onDisableEffect: {fileID: 5437206096141053363}
   _renderers: []
   <Trails>k__BackingField: []
+  _explodeSound: {fileID: 8300000, guid: 9647a821be36b7f4f814930dbe838899, type: 3}
+  _matBlue0: {fileID: 2100000, guid: b6ccd972bbb382f45ae20e2e249f48d6, type: 2}
+  _matBlue1: {fileID: 2100000, guid: 3ee9eff4db9036f49aaf99cdf055406e, type: 2}
+  _matRed0: {fileID: 2100000, guid: 1983cd1cd6301094b91f50c51348a97e, type: 2}
+  _matRed1: {fileID: 2100000, guid: 911f19c7697b0184db35379931807d6b, type: 2}
   _colorBlue0: {r: 0.7490196, g: 0.9372549, b: 1, a: 1}
   _colorBlue1: {r: 0.22352941, g: 0.5137255, b: 0.9254902, a: 1}
   _colorRed0: {r: 0.99215686, g: 0.5568628, b: 0.5568628, a: 1}
   _colorRed1: {r: 0.9254902, g: 0.3764706, b: 0.22352941, a: 1}
   _spinSpeed: 100
+  _meshRenderers:
+  - {fileID: 6907208263924002419}
+  - {fileID: 6907208262192845513}
+  - {fileID: 6907208263724295690}
+  - {fileID: 6907208263052203571}
+  - {fileID: 6907208262666187106}
+  - {fileID: 6907208263256682216}
+  - {fileID: 6907208262249463406}
+  - {fileID: 6907208262388852446}
+  - {fileID: 6907208262446628013}
+  - {fileID: 6907208263066761775}
+  - {fileID: 6907208262337778980}
+  - {fileID: 6907208263598399090}
+  - {fileID: 6907208263137791494}
+  - {fileID: 6907208263131336384}
+  - {fileID: 6907208262293062477}
+  - {fileID: 6907208262905757383}
+  - {fileID: 6907208264143113921}
+  - {fileID: 6907208262370122025}
+  - {fileID: 6907208263867382280}
+  - {fileID: 6907208263305450270}
+  - {fileID: 6907208263918211372}
+  - {fileID: 6907208263718651310}
+  - {fileID: 6907208263487606533}
+  - {fileID: 6907208262483100113}
+  - {fileID: 6907208262076880553}
+  - {fileID: 6907208262650683189}
+  - {fileID: 6907208263097342211}
 --- !u!1 &6907208262323685607
 GameObject:
   m_ObjectHideFlags: 0

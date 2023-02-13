@@ -19,7 +19,7 @@ public class CPlayerEffect : MonoBehaviour
 
 	public void PlaySpecialAttackEffect()
 	{
-		Play(_specialAttackEffect);
+		//Play(_specialAttackEffect);
 	}
 
 	public void PlayChargeEffect()
