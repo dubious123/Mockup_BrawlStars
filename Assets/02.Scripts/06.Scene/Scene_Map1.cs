@@ -75,8 +75,11 @@ public class Scene_Map1 : BaseScene
 		Camera.main.GetComponent<GameCameraController>().OnGameEnd();
 		Timing.CallDelayed(3.5f, () =>
 		{
-			Timing.KillCoroutines(_envCoHandle);
-			Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
+			JobMgr.PushUnityJob(() =>
+			{
+				Timing.KillCoroutines();
+				Scene.MoveTo(SceneType.Lobby, User.CharType, LoadSceneMode.Single);
+			});
 		});
 	}
 

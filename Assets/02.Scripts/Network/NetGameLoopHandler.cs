@@ -4,6 +4,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 
+using MEC;
+
 using Server.Game;
 using Server.Game.Data;
 using Server.Game.GameRule;
@@ -84,7 +86,7 @@ public class NetGameLoopHandler
 	private void HandleRoundStart(int waitMilliseconds)
 	{
 		Loggers.Debug.Information("Round Start Wait Time : {0}", waitMilliseconds);
-		Task.Delay(waitMilliseconds).ContinueWith(_ =>
+		Task.Delay(Math.Max(0, waitMilliseconds)).ContinueWith(_ =>
 		{
 			Loggers.Game.Information("Round Start");
 			State = GameState.Started;
@@ -115,6 +117,7 @@ public class NetGameLoopHandler
 			case GameState.MatchOvered:
 				_gameLoopTimer.Dispose();
 				Interlocked.Exchange(ref _gameLoopLock, 0);
+				JobMgr.PushUnityJob(() => Timing.CallPeriodically(float.MaxValue, 0.016f, _world.Update));
 				return;
 		}
 
@@ -163,6 +166,7 @@ public class NetGameLoopHandler
 	{
 		Loggers.Game.Information("Round Clear");
 		State = GameState.RoundCleared;
+		_world.Clear();
 		Task.Delay(Config.ROUND_CLEAR_WAIT_DELAY).ContinueWith(t => HandleRoundReset());
 	}
 

@@ -14,6 +14,8 @@ public class Audio : MonoBehaviour
 	[SerializeField] private AudioClip _playerPowerGain;
 	[SerializeField] private AudioClip _playerPowerSelected;
 	[SerializeField] private AudioClip _playerPowerPerformed;
+	[SerializeField] private AudioClip _playerGameBasicAttackSelected;
+
 	private static Audio _instance;
 	private Dictionary<string, AudioSource> _audioDict;
 
@@ -86,12 +88,13 @@ public class Audio : MonoBehaviour
 		}
 	}
 
-	public static void PlayAudio(AudioClip clip, string name, bool loop, bool allowMany = false)
+	public static void PlayAudio(AudioClip clip, string name, bool loop, bool allowMany = false, float volume = 1f)
 	{
 		if (_instance._audioDict.TryGetValue(name, out var audio))
 		{
 			if (allowMany is false && audio.isPlaying is false)
 			{
+				audio.volume = volume;
 				audio.Play();
 			}
 
@@ -107,7 +110,7 @@ public class Audio : MonoBehaviour
 
 	public static void PlayBtnPressedNormal()
 	{
-		PlayAudio(_instance._btnPressedNormal, _instance._btnPressedNormal.name, false);
+		PlayAudio(_instance._btnPressedNormal, _instance._btnPressedNormal.name, false, false, 0.5f);
 	}
 
 	public static void PlayPlayerDead(bool isGood)
@@ -118,7 +121,7 @@ public class Audio : MonoBehaviour
 
 	public static void PlayPlayerDisabled()
 	{
-		PlayOnce(_instance._playerDisabled, 0.5f);
+		PlayOnce(_instance._playerDisabled, 0.25f);
 	}
 
 	public static void PlayerPowerGain()
@@ -134,5 +137,10 @@ public class Audio : MonoBehaviour
 	public static void PlayerPowerPerformed()
 	{
 		PlayOnce(_instance._playerPowerPerformed, 0.2f);
+	}
+
+	public static void PlayerBasicAttackSelected()
+	{
+		PlayOnce(_instance._playerGameBasicAttackSelected, 0.5f);
 	}
 }

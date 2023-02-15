@@ -101,8 +101,35 @@ public class Map00UI : MonoBehaviour
 		_clock.Reset();
 	}
 
-	public void OnMatchOver()
+	public void OnMatchOver(GameRule00.MatchResult matchRes)
 	{
+		switch (matchRes)
+		{
+			case GameRule00.MatchResult.Blue:
+				if (User.Team == Enums.TeamType.Blue)
+				{
+					_centerScores.OnPlayerWin();
+				}
+				else
+				{
+					_centerScores.OnPlayerLose();
+				}
+				break;
+			case GameRule00.MatchResult.Red:
+				if (User.Team == Enums.TeamType.Red)
+				{
+					_centerScores.OnPlayerWin();
+				}
+				else
+				{
+					_centerScores.OnPlayerLose();
+				}
+				break;
+			default:
+				_centerScores.OnPlayerDraw();
+				break;
+		}
+
 		_gameMessage.ChangeText("Match over");
 	}
 

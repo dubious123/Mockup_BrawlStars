@@ -2,19 +2,27 @@
 
 public class CPlayerEffect : MonoBehaviour
 {
-	[SerializeField] private ParticleSystem _playerDeadEffect;
+	[SerializeField] private ParticleSystem _playerDeadEffectBlue;
+	[SerializeField] private ParticleSystem _playerDeadEffectRed;
 	[SerializeField] private ParticleSystem _specialAttackEffect;
 	[SerializeField] private ParticleSystem _chargeEffect;
 
 	private void Update()
 	{
 		var direction = (Camera.main.transform.position - transform.position).normalized;
-		_playerDeadEffect.gameObject.transform.position = transform.position + direction * 3;
+		_playerDeadEffectBlue.transform.parent.position = transform.position + direction * 3;
 	}
 
-	public void PlayeDeadEffect()
+	public void PlayeDeadEffect(bool isTeam)
 	{
-		Play(_playerDeadEffect);
+		if (isTeam)
+		{
+			Play(_playerDeadEffectBlue);
+		}
+		else
+		{
+			Play(_playerDeadEffectRed);
+		}
 	}
 
 	public void PlaySpecialAttackEffect()

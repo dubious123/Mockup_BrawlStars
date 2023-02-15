@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d880f0daf10dfb438855d57cb3e7222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _textPrefab: {fileID: 5503301704221171808, guid: 63edd18f787b5004988c66ba529561b0, type: 3}
+  _textPrefab: {fileID: 5503301704221171808, guid: 06f7e85caa177f5488e41b9e13d918fa, type: 3}
   _randomPosRadius: 0.2
   _startAlpha: 0
   _startSize: 0.5

@@ -60,6 +60,7 @@ Material:
     - _QueueOffset: 0
     - _Radius: 0.5
     - _RingRadius: 0.67
+    - _RingTh: 0.015
     - _RingThickness: 0.02
     - _Rotation: 0
     - _SegmentNum: 20

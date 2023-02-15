@@ -37,6 +37,7 @@ public class CShellyBuckShot : MonoBehaviour
 	private void OnPressed(InputAction.CallbackContext _)
 	{
 		_indicator.gameObject.SetActive(true);
+		Audio.PlayerBasicAttackSelected();
 	}
 
 	private void OnReleased(InputAction.CallbackContext _)

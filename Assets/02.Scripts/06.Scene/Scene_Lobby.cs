@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 using static Enums;
@@ -11,8 +12,7 @@ public class Scene_Lobby : BaseScene
 	{
 		Scenetype = SceneType.Lobby;
 		Scene.PlaySceneChangeAnim();
-		User.CharType = (NetObjectType)param;
-		User.CharType = NetObjectType.Character_Shelly;
+		GameInput.BasicAttackInputAction.started += PlayBtnPressedNormal;
 		IsReady = true;
 		GetComponent<AudioSource>().PlayDelayed(1f);
 	}
@@ -26,7 +26,14 @@ public class Scene_Lobby : BaseScene
 		}
 
 		_playBtnPressed = true;
+		GameInput.BasicAttackInputAction.started -= PlayBtnPressedNormal;
+		GetComponent<AudioSource>().Stop();
 		SceneManager.UnloadSceneAsync((int)Scenetype);
 		Scene.MoveTo(SceneType.SearchingPlayers, null, LoadSceneMode.Additive);
+	}
+
+	private void PlayBtnPressedNormal(InputAction.CallbackContext _)
+	{
+		Audio.PlayBtnPressedNormal();
 	}
 }

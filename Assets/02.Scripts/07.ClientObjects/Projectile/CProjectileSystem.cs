@@ -93,7 +93,6 @@ public class CProjectileSystem : CBaseComponentSystem<NetProjectile>
 		foreach (var cProjectile in _activeDict.Values)
 		{
 			cProjectile.Clear();
-			_removeArr.Add(cProjectile);
 		}
 
 		foreach (var cProjRemove in _removeArr)

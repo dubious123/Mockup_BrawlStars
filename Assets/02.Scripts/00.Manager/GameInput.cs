@@ -9,14 +9,15 @@ public class GameInput : MonoBehaviour
 {
 	public static InputAction BasicAttackInputAction => _instance._basicAttackAction;
 	public static InputAction MoveInputAction => _instance._moveAction;
-	public static InputAction PowerInputAction => _instance._abilityQ;
+	public static InputAction PowerInputAction => _instance._specialAttack;
+	public static Vector2 LookDelta => ToVector(_instance._lookInput);
 
 	private static GameInput _instance;
 	private PlayerInput _playerInput;
 	private InputAction _lookAction;
 	private InputAction _moveAction;
 	private InputAction _basicAttackAction;
-	private InputAction _abilityQ;
+	private InputAction _specialAttack;
 	private InputAction _abilityCancel;
 	private RaycastHit _lookHit;
 	private Transform _targetTransform;
@@ -38,15 +39,15 @@ public class GameInput : MonoBehaviour
 		_instance._basicAttackAction = _instance._playerInput.actions[InputActionMeta.BasicAttack];
 		{
 			_instance._basicAttackAction.started += _ => _instance._buttonPressed |= 0b0001;
-			_instance._basicAttackAction.started += _ => Audio.PlayBtnPressedNormal();
+			//_instance._basicAttackAction.started += _ => Audio.PlayBtnPressedNormal();
 			_instance._basicAttackAction.canceled += _ => _instance._buttonPressed &= 0b1110;
 		}
 
-		_instance._abilityQ = _instance._playerInput.actions[InputActionMeta.Q];
+		_instance._specialAttack = _instance._playerInput.actions[InputActionMeta.SpecialAttack];
 		{
-			_instance._abilityQ.started += _ => _instance._buttonPressed |= 0b0010;
-			_instance._abilityQ.started += _ => Audio.PlayBtnPressedNormal();
-			_instance._abilityQ.canceled += _ => _instance._buttonPressed &= 0b1101;
+			_instance._specialAttack.started += _ => _instance._buttonPressed |= 0b0010;
+			//_instance._specialAttack.started += _ => Audio.PlayBtnPressedNormal();
+			_instance._specialAttack.canceled += _ => _instance._buttonPressed &= 0b1101;
 		}
 
 		//_instance._abilityCancel = _instance._playerInput.actions[InputActionMeta.CancelAbility];

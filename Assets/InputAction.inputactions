@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Q",
+                    "name": "SpecialAttack",
                     "type": "Button",
                     "id": "be9fcdf4-a4f7-4a18-9285-209365fd6643",
                     "expectedControlType": "Button",
@@ -196,11 +196,11 @@
                 {
                     "name": "",
                     "id": "899b7011-a196-4ea9-a385-014dee565fc4",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Q",
+                    "action": "SpecialAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

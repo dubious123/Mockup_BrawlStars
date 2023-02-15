@@ -22,3 +22,18 @@ public class TempEditor : Editor
 		}
 	}
 }
+
+[CustomEditor(typeof(CProjectileSpikeStickAround_Aoe))]
+public class TempEditor2 : Editor
+{
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+		var aoe = (CProjectileSpikeStickAround_Aoe)target;
+
+		if (GUILayout.Button("GenerateResetData"))
+		{
+			aoe.GenerateResetData();
+		}
+	}
+}

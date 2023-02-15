@@ -7,6 +7,9 @@ namespace Server.Game
 {
 	public class NSpikeStickAround : NetSpecialAttack
 	{
+#if CLIENT
+		public sfloat MaxRadius => _maxRadius;
+#endif
 		private readonly HitInfo _hitInfo;
 
 		private int _coHandle, _coAoeHandle, _currentDelay, _attackCount, _attackInterval;
@@ -25,8 +28,8 @@ namespace Server.Game
 			_maxRadius = (sfloat)7f;
 			_hitInfo = new HitInfo()
 			{
-				Damage = 40,
-				PowerChargeAmount = 20,
+				Damage = 400,
+				PowerChargeAmount = 13,
 			};
 
 			World.ProjectileSystem.Reserve(NetObjectType.Projectile_Spike_StickAround, 1);
@@ -96,8 +99,8 @@ namespace Server.Game
 
 		private void InitGranade(NetProjectile projectile)
 		{
-			projectile.SetAngle(sMathf.Atan2(_targetDir.z, _targetDir.x) * sMathf.Deg2Rad).SetOwner(Character.NetObj).SetMaxDistance(_targetDir.magnitude);
-			projectile.NetObj.SetPositionAndRotation(Character.Position, sQuaternion.identity);
+			projectile.SetAngle((sfloat)90 * sMathf.Deg2Rad).SetOwner(Character.NetObj).SetMaxDistance(_targetDir.magnitude);
+			projectile.NetObj.SetPositionAndRotation(Character.Position, sQuaternion.LookRotation(_targetDir));
 			projectile.OnReachedMaxRadius = Explode;
 			projectile.NetObj.Active = true;
 		}

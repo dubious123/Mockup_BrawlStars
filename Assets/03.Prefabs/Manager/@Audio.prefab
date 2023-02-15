@@ -53,6 +53,7 @@ MonoBehaviour:
   _playerPowerGain: {fileID: 8300000, guid: 30d70d7f4ba14f242a5457831c30ca6b, type: 3}
   _playerPowerSelected: {fileID: 8300000, guid: 22366b1f6ebac7b4b82f75b7eddc3e8b, type: 3}
   _playerPowerPerformed: {fileID: 8300000, guid: b0c85d8a31cad1741a04eafb577e265c, type: 3}
+  _playerGameBasicAttackSelected: {fileID: 8300000, guid: bf7c26d9b4ca0c240aa3328870c05f6b, type: 3}
 --- !u!81 &6522332530376454726
 AudioListener:
   m_ObjectHideFlags: 0

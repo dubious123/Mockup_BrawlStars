@@ -145,9 +145,8 @@ public class ClientGameLoopHandler : MonoBehaviour
 
 	private void HandleMatchOver()
 	{
-		_mapUI.OnMatchOver();
+		_mapUI.OnMatchOver(_netGameLoop.MatchRes);
 		GameInput.SetActive(false);
 		(Scene.CurrentScene as Scene_Map1).EndGame();
-		enabled = false;
 	}
 }

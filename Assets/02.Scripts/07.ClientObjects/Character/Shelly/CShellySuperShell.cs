@@ -52,7 +52,7 @@ public class CShellySuperShell : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		GameInput.BasicAttackInputAction.started -= OnPressed;
-		GameInput.BasicAttackInputAction.canceled -= OnReleased;
+		GameInput.PowerInputAction.started -= OnPressed;
+		GameInput.PowerInputAction.canceled -= OnReleased;
 	}
 }

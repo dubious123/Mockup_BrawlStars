@@ -39,6 +39,7 @@ public class CSpikeNeedleGranade : MonoBehaviour
 
 	private void OnPressed(InputAction.CallbackContext _)
 	{
+		Audio.PlayerBasicAttackSelected();
 		_indicator.gameObject.SetActive(true);
 	}
 

@@ -52,7 +52,7 @@ public class CProjectileSpikeStickAround : CProjectile
 	public override void Interpretate(float ratio)
 	{
 		base.Interpretate(ratio);
-		var x = NProjectile.CurrentTravelTime / (float)NProjectile.MaxTravelTime;
+		var x = NProjectile.MaxTravelTime == 0 ? 0 : NProjectile.CurrentTravelTime / (float)NProjectile.MaxTravelTime;
 		var height = x * (1 - x) * (16f * NProjectile.MaxTravelTime / 60f) + 1;
 		transform.position = new Vector3(transform.position.x, height, transform.position.z);
 	}
